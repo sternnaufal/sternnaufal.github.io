@@ -75,15 +75,15 @@ document.getElementById("bq").onclick = function() {
   
   async function menuju(){
   var { value: jawaban } = await swals.fire({
-    title: 'Isi Pesan Untukku &#128073;&#128072;', input: 'text', allowOutsideClick: false, showCancelButton: false,
+    title: 'Isi Pesan Untukku &#128151;', input: 'text', allowOutsideClick: false, showCancelButton: false,
   });
-  if(jawaban && jawaban.length < 19){
+  if(jawaban && jawaban.length < 100){
     window.jawaban = jawaban;
     pesanwhatsapp = jawaban;
     await swals.fire('OK!', 'Kirim jawabannya ke WhatsApp aku, ya!', 'success');
-    window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;
+    window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp +"//bot By Sternnaufal";
     tombol();
   } else {
-    await swals.fire('Ups!', 'Jawaban tidak boleh kosong atau lebih dari 18 karakter, ya!');jawab();
+    await swals.fire('Ups!', 'Jawaban tidak boleh kosong atau lebih dari 100 karakter, ya!');jawab();
   }
 }
