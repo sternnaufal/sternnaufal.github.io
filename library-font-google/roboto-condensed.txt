@@ -1,0 +1,12 @@
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+
+//HTML
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed" rel="stylesheet">
+
+//CSS
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+</style>
