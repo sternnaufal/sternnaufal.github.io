@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakurapai - Case Study</title>
+  <meta name="description" content="Portfolio Naufal Rakha Putra, Web Developer dengan spesialisasi desain minimalis dan proyek open-source.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>Sakurapai 📺</h1>
+    <p>CMS Video untuk konten anime dengan sistem premium & monetisasi.</p>
+  </header>
+
+  <main class="case-study">
+    <section class="card">
+      <h2>Deskripsi</h2>
+      <p>
+        <strong>Sakurapai</strong> adalah sebuah <em>Content Management System (CMS)</em> 
+        video yang berfokus pada konten anime. Proyek ini dikembangkan untuk 
+        mempermudah pengelolaan video, interaksi pengguna, serta monetisasi 
+        melalui sistem langganan dan iklan.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Fitur Utama</h2>
+      <ul>
+        <li>🔑 Autentikasi pengguna (registrasi & login).</li>
+        <li>🎥 Upload & tonton video dengan dukungan thumbnail.</li>
+        <li>👍 Interaksi pengguna (like, dislike, komentar).</li>
+        <li>🏷️ Pengelompokan video berdasarkan kategori anime.</li>
+        <li>🌟 Sistem role-based:
+          <ul>
+            <li><strong>Member biasa</strong>: nonton gratis dengan iklan.</li>
+            <li><strong>VIP/Premium</strong>: tanpa iklan, akses konten premium, tombol unduh video.</li>
+          </ul>
+        </li>
+        <li>📊 Statistik video populer (berdasarkan like & views).</li>
+        <li>💳 Monetisasi:
+          <ul>
+            <li>Langganan premium via <strong>Trakteer</strong> (Rp.5.000/bulan, 6 bulan, tahunan).</li>
+            <li>Iklan dari <strong>Infolinks, Adsterra, AdClickMedia, PopAds</strong>.</li>
+            <li>Donasi.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Teknologi yang Digunakan</h2>
+      <ul>
+        <li><strong>Frontend</strong>: HTML, CSS, JavaScript</li>
+        <li><strong>Backend</strong>: PHP (Native)</li>
+        <li><strong>Database</strong>: MySQL</li>
+        <li><strong>Styling</strong>: Bootstrap</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Struktur Proyek</h2>
+<pre><code>sakurapai/
+│── admin/          # Panel admin
+│── assets/         # File CSS, JS, images
+│── includes/       # File helper, config
+│── uploads/        # Video & thumbnail
+│── index.php       # Halaman utama
+│── category.php    # Halaman kategori
+│── title.php       # Halaman judul anime
+│── 403.php         # Halaman akses ditolak
+│── 404.php         # Halaman tidak ditemukan
+</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>Cara Menjalankan</h2>
+      <ol>
+        <li>Clone repositori:
+          <pre><code>git clone https://github.com/sternnaufal/sakurapai.git</code></pre>
+        </li>
+        <li>Import database dari file <code>sakurapai.sql</code> ke MySQL.</li>
+        <li>Atur koneksi database di <code>includes/config.php</code>.</li>
+        <li>Jalankan di XAMPP / Laragon / LAMP, lalu buka:
+          <pre><code>http://localhost/sakurapai</code></pre>
+        </li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Rencana Pengembangan</h2>
+      <ul>
+        <li>[ ] Dark mode UI</li>
+        <li>[ ] Fitur pencarian (opsional)</li>
+        <li>[ ] Optimasi caching untuk performa</li>
+        <li>[ ] Support multi-bahasa</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Author</h2>
+      <p>
+        Proyek ini dibuat oleh <strong>Naufal Rakha Putra</strong>  
+        <br>🌍 SMKN 1 Bukittinggi  
+        <br>💻 Web Programmer | React.js Enthusiast
+      </p>
+    </section>
+
+    <div class="back-link">
+      <a href="../index.html">⬅ Kembali ke Portofolio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Naufal Rakha Putra</p>
+  </footer>
+</body>
+</html>
