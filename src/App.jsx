@@ -9,6 +9,7 @@ import Projects from './components/Projects'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import LoadingScreen from './components/LoadingScreen'
 
 // Main Page Component
 function Home() {
@@ -24,6 +25,7 @@ function Home() {
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
@@ -43,8 +45,9 @@ function App() {
 
   return (
     <HelmetProvider>
+      {loading && <LoadingScreen onFinished={() => setLoading(false)} />}
       <Router>
-        <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'dark bg-black' : 'bg-gray-50'}`}>
+        <div className={`min-h-screen transition-colors duration-300 ${loading ? 'hidden' : ''} ${darkMode ? 'dark bg-black' : 'bg-gray-50'}`}>
           <Helmet>
             <title>Naufal Rakha Putra | Web Developer</title>
             <meta name="description" content="Portfolio Naufal Rakha Putra — Web Developer & Code Aesthete dengan spesialisasi desain minimalis & open-source." />
