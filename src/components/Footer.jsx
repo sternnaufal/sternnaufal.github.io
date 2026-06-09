@@ -31,8 +31,8 @@ function Footer() {
             {[ 
               { icon: <FaInstagram />, url: "https://instagram.com/stern_naufal2712", name: "Instagram" },
               { icon: <FaGithub />, url: "https://github.com/sternnaufal", name: "Github" },
-              { icon: <FaLinkedin />, url: "https://linkedin.com/naufal-rakha-putra-a0130332a", name: "Linkedin" },
-              { icon: <FaTwitter />, url: "https://twitter.com/@okebeyos", name: "Twitter" },
+              { icon: <FaLinkedin />, url: "https://linkedin.com/in/naufal-rakha-putra-a0130332a", name: "Linkedin" },
+              { icon: <FaTwitter />, url: "https://x.com/okebeyos", name: "X (Twitter)" },
               { icon: <FaYoutube />, url: "https://youtube.com/@naufaltechtainment1", name: "Youtube" }
             ].map((social, i) => (
               <a 

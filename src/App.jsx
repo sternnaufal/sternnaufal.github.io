@@ -49,10 +49,10 @@ function App() {
       <Router>
         <div className={`min-h-screen transition-colors duration-300 ${loading ? 'hidden' : ''} ${darkMode ? 'dark bg-black' : 'bg-gray-50'}`}>
           <Helmet>
-            <title>Naufal Rakha Putra | Web Developer</title>
-            <meta name="description" content="Portfolio Naufal Rakha Putra — Web Developer & Code Aesthete dengan spesialisasi desain minimalis & open-source." />
-            <meta property="og:title" content="Naufal Rakha Putra" />
-            <meta property="og:description" content="Portfolio Naufal Rakha Putra — Web Developer & Code Aesthete." />
+            <title>Naufal Rakha Putra | Full-Stack Developer & Game Dev</title>
+            <meta name="description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio), Cyber Security enthusiast. IPK 4.00 di Universitas Brawijaya." />
+            <meta property="og:title" content="Naufal Rakha Putra | Full-Stack Developer" />
+            <meta property="og:description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio)." />
             <meta property="og:image" content="https://naufalrakha.my.id/ku.webp" />
             <meta property="og:url" content="https://naufalrakha.my.id/" />
             <meta name="twitter:card" content="summary_large_image" />

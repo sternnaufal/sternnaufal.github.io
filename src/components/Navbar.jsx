@@ -17,8 +17,8 @@ function Navbar({ darkMode, toggleDarkMode }) {
             </button>
             <div className="absolute hidden group-hover:block bg-black text-yellow-400 min-w-40 py-2 shadow-neo border-3 border-black">
               <a href="https://instagram.com/stern_naufal2712" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Instagram</a>
-              <a href="https://twitter.com/@okebeyos" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Twitter</a>
-              <a href="https://linkedin.com/naufal-rakha-putra-a0130332a" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Linkedin</a>
+              <a href="https://x.com/okebeyos" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">X (Twitter)</a>
+              <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Linkedin</a>
             </div>
           </div>
           
@@ -72,7 +72,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
           <div className="flex flex-col gap-2 font-bold">
              <p className="text-xs uppercase opacity-60 mt-2">Socials</p>
              <a href="https://instagram.com/stern_naufal2712" target="_blank" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Instagram</a>
-             <a href="https://linkedin.com/naufal-rakha-putra-a0130332a" target="_blank" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Linkedin</a>
+              <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Linkedin</a>
           </div>
         </nav>
       )}

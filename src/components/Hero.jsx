@@ -22,8 +22,8 @@ function Hero() {
             transition={{ delay: 0.2 }}
           >
             <h2 className="font-space text-5xl md:text-7xl font-bold mb-6 text-black dark:text-yellow-400 leading-none uppercase -rotate-1">
-              WEB DEVELOPER.<br/>
-              <span className="bg-yellow-400 dark:bg-pink-500 px-3 border-4 border-black shadow-neo-small rotate-2 inline-block">CODE AESTHETE.</span>
+              FULL-STACK DEV.<br/>
+              <span className="bg-yellow-400 dark:bg-pink-500 px-3 border-4 border-black shadow-neo-small rotate-2 inline-block">GAME & AI BUILDER.</span>
             </h2>
           </motion.div>
           
@@ -33,7 +33,7 @@ function Hero() {
             transition={{ delay: 0.4 }}
             className="font-mono italic text-xl md:text-2xl mb-8 text-black dark:text-gray-300 max-w-2xl bg-white/10 dark:bg-black/20 p-4 border-l-8 border-black shadow-neo-mini backdrop-blur-sm"
           >
-            "Membangun web seperti merangkai puisi dengan kode." 
+            "Kode bukan hanya soal fungsi, tapi juga cerita." 
             <span className="block mt-2 text-sm not-italic font-bold text-gray-800 dark:text-gray-400 opacity-70"> - Naufal Rakha Putra</span>
           </motion.p>
           
@@ -42,7 +42,7 @@ function Hero() {
               View My Work
             </a>
             <a href="/CV_Naufal Rakha Putra.pdf" target="_blank" className="bg-white text-black font-bold px-8 py-3 border-4 border-black shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all hover:bg-black hover:text-white">
-              CV + Porto
+              CV → Juni 2026
             </a>
           </div>
         </div>

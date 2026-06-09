@@ -56,7 +56,7 @@ function About() {
            <div className="lg:w-1/2">
              <SectionHeading colorClass="yellow-400">About Me</SectionHeading>
              <p className="font-mono text-xl leading-relaxed mb-8 dark:text-gray-200 bg-white dark:bg-gray-800 p-8 border-4 border-black shadow-neo-large relative z-10">
-               Saya adalah mahasiswa D3 Teknologi Informasi di <span className="bg-pink-500 px-1 border-2 border-black">Universitas Brawijaya</span> dengan latar belakang Teknik Komputer & Jaringan. Passion saya ada di jembatan antara kode yang efisien dan desain yang estetis.
+                Mahasiswa D3 Teknologi Informasi di <span className="bg-pink-500 px-1 border-2 border-black">Universitas Brawijaya</span> dengan <span className="bg-yellow-400 px-1 border-2 border-black font-bold">IPK Sempurna 4.00</span>. Full-Stack Developer, Game Developer (Senin Terus Studio), dan Cyber Security enthusiast. Berpengalaman di AI integration, server internal kampus, dan jaringan fiber optik.
              </p>
              
              <div className="mt-12 h-1 w-full bg-black shadow-neo-mini mb-12" />
@@ -83,24 +83,24 @@ function About() {
                  <h4 className="font-space font-black text-3xl uppercase mb-8 flex items-center gap-4">
                    <span className="w-12 h-1 bg-black" /> Stats
                  </h4>
-                 <div className="grid grid-cols-2 gap-8 font-mono">
-                   <div>
-                     <p className="text-4xl font-black text-pink-500">2+</p>
-                     <p className="text-sm dark:text-gray-400">Tahun Pengalaman</p>
-                   </div>
-                   <div>
-                     <p className="text-4xl font-black text-blue-500">20+</p>
-                     <p className="text-sm dark:text-gray-400">Proyek Selesai</p>
-                   </div>
-                   <div>
-                     <p className="text-4xl font-black text-yellow-500">10+</p>
-                     <p className="text-sm dark:text-gray-400">Sertifikat IT</p>
-                   </div>
-                   <div>
-                     <p className="text-4xl font-black text-green-500">5+</p>
-                     <p className="text-sm dark:text-gray-400">Organisasi</p>
-                   </div>
-                 </div>
+                  <div className="grid grid-cols-2 gap-8 font-mono">
+                    <div>
+                      <p className="text-4xl font-black text-pink-500">4.00</p>
+                      <p className="text-sm dark:text-gray-400">IPK Sempurna</p>
+                    </div>
+                    <div>
+                      <p className="text-4xl font-black text-blue-500">25+</p>
+                      <p className="text-sm dark:text-gray-400">Proyek Selesai</p>
+                    </div>
+                    <div>
+                      <p className="text-4xl font-black text-yellow-500">11</p>
+                      <p className="text-sm dark:text-gray-400">Sertifikat IT</p>
+                    </div>
+                    <div>
+                      <p className="text-4xl font-black text-green-500">3K+</p>
+                      <p className="text-sm dark:text-gray-400">Audience Views</p>
+                    </div>
+                  </div>
                </div>
              </div>
            </div>

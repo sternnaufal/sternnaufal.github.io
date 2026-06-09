@@ -1,12 +1,12 @@
 export const portfolioData = {
   name: "Naufal Rakha Putra",
-  tagline: '"Membangun web seperti merangkai puisi dengan kode."',
+  tagline: '"Kode bukan hanya soal fungsi, tapi juga cerita."',
   heroTitle: "WEB DEVELOPER. CODE AESTHETE.",
   
   socialLinks: [
     { name: "Instagram", url: "https://instagram.com/stern_naufal2712", icon: "instagram" },
     { name: "Twitter", url: "https://twitter.com/@okebeyos", icon: "twitter" },
-    { name: "Linkedin", url: "https://linkedin.com/naufal-rakha-putra-a0130332a", icon: "linkedin" },
+    { name: "Linkedin", url: "https://linkedin.com/in/naufal-rakha-putra-a0130332a", icon: "linkedin" },
   ],
   
   mySites: [
@@ -21,66 +21,64 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
+      title: "CareFund",
+      description: "Platform <strong>crowdfunding medis</strong> full-stack (React.js + Node.js/Express). Kolaborasi tim dengan dosen sebagai stakeholder utama. Fitur campaign management, donasi, dan auth.",
+      github: "https://github.com/orgs/group4pbl-carefund/repositories",
+      live: "https://frontend-wine-kappa-76.vercel.app/"
+    },
+    {
+      id: 2,
+      title: "LG-Exambot",
+      description: "Sistem <strong>generator soal ujian otomatis</strong> berbasis AI bernilai komersial Rp2.500.000. Multi-AI fallback: Gemini API, DeepSeek, Groq. Laravel + AI Integration.",
+      github: "https://github.com/sternnaufal/LG-exambot"
+    },
+    {
+      id: 3,
+      title: "GreenEvent",
+      description: "<strong>GreenEvent</strong> adalah platform manajemen acara lingkungan hidup. Produk andalan kompetisi Creanomic Vokasi UB 2025. Laravel + MySQL.",
+      github: "https://github.com/sternnaufal/greenEvent",
+      live: "https://greenevent.infinityfree.me"
+    },
+    {
+      id: 4,
+      title: "Telegram Bot Reminder",
+      description: "Bot <strong>pengingat jadwal otomatis</strong> terintegrasi Google Calendar API. Skrip Python untuk manajemen waktu personal via Telegram.",
+      github: "https://github.com/sternnaufal/bot-calendar-python-telegram"
+    },
+    {
+      id: 5,
+      title: "Flag Quiz Master & Sortiverse",
+      description: "Dua <strong>game edukasi native Android</strong> di Google Play Store. Dikembangkan dengan Kotlin. 60+ unduhan pada fase awal rilis.",
+      github: "https://github.com/sternnaufal"
+    },
+    {
+      id: 6,
       title: "Alphascript",
-      description: "Alphascript adalah <strong>JavaScript library ringan</strong> yang saya kembangkan untuk generasi Alpha. Fokus pada kesederhanaan syntax, fun & modern, sehingga cocok dipakai pemula maupun untuk eksperimen UI kecil.",
+      description: "<strong>JavaScript library ringan</strong> untuk generasi Alpha. Fokus pada kesederhanaan syntax, fun & modern.",
       github: "https://github.com/sternnaufal/alphascript",
       caseStudy: "/projects/alphascript.html",
     },
     {
-      id: 2,
+      id: 7,
       title: "Keepsimple",
-      description: "Keepsimple adalah <strong>CSS framework monochrome buatan sendiri</strong>. Tujuannya untuk menghadirkan desain minimalis, fokus ke readability, dan sangat ringan dipakai untuk proyek kecil.",
+      description: "<strong>CSS framework monochrome</strong> untuk desain minimalis, fokus ke readability, dan sangat ringan.",
       github: "https://github.com/sternnaufal/keepsimple",
       caseStudy: "/projects/keepsimple.html",
     },
     {
-      id: 3,
-      title: "Project C++",
-      description: "Kumpulan program <strong>latihan dasar C++</strong> yang saya buat untuk memahami logika, algoritma, dan struktur data. Termasuk array, linked list, dan OOP sederhana.",
-      github: "https://github.com/sternnaufal/ProjectCPlusPlus",
-      caseStudy: "/projects/cpp.html",
-    },
-    {
-      id: 4,
-      title: "Web Ulang Tahun",
-      description: "Website interaktif dan playful yang dibuat untuk merayakan ulang tahun teman. Menggunakan animasi CSS + JavaScript untuk pengalaman yang menyenangkan.",
-      github: "https://github.com/sternnaufal/projekulangtahun",
-      caseStudy: "/projects/ulangtahun.html",
-    },
-    {
-      id: 5,
+      id: 8,
       title: "Sakurapai (CMS Video)",
-      description: "<strong>CMS video streaming</strong> dengan fitur login, premium, komentar, dan donasi. Dibangun dengan PHP Native, fokus pada autentikasi aman dan manajemen file besar.",
+      description: "<strong>CMS video streaming</strong> dengan fitur login, premium, komentar, dan donasi. Dibangun dengan PHP Native.",
       github: "https://github.com/sternnaufal/cmsvideo",
       caseStudy: "/projects/sakurapai.html",
-    },
-    {
-      id: 6,
-      title: "Website Duta Anak Kota Bukittinggi 2025",
-      description: "Website resmi untuk profil, kegiatan, dan publikasi Duta Anak Kota Bukittinggi. Dibangun dengan <strong>Bootstrap</strong> untuk tampilan responsif dan aksesibilitas tinggi.",
-      github: "https://github.com/sternnaufal/dutaanakfordabkt2025",
-    },
-    {
-      id: 7,
-      title: "Catatanku (Digital Note)",
-      description: "<strong>Catatanku (Catatan Kuliah) adalah digital note</strong> bagi kalian mahasiswa yang tidak ingin ribet dalam membuat catatan! Dibangun dengan PHP Native.",
-      live: "https://catatanku.naufalrakha.my.id",
-      github: "https://github.com/sternnaufal/catatanku",
-    },
-    {
-      id: 8,
-      title: "GreenEvent",
-      description: "<strong>GreenEvent</strong> adalah platform yang menghubungkan warga Malang dengan kegiatan lingkungan yang inspiratif dan berdampak nyata bagi alam sekitar.",
-      live: "https://greenevent.infinityfree.me",
-      github: "https://github.com/sternnaufal/greenEventNaufal",
     },
   ],
   
   about: {
     intro: [
-      "Perkenalkan, saya <strong>Naufal Rakha Putra</strong>, hanya seorang web developer. Saya fokus pada pembangunan antarmuka web yang sederhana, cepat, dan estetis.",
-      "Saya berpengalaman menggunakan <em>HTML, CSS, JavaScript, PHP</em> dalam membangun beragam proyek personal, dari CMS video hingga framework CSS pribadi.",
-      "Saya percaya bahwa desain yang baik dimulai dari struktur kode yang bersih dan niat yang jelas.",
+      "Perkenalkan, saya <strong>Naufal Rakha Putra</strong>, mahasiswa D3 Teknologi Informasi di Universitas Brawijaya dengan <strong>IPK Sempurna (4.00)</strong>. Saya adalah seorang <em>Full-Stack Developer, Game Developer, dan Network & Cyber Security</em> enthusiast.",
+      "Saya berpengalaman dalam ekosistem JavaScript modern (React.js, Node.js, Express), PHP (Laravel), serta integrasi model AI komersial (Gemini, DeepSeek, Groq API).",
+      "Tipe <em>generalist</em> yang berorientasi pada eksekusi produk nyata — end-to-end product delivery — dengan kemampuan problem-solving yang adaptif.",
     ],
     journey: [
       "Perjalanan saya sebagai developer bermula dari rasa penasaran kecil: bagaimana sebuah website bisa hidup hanya dari barisan kode? Dari situlah muncul dorongan untuk terus belajar, bereksperimen, dan menantang diri lewat proyek-proyek mandiri.",
@@ -90,19 +88,22 @@ export const portfolioData = {
   },
   
   skills: [
-    "Bootstrap", "Tailwind CSS", "React.js", "Next.js", 
-    "jQuery", "Vanilla JS", "MySQL", "PHP Native", 
-    "Cisco", "Mikrotik", "Linux Debian", "Cyber Security"
+    "React.js", "Next.js", "Vite", "Tailwind CSS", "Bootstrap",
+    "Node.js", "Express", "Laravel", "PHP",
+    "JavaScript (ES6+)", "Kotlin", "Python", "MySQL", "Firebase",
+    "Docker", "Git/GitHub", "Vercel", "Railway",
+    "Cisco", "MikroTik", "Linux Debian", "Cyber Security"
   ],
   
   education: [
     {
       institution: "Universitas Brawijaya",
-      degree: "D3 Teknologi Informasi",
+      degree: "D3 Teknologi Informasi — IPK 4.00/4.00",
       period: "2025 – sekarang",
       description: [
+        "IPK sempurna 4.00 (Ongoing Semester 2).",
         "Fokus pada <strong>pengembangan web, basis data, dan keamanan jaringan</strong>.",
-        "Aktif dalam <strong>komunitas developer kampus</strong> dan projek kolaboratif mahasiswa.",
+        "Aktif di <strong>BEM Vokasi (Kominfo), PSIK Vokasi, Provoks, dan GDGoC</strong>.",
       ],
     },
     {
@@ -111,69 +112,116 @@ export const portfolioData = {
       period: "2022 – 2025",
       description: [
         "Mendalami <strong>jaringan komputer, administrasi server, dan pemrograman dasar</strong>.",
-        "Mengikuti <strong>lomba IT tingkat pelajar</strong> serta membuat beberapa projek web pribadi.",
-        "Lulus dengan pengalaman praktik langsung di bidang jaringan dan web development.",
+        "Wakil Ketua OSIS, Ketua Math Club, Anggota English Club.",
+        "Mengikuti lomba IT tingkat pelajar serta membuat beberapa projek web pribadi.",
       ],
     },
   ],
   
   experience: [
     {
+      company: "Backend Developer (Staff Ahli) – BEM Vokasi UB",
+      description: [
+        "Merancang <strong>RESTful API dengan 25+ endpoints</strong> untuk User, Role, Permission, dan Menu menggunakan Laravel.",
+        "Mengembangkan sistem <strong>autentikasi Bearer Token</strong> dan otorisasi menu dinamis.",
+        "Berkolaborasi dengan tim Front-End untuk integrasi data <strong>real-time</strong>.",
+      ],
+    },
+    {
+      company: "Web Dev & Administrator – PSIK Vokasi UB",
+      description: [
+        "<strong>Maintenance, optimalisasi performa, dan backup</strong> berkala server internal PSIK Vokasi UB.",
+        "<strong>Audit kode dan security review</strong> pada sistem administrasi web kampus.",
+      ],
+    },
+    {
+      company: "Lead Game Developer & Founder – Senin Terus Studio",
+      description: [
+        "Menginisiasi studio game independen — <strong>3.070+ total views</strong> game web visual novel di itch.io.",
+        "Merilis 2 game edukasi native Android di Google Play Store (<strong>60+ unduhan awal</strong>) pakai Kotlin.",
+        "Mengelola publikasi dari GitHub, Google Play Console, hingga Vercel.",
+      ],
+    },
+    {
       company: "Helpdesk Assurance – PT. Telkom Akses",
       description: [
-        "Melakukan <strong>monitoring teknisi lapangan</strong> melalui sistem tiket dan aplikasi internal.",
-        "<strong>Approve dan validasi</strong> tiket gangguan yang masuk sebelum diteruskan ke teknisi.",
-        "Melakukan <strong>survei pemasangan baru</strong> melalui aplikasi serta mengoordinasikan hasilnya dengan tim lapangan.",
-        "Mendukung kegiatan <strong>assurance</strong> untuk memastikan pekerjaan teknisi sesuai standar layanan.",
+        "Memproses <strong>30–50 tiket gangguan jaringan</strong> per hari dengan akurasi approval 98%.",
+        "Validasi, analisis teknis awal, dan approval tiket sebelum diteruskan ke teknisi lapangan.",
       ],
     },
     {
       company: "Teknisi Fiber Optik – PT. Golden Fiber",
       description: [
-        "Melakukan <strong>instalasi jaringan fiber optic</strong> ke rumah dan kantor pelanggan.",
-        "Menangani perawatan dan perbaikan koneksi (splicing, OTDR test, penggantian kabel).",
-        "Berkoordinasi dengan tim support untuk memastikan layanan pelanggan berjalan stabil.",
+        "Instalasi jaringan <strong>FTTH</strong> untuk segmen perumahan dan perkantoran baru.",
+        "<strong>Splicing, OTDR test</strong>, dan pemeliharaan preventif/korektif — 100% success rate.",
       ],
     },
   ],
   
   organizations: [
     {
-      name: "Provoks (Programmer Vokasi)",
-      position: "Anggota",
-      period: "2025 – sekarang",
+      name: "BEM Vokasi UB (Kementerian Kominfo)",
+      position: "Staff Ahli Backend Developer",
+      period: "2026 – sekarang",
       description: [
-        "Berkolaborasi dalam pengembangan proyek teknologi berbasis kampus.",
-        "Mengikuti diskusi dan workshop seputar pemrograman dan solusi IT.",
+        "Mengembangkan core system website resmi organisasi BEM.",
+        "Mengimplementasikan RESTful API dan sistem autentikasi.",
       ],
     },
     {
-      name: "GDGoC (Google Developer Goes on Campus)",
-      position: "Anggota",
+      name: "PSIK Vokasi Universitas Brawijaya",
+      position: "Web Development & Administrator",
+      period: "2026 – sekarang",
+      description: [
+        "Mengelola maintenance dan optimalisasi server internal.",
+        "Melakukan audit keamanan pada sistem web kampus.",
+      ],
+    },
+    {
+      name: "Provoks (Programmer Vokasi)",
+      position: "Scout Officer",
+      period: "2026 – sekarang",
+      description: [
+        "Berkolaborasi dalam pengembangan proyek teknologi berbasis kampus.",
+      ],
+    },
+    {
+      name: "GDGoC Universitas Brawijaya",
+      position: "Member",
       period: "2025 – sekarang",
       description: [
         "Mengikuti kegiatan edukasi developer berbasis teknologi Google.",
-        "Belajar tentang best practices pengembangan aplikasi modern.",
+      ],
+    },
+    {
+      name: "Senin Terus Studio",
+      position: "Lead Game Developer & Founder",
+      period: "2024 – sekarang",
+      description: [
+        "Menginisiasi dan membangun studio game independen.",
+        "Memproduksi dan merilis game web & mobile (Android).",
       ],
     },
     {
       name: "Forum Anak Kota Bukittinggi",
       position: "Divisi Database",
       period: "2023 – 2025",
-      description: [],
+      description: [
+        "Mengelola data entry dan pengarsipan digital organisasi anak tingkat kota.",
+      ],
     },
     {
       name: "OSIS SMKN 1 Bukittinggi",
-      position: "Sekretaris 1 (2022–2024), Wakil Ketua (2024–2025)",
+      position: "Wakil Ketua (2024–2025), Sekretaris 1 (2022–2024)",
+      period: "2022 – 2025",
       description: [
-        "Sebagai Sekretaris: menyusun <strong>administrasi & laporan kegiatan OSIS</strong> secara terstruktur.",
-        "Sebagai Wakil Ketua: mengkoordinasi program kerja OSIS dan memimpin lebih dari 10 divisi.",
-        "Berhasil menyelenggarakan <strong>event sekolah skala besar</strong> dengan partisipasi 500+ siswa.",
+        "Menyusun administrasi & laporan kegiatan OSIS secara terstruktur.",
+        "Mengkoordinasi program kerja dan memimpin lebih dari 10 divisi.",
       ],
     },
     {
       name: "Math Club SMKN 1 Bukittinggi",
-      position: "Anggota",
+      position: "Ketua",
       period: "2023 – 2025",
       description: [],
     },
@@ -186,24 +234,27 @@ export const portfolioData = {
   ],
   
   achievements: [
+    { title: "Kompetitor", event: "Zero Day National CTF 2026 (Digital Social Group)" },
+    { title: "Kompetitor", event: "picoCTF 2026 — Carnegie Mellon University" },
+    { title: "Finalis", event: "MTQ UB XIX — Cabang Desain Aplikasi Al-Qur'an (2026)" },
     { title: "Top 5", event: "Kihajar STEM Wilayah Sumatera Barat (2023)" },
     { title: "Juara 2", event: "Kihajar STEM Wilayah Sumatera Barat (2024)" },
     { title: "Finalis Nasional", event: "4th Eduverse Math Competition (2023)" },
     { title: "Finalis Nasional", event: "5th Eduverse Math Competition (2024)" },
-    { title: "Peserta", event: "Casio Math Competition (2023)" },
   ],
   
   certificates: [
-    { title: "Cloud Computing", provider: "Dicoding x AWS", image: "/images/aws.webp" },
-    { title: "Pemrograman Python", provider: "Dicoding x Google Developers", image: "/images/python.webp" },
+    { title: "Web Programmer (React JS)", provider: "Telkom Indonesia", image: "/images/telkom.webp" },
+    { title: "Junior Web Programmer", provider: "BNSP", image: "/images/web.webp" },
+    { title: "Cloud Computing Fundamentals", provider: "AWS / Dicoding", image: "/images/aws.webp" },
+    { title: "Introduction to Cybersecurity", provider: "Cisco", image: "/images/cisco.webp" },
+    { title: "IT & Computer Networking Support", provider: "LSP", image: "/images/it.webp" },
+    { title: "Python Developer", provider: "Google / Dicoding", image: "/images/python.webp" },
     { title: "Logika Pemrograman", provider: "Dicoding Academy", image: "/images/pemrograman.webp" },
     { title: "HTML", provider: "Sololearn", image: "/images/HTML_certificate.webp" },
     { title: "PHP", provider: "Sololearn", image: "/images/PHP_certificate.webp" },
     { title: "Responsive Web Design", provider: "Sololearn", image: "/images/Responsive Web Design_certificate.webp" },
     { title: "Python 101", provider: "CognitiveClass x IBM", image: "/images/pyibm.webp" },
-    { title: "Junior Web Programmer", provider: "BNSP", image: "/images/web.webp" },
-    { title: "Web Programmer - React JS", provider: "Telkom Indonesia", image: "/images/telkom.webp" },
-    { title: "IT & Computer Networking Support", provider: "LSP", image: "/images/it.webp" },
   ],
   
   socials: [
