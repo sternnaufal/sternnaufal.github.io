@@ -29,6 +29,10 @@ a, button, input, textarea, [role="button"], [tabindex]:not([tabindex="-1"]) {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Ccircle cx='14' cy='14' r='12' fill='%23ec4899' stroke='%23fff' stroke-width='3'/%3E%3Ccircle cx='14' cy='14' r='5' fill='%23fff'/%3E%3C/svg%3E") 14 14, pointer;
 }
 
+.dark .dark-text-force {
+  color: #fff;
+}
+
 @keyframes slide-in {
   from { transform: translateX(100%); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }

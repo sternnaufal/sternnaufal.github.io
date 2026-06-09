@@ -70,7 +70,7 @@ function About() {
   const [openSkillCat, setOpenSkillCat] = useState(skillCategories[0]?.name || null)
 
   return (
-    <section id="about" className="about py-24 bg-gray-50 dark:bg-black border-b-5 border-black px-6 md:px-12 overflow-hidden">
+    <section id="about" className="about py-24 bg-gray-50 dark:bg-black dark:text-white border-b-5 border-black px-6 md:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto">
 
         {/* About Me + Analytics Counters */}

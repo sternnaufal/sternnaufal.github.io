@@ -109,7 +109,7 @@ function Projects() {
 
                 <div className="mt-auto flex flex-wrap gap-3 pt-4">
                   {project.caseStudy ? (
-                    <a href={project.caseStudy} className="bg-yellow-400 dark:bg-pink-500 text-black font-bold px-4 py-2 border-3 border-black text-sm uppercase shadow-neo-mini hover:-translate-y-1 hover:shadow-neo transition-all">
+                    <a href={project.caseStudy} className="bg-yellow-400 dark:bg-pink-500 text-black dark:text-white font-bold px-4 py-2 border-3 border-black text-sm uppercase shadow-neo-mini hover:-translate-y-1 hover:shadow-neo transition-all">
                       Case Study
                     </a>
                   ) : null}

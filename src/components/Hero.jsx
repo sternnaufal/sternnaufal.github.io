@@ -48,7 +48,7 @@ function Hero() {
                 const c = parseInt(localStorage.getItem('cv_downloads') || '0') + 1
                 localStorage.setItem('cv_downloads', c)
               }}
-              className="bg-white text-black font-bold px-8 py-3 border-4 border-black shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all hover:bg-black hover:text-white"
+              className="bg-white dark:bg-gray-800 text-black dark:text-white font-bold px-8 py-3 border-4 border-black shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
             >
               CV → Juni 2026
             </a>

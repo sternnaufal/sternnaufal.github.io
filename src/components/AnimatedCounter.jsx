@@ -42,11 +42,11 @@ export default function AnimatedCounter({ value, suffix = '', label, icon, color
     >
       <div className="absolute inset-0 bg-black translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
       <div className={`relative z-10 ${color || 'bg-yellow-400'} border-4 border-black p-5 shadow-neo-mini`}>
-        <p className="text-3xl md:text-4xl font-black text-black">{icon}</p>
-        <p className="font-space text-3xl md:text-4xl font-black text-black mt-2">
+        <p className="text-3xl md:text-4xl font-black text-black dark:text-white">{icon}</p>
+        <p className="font-space text-3xl md:text-4xl font-black text-black dark:text-white mt-2">
           {displayValue}{suffix}
         </p>
-        <p className="font-mono text-xs font-bold text-black/70 mt-1 uppercase tracking-wider">{label}</p>
+        <p className="font-mono text-xs font-bold text-black/70 dark:text-white/70 mt-1 uppercase tracking-wider">{label}</p>
       </div>
     </motion.div>
   )

@@ -38,7 +38,7 @@ function Contact() {
 
             <div className="space-y-8 font-mono text-white">
               <div className="flex items-center gap-6 group">
-                <div className="w-16 h-16 bg-yellow-400 border-4 border-black flex items-center justify-center text-black text-2xl shadow-neo-mini group-hover:rotate-12 transition-transform">
+                <div className="w-16 h-16 bg-yellow-400 border-4 border-black flex items-center justify-center text-black dark:text-black text-2xl shadow-neo-mini group-hover:rotate-12 transition-transform">
                   <FaEnvelope />
                 </div>
                 <div>
