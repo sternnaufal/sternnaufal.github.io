@@ -218,3 +218,46 @@ export const certificates = [
   { title: 'Python Developer', provider: 'Google / Dicoding', image: '/images/python.webp' },
   { title: 'Pemrograman Python', provider: 'Dicoding', image: '/images/pyibm.webp' }
 ]
+
+export const studio = {
+  name: 'Senin Terus Studio',
+  url: 'https://seninterusstudio.vercel.app',
+  description: 'Game indie studio yang berfokus pada pengalaman naratif dan edukasi interaktif berbasis web & Android.'
+}
+
+export const games = [
+  {
+    title: 'Flag Quiz Master!',
+    description: 'Test your knowledge of world flags in this fun and educational quiz game! Tersedia di itch.io dan Google Play.',
+    platform: 'Android + Web',
+    links: [
+      { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps' },
+      { label: 'itch.io', url: 'https://seninterus.itch.io/flag-quiz-master' },
+    ],
+    icon: '🏴',
+    stats: 'Dirilis Maret 2026',
+    tag: 'Puzzle'
+  },
+  {
+    title: 'Sortiverse',
+    description: 'A fun sorting puzzle game. Tersedia di Google Play Store.',
+    platform: 'Android',
+    links: [
+      { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.seninterus.sortiverse' },
+    ],
+    icon: '🧩',
+    stats: 'Dirilis Mei 2026',
+    tag: 'Puzzle'
+  },
+  {
+    title: '30 Days: Tsundere Girl',
+    description: 'Visual novel where you meet a tsundere girl over 30 days. Free version available!',
+    platform: 'Web',
+    links: [
+      { label: 'itch.io', url: 'https://seninterus.itch.io/30-days-meet-tsundere-girl-free-version' },
+    ],
+    icon: '💕',
+    stats: 'Dirilis Juni 2023',
+    tag: 'Visual Novel'
+  }
+]

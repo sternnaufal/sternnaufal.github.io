@@ -7,6 +7,7 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
   const navLinks = [
     { href: '#about', label: 'About' },
     { href: '#projects', label: 'Projects' },
+    { href: '#games', label: 'Games' },
     { href: '#contact', label: 'Contact' },
   ]
 
@@ -37,6 +38,7 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
               <a href="https://webapps.naufalrakha.my.id" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Webapps</a>
               <a href="https://blog.naufalrakha.my.id" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Blog</a>
               <a href="https://story.naufalrakha.my.id" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Cerita</a>
+              <a href="https://seninterusstudio.vercel.app" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Senin Terus Studio 🎮</a>
             </div>
           </div>
           

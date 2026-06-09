@@ -6,6 +6,7 @@ import ScrollProgressBar from './components/ScrollProgressBar'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
+import Games from './components/Games'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -16,6 +17,7 @@ function Home() {
     <main className="min-h-screen">
       <Hero />
       <Projects />
+      <Games />
       <About />
       <Contact />
     </main>

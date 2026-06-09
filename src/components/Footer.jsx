@@ -48,6 +48,7 @@ function Footer() {
           <div className="flex flex-wrap justify-center gap-6 text-sm uppercase font-black tracking-widest bg-white text-black p-4 border-4 border-black shadow-neo-mini rotate-1">
              <a href="#about" className="hover:text-pink-500 transition-colors">About</a>
              <a href="#projects" className="hover:text-pink-500 transition-colors">Projects</a>
+             <a href="#games" className="hover:text-pink-500 transition-colors">Games</a>
              <a href="#contact" className="hover:text-pink-500 transition-colors">Contact</a>
              <button onClick={scrollToTop} className="flex items-center gap-2 border-l-2 border-black pl-4 hover:text-blue-500 transition-colors">
                Top <FaArrowUp />
