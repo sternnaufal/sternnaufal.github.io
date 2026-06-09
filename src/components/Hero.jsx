@@ -41,7 +41,15 @@ function Hero() {
             <a href="#projects" className="bg-black text-pink-500 font-bold px-8 py-3 border-4 border-black shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all hover:bg-white hover:text-black">
               View My Work
             </a>
-            <a href="/CV_Naufal Rakha Putra.pdf" target="_blank" className="bg-white text-black font-bold px-8 py-3 border-4 border-black shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all hover:bg-black hover:text-white">
+            <a
+              href="/CV_Naufal Rakha Putra.pdf"
+              target="_blank"
+              onClick={() => {
+                const c = parseInt(localStorage.getItem('cv_downloads') || '0') + 1
+                localStorage.setItem('cv_downloads', c)
+              }}
+              className="bg-white text-black font-bold px-8 py-3 border-4 border-black shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all hover:bg-black hover:text-white"
+            >
               CV → Juni 2026
             </a>
           </div>
