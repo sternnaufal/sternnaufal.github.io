@@ -64,7 +64,7 @@ function Hero() {
           <div className="absolute inset-0 bg-yellow-400 translate-x-4 translate-y-4 border-4 border-black z-0 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform" />
           <div className="relative z-10 border-8 border-black p-2 bg-white shadow-neo">
             <LazyLoadImage 
-              src="/ku.webp" 
+              src="/ku.png" 
               alt="Foto Naufal Rakha Putra" 
               width={280}
               height={380}

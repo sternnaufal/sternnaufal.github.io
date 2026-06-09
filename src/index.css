@@ -33,6 +33,14 @@ html.dark {
   color: #fff;
 }
 
+html.dark .text-black:not([class*="dark:text"]) {
+  color: #fff;
+}
+
+html.dark [class*="text-black/"]:not([class*="dark:text"]) {
+  color: rgba(255,255,255,var(--tw-text-opacity,1));
+}
+
 @keyframes slide-in {
   from { transform: translateX(100%); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }

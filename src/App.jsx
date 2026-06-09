@@ -69,7 +69,7 @@ function App() {
             <meta name="description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio), Cyber Security enthusiast." />
             <meta property="og:title" content="Naufal Rakha Putra | Full-Stack Developer" />
             <meta property="og:description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio)." />
-            <meta property="og:image" content="https://naufalrakha.my.id/ku.webp" />
+            <meta property="og:image" content="https://naufalrakha.my.id/ku.png" />
             <meta property="og:url" content="https://naufalrakha.my.id/" />
             <meta name="twitter:card" content="summary_large_image" />
             <link rel="canonical" href="https://naufalrakha.my.id/" />
@@ -79,7 +79,7 @@ function App() {
                 "@type": "Person",
                 "name": "Naufal Rakha Putra",
                 "url": "https://naufalrakha.my.id",
-                "image": "https://naufalrakha.my.id/ku.webp",
+                "image": "https://naufalrakha.my.id/ku.png",
                 "jobTitle": ["Full-Stack Developer", "Game Developer", "Lead Game Developer & Founder at Senin Terus Studio"],
                 "email": "naufalrakha2712@gmail.com",
                 "address": { "@type": "PostalAddress", "addressLocality": "Malang", "addressRegion": "Jawa Timur", "addressCountry": "Indonesia" },
