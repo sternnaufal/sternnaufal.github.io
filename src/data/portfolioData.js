@@ -221,7 +221,6 @@ export const certificates = [
   { title: 'Web Programmer (React JS)', provider: 'Telkom Indonesia', image: '/images/telkom.webp' },
   { title: 'Junior Web Programmer', provider: 'BNSP', image: '/images/web.webp' },
   { title: 'Cloud Computing Fundamentals', provider: 'AWS / Dicoding', image: '/images/aws.webp' },
-  { title: 'Introduction to Cybersecurity', provider: 'Cisco', image: '/images/cisco.webp' },
   { title: 'IT & Computer Networking Support', provider: 'LSP', image: '/images/it.webp' },
   { title: 'Python Developer', provider: 'Google / Dicoding', image: '/images/python.webp' },
   { title: 'Pemrograman Python', provider: 'Dicoding', image: '/images/pyibm.webp' }
