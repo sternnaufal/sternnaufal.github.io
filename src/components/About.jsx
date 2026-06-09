@@ -141,43 +141,42 @@ function About() {
           </div>
         </div>
 
-        {/* Timeline (Education & Experience) */}
-        <div className="grid lg:grid-cols-2 gap-20 mt-32">
-          <div>
-            <SectionHeading colorClass="blue-500 text-white">Pendidikan</SectionHeading>
-            <div className="border-l-4 border-black border-dashed py-4 relative">
-              {education.map((edu, i) => (
-                <Card
-                  key={i}
-                  title={edu.title}
-                  subtitle={edu.major}
-                  duration={edu.year}
-                  variant="blue"
-                >
-                  <p>{edu.description}</p>
-                </Card>
-              ))}
-            </div>
+        {/* Pendidikan */}
+        <div className="mt-32">
+          <SectionHeading colorClass="blue-500 text-white">Pendidikan</SectionHeading>
+          <div className="border-l-4 border-black border-dashed py-4 relative max-w-3xl">
+            {education.map((edu, i) => (
+              <Card
+                key={i}
+                title={edu.title}
+                subtitle={edu.major}
+                duration={edu.year}
+                variant="blue"
+              >
+                <p>{edu.description}</p>
+              </Card>
+            ))}
           </div>
+        </div>
 
-          <div>
-            <SectionHeading colorClass="pink-500">Pengalaman</SectionHeading>
-            <div className="border-l-4 border-black border-dashed py-4 relative">
-              {experience.map((exp, i) => (
-                <Card
-                  key={i}
-                  title={exp.title}
-                  duration="WORK"
-                  variant="pink"
-                >
-                  <ul className="list-disc ml-5 space-y-2">
-                    {exp.items.map((item, j) => (
-                      <li key={j}>{item}</li>
-                    ))}
-                  </ul>
-                </Card>
-              ))}
-            </div>
+        {/* Pengalaman */}
+        <div className="mt-32">
+          <SectionHeading colorClass="pink-500">Pengalaman</SectionHeading>
+          <div className="border-l-4 border-black border-dashed py-4 relative max-w-3xl">
+            {experience.map((exp, i) => (
+              <Card
+                key={i}
+                title={exp.title}
+                duration="WORK"
+                variant="pink"
+              >
+                <ul className="list-disc ml-5 space-y-2">
+                  {exp.items.map((item, j) => (
+                    <li key={j}>{item}</li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
           </div>
         </div>
 
