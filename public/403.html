@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>403 - Akses Ditolak | Naufal Rakha Putra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fde047;
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .box {
+      background: #fff;
+      border: 6px solid #000;
+      padding: 48px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 12px 12px 0 #000;
+      text-align: center;
+      position: relative;
+      rotate: 1deg;
+    }
+    .code {
+      font-size: 120px;
+      font-weight: 900;
+      color: #ef4444;
+      line-height: 1;
+      letter-spacing: -4px;
+      text-shadow: 4px 4px 0 #000;
+    }
+    .label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: #000;
+      color: #fff;
+      display: inline-block;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+      rotate: -2deg;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    p {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .btn {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 28px;
+      border: 4px solid #000;
+      box-shadow: 6px 6px 0 #000;
+      transition: all 0.15s ease;
+    }
+    .btn:hover {
+      translate: -2px -2px;
+      box-shadow: 8px 8px 0 #000;
+      background: #ef4444;
+    }
+    .deco {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      border: 4px solid #000;
+      rotate: -12deg;
+    }
+    .deco.tl { top: -20px; left: -20px; background: #facc15; }
+    .deco.br { bottom: -20px; right: -20px; background: #ec4899; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="deco tl"></div>
+    <div class="deco br"></div>
+    <div class="label">Error</div>
+    <div class="code">403</div>
+    <h1>Akses Ditolak!</h1>
+    <p>Lo gak punya izin buat buka halaman ini. Mungkin ini area terlarang.</p>
+    <a href="/" class="btn">Balik ke Beranda</a>
+  </div>
+</body>
+</html>

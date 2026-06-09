@@ -218,12 +218,12 @@ export const achievements = [
 ]
 
 export const certificates = [
-  { title: 'Web Programmer (React JS)', provider: 'Telkom Indonesia', image: '/images/telkom.webp' },
-  { title: 'Junior Web Programmer', provider: 'BNSP', image: '/images/web.webp' },
-  { title: 'Cloud Computing Fundamentals', provider: 'AWS / Dicoding', image: '/images/aws.webp' },
-  { title: 'IT & Computer Networking Support', provider: 'LSP', image: '/images/it.webp' },
-  { title: 'Python Developer', provider: 'Google / Dicoding', image: '/images/python.webp' },
-  { title: 'Pemrograman Python', provider: 'Dicoding', image: '/images/pyibm.webp' }
+  { title: 'Web Programmer (React JS)', provider: 'Telkom Indonesia', image: '/images/cert.svg' },
+  { title: 'Junior Web Programmer', provider: 'BNSP', image: '/images/cert.svg' },
+  { title: 'Cloud Computing Fundamentals', provider: 'AWS / Dicoding', image: '/images/cert.svg' },
+  { title: 'IT & Computer Networking Support', provider: 'LSP', image: '/images/cert.svg' },
+  { title: 'Python Developer', provider: 'Google / Dicoding', image: '/images/cert.svg' },
+  { title: 'Pemrograman Python', provider: 'Dicoding', image: '/images/cert.svg' }
 ]
 
 export const studio = {
