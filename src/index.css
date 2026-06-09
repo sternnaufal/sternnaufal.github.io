@@ -11,19 +11,14 @@
 
 html {
   scroll-behavior: smooth;
-  color: #000;
 }
 
-html.dark {
-  color: #fff;
+html, html * {
+  color: #000 !important;
 }
 
-html.dark .text-black {
-  color: #fff;
-}
-
-html.dark [class*="text-black/"] {
-  color: rgba(255,255,255,var(--tw-text-opacity,1));
+html.dark, html.dark * {
+  color: #fff !important;
 }
 
 * {
