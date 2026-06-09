@@ -8,7 +8,7 @@ function Hero() {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="hero bg-pink-500 dark:bg-gray-950 dark:text-white py-16 md:py-24 px-6 md:px-12 border-b-5 border-black relative overflow-hidden"
+      className="hero bg-pink-500 dark:bg-gray-950 dark:text-white py-16 md:py-24 px-6 md:px-12 border-b-5 border-black relative overflow-hidden scroll-mt-24"
     >
       {/* Decorative dots for Neo-Brutalism */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-400 border-4 border-black animate-bounce hidden md:block" />

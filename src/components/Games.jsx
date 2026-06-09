@@ -4,7 +4,7 @@ import { FaExternalLinkAlt, FaGamepad } from 'react-icons/fa'
 
 function Games() {
   return (
-    <section id="games" className="games py-24 bg-lime-100 dark:bg-gray-950 border-b-5 border-black px-6 md:px-12 overflow-hidden relative">
+    <section id="games" className="games py-24 bg-lime-100 dark:bg-gray-950 border-b-5 border-black px-6 md:px-12 overflow-hidden relative scroll-mt-24">
       <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500/20 dark:bg-pink-500/10 -translate-y-1/2 translate-x-1/2 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -45,7 +45,7 @@ function Games() {
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="group"
+              className="group relative"
             >
               <div className="absolute inset-0 bg-black translate-x-3 translate-y-3 group-hover:translate-x-5 group-hover:translate-y-5 transition-transform" />
               <div className="relative z-10 bg-white dark:bg-gray-900 border-4 border-black p-8 h-full flex flex-col group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all duration-300">

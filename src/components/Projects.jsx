@@ -24,7 +24,7 @@ function Projects() {
   }
 
   return (
-    <section id="projects" className="projects py-20 px-6 border-b-5 border-black bg-white dark:bg-gray-950 overflow-hidden relative">
+    <section id="projects" className="projects py-20 px-6 border-b-5 border-black bg-white dark:bg-gray-950 overflow-hidden relative scroll-mt-24">
       <div className="absolute inset-0 opacity-10 dark:opacity-20 pointer-events-none" style={{
         backgroundImage: 'radial-gradient(circle, black 1px, transparent 1px)',
         backgroundSize: '30px 30px'

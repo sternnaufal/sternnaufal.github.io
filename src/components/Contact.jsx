@@ -18,7 +18,7 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="contact py-24 bg-blue-500 dark:bg-gray-950 border-b-5 border-black px-6 md:px-12 relative overflow-hidden">
+    <section id="contact" className="contact py-24 bg-blue-500 dark:bg-gray-950 border-b-5 border-black px-6 md:px-12 relative overflow-hidden scroll-mt-24">
       
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400 border-b-8 border-l-8 border-black -translate-y-1/2 translate-x-1/2 rotate-45 z-0" />
