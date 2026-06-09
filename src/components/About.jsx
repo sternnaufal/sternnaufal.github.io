@@ -34,7 +34,7 @@ const Card = ({ title, subtitle, duration, children, variant = 'yellow' }) => {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 border-b-3 border-black pb-4">
           <div>
             <h4 className="font-space text-2xl font-bold uppercase">{title}</h4>
-            <p className="font-mono font-bold mt-1 text-pink-600 dark:text-yellow-400">{subtitle}</p>
+            <p className="font-mono font-bold mt-1">{subtitle}</p>
           </div>
           <span className="font-mono bg-black text-white px-3 py-1 text-sm border-2 border-black inline-block md:rotate-3 shadow-neo-mini">
             {duration}
@@ -70,14 +70,14 @@ function About() {
   const [openSkillCat, setOpenSkillCat] = useState(skillCategories[0]?.name || null)
 
   return (
-    <section id="about" className="about py-24 bg-gray-50 dark:bg-black dark:text-white border-b-5 border-black px-6 md:px-12 overflow-hidden scroll-mt-24">
+    <section id="about" className="about py-24 bg-gray-50 dark:bg-black border-b-5 border-black px-6 md:px-12 overflow-hidden scroll-mt-24">
       <div className="max-w-7xl mx-auto">
 
         {/* About Me + Analytics Counters */}
         <div className="mb-24 flex flex-col lg:flex-row gap-16 items-start">
           <div className="lg:w-1/2">
             <SectionHeading colorClass="yellow-400">About Me</SectionHeading>
-            <p className="font-mono text-xl leading-relaxed mb-8 dark:text-gray-200 bg-white dark:bg-gray-800 p-8 border-4 border-black shadow-neo-large relative z-10">
+            <p className="font-mono text-xl leading-relaxed mb-8 bg-white dark:bg-gray-800 p-8 border-4 border-black shadow-neo-large relative z-10">
               Mahasiswa D3 Teknologi Informasi di <span className="bg-pink-500 px-1 border-2 border-black">Universitas Brawijaya</span>. Full-Stack Developer, Game Developer (Senin Terus Studio), dan Cyber Security enthusiast. Berpengalaman di AI integration, server internal kampus, dan jaringan fiber optik.
             </p>
 
@@ -102,15 +102,15 @@ function About() {
                 <div className="grid grid-cols-3 gap-8 font-mono">
                   <div>
                     <p className="text-4xl font-black text-blue-500">25+</p>
-                    <p className="text-sm dark:text-gray-400">Proyek Selesai</p>
+                    <p className="text-sm">Proyek Selesai</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-black text-yellow-500">11</p>
-                    <p className="text-sm dark:text-gray-400">Sertifikat IT</p>
+                    <p className="text-4xl font-black">11</p>
+                    <p className="text-sm">Sertifikat IT</p>
                   </div>
                   <div>
                     <p className="text-4xl font-black text-green-500">3K+</p>
-                    <p className="text-sm dark:text-gray-400">Audience Views</p>
+                    <p className="text-sm">Audience Views</p>
                   </div>
                 </div>
               </div>
@@ -187,7 +187,7 @@ function About() {
             {organizations.map((org, i) => (
               <div key={i} className="border-4 border-black bg-white dark:bg-gray-900 p-6 shadow-neo-small hover:shadow-neo hover:-translate-y-2 transition-all">
                 <h5 className="font-space font-bold text-xl mb-2 uppercase">{org.title}</h5>
-                <p className="font-mono text-sm text-pink-600 dark:text-yellow-400 font-bold mb-1">{org.role}</p>
+                <p className="font-mono text-sm font-bold mb-1">{org.role}</p>
                 <p className="font-mono text-xs opacity-70">{org.year}</p>
               </div>
             ))}

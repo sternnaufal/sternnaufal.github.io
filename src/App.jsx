@@ -61,9 +61,9 @@ function App() {
 
   return (
     <HelmetProvider>
-      {loading && <LoadingScreen onFinished={() => setLoading(false)} />}
+      {loading && <LoadingScreen darkMode={darkMode} onFinished={() => setLoading(false)} />}
       <Router>
-        <div className={`${loading ? 'hidden' : ''} ${darkMode ? 'bg-black' : 'bg-yellow-300'}`}>
+        <div className={`${loading ? 'hidden' : ''} ${darkMode ? 'bg-black' : 'bg-yellow-300'} ${darkMode ? 'text-white' : 'text-black'}`}>
           <Helmet>
             <title>Naufal Rakha Putra | Full-Stack Developer & Game Dev</title>
             <meta name="description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio), Cyber Security enthusiast." />

@@ -29,7 +29,7 @@ function Games() {
           <a
             href={studio.url}
             target="_blank"
-            className="bg-black text-pink-500 dark:bg-yellow-400 dark:text-black font-space font-bold px-8 py-4 border-4 border-black shadow-neo-large hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo transition-all text-xl uppercase flex items-center gap-3 shrink-0"
+            className="bg-black text-white dark:bg-yellow-400 dark:text-black font-space font-bold px-8 py-4 border-4 border-black shadow-neo-large hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo transition-all text-xl uppercase flex items-center gap-3 shrink-0"
           >
             <FaGamepad />
             Kunjungi Studio

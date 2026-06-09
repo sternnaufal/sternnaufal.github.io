@@ -14,7 +14,7 @@ const quotes = [
   '"Desain yang baik dimulai dari struktur kode yang bersih."',
 ]
 
-const LoadingScreen = ({ onFinished }) => {
+const LoadingScreen = ({ darkMode, onFinished }) => {
   const [progress, setProgress] = useState(0)
   const [show, setShow] = useState(true)
   const highlight = highlights[Math.floor(Math.random() * highlights.length)]
@@ -40,28 +40,28 @@ const LoadingScreen = ({ onFinished }) => {
   if (!show) return null
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-yellow-400 flex flex-col items-center justify-center p-6 overflow-hidden">
-      <div className="absolute top-10 left-10 w-32 h-32 border-4 border-black bg-white -rotate-12 shadow-neo" />
-      <div className="absolute bottom-10 right-10 w-48 h-48 border-4 border-black bg-pink-500 rotate-12 shadow-neo" />
-      <div className="absolute top-1/4 right-20 w-16 h-16 border-4 border-black bg-lime-400 shadow-neo animate-spin-slow" />
+    <div className={`fixed inset-0 z-[9999] ${darkMode ? 'bg-black' : 'bg-yellow-400'} flex flex-col items-center justify-center p-6 overflow-hidden`}>
+      <div className={`absolute top-10 left-10 w-32 h-32 border-4 ${darkMode ? 'border-white bg-pink-500' : 'border-black bg-white'} -rotate-12 shadow-neo`} />
+      <div className={`absolute bottom-10 right-10 w-48 h-48 border-4 ${darkMode ? 'border-white' : 'border-black'} bg-pink-500 rotate-12 shadow-neo`} />
+      <div className={`absolute top-1/4 right-20 w-16 h-16 border-4 ${darkMode ? 'border-white' : 'border-black'} bg-lime-400 shadow-neo animate-spin-slow`} />
 
       <div className="w-full max-w-2xl text-center space-y-8 relative z-10">
-        <h1 className="text-5xl md:text-7xl font-space font-black text-black tracking-tighter uppercase leading-none">
+        <h1 className="text-5xl md:text-7xl font-space font-black tracking-tighter uppercase leading-none">
           Naufal Rakha<br />
-          <span className="bg-black text-white px-4 inline-block rotate-1 border-4 border-white shadow-neo">Putra</span>
+          <span className="bg-black text-white dark:bg-yellow-400 dark:text-black px-4 inline-block rotate-1 border-4 border-white dark:border-black shadow-neo">Putra</span>
         </h1>
 
-        <div className="bg-black text-yellow-400 font-mono font-bold text-lg md:text-xl p-4 border-4 border-white shadow-neo -rotate-1">
+        <div className="bg-black text-white font-mono font-bold text-lg md:text-xl p-4 border-4 border-white shadow-neo -rotate-1">
           {quote}
         </div>
 
-        <div className="bg-white border-4 border-black shadow-neo p-4">
-          <p className="font-mono text-xs uppercase tracking-widest text-black/60 mb-1">Random Highlight</p>
-          <p className="font-space text-2xl font-black text-black">{highlight.label}: <span className="text-pink-500">{highlight.value}</span></p>
+        <div className={`bg-white dark:text-black ${darkMode ? 'border-white' : 'border-black'} shadow-neo p-4`}>
+          <p className="font-mono text-xs uppercase tracking-widest mb-1">Random Highlight</p>
+          <p className="font-space text-2xl font-black">{highlight.label}: <span>{highlight.value}</span></p>
         </div>
 
         <div className="space-y-4">
-          <div className="relative w-full h-12 bg-white border-4 border-black shadow-neo overflow-hidden">
+          <div className={`relative w-full h-12 bg-white ${darkMode ? 'border-white' : 'border-black'} shadow-neo overflow-hidden`}>
             <div
               className="h-full bg-black transition-all duration-300 ease-out"
               style={{ width: `${progress}%` }}
@@ -73,7 +73,7 @@ const LoadingScreen = ({ onFinished }) => {
             </div>
           </div>
 
-          <p className="font-mono font-bold text-xl text-black uppercase animate-pulse">
+          <p className="font-mono font-bold text-xl uppercase animate-pulse">
             {progress < 100 ? 'Loading...' : 'Ready!'}
           </p>
         </div>

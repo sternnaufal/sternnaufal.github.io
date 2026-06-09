@@ -35,7 +35,7 @@ function Projects() {
           <h3 className="font-space text-4xl md:text-6xl font-bold uppercase tracking-tighter bg-yellow-400 dark:bg-pink-500 px-6 py-2 border-5 border-black shadow-neo-large -rotate-2">
             PROYEK PILIHAN
           </h3>
-          <p className="font-mono text-lg md:text-xl text-black dark:text-gray-300 max-w-xl border-l-8 border-black pl-5 italic">
+          <p className="font-mono text-lg md:text-xl max-w-xl border-l-8 border-black pl-5 italic">
             Beberapa hasil karya saya dalam pengembangan web, game, AI, dan mobile.
           </p>
         </div>
@@ -48,8 +48,8 @@ function Projects() {
               onClick={() => setActiveCategory(cat)}
               className={`font-space font-bold px-5 py-2 border-3 border-black uppercase text-sm tracking-wider transition-all ${
                 activeCategory === cat
-                  ? 'bg-black text-yellow-400 dark:bg-yellow-400 dark:text-black shadow-neo-mini -translate-y-1'
-                  : 'bg-white dark:bg-gray-800 text-black dark:text-white hover:-translate-y-0.5 hover:shadow-neo-mini'
+                  ? 'bg-black text-white dark:bg-yellow-400 dark:text-black shadow-neo-mini -translate-y-1'
+                  : 'bg-white dark:bg-gray-800 hover:-translate-y-0.5 hover:shadow-neo-mini'
               }`}
             >
               {cat}
