@@ -79,8 +79,8 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
 
       {/* Mobile Nav */}
       {mobileMenuOpen && (
-        <nav className="md:hidden bg-yellow-400 dark:bg-black border-l-4 border-b-4 border-black absolute right-0 w-64 py-6 px-4 flex flex-col gap-4 shadow-neo-large animate-slide-in">
-          <button onClick={toggleDarkMode} className="text-left font-bold flex items-center justify-between border-3 border-black p-2 bg-white dark:bg-gray-800">
+        <nav className="md:hidden bg-yellow-400 dark:bg-black dark:text-white border-l-4 border-b-4 border-black absolute right-0 w-64 py-6 px-4 flex flex-col gap-4 shadow-neo-large animate-slide-in">
+          <button onClick={toggleDarkMode} className="text-left font-bold flex items-center justify-between border-3 border-black p-2 bg-white dark:bg-gray-800 dark:text-white">
             <span>{darkMode ? 'Light Mode' : 'Dark Mode'}</span>
             <span>{darkMode ? '☀️' : '🌙'}</span>
           </button>

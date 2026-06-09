@@ -62,7 +62,7 @@ function App() {
     <HelmetProvider>
       {loading && <LoadingScreen onFinished={() => setLoading(false)} />}
       <Router>
-        <div className={`min-h-screen transition-colors duration-300 ${loading ? 'hidden' : ''} ${darkMode ? 'dark bg-black' : 'bg-gray-50'}`}>
+        <div className={`min-h-screen transition-colors duration-300 ${loading ? 'hidden' : ''} ${darkMode ? 'dark bg-black text-white' : 'bg-amber-50 text-black'}`}>
           <Helmet>
             <title>Naufal Rakha Putra | Full-Stack Developer & Game Dev</title>
             <meta name="description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio), Cyber Security enthusiast. IPK 4.00 di Universitas Brawijaya." />

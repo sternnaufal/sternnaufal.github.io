@@ -22,7 +22,7 @@
   }
 
   body {
-    @apply font-mono bg-white text-black selection:bg-yellow-400 selection:text-black;
+    @apply font-mono bg-amber-50 text-black selection:bg-yellow-400 selection:text-black;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -64,12 +64,13 @@ section {
 
 /* === DARK MODE === */
 .dark {
-  @apply bg-black text-white;
+  background-color: #000;
+  color: #fff;
 }
 
 .dark body {
-  @apply bg-black text-white;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #000;
+  color: #fff;
 }
 
 .dark,
