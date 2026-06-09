@@ -23,7 +23,12 @@ function Home() {
 }
 
 function App() {
-  const [darkMode, setDarkMode] = useState(() => localStorage.getItem('theme') === 'dark')
+  const [darkMode, setDarkMode] = useState(() => {
+    const stored = localStorage.getItem('theme')
+    if (stored === 'dark') return true
+    if (stored === 'light') return false
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  })
   const [loading, setLoading] = useState(true)
   const [activeSection, setActiveSection] = useState('')
 
