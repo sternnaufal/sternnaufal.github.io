@@ -1,8 +1,7 @@
-import { useState, useEffect, Suspense, lazy } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider, Helmet } from 'react-helmet-async'
 
-// Components
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
@@ -11,7 +10,6 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import LoadingScreen from './components/LoadingScreen'
 
-// Main Page Component
 function Home() {
   return (
     <main className="min-h-screen">
@@ -24,19 +22,18 @@ function Home() {
 }
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(() => localStorage.getItem('theme') === 'dark')
   const [loading, setLoading] = useState(true)
   const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme === 'dark') {
-      setDarkMode(true)
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light')
+    if (darkMode) {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
     }
-  }, [])
+  }, [darkMode])
 
   useEffect(() => {
     const sections = document.querySelectorAll('section[id]')
@@ -52,17 +49,13 @@ function App() {
     return () => observer.disconnect()
   }, [])
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-    document.documentElement.classList.toggle('dark')
-    localStorage.setItem('theme', !darkMode ? 'dark' : 'light')
-  }
+  const toggleDarkMode = () => setDarkMode((prev) => !prev)
 
   return (
     <HelmetProvider>
       {loading && <LoadingScreen onFinished={() => setLoading(false)} />}
       <Router>
-        <div className={`min-h-screen transition-colors duration-300 ${loading ? 'hidden' : ''} ${darkMode ? 'dark bg-black text-white' : 'bg-amber-50 text-black'}`}>
+        <div className={`${loading ? 'hidden' : ''} ${darkMode ? 'bg-black text-white' : 'bg-amber-50 text-black'}`}>
           <Helmet>
             <title>Naufal Rakha Putra | Full-Stack Developer & Game Dev</title>
             <meta name="description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio), Cyber Security enthusiast. IPK 4.00 di Universitas Brawijaya." />
@@ -81,20 +74,10 @@ function App() {
                 "image": "https://naufalrakha.my.id/ku.webp",
                 "jobTitle": ["Full-Stack Developer", "Game Developer", "Lead Game Developer & Founder at Senin Terus Studio"],
                 "email": "naufalrakha2712@gmail.com",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Malang",
-                  "addressRegion": "Jawa Timur",
-                  "addressCountry": "Indonesia"
-                },
+                "address": { "@type": "PostalAddress", "addressLocality": "Malang", "addressRegion": "Jawa Timur", "addressCountry": "Indonesia" },
                 "alumniOf": ["Universitas Brawijaya", "SMKN 1 Bukittinggi"],
                 "knowsAbout": ["React.js", "Node.js", "Laravel", "Game Development", "Cyber Security"],
-                "sameAs": [
-                  "https://linkedin.com/in/naufal-rakha-putra-a0130332a",
-                  "https://github.com/sternnaufal",
-                  "https://instagram.com/stern_naufal2712",
-                  "https://youtube.com/@naufaltechtainment1"
-                ]
+                "sameAs": ["https://linkedin.com/in/naufal-rakha-putra-a0130332a", "https://github.com/sternnaufal", "https://instagram.com/stern_naufal2712", "https://youtube.com/@naufaltechtainment1"]
               })}
             </script>
           </Helmet>
@@ -103,7 +86,6 @@ function App() {
           
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* Future routes like /projects/:id can be added here */}
           </Routes>
           
           <Footer />

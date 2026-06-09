@@ -3,41 +3,14 @@
 @theme {
   --font-space: 'Space Grotesk', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
-  --border-5: 5px;
-  --border-6: 6px;
-  --border-10: 10px;
   --shadow-neo: 10px 10px 0px 0px rgba(0, 0, 0, 1);
   --shadow-neo-large: 15px 15px 0px 0px rgba(0, 0, 0, 1);
   --shadow-neo-small: 6px 6px 0px 0px rgba(0, 0, 0, 1);
   --shadow-neo-mini: 3px 3px 0px 0px rgba(0, 0, 0, 1);
-  --shadow-neo-yellow: 10px 10px 0px 0px #facc15;
-  --shadow-neo-large-yellow: 15px 15px 0px 0px #facc15;
-  --shadow-neo-small-yellow: 6px 6px 0px 0px #facc15;
-  --shadow-neo-mini-yellow: 3px 3px 0px 0px #facc15;
 }
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply font-mono bg-amber-50 text-black selection:bg-yellow-400 selection:text-black;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-space;
-  }
-}
-
-@layer components {
-  .neo-btn {
-    @apply bg-white border-4 border-black px-6 py-2 font-bold shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all cursor-pointer inline-flex items-center gap-2;
-  }
-
-  .neo-card {
-    @apply bg-white border-4 border-black p-6 shadow-neo;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 @keyframes slide-in {
@@ -56,46 +29,4 @@
 
 .animate-spin-slow {
   animation: spin-slow 8s linear infinite;
-}
-
-section {
-  @apply relative;
-}
-
-/* === DARK MODE === */
-.dark {
-  background-color: #000;
-  color: #fff;
-}
-
-.dark body {
-  background-color: #000;
-  color: #fff;
-}
-
-.dark,
-.dark * {
-  transition-property: background-color, border-color, color, box-shadow;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-}
-
-.dark .shadow-neo {
-  box-shadow: 10px 10px 0px 0px #facc15;
-}
-.dark .shadow-neo-large {
-  box-shadow: 15px 15px 0px 0px #facc15;
-}
-.dark .shadow-neo-small {
-  box-shadow: 6px 6px 0px 0px #facc15;
-}
-.dark .shadow-neo-mini {
-  box-shadow: 3px 3px 0px 0px #facc15;
-}
-
-.dark .shadow-neo-yellow,
-.dark .shadow-neo-large-yellow,
-.dark .shadow-neo-small-yellow,
-.dark .shadow-neo-mini-yellow {
-  box-shadow: none;
 }
