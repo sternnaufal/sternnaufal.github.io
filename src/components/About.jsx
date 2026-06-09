@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { education, experience, organizations, achievements, certificates, analytics, skillCategories } from '../data/portfolioData'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import AnimatedCounter from './AnimatedCounter'
+import { Trophy } from 'lucide-react'
 
 const SectionHeading = ({ children, colorClass }) => (
   <div className="inline-block mb-10 transform -rotate-2 relative z-10">
@@ -200,7 +201,7 @@ function About() {
           <div className="grid md:grid-cols-2 gap-6">
             {achievements.map((ach, i) => (
               <div key={i} className="flex items-center gap-6 bg-black text-white p-6 border-4 border-yellow-400 shadow-neo group hover:bg-yellow-400 hover:text-black transition-colors rotate-1 hover:rotate-0">
-                <div className="text-4xl scale-125 group-hover:scale-150 transition-transform">🏆</div>
+                <div className="scale-125 group-hover:scale-150 transition-transform"><Trophy size={36} strokeWidth={2.5} /></div>
                 <div>
                   <h5 className="font-space font-black text-xl uppercase tracking-tighter">{ach.title}</h5>
                   <p className="font-mono text-sm uppercase opacity-80">{ach.event} · {ach.year}</p>

@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 import { games, studio } from '../data/portfolioData'
 import { FaExternalLinkAlt, FaGamepad } from 'react-icons/fa'
+import { Flag, Puzzle, Heart, Gamepad2 } from 'lucide-react'
+
+const gameIcons = { Flag, Puzzle, Heart }
 
 function Games() {
   return (
@@ -14,7 +17,7 @@ function Games() {
             <div className="inline-block mb-6 relative">
               <div className="absolute inset-0 translate-x-2 translate-y-2 bg-black border-4 border-black" />
               <h3 className="relative z-10 px-8 py-3 bg-pink-500 border-4 border-black text-2xl md:text-3xl font-black uppercase tracking-widest">
-                🎮 Game Studio
+                <Gamepad2 size={32} className="inline mr-2" /> Game Studio
               </h3>
             </div>
             <h4 className="font-space text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 -rotate-1">
@@ -49,8 +52,8 @@ function Games() {
             >
               <div className="absolute inset-0 bg-black translate-x-3 translate-y-3 group-hover:translate-x-5 group-hover:translate-y-5 transition-transform" />
               <div className="relative z-10 bg-white dark:bg-gray-900 border-4 border-black p-8 h-full flex flex-col group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
-                <div className="text-6xl mb-4 group-hover:scale-125 group-hover:-rotate-6 transition-transform duration-300">
-                  {game.icon}
+                <div className="mb-4 group-hover:scale-125 group-hover:-rotate-6 transition-transform duration-300">
+                  {(() => { const Ic = gameIcons[game.icon]; return Ic ? <Ic size={60} strokeWidth={1.5} /> : null })()}
                 </div>
 
                 {game.tag && (

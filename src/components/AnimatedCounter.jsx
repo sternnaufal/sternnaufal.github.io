@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { Play, PenLine, Smartphone, Gamepad2 } from 'lucide-react'
+
+const iconMap = { Play, PenLine, Smartphone, Gamepad2 }
 
 export default function AnimatedCounter({ value, suffix = '', label, icon, color }) {
   const [count, setCount] = useState(0)
@@ -42,7 +45,7 @@ export default function AnimatedCounter({ value, suffix = '', label, icon, color
     >
       <div className="absolute inset-0 bg-black translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
       <div className={`relative z-10 ${color || 'bg-yellow-400'} border-4 border-black p-5 shadow-neo-mini`}>
-        <p className="text-3xl md:text-4xl font-black text-black dark:text-white">{icon}</p>
+        <p className="text-3xl md:text-4xl font-black text-black dark:text-white">{(() => { const Ic = iconMap[icon]; return Ic ? <Ic size={36} strokeWidth={2.5} /> : null })()}</p>
         <p className="font-space text-3xl md:text-4xl font-black text-black dark:text-white mt-2">
           {displayValue}{suffix}
         </p>

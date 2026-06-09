@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes, FaGamepad } from 'react-icons/fa'
+import { Sun, Moon } from 'lucide-react'
 
 function Navbar({ darkMode, toggleDarkMode, activeSection }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -38,7 +39,7 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
               <a href="https://webapps.naufalrakha.my.id" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Webapps</a>
               <a href="https://blog.naufalrakha.my.id" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Blog</a>
               <a href="https://story.naufalrakha.my.id" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Cerita</a>
-              <a href="https://seninterusstudio.vercel.app" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Senin Terus Studio 🎮</a>
+              <a href="https://seninterusstudio.vercel.app" target="_blank" className="block px-4 py-2 hover:bg-white hover:text-black">Senin Terus Studio <FaGamepad size={14} className="inline" /></a>
             </div>
           </div>
           
@@ -66,7 +67,7 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
             onClick={toggleDarkMode}
             className="bg-black text-white border-3 border-black p-2 text-xl shadow-neo hover:bg-yellow-400 hover:text-black transition-all rotate-3 hover:rotate-0"
           >
-            {darkMode ? '☀️' : '🌙'}
+            {darkMode ? <Sun size={24} /> : <Moon size={24} />}
           </button>
         </nav>
 
@@ -84,7 +85,7 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
         <nav className="md:hidden bg-yellow-400 dark:bg-black border-l-4 border-b-4 border-black absolute right-0 w-64 py-6 px-4 flex flex-col gap-4 shadow-neo-large animate-slide-in">
           <button onClick={toggleDarkMode} className="text-left font-bold flex items-center justify-between border-3 border-black p-2 bg-white dark:bg-gray-800">
             <span>{darkMode ? 'Light Mode' : 'Dark Mode'}</span>
-            <span>{darkMode ? '☀️' : '🌙'}</span>
+            <span>{darkMode ? <Sun size={20} /> : <Moon size={20} />}</span>
           </button>
           <div className="flex flex-col gap-2 font-bold">
              <p className="text-xs uppercase opacity-60 mt-2">Navigation</p>

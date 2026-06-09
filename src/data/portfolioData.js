@@ -65,10 +65,10 @@ export const projects = [
 ]
 
 export const analytics = [
-  { label: 'YouTube Subscribers', value: 700, suffix: '+', icon: '▶️', color: 'bg-red-500' },
-  { label: 'Blog Readers', value: 4000, suffix: '+', icon: '✍️', color: 'bg-blue-500' },
-  { label: 'Google Play Downloads', value: 60, suffix: '+', icon: '📱', color: 'bg-green-500' },
-  { label: 'itch.io Views', value: 3070, suffix: '+', icon: '🎮', color: 'bg-pink-500' },
+  { label: 'YouTube Subscribers', value: 700, suffix: '+', icon: 'Play', color: 'bg-red-500' },
+  { label: 'Blog Readers', value: 4000, suffix: '+', icon: 'PenLine', color: 'bg-blue-500' },
+  { label: 'Google Play Downloads', value: 60, suffix: '+', icon: 'Smartphone', color: 'bg-green-500' },
+  { label: 'itch.io Views', value: 3070, suffix: '+', icon: 'Gamepad2', color: 'bg-pink-500' },
 ]
 
 export const skillCategories = [
@@ -241,7 +241,7 @@ export const games = [
       { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps' },
       { label: 'itch.io', url: 'https://seninterus.itch.io/flag-quiz-master' },
     ],
-    icon: '🏴',
+    icon: 'Flag',
     stats: 'Dirilis Maret 2026',
     tag: 'Puzzle'
   },
@@ -252,7 +252,7 @@ export const games = [
     links: [
       { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.seninterus.sortiverse' },
     ],
-    icon: '🧩',
+    icon: 'Puzzle',
     stats: 'Dirilis Mei 2026',
     tag: 'Puzzle'
   },
@@ -263,7 +263,7 @@ export const games = [
     links: [
       { label: 'itch.io', url: 'https://seninterus.itch.io/30-days-meet-tsundere-girl-free-version' },
     ],
-    icon: '💕',
+    icon: 'Heart',
     stats: 'Dirilis Juni 2023',
     tag: 'Visual Novel'
   }
