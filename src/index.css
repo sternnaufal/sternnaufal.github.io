@@ -11,6 +11,19 @@
 
 html {
   scroll-behavior: smooth;
+  color: #000;
+}
+
+html.dark {
+  color: #fff;
+}
+
+html.dark .text-black {
+  color: #fff;
+}
+
+html.dark [class*="text-black/"] {
+  color: rgba(255,255,255,var(--tw-text-opacity,1));
 }
 
 * {
@@ -27,18 +40,6 @@ a, button, input, textarea, [role="button"], [tabindex]:not([tabindex="-1"]) {
 
 .dark a, .dark button, .dark input, .dark textarea {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Ccircle cx='14' cy='14' r='12' fill='%23ec4899' stroke='%23fff' stroke-width='3'/%3E%3Ccircle cx='14' cy='14' r='5' fill='%23fff'/%3E%3C/svg%3E") 14 14, pointer;
-}
-
-html.dark {
-  color: #fff;
-}
-
-html.dark .text-black:not([class*="dark:text"]) {
-  color: #fff;
-}
-
-html.dark [class*="text-black/"]:not([class*="dark:text"]) {
-  color: rgba(255,255,255,var(--tw-text-opacity,1));
 }
 
 @keyframes slide-in {

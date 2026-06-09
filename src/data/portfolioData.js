@@ -49,10 +49,18 @@ export const projects = [
     caseStudy: '/projects/keepsimple.html'
   },
   {
-    title: 'Flag Quiz Master & Sortiverse',
+    title: 'Flag Quiz Master',
     category: 'Mobile',
-    description: 'Dua game edukasi native Android di Google Play Store. Dikembangkan dengan Kotlin. 60+ unduhan pada fase awal rilis.',
-    github: 'https://github.com/sternnaufal'
+    description: 'Game edukasi tebak bendera negara native Android. 60+ unduhan awal.',
+    github: 'https://github.com/sternnaufal',
+    live: 'https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps'
+  },
+  {
+    title: 'Sortiverse',
+    category: 'Mobile',
+    description: 'Game puzzle edukasi sorting untuk Android. 60+ unduhan awal.',
+    github: 'https://github.com/sternnaufal',
+    live: 'https://play.google.com/store/apps/details?id=com.seninterus.sortiverse'
   }
 ]
 
