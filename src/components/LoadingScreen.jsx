@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 
 const highlights = [
-  { label: 'IPK Sempurna', value: '4.00' },
   { label: 'Game Views', value: '3.070+' },
   { label: 'AI Project', value: 'Rp2,5jt' },
   { label: 'Google Play', value: '60+ Download' },

@@ -59,7 +59,7 @@ function App() {
         <div className={`${loading ? 'hidden' : ''} ${darkMode ? 'bg-black text-white' : 'bg-amber-50 text-black'}`}>
           <Helmet>
             <title>Naufal Rakha Putra | Full-Stack Developer & Game Dev</title>
-            <meta name="description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio), Cyber Security enthusiast. IPK 4.00 di Universitas Brawijaya." />
+            <meta name="description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio), Cyber Security enthusiast." />
             <meta property="og:title" content="Naufal Rakha Putra | Full-Stack Developer" />
             <meta property="og:description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio)." />
             <meta property="og:image" content="https://naufalrakha.my.id/ku.webp" />
