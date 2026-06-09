@@ -1,8 +1,14 @@
 import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
-function Navbar({ darkMode, toggleDarkMode }) {
+function Navbar({ darkMode, toggleDarkMode, activeSection }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const navLinks = [
+    { href: '#about', label: 'About' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#contact', label: 'Contact' },
+  ]
 
   return (
     <header className="bg-yellow-400 dark:bg-black dark:text-white border-b-5 border-black sticky top-0 z-50">
@@ -35,9 +41,24 @@ function Navbar({ darkMode, toggleDarkMode }) {
           </div>
           
           <a href="https://youtube.com/@naufaltechtainment1" target="_blank" className="font-space font-bold hover:bg-black hover:text-yellow-400 px-2 py-1 transition-colors">Youtube</a>
-          <a href="#about" className="font-space font-bold hover:bg-black hover:text-yellow-400 px-2 py-1 transition-colors">About</a>
-          <a href="#projects" className="font-space font-bold hover:bg-black hover:text-yellow-400 px-2 py-1 transition-colors">Projects</a>
-          <a href="#contact" className="font-space font-bold hover:bg-black hover:text-yellow-400 px-2 py-1 transition-colors">Contact</a>
+          
+          {navLinks.map((link) => {
+            const sectionId = link.href.replace('#', '')
+            const isActive = activeSection === sectionId
+            return (
+              <a
+                key={sectionId}
+                href={link.href}
+                className={`font-space font-bold px-2 py-1 transition-all ${
+                  isActive
+                    ? 'bg-black text-yellow-400 dark:bg-yellow-400 dark:text-black scale-110'
+                    : 'hover:bg-black hover:text-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-black'
+                }`}
+              >
+                {link.label}
+              </a>
+            )
+          })}
           
           <button 
             onClick={toggleDarkMode}
@@ -65,14 +86,29 @@ function Navbar({ darkMode, toggleDarkMode }) {
           </button>
           <div className="flex flex-col gap-2 font-bold">
              <p className="text-xs uppercase opacity-60 mt-2">Navigation</p>
-             <a href="#about" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800" onClick={() => setMobileMenuOpen(false)}>About</a>
-             <a href="#projects" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800" onClick={() => setMobileMenuOpen(false)}>Projects</a>
-             <a href="#contact" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+             {navLinks.map((link) => {
+               const sectionId = link.href.replace('#', '')
+               const isActive = activeSection === sectionId
+               return (
+                 <a
+                   key={sectionId}
+                   href={link.href}
+                   onClick={() => setMobileMenuOpen(false)}
+                   className={`p-2 transition-colors ${
+                     isActive
+                       ? 'bg-black text-yellow-400 dark:bg-yellow-400 dark:text-black'
+                       : 'border-b-2 border-black hover:bg-white dark:hover:bg-gray-800'
+                   }`}
+                 >
+                   {link.label}
+                 </a>
+               )
+             })}
           </div>
           <div className="flex flex-col gap-2 font-bold">
              <p className="text-xs uppercase opacity-60 mt-2">Socials</p>
              <a href="https://instagram.com/stern_naufal2712" target="_blank" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Instagram</a>
-              <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Linkedin</a>
+             <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Linkedin</a>
           </div>
         </nav>
       )}

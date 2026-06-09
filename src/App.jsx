@@ -26,6 +26,7 @@ function Home() {
 function App() {
   const [darkMode, setDarkMode] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
@@ -35,6 +36,20 @@ function App() {
     } else {
       document.documentElement.classList.remove('dark')
     }
+  }, [])
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]')
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id)
+        }
+      })
+    }, { rootMargin: '-40% 0px -55% 0px' })
+
+    sections.forEach((s) => observer.observe(s))
+    return () => observer.disconnect()
   }, [])
 
   const toggleDarkMode = () => {
@@ -57,9 +72,34 @@ function App() {
             <meta property="og:url" content="https://naufalrakha.my.id/" />
             <meta name="twitter:card" content="summary_large_image" />
             <link rel="canonical" href="https://naufalrakha.my.id/" />
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Naufal Rakha Putra",
+                "url": "https://naufalrakha.my.id",
+                "image": "https://naufalrakha.my.id/ku.webp",
+                "jobTitle": ["Full-Stack Developer", "Game Developer", "Lead Game Developer & Founder at Senin Terus Studio"],
+                "email": "naufalrakha2712@gmail.com",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Malang",
+                  "addressRegion": "Jawa Timur",
+                  "addressCountry": "Indonesia"
+                },
+                "alumniOf": ["Universitas Brawijaya", "SMKN 1 Bukittinggi"],
+                "knowsAbout": ["React.js", "Node.js", "Laravel", "Game Development", "Cyber Security"],
+                "sameAs": [
+                  "https://linkedin.com/in/naufal-rakha-putra-a0130332a",
+                  "https://github.com/sternnaufal",
+                  "https://instagram.com/stern_naufal2712",
+                  "https://youtube.com/@naufaltechtainment1"
+                ]
+              })}
+            </script>
           </Helmet>
 
-          <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} activeSection={activeSection} />
           
           <Routes>
             <Route path="/" element={<Home />} />

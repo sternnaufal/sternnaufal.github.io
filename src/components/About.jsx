@@ -76,13 +76,13 @@ function About() {
            </div>
            
            <div className="lg:w-1/2 w-full">
-             <div className="relative group">
-               <div className="absolute inset-0 bg-blue-500 translate-x-6 translate-y-6 border-4 border-black transition-transform group-hover:translate-x-8 group-hover:translate-y-8" />
-               <div className="absolute inset-0 bg-pink-500 translate-x-3 translate-y-3 border-4 border-black transition-transform group-hover:translate-x-4 group-hover:translate-y-4" />
-               <div className="relative z-10 border-4 border-black bg-white dark:bg-gray-900 p-8 shadow-neo-large overflow-hidden">
-                 <h4 className="font-space font-black text-3xl uppercase mb-8 flex items-center gap-4">
-                   <span className="w-12 h-1 bg-black" /> Stats
-                 </h4>
+              <div className="relative group">
+                <div className="absolute inset-0 bg-blue-500 translate-x-6 translate-y-6 border-4 border-black dark:border-yellow-400 transition-transform group-hover:translate-x-8 group-hover:translate-y-8" />
+                <div className="absolute inset-0 bg-pink-500 translate-x-3 translate-y-3 border-4 border-black dark:border-yellow-400 transition-transform group-hover:translate-x-4 group-hover:translate-y-4" />
+                <div className="relative z-10 border-4 border-black dark:border-yellow-400 bg-white dark:bg-gray-900 p-8 shadow-neo-large overflow-hidden">
+                  <h4 className="font-space font-black text-3xl uppercase mb-8 flex items-center gap-4">
+                    <span className="w-12 h-1 bg-black dark:bg-yellow-400" /> Stats
+                  </h4>
                   <div className="grid grid-cols-2 gap-8 font-mono">
                     <div>
                       <p className="text-4xl font-black text-pink-500">4.00</p>
