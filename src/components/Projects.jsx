@@ -139,11 +139,21 @@ function Projects() {
                   {project.title}
                 </h4>
 
-                <p className="font-mono text-sm leading-relaxed mb-6 flex-grow border-b-2 border-black/10 dark:border-white/10 pb-4">
+                <p className="font-mono text-sm leading-relaxed mb-4 flex-grow">
                   {project.description}
                 </p>
 
-                <div className="mt-auto flex flex-wrap gap-3 pt-4">
+                {project.tech && project.tech.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {project.tech.map((t) => (
+                      <span key={t} className="font-mono text-[10px] font-bold bg-gray-100 dark:bg-gray-800 text-black dark:text-white px-2 py-0.5 border-2 border-black">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                <div className="mt-auto flex flex-wrap gap-3 pt-4 border-t-2 border-black/10 dark:border-white/10">
                   {project.caseStudy ? (
                     <a href={project.caseStudy} className="bg-yellow-400 dark:bg-pink-500 text-black dark:text-white font-bold px-4 py-2 border-3 border-black text-sm uppercase shadow-neo-mini hover:-translate-y-1 hover:shadow-neo transition-all">
                       Case Study

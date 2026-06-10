@@ -7,7 +7,8 @@ export const projects = [
     description: 'Platform crowdfunding medis full-stack (React.js + Node.js/Express). Kolaborasi tim dengan dosen sebagai stakeholder utama. Fitur campaign management, donasi, dan auth.',
     github: 'https://github.com/orgs/group4pbl-carefund/repositories',
     live: 'https://frontend-wine-kappa-76.vercel.app/',
-    image: '/images/projects/carefund.png'
+    image: '/images/projects/carefund.png',
+    tech: ['React.js', 'Node.js', 'Express', 'MySQL']
   },
   {
     title: 'LG-Exambot',
@@ -15,17 +16,25 @@ export const projects = [
     description: 'Sistem generator soal ujian otomatis berbasis AI bernilai komersial Rp2.500.000. Multi-AI fallback: Gemini API, DeepSeek, Groq. Laravel + AI Integration.',
     github: 'https://github.com/sternnaufal/LG-exambot',
     live: 'https://exambot.l-glearning.com/',
-    image: '/images/projects/lg-exambot.png'
+    image: '/images/projects/lg-exambot.png',
+    tech: ['Laravel', 'Gemini API', 'DeepSeek', 'Groq']
   },
   {
     title: 'GreenEvent',
+    category: 'Web App',
     description: 'Platform manajemen acara lingkungan hidup. Produk andalan kompetisi Creanomic Vokasi UB 2025. Laravel + Blade + MySQL.',
     github: 'https://github.com/sternnaufal/greenEvent',
     live: 'https://greenevent.infinityfree.me',
-    image: '/images/projects/greenevent.png'
+    image: '/images/projects/greenevent.png',
+    tech: ['Laravel', 'Blade', 'MySQL']
   },
   {
     title: 'Telegram Bot Reminder',
+    category: 'AI',
+    description: 'Bot pengingat jadwal otomatis terintegrasi Google Calendar API. Skrip Python untuk manajemen waktu personal via Telegram.',
+    github: 'https://github.com/sternnaufal/bot-calendar-python-telegram',
+    image: '/images/projects/bot-telegram.png',
+    tech: ['Python', 'Google Calendar API']
   },
   {
     title: 'Catatanku',
@@ -33,7 +42,8 @@ export const projects = [
     description: 'Aplikasi catatan digital untuk pelajar & mahasiswa. PHP Native + MySQL dengan fitur CRUD catatan, autentikasi, admin panel, dan ekspor PDF.',
     github: 'https://github.com/sternnaufal/catatanku',
     caseStudy: '/projects/catatanku.html',
-    image: '/images/projects/catatanku.png'
+    image: '/images/projects/catatanku.png',
+    tech: ['PHP', 'MySQL']
   },
   {
     title: 'Alphascript',
@@ -41,7 +51,8 @@ export const projects = [
     description: 'JavaScript library open-source untuk mempercepat manipulasi DOM sederhana.',
     github: 'https://github.com/sternnaufal/alphascript',
     caseStudy: '/projects/alphascript.html',
-    image: '/images/projects/alphascript.png'
+    image: '/images/projects/alphascript.png',
+    tech: ['JavaScript']
   },
   {
     title: 'Sakurapai (CMS Video)',
@@ -49,7 +60,8 @@ export const projects = [
     description: 'Content Management System video streaming dengan fitur login, manajemen konten, dan MySQL. PHP Native.',
     github: 'https://github.com/sternnaufal/cmsvideo',
     caseStudy: '/projects/sakurapai.html',
-    image: '/images/projects/sakurapai.png'
+    image: '/images/projects/sakurapai.png',
+    tech: ['PHP', 'MySQL']
   },
   {
     title: 'Flag Quiz Master',
@@ -57,7 +69,8 @@ export const projects = [
     description: 'Game edukasi tebak bendera negara native Android. 60+ unduhan awal.',
     github: null,
     live: 'https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps',
-    image: '/images/projects/flagquiz.png'
+    image: '/images/projects/flagquiz.png',
+    tech: ['Kotlin', 'Android']
   },
   {
     title: 'Sortiverse',
@@ -65,7 +78,8 @@ export const projects = [
     description: 'Game puzzle edukasi sorting untuk Android. 60+ unduhan awal.',
     github: null,
     live: 'https://play.google.com/store/apps/details?id=com.seninterus.sortiverse',
-    image: '/images/projects/sortiverse.png'
+    image: '/images/projects/sortiverse.png',
+    tech: ['Kotlin', 'Android']
   },
   {
     title: 'Todos API',
@@ -73,14 +87,16 @@ export const projects = [
     description: 'RESTful API manajemen todos dengan Express.js + TypeScript. Fitur pagination, filter multi-parameter, kategorisasi, prioritas, dan statistik. Deployed di Vercel.',
     github: 'https://github.com/sternnaufal/api',
     live: 'https://api-three-self-56.vercel.app/',
-    image: '/images/projects/todos-api.png'
+    image: '/images/projects/todos-api.png',
+    tech: ['Express.js', 'TypeScript', 'Vercel']
   },
   {
     title: 'Hanekawa Bot v4',
     category: 'AI',
     description: 'Discord bot serbaguna v4 berbasis JavaScript dengan fitur moderasi, musik, tiket, translasi, dan lainnya.',
     github: 'https://github.com/sternnaufal/hanekawa-bot-v4',
-    image: '/images/projects/hanekawa-bot.png'
+    image: '/images/projects/hanekawa-bot.png',
+    tech: ['JavaScript', 'Discord.js']
   },
   {
     title: 'Keepsimple',
@@ -88,7 +104,16 @@ export const projects = [
     description: 'CSS framework minimalis fokus pada kecepatan muat halaman dan kebersihan UI.',
     github: 'https://github.com/sternnaufal/keepsimple',
     caseStudy: '/projects/keepsimple.html',
-    image: '/images/projects/keepsimple.png'
+    image: '/images/projects/keepsimple.png',
+    tech: ['CSS']
+  },
+  {
+    title: 'Sterntools',
+    category: 'Tools',
+    description: 'Koleksi shell script dan tools untuk otomatisasi, sysadmin, dan produktivitas daily-use.',
+    github: 'https://github.com/sternnaufal/sterntools',
+    image: '/images/projects/sterntools.png',
+    tech: ['Shell']
   }
 ]
 
