@@ -28,6 +28,13 @@ export const projects = [
     github: 'https://github.com/sternnaufal/bot-calendar-python-telegram'
   },
   {
+    title: 'Catatanku',
+    category: 'Web App',
+    description: 'Aplikasi catatan digital untuk pelajar & mahasiswa. PHP Native + MySQL dengan fitur CRUD catatan, autentikasi, admin panel, dan ekspor PDF.',
+    github: 'https://github.com/sternnaufal/catatanku',
+    caseStudy: '/projects/catatanku.html'
+  },
+  {
     title: 'Sakurapai (CMS Video)',
     category: 'Web App',
     description: 'Content Management System video streaming dengan fitur login, manajemen konten, dan MySQL. PHP Native.',

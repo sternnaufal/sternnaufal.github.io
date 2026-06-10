@@ -35,9 +35,9 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
               My Sites ▾
             </button>
             <div className="absolute hidden group-hover:block group-focus-within:block bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black z-50" role="menu">
-              <a href="https://catatanku.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Catatanku (Apps)</a>
+              <a href="/projects/catatanku.html" className="block px-4 py-2 hover:bg-white hover:text-black">Catatanku <span className="text-[10px] opacity-60">Case Study</span></a>
               <a href="https://webapps.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Webapps</a>
-              <a href="https://blog.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Blog</a>
+              <a href="https://pentingliterasi.blogspot.com" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Blog</a>
               <a href="https://story.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Cerita</a>
               <a href="/keepsimple/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Keepsimple <span className="text-[10px] opacity-60">CSS</span></a>
               <a href="https://seninterusstudio.vercel.app" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Senin Terus Studio <FaGamepad size={14} className="inline" /></a>

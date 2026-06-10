@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catatanku — Case Study | Naufal Rakha Putra</title>
+  <meta name="description" content="Case Study Catatanku — Aplikasi catatan digital untuk pelajar & mahasiswa. PHP Native, MySQL, Bootstrap oleh Naufal Rakha Putra.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #fde047; font-family: 'Space Grotesk', sans-serif; padding: 32px 16px; }
+    .container { max-width: 800px; margin: 0 auto; }
+    .hero {
+      background: #fff; border: 6px solid #000; padding: 48px; box-shadow: 12px 12px 0 #000;
+      text-align: center; rotate: -1deg; margin-bottom: 40px; position: relative;
+    }
+    .hero .deco { position: absolute; width: 48px; height: 48px; border: 4px solid #000; }
+    .hero .deco.tl { top: -16px; left: -16px; background: #3b82f6; rotate: 12deg; }
+    .hero .deco.br { bottom: -16px; right: -16px; background: #ec4899; rotate: -8deg; }
+    .label {
+      font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; text-transform: uppercase;
+      background: #000; color: #fff; display: inline-block; padding: 4px 12px; margin-bottom: 16px; rotate: 2deg;
+    }
+    h1 { font-size: 40px; font-weight: 900; text-transform: uppercase; margin-bottom: 8px; }
+    .hero p { font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #333; line-height: 1.6; }
+    .tagline { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #555; margin-top: 8px; }
+    .card {
+      background: #fff; border: 4px solid #000; padding: 32px; box-shadow: 8px 8px 0 #000;
+      margin-bottom: 24px; position: relative;
+    }
+    .card h2 {
+      font-size: 20px; font-weight: 900; text-transform: uppercase; margin-bottom: 16px;
+      display: inline-block; border-bottom: 4px solid #000; padding-bottom: 4px;
+    }
+    .card h3 { font-size: 16px; font-weight: 900; text-transform: uppercase; margin: 16px 0 8px; }
+    .card ul, .card ol { font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.8; padding-left: 24px; }
+    .card li { margin-bottom: 6px; }
+    .card pre {
+      background: #f3f3f3; border: 3px solid #000; padding: 16px; margin: 12px 0;
+      font-family: 'IBM Plex Mono', monospace; font-size: 13px; overflow-x: auto;
+    }
+    .card code { font-family: 'IBM Plex Mono', monospace; font-size: 13px; background: #f3f3f3; padding: 2px 6px; border: 1px solid #ddd; border-radius: 3px; }
+    .card p { font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.7; margin-bottom: 12px; }
+    .card strong { font-weight: 700; }
+    .card em { font-style: italic; }
+    .card .tech-badge {
+      display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700;
+      background: #000; color: #fff; padding: 4px 12px; border: 2px solid #000; margin: 3px;
+    }
+    .card .tech-badge.php { background: #787cb5; }
+    .card .tech-badge.mysql { background: #4479a1; }
+    .card .tech-badge.boot { background: #7952b3; }
+    .btn {
+      display: inline-block; background: #000; color: #fff;
+      font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px;
+      text-transform: uppercase; text-decoration: none; padding: 12px 28px;
+      border: 4px solid #000; box-shadow: 6px 6px 0 #000; transition: all 0.15s ease;
+    }
+    .btn:hover { translate: -2px -2px; box-shadow: 8px 8px 0 #000; background: #ec4899; }
+    .footer { text-align: center; margin-top: 40px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+    .footer a { color: #000; font-weight: 700; }
+    .screenshot-placeholder {
+      background: #e5e7eb; border: 4px solid #000; padding: 48px 24px; text-align: center;
+      font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #666; margin: 16px 0;
+    }
+    @media(prefers-color-scheme:dark) {
+      body { background: #000; }
+      .hero { background: #111; border-color: #fff; box-shadow: 12px 12px 0 #fff; }
+      .hero .deco { border-color: #fff; }
+      .hero p, .tagline { color: #ccc; }
+      h1, h2, h3, .card p, .card li, .card strong, .card em { color: #fff; }
+      .card { background: #111; border-color: #fff; box-shadow: 8px 8px 0 #fff; }
+      .card h2 { border-bottom-color: #fde047; }
+      .card pre { background: #1a1a1a; border-color: #333; color: #ddd; }
+      .card code { background: #1a1a1a; border-color: #333; color: #ddd; }
+      .card .tech-badge { border-color: #555; }
+      .label { background: #fde047; color: #000; }
+      .btn { background: #fde047; color: #000; border-color: #fde047; box-shadow: 6px 6px 0 #fde047; }
+      .btn:hover { background: #ec4899; color: #fff; }
+      .footer a { color: #fde047; }
+      .footer { color: #888; }
+      .screenshot-placeholder { background: #1a1a1a; border-color: #555; color: #888; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="deco tl"></div>
+      <div class="deco br"></div>
+      <div class="label">Case Study</div>
+      <h1>Catatanku</h1>
+      <p>Aplikasi catatan digital untuk pelajar &amp; mahasiswa</p>
+      <div class="tagline">PHP Native · MySQL · Bootstrap</div>
+    </div>
+
+    <div class="card">
+      <h2>Deskripsi</h2>
+      <p><strong>Catatanku</strong> adalah aplikasi catatan digital berbasis web yang dirancang khusus untuk pelajar dan mahasiswa. Proyek ini adalah proyek PHP pertama yang dibangun dari nol tanpa framework, mengajarkan fondasi full-stack development mulai dari CRUD dasar hingga autentikasi, role-based access, dan ekspor PDF.</p>
+      <p>Dibangun saat masa SMK, Catatanku menjadi batu loncatan untuk memahami arsitektur web tradisional secara menyeluruh.</p>
+    </div>
+
+    <div class="card">
+      <h2>Teknologi</h2>
+      <div style="margin-bottom:16px">
+        <span class="tech-badge php">PHP Native</span>
+        <span class="tech-badge mysql">MySQL</span>
+        <span class="tech-badge boot">Bootstrap 5</span>
+        <span class="tech-badge" style="background:#10b981">DomPDF</span>
+        <span class="tech-badge" style="background:#f59e0b;color:#000">JavaScript</span>
+      </div>
+      <ul>
+        <li><strong>Backend:</strong> PHP Native (tanpa framework)</li>
+        <li><strong>Database:</strong> MySQL dengan relasi user-catatan-matkul</li>
+        <li><strong>Frontend:</strong> Bootstrap 5 + custom CSS</li>
+        <li><strong>PDF:</strong> DomPDF untuk ekspor catatan</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Fitur</h2>
+      <ul>
+        <li>Registrasi &amp; login pengguna</li>
+        <li>CRUD catatan (tambah, lihat, edit, hapus)</li>
+        <li>Manajemen mata kuliah (admin)</li>
+        <li>Role-based access: user biasa + admin panel</li>
+        <li>Ekspor catatan ke PDF</li>
+        <li>Forgot password &amp; reset password</li>
+        <li>Responsive design (Bootstrap)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Struktur Proyek</h2>
+      <pre>catatanku/
+  admin/        # Panel admin (user, matkul, catatan)
+  user/         # Dashboard user (add, edit, delete note)
+  public/       # Login, register, forgot/reset password
+  includes/     # Auth, config, header, footer
+  config/       # Koneksi database
+  vendor/       # DomPDF & dependencies</pre>
+    </div>
+
+    <div class="card">
+      <h2>Yang Dipelajari</h2>
+      <ul>
+        <li>PHP session management &amp; autentikasi</li>
+        <li>CRUD dengan prepared statements (PDO)</li>
+        <li>Relasi database MySQL (user → catatan → matkul)</li>
+        <li>Role-based access control (user vs admin)</li>
+        <li>File upload &amp; PDF generation</li>
+        <li>Deployment ke shared hosting (InfinityFree)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Status</h2>
+      <p>Aplikasi masih hidup di <strong>InfinityFree</strong> (free hosting) namun domain pointing sudah dimatikan. Source code tersedia di GitHub.</p>
+      <div class="flex" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+        <a href="https://github.com/sternnaufal/catatanku" target="_blank" rel="noopener noreferrer" class="btn">Lihat Source Code</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <a href="https://naufalrakha.my.id" class="btn">Balik ke Portofolio</a>
+      <p style="margin-top:16px">© 2025 Naufal Rakha Putra</p>
+    </div>
+  </div>
+</body>
+</html>
