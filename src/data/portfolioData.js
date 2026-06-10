@@ -110,10 +110,10 @@ export const projects = [
   {
     title: 'Sterntools',
     category: 'Tools',
-    description: 'Koleksi shell script dan tools untuk otomatisasi, sysadmin, dan produktivitas daily-use.',
+    description: 'Toolkit CTF untuk analisis forensika digital. Koleksi skrip otomatisasi bedah file, ekstraksi artefak, dan investigasi sistem.',
     github: 'https://github.com/sternnaufal/sterntools',
     image: '/images/projects/sterntools.png',
-    tech: ['Shell']
+    tech: ['Shell', 'Forensika']
   }
 ]
 
