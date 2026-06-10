@@ -14,22 +14,18 @@ export const projects = [
     category: 'AI',
     description: 'Sistem generator soal ujian otomatis berbasis AI bernilai komersial Rp2.500.000. Multi-AI fallback: Gemini API, DeepSeek, Groq. Laravel + AI Integration.',
     github: 'https://github.com/sternnaufal/LG-exambot',
-    image: '/images/project-placeholder.svg'
+    live: 'https://exambot.l-glearning.com/',
+    image: '/images/projects/lg-exambot.png'
   },
   {
     title: 'GreenEvent',
-    category: 'Web App',
     description: 'Platform manajemen acara lingkungan hidup. Produk andalan kompetisi Creanomic Vokasi UB 2025. Laravel + Blade + MySQL.',
     github: 'https://github.com/sternnaufal/greenEvent',
     live: 'https://greenevent.infinityfree.me',
-    image: '/images/project-placeholder.svg'
+    image: '/images/projects/greenevent.png'
   },
   {
     title: 'Telegram Bot Reminder',
-    category: 'AI',
-    description: 'Bot pengingat jadwal otomatis terintegrasi Google Calendar API. Skrip Python untuk manajemen waktu personal via Telegram.',
-    github: 'https://github.com/sternnaufal/bot-calendar-python-telegram',
-    image: '/images/project-placeholder.svg'
   },
   {
     title: 'Catatanku',
@@ -37,15 +33,15 @@ export const projects = [
     description: 'Aplikasi catatan digital untuk pelajar & mahasiswa. PHP Native + MySQL dengan fitur CRUD catatan, autentikasi, admin panel, dan ekspor PDF.',
     github: 'https://github.com/sternnaufal/catatanku',
     caseStudy: '/projects/catatanku.html',
-    image: '/images/project-placeholder.svg'
+    image: '/images/projects/bot-telegram.png'
   },
   {
-    title: 'Sakurapai (CMS Video)',
+    title: 'Catatanku',
     category: 'Web App',
-    description: 'Content Management System video streaming dengan fitur login, manajemen konten, dan MySQL. PHP Native.',
-    github: 'https://github.com/sternnaufal/cmsvideo',
-    caseStudy: '/projects/sakurapai.html',
-    image: '/images/project-placeholder.svg'
+    description: 'Aplikasi catatan digital untuk pelajar & mahasiswa. PHP Native + MySQL dengan fitur CRUD catatan, autentikasi, admin panel, dan ekspor PDF.',
+    github: 'https://github.com/sternnaufal/catatanku',
+    caseStudy: '/projects/catatanku.html',
+    image: '/images/projects/catatanku.png'
   },
   {
     title: 'Alphascript',
@@ -53,15 +49,15 @@ export const projects = [
     description: 'JavaScript library open-source untuk mempercepat manipulasi DOM sederhana.',
     github: 'https://github.com/sternnaufal/alphascript',
     caseStudy: '/projects/alphascript.html',
-    image: '/images/project-placeholder.svg'
+    image: '/images/projects/alphascript.png'
   },
   {
-    title: 'Keepsimple',
-    category: 'Library',
-    description: 'CSS framework minimalis fokus pada kecepatan muat halaman dan kebersihan UI.',
-    github: 'https://github.com/sternnaufal/keepsimple',
-    caseStudy: '/projects/keepsimple.html',
-    image: '/images/project-placeholder.svg'
+    title: 'Sakurapai (CMS Video)',
+    category: 'Web App',
+    description: 'Content Management System video streaming dengan fitur login, manajemen konten, dan MySQL. PHP Native.',
+    github: 'https://github.com/sternnaufal/cmsvideo',
+    caseStudy: '/projects/sakurapai.html',
+    image: '/images/projects/sakurapai.png'
   },
   {
     title: 'Flag Quiz Master',
@@ -85,21 +81,22 @@ export const projects = [
     description: 'RESTful API manajemen todos dengan Express.js + TypeScript. Fitur pagination, filter multi-parameter, kategorisasi, prioritas, dan statistik. Deployed di Vercel.',
     github: 'https://github.com/sternnaufal/api',
     live: 'https://api-three-self-56.vercel.app/',
-    image: '/images/project-placeholder.svg'
+    image: '/images/projects/todos-api.png'
   },
   {
     title: 'Hanekawa Bot v4',
     category: 'AI',
     description: 'Discord bot serbaguna v4 berbasis JavaScript dengan fitur moderasi, musik, tiket, translasi, dan lainnya.',
     github: 'https://github.com/sternnaufal/hanekawa-bot-v4',
-    image: '/images/project-placeholder.svg'
+    image: '/images/projects/hanekawa-bot.png'
   },
   {
-    title: 'Sterntools',
-    category: 'Tools',
-    description: 'Koleksi shell script dan tools untuk otomatisasi, sysadmin, dan produktivitas daily-use.',
-    github: 'https://github.com/sternnaufal/sterntools',
-    image: '/images/project-placeholder.svg'
+    title: 'Keepsimple',
+    category: 'Library',
+    description: 'CSS framework minimalis fokus pada kecepatan muat halaman dan kebersihan UI.',
+    github: 'https://github.com/sternnaufal/keepsimple',
+    caseStudy: '/projects/keepsimple.html',
+    image: '/images/projects/keepsimple.png'
   }
 ]
 

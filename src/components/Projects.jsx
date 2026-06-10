@@ -1,14 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { projects, projectCategories } from '../data/portfolioData'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+
+const PER_PAGE = 6
 
 function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
+  const [page, setPage] = useState(1)
 
   const filtered = activeCategory === 'All'
     ? projects
     : projects.filter((p) => p.category === activeCategory)
+
+  const totalPages = Math.ceil(filtered.length / PER_PAGE)
+  const paginated = filtered.slice(0, page * PER_PAGE)
+
+  useEffect(() => {
+    setPage(1)
+  }, [activeCategory])
 
   const container = {
     hidden: { opacity: 0 },
@@ -58,13 +68,13 @@ function Projects() {
         </div>
 
         <motion.div
-          key={activeCategory}
+          key={activeCategory + '-' + page}
           variants={container}
           initial="hidden"
           animate="show"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
-          {filtered.map((project, index) => (
+          {paginated.map((project, index) => (
             <motion.div
               key={project.title}
               variants={item}
@@ -143,6 +153,18 @@ function Projects() {
 
         {filtered.length === 0 && (
           <p className="text-center font-mono text-lg mt-12 opacity-60">Tidak ada proyek di kategori ini.</p>
+        )}
+
+        {totalPages > 1 && page < totalPages && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setPage((p) => p + 1)}
+              className="bg-black text-white dark:bg-yellow-400 dark:text-black font-bold px-8 py-3 border-4 border-black text-sm uppercase shadow-neo hover:-translate-y-1 hover:shadow-neo-large transition-all flex items-center gap-3"
+            >
+              <span>Muat Lainnya</span>
+              <FaChevronRight />
+            </button>
+          </div>
         )}
       </div>
     </section>
