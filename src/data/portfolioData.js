@@ -33,14 +33,6 @@ export const projects = [
     description: 'Aplikasi catatan digital untuk pelajar & mahasiswa. PHP Native + MySQL dengan fitur CRUD catatan, autentikasi, admin panel, dan ekspor PDF.',
     github: 'https://github.com/sternnaufal/catatanku',
     caseStudy: '/projects/catatanku.html',
-    image: '/images/projects/bot-telegram.png'
-  },
-  {
-    title: 'Catatanku',
-    category: 'Web App',
-    description: 'Aplikasi catatan digital untuk pelajar & mahasiswa. PHP Native + MySQL dengan fitur CRUD catatan, autentikasi, admin panel, dan ekspor PDF.',
-    github: 'https://github.com/sternnaufal/catatanku',
-    caseStudy: '/projects/catatanku.html',
     image: '/images/projects/catatanku.png'
   },
   {
