@@ -1,13 +1,21 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { projects, projectCategories } from '../data/portfolioData'
-import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt, FaChevronRight } from 'react-icons/fa'
 
 const PER_PAGE = 6
 
 function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
   const [page, setPage] = useState(1)
+  const [lightbox, setLightbox] = useState(null)
+
+  useEffect(() => {
+    if (!lightbox) return
+    const handler = (e) => { if (e.key === 'Escape') setLightbox(null) }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [lightbox])
 
   const filtered = activeCategory === 'All'
     ? projects
@@ -110,7 +118,7 @@ function Projects() {
                 </div>
 
                 {project.image && (
-                  <div className="mb-4 border-4 border-black overflow-hidden bg-gray-200 dark:bg-gray-800">
+                  <button onClick={() => setLightbox(project)} className="mb-4 border-4 border-black overflow-hidden bg-gray-200 dark:bg-gray-800 w-full text-left cursor-pointer group/image">
                     <div className="aspect-video relative">
                       <img
                         src={project.image}
@@ -118,8 +126,13 @@ function Projects() {
                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
+                      <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors flex items-center justify-center">
+                        <span className="bg-white dark:bg-gray-900 text-black dark:text-white font-bold px-3 py-1 border-2 border-black text-xs uppercase opacity-0 group-hover/image:opacity-100 transition-opacity -translate-y-2 group-hover/image:translate-y-0">
+                          Perbesar
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  </button>
                 )}
 
                 <h4 className="font-space text-2xl font-bold mb-3 uppercase tracking-tight group-hover:underline decoration-yellow-400 decoration-8 underline-offset-4">
@@ -167,6 +180,30 @@ function Projects() {
           </div>
         )}
       </div>
+
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <div
+            className="relative max-w-5xl w-full border-5 border-black shadow-neo-large"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setLightbox(null)}
+              className="absolute -top-4 -right-4 z-10 bg-pink-500 border-4 border-black w-10 h-10 flex items-center justify-center font-space font-bold text-xl text-black hover:bg-yellow-400 transition-colors shadow-neo-mini hover:-translate-y-0.5"
+            >
+              X
+            </button>
+            <img
+              src={lightbox.image}
+              alt={lightbox.title}
+              className="w-full h-auto max-h-[85vh] object-contain bg-white dark:bg-gray-900"
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }
