@@ -99,6 +99,19 @@ function Projects() {
                   </div>
                 </div>
 
+                {project.image && (
+                  <div className="mb-4 border-4 border-black overflow-hidden bg-gray-200 dark:bg-gray-800">
+                    <div className="aspect-video relative">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                )}
+
                 <h4 className="font-space text-2xl font-bold mb-3 uppercase tracking-tight group-hover:underline decoration-yellow-400 decoration-8 underline-offset-4">
                   {project.title}
                 </h4>

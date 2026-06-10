@@ -6,68 +6,78 @@ export const projects = [
     category: 'Web App',
     description: 'Platform crowdfunding medis full-stack (React.js + Node.js/Express). Kolaborasi tim dengan dosen sebagai stakeholder utama. Fitur campaign management, donasi, dan auth.',
     github: 'https://github.com/orgs/group4pbl-carefund/repositories',
-    live: 'https://frontend-wine-kappa-76.vercel.app/'
+    live: 'https://frontend-wine-kappa-76.vercel.app/',
+    image: '/images/projects/carefund.png'
   },
   {
     title: 'LG-Exambot',
     category: 'AI',
     description: 'Sistem generator soal ujian otomatis berbasis AI bernilai komersial Rp2.500.000. Multi-AI fallback: Gemini API, DeepSeek, Groq. Laravel + AI Integration.',
-    github: 'https://github.com/sternnaufal/LG-exambot'
+    github: 'https://github.com/sternnaufal/LG-exambot',
+    image: '/images/project-placeholder.svg'
   },
   {
     title: 'GreenEvent',
     category: 'Web App',
     description: 'Platform manajemen acara lingkungan hidup. Produk andalan kompetisi Creanomic Vokasi UB 2025. Laravel + Blade + MySQL.',
     github: 'https://github.com/sternnaufal/greenEvent',
-    live: 'https://greenevent.infinityfree.me'
+    live: 'https://greenevent.infinityfree.me',
+    image: '/images/project-placeholder.svg'
   },
   {
     title: 'Telegram Bot Reminder',
     category: 'AI',
     description: 'Bot pengingat jadwal otomatis terintegrasi Google Calendar API. Skrip Python untuk manajemen waktu personal via Telegram.',
-    github: 'https://github.com/sternnaufal/bot-calendar-python-telegram'
+    github: 'https://github.com/sternnaufal/bot-calendar-python-telegram',
+    image: '/images/project-placeholder.svg'
   },
   {
     title: 'Catatanku',
     category: 'Web App',
     description: 'Aplikasi catatan digital untuk pelajar & mahasiswa. PHP Native + MySQL dengan fitur CRUD catatan, autentikasi, admin panel, dan ekspor PDF.',
     github: 'https://github.com/sternnaufal/catatanku',
-    caseStudy: '/projects/catatanku.html'
+    caseStudy: '/projects/catatanku.html',
+    image: '/images/project-placeholder.svg'
   },
   {
     title: 'Sakurapai (CMS Video)',
     category: 'Web App',
     description: 'Content Management System video streaming dengan fitur login, manajemen konten, dan MySQL. PHP Native.',
     github: 'https://github.com/sternnaufal/cmsvideo',
-    caseStudy: '/projects/sakurapai.html'
+    caseStudy: '/projects/sakurapai.html',
+    image: '/images/project-placeholder.svg'
   },
   {
     title: 'Alphascript',
     category: 'Library',
     description: 'JavaScript library open-source untuk mempercepat manipulasi DOM sederhana.',
     github: 'https://github.com/sternnaufal/alphascript',
-    caseStudy: '/projects/alphascript.html'
+    caseStudy: '/projects/alphascript.html',
+    image: '/images/project-placeholder.svg'
   },
   {
     title: 'Keepsimple',
     category: 'Library',
     description: 'CSS framework minimalis fokus pada kecepatan muat halaman dan kebersihan UI.',
     github: 'https://github.com/sternnaufal/keepsimple',
-    caseStudy: '/projects/keepsimple.html'
+    caseStudy: '/projects/keepsimple.html',
+    image: '/images/project-placeholder.svg'
   },
   {
     title: 'Flag Quiz Master',
     category: 'Mobile',
     description: 'Game edukasi tebak bendera negara native Android. 60+ unduhan awal.',
     github: null,
-    live: 'https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps'
+    live: 'https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps',
+    image: '/images/projects/flagquiz.png'
   },
   {
     title: 'Sortiverse',
     category: 'Mobile',
     description: 'Game puzzle edukasi sorting untuk Android. 60+ unduhan awal.',
     github: null,
-    live: 'https://play.google.com/store/apps/details?id=com.seninterus.sortiverse'
+    live: 'https://play.google.com/store/apps/details?id=com.seninterus.sortiverse',
+    image: '/images/projects/sortiverse.png'
   }
 ]
 
