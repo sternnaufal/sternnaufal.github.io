@@ -131,15 +131,6 @@ export const skillCategories = [
   }
 ]
 
-export const skills = [
-  'React.js', 'Next.js', 'Vite', 'Tailwind CSS', 'Bootstrap',
-  'Node.js (Express)', 'Laravel', 'PHP', 'JavaScript (ES6+)',
-  'Kotlin', 'Python', 'MySQL', 'Firebase', 'HTML5', 'CSS3', 'SQL',
-  'Docker', 'Git/GitHub', 'Vercel', 'Railway', 'cPanel', 'Nginx', 'Apache', 'Postman',
-  'Cisco', 'MikroTik', 'Linux Server (Debian)', 'Fiber Optic (OTDR & Splicing)', 'CTF Methodologies',
-  'Twine', 'Godot', 'Unity', 'C#'
-]
-
 export const education = [
   {
     title: 'Universitas Brawijaya',

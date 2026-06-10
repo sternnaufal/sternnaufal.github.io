@@ -46,12 +46,13 @@ function App() {
   useEffect(() => {
     const sections = document.querySelectorAll('section[id]')
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id)
-        }
-      })
-    }, { rootMargin: '-40% 0px -55% 0px' })
+      const best = entries.reduce((max, entry) =>
+        entry.intersectionRatio > (max?.intersectionRatio || 0) ? entry : max
+      , null)
+      if (best?.isIntersecting) {
+        setActiveSection(best.target.id)
+      }
+    }, { threshold: [0.25, 0.4, 0.55, 0.7] })
 
     sections.forEach((s) => observer.observe(s))
     return () => observer.disconnect()

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaPaperPlane, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
+import { FaPaperPlane, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 
 function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
