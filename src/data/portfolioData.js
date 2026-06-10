@@ -1,4 +1,4 @@
-export const projectCategories = ['All', 'Web App', 'Game', 'AI', 'Mobile', 'Library']
+export const projectCategories = ['All', 'Web App', 'Game', 'AI', 'Mobile', 'Library', 'Backend', 'Tools']
 
 export const projects = [
   {
@@ -78,6 +78,28 @@ export const projects = [
     github: null,
     live: 'https://play.google.com/store/apps/details?id=com.seninterus.sortiverse',
     image: '/images/projects/sortiverse.png'
+  },
+  {
+    title: 'Todos API',
+    category: 'Backend',
+    description: 'RESTful API manajemen todos dengan Express.js + TypeScript. Fitur pagination, filter multi-parameter, kategorisasi, prioritas, dan statistik. Deployed di Vercel.',
+    github: 'https://github.com/sternnaufal/api',
+    live: 'https://api-three-self-56.vercel.app/',
+    image: '/images/project-placeholder.svg'
+  },
+  {
+    title: 'Hanekawa Bot v4',
+    category: 'AI',
+    description: 'Discord bot serbaguna v4 berbasis JavaScript dengan fitur moderasi, musik, tiket, translasi, dan lainnya.',
+    github: 'https://github.com/sternnaufal/hanekawa-bot-v4',
+    image: '/images/project-placeholder.svg'
+  },
+  {
+    title: 'Sterntools',
+    category: 'Tools',
+    description: 'Koleksi shell script dan tools untuk otomatisasi, sysadmin, dan produktivitas daily-use.',
+    github: 'https://github.com/sternnaufal/sterntools',
+    image: '/images/project-placeholder.svg'
   }
 ]
 
