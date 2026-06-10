@@ -21,7 +21,7 @@ function Games() {
               </h3>
             </div>
             <h4 className="font-space text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 -rotate-1">
-              <a href={studio.url} target="_blank" className="hover:text-pink-500 dark:hover:text-yellow-400 transition-colors underline decoration-yellow-400 decoration-8 underline-offset-8">
+              <a href={studio.url} target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 dark:hover:text-yellow-400 transition-colors underline decoration-yellow-400 decoration-8 underline-offset-8">
                 {studio.name}
               </a>
             </h4>
@@ -31,7 +31,7 @@ function Games() {
           </div>
           <a
             href={studio.url}
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             className="bg-black text-white dark:bg-yellow-400 dark:text-black font-space font-bold px-8 py-4 border-4 border-black shadow-neo-large hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo transition-all text-xl uppercase flex items-center gap-3 shrink-0"
           >
             <FaGamepad />
@@ -75,7 +75,7 @@ function Games() {
                     <a
                       key={link.label}
                       href={link.url}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                       className="font-mono text-xs font-bold bg-yellow-400 dark:bg-pink-500 text-black dark:text-white px-3 py-2 border-2 border-black shadow-neo-mini hover:-translate-y-1 hover:shadow-neo transition-all flex items-center gap-2"
                     >

@@ -52,14 +52,14 @@ export const projects = [
     title: 'Flag Quiz Master',
     category: 'Mobile',
     description: 'Game edukasi tebak bendera negara native Android. 60+ unduhan awal.',
-    github: 'https://github.com/sternnaufal',
+    github: null,
     live: 'https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps'
   },
   {
     title: 'Sortiverse',
     category: 'Mobile',
     description: 'Game puzzle edukasi sorting untuk Android. 60+ unduhan awal.',
-    github: 'https://github.com/sternnaufal',
+    github: null,
     live: 'https://play.google.com/store/apps/details?id=com.seninterus.sortiverse'
   }
 ]

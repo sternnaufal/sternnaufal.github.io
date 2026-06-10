@@ -43,7 +43,7 @@ function Hero() {
             </a>
             <a
               href="/CV_Naufal Rakha Putra.pdf"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               onClick={() => {
                 const c = parseInt(localStorage.getItem('cv_downloads') || '0') + 1
                 localStorage.setItem('cv_downloads', c)

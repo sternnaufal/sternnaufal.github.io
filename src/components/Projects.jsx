@@ -87,12 +87,12 @@ function Projects() {
                   </div>
                   <div className="flex gap-4">
                     {project.github && (
-                      <a href={project.github} target="_blank" className="text-2xl hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
                         <FaGithub />
                       </a>
                     )}
                     {project.live && (
-                      <a href={project.live} target="_blank" className="text-2xl hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
                         <FaExternalLinkAlt />
                       </a>
                     )}
@@ -113,9 +113,15 @@ function Projects() {
                       Case Study
                     </a>
                   ) : null}
-                  <a href={project.github} target="_blank" className="bg-white dark:bg-gray-800 text-black dark:text-white font-bold px-4 py-2 border-3 border-black text-sm uppercase shadow-neo-mini hover:-translate-y-1 hover:shadow-neo transition-all">
-                    View Code
-                  </a>
+                  {project.github ? (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="bg-white dark:bg-gray-800 text-black dark:text-white font-bold px-4 py-2 border-3 border-black text-sm uppercase shadow-neo-mini hover:-translate-y-1 hover:shadow-neo transition-all">
+                      View Code
+                    </a>
+                  ) : project.live ? (
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="bg-white dark:bg-gray-800 text-black dark:text-white font-bold px-4 py-2 border-3 border-black text-sm uppercase shadow-neo-mini hover:-translate-y-1 hover:shadow-neo transition-all">
+                      View App
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </motion.div>
