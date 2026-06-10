@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlphaScript — Case Study | Naufal Rakha Putra</title>
+  <meta name="description" content="Case Study AlphaScript — Pseudo programming language based on Gen Alpha slang by Naufal Rakha Putra.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fde047;
+      font-family: 'Space Grotesk', sans-serif;
+      padding: 32px 16px;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    .hero {
+      background: #fff;
+      border: 6px solid #000;
+      padding: 48px;
+      box-shadow: 12px 12px 0 #000;
+      text-align: center;
+      rotate: 1deg;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .hero .deco {
+      position: absolute; width: 48px; height: 48px; border: 4px solid #000;
+    }
+    .hero .deco.tl { top: -16px; left: -16px; background: #ec4899; rotate: 12deg; }
+    .hero .deco.br { bottom: -16px; right: -16px; background: #3b82f6; rotate: -8deg; }
+    .label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px; font-weight: 700; text-transform: uppercase;
+      background: #000; color: #fff;
+      display: inline-block; padding: 4px 12px; margin-bottom: 16px; rotate: -2deg;
+    }
+    h1 { font-size: 40px; font-weight: 900; text-transform: uppercase; margin-bottom: 8px; }
+    .hero p { font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #333; line-height: 1.6; }
+    .card {
+      background: #fff;
+      border: 4px solid #000;
+      padding: 32px;
+      box-shadow: 8px 8px 0 #000;
+      margin-bottom: 24px;
+    }
+    .card h2 {
+      font-size: 20px; font-weight: 900; text-transform: uppercase; margin-bottom: 16px;
+      display: inline-block;
+      border-bottom: 4px solid #000; padding-bottom: 4px;
+    }
+    .card h3 {
+      font-size: 16px; font-weight: 900; text-transform: uppercase; margin: 16px 0 8px;
+    }
+    .card p { font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.7; margin-bottom: 12px; }
+    .card ul { font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.8; padding-left: 24px; }
+    .card li { margin-bottom: 6px; }
+    .card pre {
+      background: #f3f3f3; border: 3px solid #000; padding: 16px; margin: 12px 0;
+      font-family: 'IBM Plex Mono', monospace; font-size: 13px; overflow-x: auto;
+    }
+    .card code { font-family: 'IBM Plex Mono', monospace; font-size: 13px; }
+    .card table {
+      width: 100%; border-collapse: collapse; margin: 12px 0;
+      font-family: 'IBM Plex Mono', monospace; font-size: 13px;
+    }
+    .card th, .card td {
+      border: 3px solid #000; padding: 8px 12px; text-align: left;
+    }
+    .card th { background: #000; color: #fff; font-weight: 700; }
+    .card td { background: #fff; }
+    .card strong { font-weight: 700; }
+    .btn {
+      display: inline-block;
+      background: #000; color: #fff;
+      font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px;
+      text-transform: uppercase; text-decoration: none;
+      padding: 12px 28px; border: 4px solid #000;
+      box-shadow: 6px 6px 0 #000; transition: all 0.15s ease;
+    }
+    .btn:hover { translate: -2px -2px; box-shadow: 8px 8px 0 #000; background: #ec4899; }
+    .footer {
+      text-align: center; margin-top: 40px;
+      font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    }
+    .footer a { color: #000; font-weight: 700; }
+    @media(prefers-color-scheme:dark) {
+      body { background: #000; }
+      .hero { background: #111; border-color: #fff; box-shadow: 12px 12px 0 #fff; }
+      .hero .deco { border-color: #fff; }
+      .hero p { color: #ccc; }
+      h1, h2, h3, .card p, .card li, .card strong { color: #fff; }
+      .card { background: #111; border-color: #fff; box-shadow: 8px 8px 0 #fff; }
+      .card h2 { border-bottom-color: #fde047; }
+      .card pre { background: #1a1a1a; border-color: #333; color: #ddd; }
+      .card th { background: #fde047; color: #000; }
+      .card td { background: #1a1a1a; color: #ddd; border-color: #555; }
+      .label { background: #fde047; color: #000; }
+      .btn { background: #fde047; color: #000; border-color: #fde047; box-shadow: 6px 6px 0 #fde047; }
+      .btn:hover { background: #ec4899; color: #fff; }
+      .footer a { color: #fde047; }
+      .footer { color: #888; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="deco tl"></div>
+      <div class="deco br"></div>
+      <div class="label">Case Study</div>
+      <h1>AlphaScript</h1>
+      <p>Pseudo programming language based on Gen Alpha slang</p>
+    </div>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p><strong>AlphaScript</strong> adalah bahasa pemrograman berbasis <strong>JavaScript</strong>, tapi menggunakan slang Gen Alpha sebagai sintaksnya. Dibuat untuk cara unik dan menyenangkan dalam belajar coding.</p>
+    </div>
+
+    <div class="card">
+      <h2>Contoh Kode</h2>
+      <pre>npc age = 20;
+
+bet (age based 18) {
+    gyatt("You're an adult!");
+} goofy {
+    gyatt("You're a minor!");
+}</pre>
+      <p><em>Hasil konversi ke JavaScript:</em></p>
+      <pre>let age = 20;
+
+if (age > 18) {
+    console.log("You're an adult!");
+} else {
+    console.log("You're a minor!");
+}</pre>
+    </div>
+
+    <div class="card">
+      <h2>Instalasi</h2>
+      <pre>npm install alphascript</pre>
+    </div>
+
+    <div class="card">
+      <h2>Cara Menggunakan</h2>
+      <pre>const { alphaScriptInterpreter } = require("alphascript");
+
+const code = `
+npc x = 10;
+ratio (npc i = 0; i cringe x; i drip 1) {
+    gyatt(i);
+}
+`;
+
+const jsCode = alphaScriptInterpreter(code);
+eval(jsCode);</pre>
+      <p>Jalankan dengan: <code>node script.js</code></p>
+    </div>
+
+    <div class="card">
+      <h2>Daftar Slang</h2>
+      <table>
+        <tr><th>AlphaScript</th><th>JavaScript</th></tr>
+        <tr><td>npc</td><td>let</td></tr>
+        <tr><td>main character</td><td>const</td></tr>
+        <tr><td>gyatt</td><td>console.log</td></tr>
+        <tr><td>bet</td><td>if</td></tr>
+        <tr><td>goofy</td><td>else</td></tr>
+        <tr><td>sigma</td><td>while</td></tr>
+        <tr><td>ratio</td><td>for</td></tr>
+        <tr><td>rizz</td><td>function</td></tr>
+        <tr><td>mid</td><td>null</td></tr>
+        <tr><td>no cap</td><td>true</td></tr>
+        <tr><td>cap</td><td>false</td></tr>
+        <tr><td>drip</td><td>+</td></tr>
+        <tr><td>bussin</td><td>-</td></tr>
+        <tr><td>sus</td><td>===</td></tr>
+        <tr><td>goofy ahh</td><td>!==</td></tr>
+        <tr><td>based</td><td>&gt;</td></tr>
+        <tr><td>cringe</td><td>&lt;</td></tr>
+        <tr><td>yeet</td><td>push</td></tr>
+        <tr><td>simp</td><td>pop</td></tr>
+        <tr><td>vibe check</td><td>includes</td></tr>
+        <tr><td>flex</td><td>map</td></tr>
+        <tr><td>no riz</td><td>filter</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Lisensi</h2>
+      <p>AlphaScript menggunakan <strong>MIT License</strong>, bebas digunakan oleh siapa saja.</p>
+    </div>
+
+    <div class="footer">
+      <a href="https://naufalrakha.my.id" class="btn">Balik ke Portofolio</a>
+      <p style="margin-top:16px">© 2025 Naufal Rakha Putra</p>
+    </div>
+  </div>
+</body>
+</html>
