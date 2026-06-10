@@ -113,7 +113,7 @@ export const projects = [
     description: 'Toolkit CTF untuk analisis forensika digital. Koleksi skrip otomatisasi bedah file, ekstraksi artefak, dan investigasi sistem.',
     github: 'https://github.com/sternnaufal/sterntools',
     image: '/images/projects/sterntools.png',
-    tech: ['Shell', 'Forensika']
+    tech: ['Shell', 'Linux']
   }
 ]
 
@@ -189,7 +189,7 @@ export const education = [
     title: 'Universitas Brawijaya',
     major: 'D3 Teknologi Informasi',
     year: '2025 – sekarang',
-    description: 'IPK 4.00/4.00 (Semester 2 berjalan). Aktif di BEM Vokasi (Kominfo), PSIK Vokasi, Provoks, dan GDGoC UB.'
+    description: 'Semester 2 berjalan. Aktif di BEM Vokasi (Kominfo), PSIK Vokasi, Provoks, dan GDGoC UB.'
   },
   {
     title: 'SMKN 1 Bukittinggi',
