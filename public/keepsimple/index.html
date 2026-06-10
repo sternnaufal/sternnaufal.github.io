@@ -3,167 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keepsimple — CSS Framework</title>
+  <title>Keepsimple — CSS Framework Docs</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .hero-section { text-align: center; padding: 60px 0 40px; }
-    .hero-section h1 { font-size: 4rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 8px; }
-    .hero-section .version { font-size: 0.85rem; opacity: 0.5; font-weight: 600; }
-    .hero-section p { font-size: 1.2rem; max-width: 600px; margin: 16px auto 32px; opacity: 0.7; }
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 32px 0; }
-    .feature-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; text-align: center; }
-    .feature-card .icon { font-size: 2rem; margin-bottom: 8px; }
-    .feature-card h4 { margin-bottom: 4px; }
-    .feature-card p { font-size: 0.85rem; opacity: 0.6; margin: 0; }
-    .section-title { font-weight: 900; letter-spacing: -1px; margin-bottom: 1rem; padding-top: 1rem; }
-    .demo-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; margin-bottom: 1.5rem; }
-    .demo-box.compact { padding: 1.25rem; }
-    .install-code { background: #1e293b; color: #e2e8f0; border-radius: var(--radius); padding: 1.5rem; font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.8; margin: 1rem 0; }
-    .install-code .comment { color: #64748b; }
-    .install-code .tag { color: #60a5fa; }
-    .install-code .string { color: #34d399; }
-    .footer-bar { text-align: center; padding: 2rem 0; opacity: 0.5; font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+    * { scroll-margin-top: 80px; }
+    .markup pre, .markup code { font-size: 0.85rem; }
+    .markup pre { margin: 12px 0 20px; }
+    .markup h3 { margin-top: 28px; }
+    .markup hr { margin: 32px 0; }
+    .toc { position: sticky; top: 85px; }
+    .toc a { display: block; padding: 4px 0; font-size: 0.85rem; color: var(--text); opacity: 0.6; }
+    .toc a:hover { opacity: 1; text-decoration: none; }
+    .toc a.active { opacity: 1; font-weight: 700; }
+    .var-table td:first-child { font-family: var(--font-mono); font-size: 0.82rem; }
+    .hero-docs { padding: 40px 0 20px; }
+    .hero-docs h1 { font-size: 3.5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 4px; }
+    .hero-docs .sub { font-size: 1.1rem; opacity: 0.6; margin-bottom: 24px; }
+    .badge-get { font-size: 0.75rem; padding: 4px 12px; }
+    .class-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 4px; }
+    .class-grid code { display: block; padding: 6px 10px; font-size: 0.8rem; border-radius: 4px; background: rgba(128,128,128,0.06); }
+    .footer-docs { text-align: center; padding: 3rem 0 1rem; opacity: 0.5; font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+    @media (max-width: 768px) { .hero-docs h1 { font-size: 2.5rem; } }
   </style>
 </head>
 <body>
   <nav class="navbar-con">
     <ul>
-      <li><a href="#install">Install</a></li>
-      <li><a href="#grid">Layout</a></li>
+      <li><a href="#start">Start</a></li>
+      <li><a href="#grid">Grid</a></li>
       <li><a href="#components">Components</a></li>
-      <li><a href="#forms">Forms</a></li>
       <li><a href="#utilities">Utilities</a></li>
+      <li><a href="#customize">Customize</a></li>
       <li><a href="#" id="theme-toggle">🌗</a></li>
     </ul>
   </nav>
 
-  <main class="container">
-    <section class="hero-section">
-      <span class="badge badge-primary" style="font-size:0.8rem;padding:4px 14px">v2.0</span>
+  <main class="container markup">
+    <!-- Hero -->
+    <section class="hero-docs">
+      <span class="badge badge-primary badge-get">v2.0</span>
       <h1>Keepsimple</h1>
-      <p>The lightweight CSS framework that just works. No build tools, no JavaScript, no complexity.</p>
-      <div class="flex justify-center gap-2" style="flex-wrap:wrap">
-        <a href="#install" class="btn btn-primary btn-lg">Get Started</a>
-        <a href="style.css" class="btn btn-outline btn-lg" download>Download CSS</a>
-        <button onclick="document.body.classList.toggle('dark-mode')" class="btn btn-ghost btn-lg">Toggle Dark</button>
-      </div>
-      <div class="features">
-        <div class="feature-card"><div class="icon">🎯</div><h4>5KB Gzipped</h4><p>Minimal footprint, maximum impact</p></div>
-        <div class="feature-card"><div class="icon">🧩</div><h4>Zero JS</h4><p>Pure CSS — no JavaScript required</p></div>
-        <div class="feature-card"><div class="icon">🎨</div><h4>CSS Variables</h4><p>Customize everything in one place</p></div>
-        <div class="feature-card"><div class="icon">🌙</div><h4>Dark Mode</h4><p>Built-in dark theme support</p></div>
-      </div>
-    </section>
-
-    <!-- Install -->
-    <section id="install">
-      <h2 class="section-title">⚡ Install</h2>
-      <p>Add one line to your <code>&lt;head&gt;</code> and you're done:</p>
-      <div class="install-code">
-        <span class="comment">&lt;!-- CDN via GitHub Pages --&gt;</span><br>
-        <span class="tag">&lt;</span><span class="tag">link</span> <span class="tag">rel</span>=<span class="string">"stylesheet"</span> <span class="tag">href</span>=<span class="string">"https://naufalrakha.my.id/keepsimple/style.css"</span><span class="tag">&gt;</span>
-      </div>
+      <p class="sub">The lightweight CSS framework that just works. 5KB gzipped, zero JS, no build step.</p>
       <div class="flex gap-2 items-center" style="flex-wrap:wrap">
-        <span class="badge badge-success">No NPM</span>
-        <span class="badge badge-success">No build step</span>
-        <span class="badge badge-success">Just HTML</span>
+        <a href="style.css" class="btn btn-primary" download>Download CSS</a>
+        <button onclick="document.body.classList.toggle('dark-mode')" class="btn btn-ghost">Toggle Dark Mode</button>
+        <a href="https://github.com/sternnaufal/keepsimple" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
       </div>
     </section>
 
     <hr>
 
-    <!-- Layout -->
+    <!-- Quick Start -->
+    <section id="start">
+      <h2>Quick Start</h2>
+      <p>Add one <code>&lt;link&gt;</code> in your <code>&lt;head&gt;</code>:</p>
+      <pre>&lt;link rel="stylesheet" href="https://naufalrakha.my.id/keepsimple/style.css"&gt;</pre>
+      <p>That's it. No npm install, no build step, no JavaScript.</p>
+      <div class="flex gap-1" style="flex-wrap:wrap">
+        <span class="badge badge-success">No dependencies</span>
+        <span class="badge badge-success">MIT License</span>
+        <span class="badge badge-success">6KB minified</span>
+      </div>
+
+      <h3>Font Setup (optional)</h3>
+      <p>Keepsimple uses <strong>Inter</strong> as default. Add it for best results:</p>
+      <pre>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet"&gt;</pre>
+    </section>
+
+    <hr>
+
+    <!-- Grid -->
     <section id="grid">
-      <h2 class="section-title">📐 Layout</h2>
-      <p>Flexible grid system with auto-fit columns.</p>
+      <h2>Grid</h2>
 
-      <h3 class="mb-1">Grid 2 Columns</h3>
-      <div class="grid-2">
-        <div class="demo-box compact text-center"><code>.grid-2</code><br><small>auto</small></div>
-        <div class="demo-box compact text-center"><code>.grid-2</code><br><small>auto</small></div>
-      </div>
-
-      <h3 class="mb-1">Grid 3 Columns</h3>
+      <h3><code>.grid</code> / <code>.grid-2</code> / <code>.grid-3</code> / <code>.grid-4</code></h3>
+      <p>Auto-fit responsive grid. Adjusts column count based on container width.</p>
+      <pre>&lt;div class="grid-3"&gt;
+  &lt;div&gt;Column 1&lt;/div&gt;
+  &lt;div&gt;Column 2&lt;/div&gt;
+  &lt;div&gt;Column 3&lt;/div&gt;
+&lt;/div&gt;</pre>
       <div class="grid-3">
-        <div class="demo-box compact text-center"><code>.grid-3</code></div>
-        <div class="demo-box compact text-center"><code>.grid-3</code></div>
-        <div class="demo-box compact text-center"><code>.grid-3</code></div>
+        <div class="card card-flat text-center"><code>.grid-3</code></div>
+        <div class="card card-flat text-center"><code>.grid-3</code></div>
+        <div class="card card-flat text-center"><code>.grid-3</code></div>
       </div>
 
-      <h3 class="mb-1">Grid 4 Columns</h3>
-      <div class="grid-4">
-        <div class="demo-box compact text-center"><code>.grid-4</code></div>
-        <div class="demo-box compact text-center"><code>.grid-4</code></div>
-        <div class="demo-box compact text-center"><code>.grid-4</code></div>
-        <div class="demo-box compact text-center"><code>.grid-4</code></div>
-      </div>
-
-      <h3 class="mb-1">Row + Col</h3>
+      <h3><code>.row</code> + <code>.col</code></h3>
+      <p>Flexbox-based row with equal-width columns.</p>
+      <pre>&lt;div class="row"&gt;
+  &lt;div class="col"&gt;...&lt;/div&gt;
+  &lt;div class="col"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
       <div class="row">
-        <div class="col"><div class="demo-box compact text-center"><code>.col</code></div></div>
-        <div class="col"><div class="demo-box compact text-center"><code>.col</code></div></div>
-        <div class="col"><div class="demo-box compact text-center"><code>.col</code></div></div>
+        <div class="col"><div class="card card-flat text-center"><code>.col</code></div></div>
+        <div class="col"><div class="card card-flat text-center"><code>.col</code></div></div>
       </div>
 
-      <h3 class="mb-1">Responsive Columns</h3>
+      <h3>Fixed Columns</h3>
+      <pre>&lt;div class="row"&gt;
+  &lt;div class="col-6"&gt;50%&lt;/div&gt;
+  &lt;div class="col-6"&gt;50%&lt;/div&gt;
+&lt;/div&gt;</pre>
       <div class="row">
-        <div class="col-6"><div class="demo-box compact text-center"><code>.col-6</code> (50%)</div></div>
-        <div class="col-6"><div class="demo-box compact text-center"><code>.col-6</code> (50%)</div></div>
+        <div class="col-6"><div class="card card-flat text-center"><code>.col-6</code></div></div>
+        <div class="col-6"><div class="card card-flat text-center"><code>.col-6</code></div></div>
       </div>
+
+      <table class="table table-bordered table-striped">
+        <thead><tr><th>Class</th><th>Width</th></tr></thead>
+        <tbody>
+          <tr><td><code>.col-1</code></td><td>8.33%</td></tr>
+          <tr><td><code>.col-2</code></td><td>16.66%</td></tr>
+          <tr><td><code>.col-3</code></td><td>25%</td></tr>
+          <tr><td><code>.col-4</code></td><td>33.33%</td></tr>
+          <tr><td><code>.col-6</code></td><td>50%</td></tr>
+          <tr><td><code>.col-8</code></td><td>66.66%</td></tr>
+          <tr><td><code>.col-12</code></td><td>100%</td></tr>
+        </tbody>
+      </table>
     </section>
 
     <hr>
 
     <!-- Components -->
     <section id="components">
-      <h2 class="section-title">🧩 Components</h2>
+      <h2>Components</h2>
 
-      <h3 class="mb-1">Cards</h3>
+      <!-- Card -->
+      <h3>Card</h3>
+      <pre>&lt;div class="card"&gt;
+  &lt;h3&gt;Title&lt;/h3&gt;
+  &lt;p&gt;Content here.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Flat variant (no shadow, no hover lift) --&gt;
+&lt;div class="card card-flat"&gt;...&lt;/div&gt;</pre>
       <div class="grid-3">
-        <div class="card">
-          <h3>Standard Card</h3>
-          <p>With hover lift effect. Perfect for content panels.</p>
-          <a href="#" class="btn btn-primary btn-sm">Action</a>
-        </div>
-        <div class="card-flat card">
-          <h3>Flat Card</h3>
-          <p>No shadow, no lift. Add <code>.card-flat</code>.</p>
-          <a href="#" class="btn btn-outline btn-sm">Action</a>
-        </div>
-        <div class="card" style="text-align:center">
-          <span class="badge badge-primary mb-1">Featured</span>
-          <h3>With Badge</h3>
-          <p>Combine card with badges and buttons.</p>
-          <a href="#" class="btn btn-secondary">Learn More</a>
-        </div>
+        <div class="card"><h4>Standard</h4><p class="text-sm">Hover to see lift effect.</p></div>
+        <div class="card card-flat"><h4>Flat</h4><p class="text-sm">Add <code>.card-flat</code>.</p></div>
+        <div class="card"><h4>With Button</h4><p class="text-sm">Combine with <code>.btn</code>.</p><a href="#" class="btn btn-primary btn-sm">Action</a></div>
       </div>
 
-      <h3 class="mb-1">Buttons</h3>
-      <div class="demo-box">
-        <div class="flex gap-2 items-center" style="flex-wrap:wrap">
-          <button class="btn btn-primary">Primary</button>
-          <button class="btn btn-secondary">Secondary</button>
-          <button class="btn btn-outline">Outline</button>
-          <button class="btn btn-ghost">Ghost</button>
-          <button class="btn btn-danger">Danger</button>
-        </div>
-        <div class="flex gap-2 items-center mt-2" style="flex-wrap:wrap">
-          <button class="btn btn-primary btn-sm">Small</button>
-          <button class="btn btn-primary">Default</button>
-          <button class="btn btn-primary btn-lg">Large</button>
-        </div>
+      <!-- Button -->
+      <h3>Button</h3>
+      <pre>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-outline"&gt;Outline&lt;/button&gt;
+&lt;button class="btn btn-ghost"&gt;Ghost&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+
+&lt;!-- Sizes --&gt;
+&lt;button class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;</pre>
+      <div class="flex gap-2 items-center" style="flex-wrap:wrap">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-outline">Outline</button>
+        <button class="btn btn-ghost">Ghost</button>
+        <button class="btn btn-danger">Danger</button>
+      </div>
+      <div class="flex gap-2 items-center mt-2" style="flex-wrap:wrap">
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary">Default</button>
+        <button class="btn btn-primary btn-lg">Large</button>
       </div>
 
-      <h3 class="mb-1">Alerts</h3>
-      <div class="alert alert-success"><strong>Success!</strong> Data has been saved.</div>
-      <div class="alert alert-info"><strong>Heads up!</strong> New update available.</div>
-      <div class="alert alert-warning"><strong>Warning!</strong> Please check your input.</div>
-      <div class="alert alert-error"><strong>Error!</strong> Connection lost.</div>
+      <!-- Alert -->
+      <h3>Alert</h3>
+      <pre>&lt;div class="alert alert-success"&gt;...&lt;/div&gt;
+&lt;div class="alert alert-info"&gt;...&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;...&lt;/div&gt;
+&lt;div class="alert alert-error"&gt;...&lt;/div&gt;</pre>
+      <div class="alert alert-success"><strong>Success!</strong> Data saved.</div>
+      <div class="alert alert-info"><strong>Info:</strong> Update available.</div>
+      <div class="alert alert-warning"><strong>Warning:</strong> Check your input.</div>
+      <div class="alert alert-error"><strong>Error:</strong> Connection lost.</div>
 
-      <h3 class="mb-1">Badges</h3>
+      <!-- Badge -->
+      <h3>Badge</h3>
+      <pre>&lt;span class="badge badge-primary"&gt;New&lt;/span&gt;</pre>
       <div class="flex gap-1 items-center" style="flex-wrap:wrap">
         <span class="badge badge-primary">Primary</span>
         <span class="badge badge-secondary">Secondary</span>
@@ -172,143 +195,208 @@
         <span class="badge badge-warning">Warning</span>
       </div>
 
-      <h3 class="mb-1">Tables</h3>
+      <!-- Table -->
+      <h3>Table</h3>
+      <pre>&lt;table class="table table-striped table-hover"&gt;
+  &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Alpha&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
       <div style="overflow-x:auto">
         <table class="table table-striped table-hover">
-          <thead>
-            <tr><th>Framework</th><th>Size</th><th>JS</th><th>Stars</th></tr>
-          </thead>
+          <thead><tr><th>Class</th><th>Description</th></tr></thead>
           <tbody>
-            <tr><td>Keepsimple</td><td>5 KB</td><td>None</td><td>⭐ New</td></tr>
-            <tr><td>Bootstrap</td><td>~150 KB</td><td>Required</td><td>170K+</td></tr>
-            <tr><td>Tailwind</td><td>~80 KB</td><td>Build step</td><td>80K+</td></tr>
-            <tr><td>Bulma</td><td>~40 KB</td><td>Optional</td><td>30K+</td></tr>
+            <tr><td><code>.table</code></td><td>Base table</td></tr>
+            <tr><td><code>.table-striped</code></td><td>Alternating row colors</td></tr>
+            <tr><td><code>.table-hover</code></td><td>Highlight on hover</td></tr>
+            <tr><td><code>.table-bordered</code></td><td>Full border on all cells</td></tr>
           </tbody>
         </table>
       </div>
 
-      <h3 class="mb-1">Code</h3>
-      <div class="row">
-        <div class="col">
-          <p>Inline code: <code>console.log("hello")</code></p>
-        </div>
-        <div class="col">
-          <pre>const keepsimple = {
-  weight: "5KB",
+      <!-- Form -->
+      <h3>Form</h3>
+      <pre>&lt;div class="form-group"&gt;
+  &lt;label class="form-label"&gt;Name&lt;/label&gt;
+  &lt;input type="text" class="input" placeholder="Name"&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+  &lt;label class="form-label"&gt;Category&lt;/label&gt;
+  &lt;select class="select"&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+  &lt;label class="form-label"&gt;Message&lt;/label&gt;
+  &lt;textarea class="textarea" rows="4"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</pre>
+
+      <!-- Code -->
+      <h3>Code</h3>
+      <pre>Use &lt;code&gt;inline code&lt;/code&gt; for short snippets.
+
+&lt;pre&gt;for block-level code
+  with preserved formatting&lt;/pre&gt;</pre>
+      <p>Inline: <code>console.log("hello")</code></p>
+      <pre>const keepsimple = {
+  size: "5KB",
   deps: 0,
   philosophy: "just works"
 };</pre>
-        </div>
-      </div>
 
-      <h3 class="mb-1">Spinner</h3>
+      <!-- Spinner -->
+      <h3>Spinner</h3>
+      <pre>&lt;div class="spinner"&gt;&lt;/div&gt;
+&lt;div class="spinner spinner-lg"&gt;&lt;/div&gt;</pre>
       <div class="flex gap-2 items-center">
         <div class="spinner"></div>
         <div class="spinner spinner-lg"></div>
-        <span class="text-muted">Pure CSS, zero JS</span>
       </div>
 
-      <h3 class="mb-1">Skeleton Loading</h3>
-      <div style="max-width:400px">
-        <div class="skeleton" style="width:60%;height:1.5rem;margin-bottom:12px"></div>
+      <!-- Skeleton -->
+      <h3>Skeleton</h3>
+      <pre>&lt;div class="skeleton" style="width:60%;height:1.5rem"&gt;&lt;/div&gt;</pre>
+      <div style="max-width:300px">
+        <div class="skeleton" style="width:60%;height:1.5rem;margin-bottom:10px"></div>
         <div class="skeleton" style="height:1rem;margin-bottom:8px"></div>
-        <div class="skeleton" style="width:80%;height:1rem;margin-bottom:8px"></div>
         <div class="skeleton" style="width:40%;height:1rem"></div>
       </div>
-    </section>
 
-    <hr>
-
-    <!-- Forms -->
-    <section id="forms">
-      <h2 class="section-title">📝 Forms</h2>
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <h3>Contact Form</h3>
-            <form>
-              <div class="form-group">
-                <label class="form-label">Full Name</label>
-                <input type="text" class="input" placeholder="John Doe">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Email</label>
-                <input type="email" class="input" placeholder="john@example.com">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Category</label>
-                <select class="select">
-                  <option>General</option>
-                  <option>Support</option>
-                  <option>Feedback</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Message</label>
-                <textarea class="textarea" rows="4" placeholder="Tell us more..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary w-100">Send Message</button>
-            </form>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <h3>Benefits</h3>
-            <ul class="list-unstyled">
-              <li class="mb-2">✅ <strong>Lightweight</strong> — Only 5KB gzipped</li>
-              <li class="mb-2">✅ <strong>Zero Dependencies</strong> — No JS needed</li>
-              <li class="mb-2">✅ <strong>CSS Variables</strong> — Full customization</li>
-              <li class="mb-2">✅ <strong>Dark Mode</strong> — Built-in support</li>
-              <li class="mb-2">✅ <strong>Responsive</strong> — Mobile-first grid</li>
-              <li>✅ <strong>MIT License</strong> — Free for everyone</li>
-            </ul>
-            <div class="flex gap-1 mt-3" style="flex-wrap:wrap">
-              <span class="badge badge-primary">Modern</span>
-              <span class="badge badge-success">Fast</span>
-              <span class="badge badge-secondary">Minimal</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Navbar -->
+      <h3>Navbar</h3>
+      <pre>&lt;nav class="navbar-con"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
     </section>
 
     <hr>
 
     <!-- Utilities -->
     <section id="utilities">
-      <h2 class="section-title">🔧 Utilities</h2>
-      <div class="grid-3">
-        <div class="card card-flat">
-          <h4>Flex</h4>
-          <code>.flex .flex-col .items-center .justify-between .gap-*</code>
-        </div>
-        <div class="card card-flat">
-          <h4>Spacing</h4>
-          <code>.m-* .p-* .mt-* .mb-* .pt-* .pb-*</code>
-          <p class="text-sm text-muted mt-1">Scale: 0–4 (0.5rem steps)</p>
-        </div>
-        <div class="card card-flat">
-          <h4>Text</h4>
-          <code>.text-center .text-sm .text-lg .text-muted .text-primary</code>
-        </div>
-        <div class="card card-flat">
-          <h4>Display</h4>
-          <code>.hidden .block .inline-block .w-100</code>
-        </div>
-        <div class="card card-flat">
-          <h4>Images</h4>
-          <code>.img-fluid .img-round .img-shadow .img-bordered</code>
-        </div>
-        <div class="card card-flat">
-          <h4>Lists</h4>
-          <code>.list-unstyled .list-inline</code>
-        </div>
+      <h2>Utilities</h2>
+
+      <h3>Flex</h3>
+      <div class="class-grid">
+        <code>.flex</code>
+        <code>.flex-col</code>
+        <code>.flex-wrap</code>
+        <code>.flex-1</code>
+        <code>.items-start</code>
+        <code>.items-center</code>
+        <code>.items-end</code>
+        <code>.justify-start</code>
+        <code>.justify-center</code>
+        <code>.justify-between</code>
+        <code>.justify-end</code>
+        <code>.gap-0</code>
+        <code>.gap-1</code>
+        <code>.gap-2</code>
+        <code>.gap-3</code>
+        <code>.gap-4</code>
+      </div>
+
+      <h3 class="mt-3">Spacing</h3>
+      <p>Scale: <strong>0</strong> (0) · <strong>1</strong> (0.5rem) · <strong>2</strong> (1rem) · <strong>3</strong> (1.5rem) · <strong>4</strong> (2rem)</p>
+      <div class="class-grid">
+        <code>.m-0</code> <code>.m-1</code> <code>.m-2</code> <code>.m-3</code> <code>.m-4</code>
+        <code>.p-0</code> <code>.p-1</code> <code>.p-2</code> <code>.p-3</code> <code>.p-4</code>
+        <code>.mt-1</code> <code>.mt-2</code> <code>.mt-3</code> <code>.mt-4</code>
+        <code>.mb-1</code> <code>.mb-2</code> <code>.mb-3</code> <code>.mb-4</code>
+        <code>.ml-1</code> <code>.ml-2</code>
+        <code>.mr-1</code> <code>.mr-2</code>
+        <code>.pt-1</code> <code>.pt-2</code> <code>.pt-3</code> <code>.pt-4</code>
+        <code>.pb-1</code> <code>.pb-2</code> <code>.pb-3</code> <code>.pb-4</code>
+      </div>
+
+      <h3 class="mt-3">Text</h3>
+      <div class="class-grid">
+        <code>.text-center</code>
+        <code>.text-right</code>
+        <code>.text-left</code>
+        <code>.text-sm</code>
+        <code>.text-lg</code>
+        <code>.text-xl</code>
+        <code>.text-muted</code>
+        <code>.text-primary</code>
+        <code>.text-success</code>
+        <code>.text-danger</code>
+        <code>.text-bold</code>
+      </div>
+
+      <h3 class="mt-3">Display & Image</h3>
+      <div class="class-grid">
+        <code>.hidden</code>
+        <code>.block</code>
+        <code>.inline-block</code>
+        <code>.w-100</code>
+        <code>.img-fluid</code>
+        <code>.img-round</code>
+        <code>.img-shadow</code>
+        <code>.img-bordered</code>
+        <code>.list-unstyled</code>
+        <code>.list-inline</code>
       </div>
     </section>
 
-    <div class="footer-bar">
-      <p class="text-sm">Keepsimple &mdash; MIT License &mdash; Built by <a href="https://naufalrakha.my.id">Naufal Rakha Putra</a></p>
-      <a href="https://github.com/sternnaufal/keepsimple" class="text-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <hr>
+
+    <!-- Customize -->
+    <section id="customize">
+      <h2>Customization</h2>
+      <p>Override CSS variables to match your brand:</p>
+      <pre>:root {
+  --primary: #6366f1;     /* indigo */
+  --success: #10b981;     /* emerald */
+  --radius: 6px;          /* smaller radius */
+  --font: 'Poppins', sans-serif;
+}</pre>
+
+      <table class="table table-striped">
+        <thead><tr><th>Variable</th><th>Default</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td><code>--bg</code></td><td>#f8f9fa</td><td>Page background</td></tr>
+          <tr><td><code>--text</code></td><td>#212529</td><td>Text color</td></tr>
+          <tr><td><code>--primary</code></td><td>#007bff</td><td>Primary accent</td></tr>
+          <tr><td><code>--secondary</code></td><td>#6c757d</td><td>Secondary accent</td></tr>
+          <tr><td><code>--success</code></td><td>#28a745</td><td>Success state</td></tr>
+          <tr><td><code>--danger</code></td><td>#dc3545</td><td>Danger state</td></tr>
+          <tr><td><code>--warning</code></td><td>#ffc107</td><td>Warning state</td></tr>
+          <tr><td><code>--info</code></td><td>#17a2b8</td><td>Info state</td></tr>
+          <tr><td><code>--border</code></td><td>#dee2e6</td><td>Border color</td></tr>
+          <tr><td><code>--radius</code></td><td>12px</td><td>Border radius</td></tr>
+          <tr><td><code>--shadow</code></td><td>0 4px 6px -1px rgba(0,0,0,0.1)</td><td>Box shadow</td></tr>
+          <tr><td><code>--font</code></td><td>Inter, system-ui, sans-serif</td><td>Base font</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Dark Mode</h3>
+      <p>Add class <code>.dark-mode</code> to <code>&lt;body&gt;</code>:</p>
+      <pre>&lt;body class="dark-mode"&gt;  &lt;!-- toggle with JS --&gt;
+  ...
+&lt;/body&gt;</pre>
+      <p>Dark mode also activates automatically via <code>prefers-color-scheme: dark</code> unless you add <code>class="light"</code> to override.</p>
+      <button onclick="document.body.classList.toggle('dark-mode')" class="btn btn-outline">Toggle Dark Mode</button>
+
+      <h3>Font Classes</h3>
+      <table class="table table-bordered">
+        <thead><tr><th>Class</th><th>Font</th></tr></thead>
+        <tbody>
+          <tr><td><code>.font-mono</code></td><td>JetBrains Mono / monospace</td></tr>
+          <tr><td><code>.font-serif</code></td><td>Georgia / serif</td></tr>
+          <tr><td><code>.font-gothic</code></td><td>Franklin Gothic Medium</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="footer-docs">
+      <p>Keepsimple &mdash; MIT License</p>
+      <p class="text-sm">Built by <a href="https://naufalrakha.my.id">Naufal Rakha Putra</a> &middot; <a href="https://github.com/sternnaufal/keepsimple" target="_blank" rel="noopener noreferrer">GitHub</a></p>
     </div>
   </main>
 
