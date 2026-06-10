@@ -72,8 +72,9 @@ function Contact() {
 
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="relative group">
-                   <label className="block font-space font-black uppercase text-sm mb-2">Nama Anda / Perusahaan</label>
+                   <label htmlFor="contact-name" className="block font-space font-black uppercase text-sm mb-2">Nama Anda / Perusahaan</label>
                    <input 
+                     id="contact-name"
                      type="text" 
                      name="name"
                      required
@@ -85,8 +86,9 @@ function Contact() {
                 </div>
 
                 <div className="relative group">
-                   <label className="block font-space font-black uppercase text-sm mb-2">Email Aktif</label>
+                   <label htmlFor="contact-email" className="block font-space font-black uppercase text-sm mb-2">Email Aktif</label>
                    <input 
+                     id="contact-email"
                      type="email" 
                      name="email"
                      required
@@ -98,8 +100,9 @@ function Contact() {
                 </div>
 
                 <div className="relative group">
-                   <label className="block font-space font-black uppercase text-sm mb-2">Pesan Anda</label>
+                   <label htmlFor="contact-message" className="block font-space font-black uppercase text-sm mb-2">Pesan Anda</label>
                    <textarea 
+                     id="contact-message"
                      name="message"
                      rows="5"
                      required

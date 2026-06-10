@@ -20,10 +20,10 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
           <div className="relative group">
-            <button className="font-space font-bold hover:bg-black hover:text-white px-2 py-1 transition-colors">
+            <button className="font-space font-bold hover:bg-black hover:text-white px-2 py-1 transition-colors" aria-expanded="false">
               Social Media ▾
             </button>
-            <div className="absolute hidden group-hover:block bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black">
+            <div className="absolute hidden group-hover:block group-focus-within:block bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black z-50" role="menu">
               <a href="https://instagram.com/stern_naufal2712" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Instagram</a>
               <a href="https://x.com/okebeyos" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">X (Twitter)</a>
               <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Linkedin</a>
@@ -31,10 +31,10 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
           </div>
           
           <div className="relative group">
-            <button className="font-space font-bold hover:bg-black hover:text-white px-2 py-1 transition-colors">
+            <button className="font-space font-bold hover:bg-black hover:text-white px-2 py-1 transition-colors" aria-expanded="false">
               My Sites ▾
             </button>
-            <div className="absolute hidden group-hover:block bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black">
+            <div className="absolute hidden group-hover:block group-focus-within:block bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black z-50" role="menu">
               <a href="https://catatanku.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Catatanku (Apps)</a>
               <a href="https://webapps.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Webapps</a>
               <a href="https://blog.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Blog</a>
@@ -75,6 +75,8 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
         <button 
           className="md:hidden text-2xl border-3 border-black p-1 bg-black text-white shadow-neo"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'}
+          aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
