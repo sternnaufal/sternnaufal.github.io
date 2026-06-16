@@ -8,9 +8,9 @@ import { Trophy } from 'lucide-react'
 const SectionHeading = ({ children, colorClass }) => (
   <div className="inline-block mb-10 transform -rotate-2 relative z-10">
     <div className="absolute inset-0 translate-x-3 translate-y-2 bg-black border-4 border-black" />
-    <h3 className={`relative z-10 px-8 py-3 bg-${colorClass} border-4 border-black text-2xl md:text-3xl font-black uppercase tracking-widest`}>
+    <h2 className={`relative z-10 px-8 py-3 bg-${colorClass} border-4 border-black text-2xl md:text-3xl font-black uppercase tracking-widest`}>
       {children}
-    </h3>
+    </h2>
   </div>
 )
 
@@ -34,7 +34,7 @@ const Card = ({ title, subtitle, duration, children, variant = 'yellow' }) => {
       <div className={`relative z-10 p-6 border-4 border-black ${bgClass} dark:bg-gray-900 shadow-neo group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all`}>
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 border-b-3 border-black pb-4">
           <div>
-            <h4 className="font-space text-2xl font-bold uppercase">{title}</h4>
+            <h3 className="font-space text-2xl font-bold uppercase">{title}</h3>
             <p className="font-mono font-bold mt-1">{subtitle}</p>
           </div>
           <span className="font-mono bg-black text-white px-3 py-1 text-sm border-2 border-black inline-block md:rotate-3 shadow-neo-mini">
@@ -97,9 +97,9 @@ function About() {
               <div className="absolute inset-0 bg-blue-500 translate-x-6 translate-y-6 border-4 border-black dark:border-yellow-400 transition-transform group-hover:translate-x-8 group-hover:translate-y-8" />
               <div className="absolute inset-0 bg-pink-500 translate-x-3 translate-y-3 border-4 border-black dark:border-yellow-400 transition-transform group-hover:translate-x-4 group-hover:translate-y-4" />
               <div className="relative z-10 border-4 border-black dark:border-yellow-400 bg-white dark:bg-gray-900 p-8 shadow-neo-large overflow-hidden">
-                <h4 className="font-space font-black text-3xl uppercase mb-8 flex items-center gap-4">
+                <h3 className="font-space font-black text-3xl uppercase mb-8 flex items-center gap-4">
                   <span className="w-12 h-1 bg-black dark:bg-yellow-400" /> Stats
-                </h4>
+                </h3>
                 <div className="grid grid-cols-3 gap-8 font-mono">
                   <div>
                     <p className="text-4xl font-black text-blue-500">25+</p>
@@ -187,7 +187,7 @@ function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {organizations.map((org, i) => (
               <div key={i} className="border-4 border-black bg-white dark:bg-gray-900 p-6 shadow-neo-small hover:shadow-neo hover:-translate-y-2 transition-all">
-                <h5 className="font-space font-bold text-xl mb-2 uppercase">{org.title}</h5>
+                <h4 className="font-space font-bold text-xl mb-2 uppercase">{org.title}</h4>
                 <p className="font-mono text-sm font-bold mb-1">{org.role}</p>
                 <p className="font-mono text-xs opacity-70">{org.year}</p>
               </div>
@@ -203,7 +203,7 @@ function About() {
               <div key={i} className="flex items-center gap-6 bg-black text-white p-6 border-4 border-yellow-400 shadow-neo group hover:bg-yellow-400 hover:text-black transition-colors rotate-1 hover:rotate-0">
                 <div className="scale-125 group-hover:scale-150 transition-transform"><Trophy size={36} strokeWidth={2.5} /></div>
                 <div>
-                  <h5 className="font-space font-black text-xl uppercase tracking-tighter">{ach.title}</h5>
+                  <h4 className="font-space font-black text-xl uppercase tracking-tighter">{ach.title}</h4>
                   <p className="font-mono text-sm uppercase opacity-80">{ach.event} · {ach.year}</p>
                 </div>
               </div>
@@ -226,7 +226,7 @@ function About() {
                   />
                   <div className="absolute inset-0 bg-yellow-400/20 group-hover:bg-transparent transition-colors" />
                 </div>
-                <h6 className="font-space font-bold text-sm uppercase leading-tight line-clamp-2">{cert.title}</h6>
+                <h5 className="font-space font-bold text-sm uppercase leading-tight line-clamp-2">{cert.title}</h5>
                 <p className="font-mono text-[10px] mt-1 opacity-60">{cert.provider}</p>
               </div>
             ))}

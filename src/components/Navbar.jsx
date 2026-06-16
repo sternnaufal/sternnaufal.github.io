@@ -66,6 +66,7 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
           
           <button 
             onClick={toggleDarkMode}
+            aria-label={darkMode ? 'Aktifkan mode terang' : 'Aktifkan mode gelap'}
             className="bg-black text-white border-3 border-black p-2 text-xl shadow-neo hover:bg-yellow-400 hover:text-black transition-all rotate-3 hover:rotate-0"
           >
             {darkMode ? <Sun size={24} /> : <Moon size={24} />}

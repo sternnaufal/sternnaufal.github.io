@@ -50,9 +50,9 @@ function Projects() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-8">
-          <h3 className="font-space text-4xl md:text-6xl font-bold uppercase tracking-tighter bg-yellow-400 dark:bg-pink-500 px-6 py-2 border-5 border-black shadow-neo-large -rotate-2">
+          <h2 className="font-space text-4xl md:text-6xl font-bold uppercase tracking-tighter bg-yellow-400 dark:bg-pink-500 px-6 py-2 border-5 border-black shadow-neo-large -rotate-2">
             PROYEK PILIHAN
-          </h3>
+          </h2>
           <p className="font-mono text-lg md:text-xl max-w-xl border-l-8 border-black pl-5 italic">
             Beberapa hasil karya saya dalam pengembangan web, game, AI, dan mobile.
           </p>
@@ -105,12 +105,12 @@ function Projects() {
                   </div>
                   <div className="flex gap-4">
                     {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`Lihat kode ${project.title} di GitHub`} className="text-2xl hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
                         <FaGithub />
                       </a>
                     )}
                     {project.live && (
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" aria-label={`Buka demo ${project.title}`} className="text-2xl hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
                         <FaExternalLinkAlt />
                       </a>
                     )}
@@ -135,9 +135,9 @@ function Projects() {
                   </button>
                 )}
 
-                <h4 className="font-space text-2xl font-bold mb-3 uppercase tracking-tight group-hover:underline decoration-yellow-400 decoration-8 underline-offset-4">
+                <h3 className="font-space text-2xl font-bold mb-3 uppercase tracking-tight group-hover:underline decoration-yellow-400 decoration-8 underline-offset-4">
                   {project.title}
-                </h4>
+                </h3>
 
                 <p className="font-mono text-sm leading-relaxed mb-4 flex-grow">
                   {project.description}

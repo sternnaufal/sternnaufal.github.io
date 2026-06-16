@@ -28,9 +28,9 @@ function Contact() {
         <div className="flex flex-col lg:flex-row gap-16">
           
           <div className="lg:w-1/2">
-            <h3 className="font-space text-5xl md:text-7xl font-bold uppercase mb-10 text-white tracking-widest leading-none drop-shadow-[5px_5px_0px_#000]">
+            <h2 className="font-space text-5xl md:text-7xl font-bold uppercase mb-10 text-white tracking-widest leading-none drop-shadow-[5px_5px_0px_#000]">
               Get In<br/>Touch!
-            </h3>
+            </h2>
             
             <p className="font-mono text-xl text-white mb-16 max-w-lg bg-black p-6 border-4 border-white shadow-neo-large rotate-1">
               "Punya ide gila atau sekadar ingin menyapa? Mari berkolaborasi dan ciptakan sesuatu yang luar biasa bersama!"

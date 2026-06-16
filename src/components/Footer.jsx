@@ -39,6 +39,7 @@ function Footer() {
                 key={i} 
                 href={social.url} 
                 target="_blank" rel="noopener noreferrer" 
+                aria-label={social.name}
                 className="w-14 h-14 bg-white border-4 border-black text-black text-2xl flex items-center justify-center hover:bg-yellow-400 hover:-translate-y-2 transition-all shadow-neo-mini hover:shadow-neo group"
               >
                 <span className="group-hover:scale-125 transition-transform">{social.icon}</span>

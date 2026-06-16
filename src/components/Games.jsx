@@ -16,15 +16,15 @@ function Games() {
           <div>
             <div className="inline-block mb-6 relative">
               <div className="absolute inset-0 translate-x-2 translate-y-2 bg-black border-4 border-black" />
-              <h3 className="relative z-10 px-8 py-3 bg-pink-500 border-4 border-black text-2xl md:text-3xl font-black uppercase tracking-widest">
+              <h2 className="relative z-10 px-8 py-3 bg-pink-500 border-4 border-black text-2xl md:text-3xl font-black uppercase tracking-widest">
                 <Gamepad2 size={32} className="inline mr-2" /> Game Studio
-              </h3>
+              </h2>
             </div>
-            <h4 className="font-space text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 -rotate-1">
+            <h3 className="font-space text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 -rotate-1">
               <a href={studio.url} target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 dark:hover:text-yellow-400 transition-colors underline decoration-yellow-400 decoration-8 underline-offset-8">
                 {studio.name}
               </a>
-            </h4>
+            </h3>
             <p className="font-mono text-lg max-w-2xl dark:text-gray-300">
               {studio.description}
             </p>
@@ -62,9 +62,9 @@ function Games() {
                   </span>
                 )}
 
-                <h5 className="font-space text-2xl font-black uppercase tracking-tight mb-3">
+                <h4 className="font-space text-2xl font-black uppercase tracking-tight mb-3">
                   {game.title}
-                </h5>
+                </h4>
 
                 <p className="font-mono text-sm leading-relaxed mb-6 flex-grow dark:text-gray-300">
                   {game.description}

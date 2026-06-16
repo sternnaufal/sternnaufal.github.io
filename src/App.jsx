@@ -85,8 +85,47 @@ function App() {
                 "email": "naufalrakha2712@gmail.com",
                 "address": { "@type": "PostalAddress", "addressLocality": "Malang", "addressRegion": "Jawa Timur", "addressCountry": "Indonesia" },
                 "alumniOf": ["Universitas Brawijaya", "SMKN 1 Bukittinggi"],
-                "knowsAbout": ["React.js", "Node.js", "Laravel", "Game Development", "Cyber Security"],
-                "sameAs": ["https://linkedin.com/in/naufal-rakha-putra-a0130332a", "https://github.com/sternnaufal", "https://instagram.com/stern_naufal2712", "https://youtube.com/@naufaltechtainment1"]
+                "knowsAbout": ["React.js", "Node.js", "Laravel", "Game Development", "Cyber Security", "Kotlin", "Python", "Tailwind CSS", "Docker", "Git", "REST API", "MySQL", "Firebase", "Express.js", "PHP", "Linux Server", "Cisco", "MikroTik"],
+                "sameAs": ["https://linkedin.com/in/naufal-rakha-putra-a0130332a", "https://github.com/sternnaufal", "https://instagram.com/stern_naufal2712", "https://youtube.com/@naufaltechtainment1", "https://x.com/okebeyos"]
+              })}
+            </script>
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "name": "Projects Portfolio Naufal Rakha Putra",
+                "description": "Kumpulan proyek pilihan Naufal Rakha Putra dalam pengembangan web, game, AI, dan mobile.",
+                "itemListElement": [
+                  { "@type": "SoftwareApplication", "name": "CareFund", "applicationCategory": "WebApplication", "description": "Platform crowdfunding medis full-stack React.js + Node.js/Express.", "url": "https://github.com/orgs/group4pbl-carefund/repositories" },
+                  { "@type": "SoftwareApplication", "name": "LG-Exambot", "applicationCategory": "AIApplication", "description": "Sistem generator soal ujian otomatis berbasis AI. Multi-AI fallback: Gemini, DeepSeek, Groq.", "url": "https://exambot.l-glearning.com/" },
+                  { "@type": "SoftwareApplication", "name": "GreenEvent", "applicationCategory": "WebApplication", "description": "Platform manajemen acara lingkungan hidup.", "url": "https://greenevent.infinityfree.me" },
+                  { "@type": "MobileApplication", "name": "Flag Quiz Master", "applicationCategory": "GameApplication", "description": "Game edukasi tebak bendera negara native Android.", "url": "https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps" },
+                  { "@type": "MobileApplication", "name": "Sortiverse", "applicationCategory": "GameApplication", "description": "Game puzzle edukasi sorting untuk Android.", "url": "https://play.google.com/store/apps/details?id=com.seninterus.sortiverse" },
+                  { "@type": "SoftwareApplication", "name": "Catatanku", "applicationCategory": "WebApplication", "description": "Aplikasi catatan digital untuk pelajar & mahasiswa.", "url": "https://naufalrakha.my.id/projects/catatanku.html" },
+                  { "@type": "WebAPI", "name": "Todos API", "applicationCategory": "WebApplication", "description": "RESTful API manajemen todos dengan Express.js + TypeScript.", "url": "https://api-three-self-56.vercel.app/" }
+                ]
+              })}
+            </script>
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "name": "Skills Naufal Rakha Putra",
+                "description": "Keahlian Naufal Rakha Putra dalam pengembangan software, game, jaringan, dan keamanan.",
+                "itemListElement": [
+                  { "@type": "DefinedTerm", "name": "React.js", "description": "Front-end library for building user interfaces" },
+                  { "@type": "DefinedTerm", "name": "Node.js (Express)", "description": "Back-end JavaScript runtime with Express framework" },
+                  { "@type": "DefinedTerm", "name": "Laravel", "description": "PHP web framework" },
+                  { "@type": "DefinedTerm", "name": "Kotlin", "description": "Programming language for Android development" },
+                  { "@type": "DefinedTerm", "name": "Tailwind CSS", "description": "Utility-first CSS framework" },
+                  { "@type": "DefinedTerm", "name": "Python", "description": "Programming language for AI and automation" },
+                  { "@type": "DefinedTerm", "name": "Docker", "description": "Containerization platform" },
+                  { "@type": "DefinedTerm", "name": "MySQL", "description": "Relational database management system" },
+                  { "@type": "DefinedTerm", "name": "JavaScript (ES6+)", "description": "Modern JavaScript programming" },
+                  { "@type": "DefinedTerm", "name": "Git/GitHub", "description": "Version control and collaboration platform" },
+                  { "@type": "DefinedTerm", "name": "Linux Server", "description": "Server administration and management" },
+                  { "@type": "DefinedTerm", "name": "Cyber Security", "description": "CTF methodologies and security analysis" }
+                ]
               })}
             </script>
           </Helmet>
