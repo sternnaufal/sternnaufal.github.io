@@ -46,14 +46,25 @@ function Footer() {
               </a>
             ))}
           </div>
-          <div className="flex flex-wrap justify-center gap-6 text-sm uppercase font-black tracking-widest bg-white text-black p-4 border-4 border-black shadow-neo-mini rotate-1">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm uppercase font-black tracking-widest bg-white text-black p-4 border-4 border-black shadow-neo-mini rotate-1">
              <a href="#about" className="hover:text-pink-500 transition-colors">About</a>
              <a href="#projects" className="hover:text-pink-500 transition-colors">Projects</a>
              <a href="#games" className="hover:text-pink-500 transition-colors">Games</a>
              <a href="#contact" className="hover:text-pink-500 transition-colors">Contact</a>
              <button onClick={scrollToTop} className="flex items-center gap-2 border-l-2 border-black pl-4 hover:text-blue-500 transition-colors">
-               Top <FaArrowUp />
+                Top <FaArrowUp />
              </button>
+          </div>
+
+          <div className="mt-6 text-center">
+            <p className="text-xs uppercase tracking-widest text-white/40 mb-2">Sites Network</p>
+            <div className="flex flex-wrap justify-center gap-3 text-xs">
+              <a href="https://naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Root</a>
+              <a href="https://digital.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Digital</a>
+              <a href="https://demo.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Demo Art</a>
+              <a href="https://koleksilama.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Koleksi LAMA</a>
+              <a href="https://webapps.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">WebApps</a>
+            </div>
           </div>
         </div>
 
