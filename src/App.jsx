@@ -11,6 +11,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import LoadingScreen from './components/LoadingScreen'
+import KeepsimpleDemo from './components/KeepsimpleDemo'
 
 function Home() {
   return (
@@ -135,6 +136,7 @@ function App() {
           
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/keepsimple-demo" element={<KeepsimpleDemo />} />
           </Routes>
           
           <Footer />
