@@ -33,9 +33,9 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Notify Bing (IndexNow)
+      - name: IndexNow
         run: |
-          curl -sS "https://www.bing.com/ping?sitemap=https://naufalrakha.my.id/sitemap.xml" -o /dev/null -w "Bing: %{http_code}\n"
+          curl -sS "https://api.indexnow.org/indexnow?url=https://naufalrakha.my.id/&key=${{ secrets.INDEXNOW_KEY }}" -o /dev/null -w "IndexNow: %{http_code}\n" || echo "IndexNow skipped (no key)"
 
       - name: Submit sitemap to Google Search Console
         env:
