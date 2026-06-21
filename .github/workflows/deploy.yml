@@ -32,3 +32,16 @@ jobs:
           path: dist
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Notify Bing (IndexNow)
+        run: |
+          curl -sS "https://www.bing.com/ping?sitemap=https://naufalrakha.my.id/sitemap.xml" -o /dev/null -w "Bing: %{http_code}\n"
+
+      - name: Submit sitemap to Google Search Console
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: |
+          python3 scripts/submit-sitemap.py \
+            "https://naufalrakha.my.id" \
+            "https://naufalrakha.my.id/sitemap.xml"
+          rm -f /tmp/gcp-key.pem
