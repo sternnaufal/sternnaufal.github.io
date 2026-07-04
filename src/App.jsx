@@ -12,6 +12,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import LoadingScreen from './components/LoadingScreen'
 import KeepsimpleDemo from './components/KeepsimpleDemo'
+import Blog from './components/Blog'
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
       <Hero />
       <Projects />
       <Games />
+      <Blog />
       <About />
       <Contact />
     </main>

@@ -9,6 +9,7 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
     { href: '#about', label: 'About' },
     { href: '#projects', label: 'Projects' },
     { href: '#games', label: 'Games' },
+    { href: '#blog', label: 'Blog' },
     { href: '#contact', label: 'Contact' },
   ]
 
