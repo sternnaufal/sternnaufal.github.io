@@ -84,12 +84,12 @@ function App() {
                 "name": "Naufal Rakha Putra",
                 "url": "https://naufalrakha.my.id",
                 "image": "https://naufalrakha.my.id/ku.png",
-                "jobTitle": ["Full-Stack Developer", "Game Developer", "Lead Game Developer & Founder at Senin Terus Studio"],
+                "jobTitle": ["Full-Stack Developer", "Game Developer", "IT Generalist", "Lead Game Developer & Founder at Senin Terus Studio"],
                 "email": "naufalrakha2712@gmail.com",
                 "address": { "@type": "PostalAddress", "addressLocality": "Malang", "addressRegion": "Jawa Timur", "addressCountry": "Indonesia" },
                 "alumniOf": ["Universitas Brawijaya", "SMKN 1 Bukittinggi"],
-                "knowsAbout": ["React.js", "Node.js", "Laravel", "Game Development", "Cyber Security", "Kotlin", "Python", "Tailwind CSS", "Docker", "Git", "REST API", "MySQL", "Firebase", "Express.js", "PHP", "Linux Server", "Cisco", "MikroTik"],
-                "sameAs": ["https://linkedin.com/in/naufal-rakha-putra-a0130332a", "https://github.com/sternnaufal", "https://instagram.com/stern_naufal2712", "https://youtube.com/@naufaltechtainment1", "https://x.com/okebeyos"]
+                "knowsAbout": ["React.js", "Node.js", "Laravel", "Game Development", "Cyber Security", "Kotlin", "Python", "Tailwind CSS", "Docker", "Git", "REST API", "MySQL", "Firebase", "Express.js", "PHP", "Linux Server", "Cisco", "MikroTik", "SEO", "Web Scraping", "Bot Automation"],
+                "sameAs": ["https://linkedin.com/in/naufal-rakha-putra-a0130332a", "https://github.com/sternnaufal", "https://instagram.com/stern_naufal2712", "https://youtube.com/@naufaltechtainment1", "https://x.com/okebeyos", "https://blog.naufalrakha.my.id", "https://digital.naufalrakha.my.id"]
               })}
             </script>
             <script type="application/ld+json">
