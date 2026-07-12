@@ -114,6 +114,14 @@ export const projects = [
     github: 'https://github.com/sternnaufal/sterntools',
     image: '/images/projects/sterntools.png',
     tech: ['Shell', 'Linux']
+  },
+  {
+    title: 'Website Duta Anak Kota Bukittinggi 2025',
+    category: 'Web App',
+    description: 'Landing page resmi profil Duta Anak Kota Bukittinggi. Dibangun dengan Bootstrap untuk tampilan responsif dan modern.',
+    github: 'https://github.com/sternnaufal/website-duta-anak',
+    image: '/images/project-placeholder.svg',
+    tech: ['Bootstrap', 'HTML5', 'CSS3']
   }
 ]
 
@@ -140,7 +148,7 @@ export const skillCategories = [
     items: [
       { name: 'Node.js (Express)', level: 85 },
       { name: 'Laravel', level: 80 },
-      { name: 'PHP', level: 85 },
+      { name: 'RESTful API Architecture', level: 85 },
       { name: 'MySQL', level: 80 },
       { name: 'Firebase', level: 70 },
     ]
@@ -149,9 +157,11 @@ export const skillCategories = [
     name: 'Programming Languages',
     items: [
       { name: 'JavaScript (ES6+)', level: 90 },
+      { name: 'PHP', level: 85 },
       { name: 'Kotlin', level: 75 },
       { name: 'Python', level: 80 },
       { name: 'HTML5 / CSS3', level: 95 },
+      { name: 'SQL', level: 80 },
     ]
   },
   {
@@ -168,18 +178,21 @@ export const skillCategories = [
     items: [
       { name: 'Cisco', level: 70 },
       { name: 'MikroTik', level: 75 },
-      { name: 'Linux Server', level: 80 },
-      { name: 'Fiber Optic (OTDR)', level: 85 },
+      { name: 'Linux Server (Debian)', level: 80 },
+      { name: 'Fiber Optic (OTDR & Splicing)', level: 85 },
       { name: 'CTF Methodologies', level: 65 },
     ]
   },
-  {
+{
     name: 'DevOps & Tools',
     items: [
+      { name: 'Azure AI Foundry', level: 75 },
       { name: 'Git/GitHub', level: 90 },
       { name: 'Docker', level: 65 },
       { name: 'Vercel / Railway', level: 85 },
       { name: 'cPanel / Nginx', level: 75 },
+      { name: 'Apache', level: 70 },
+      { name: 'Postman', level: 85 },
     ]
   }
 ]
@@ -189,7 +202,7 @@ export const education = [
     title: 'Universitas Brawijaya',
     major: 'D3 Teknologi Informasi',
     year: '2025 – sekarang',
-    description: 'Semester 2 berjalan. Aktif di BEM Vokasi (Kominfo), PSIK Vokasi, Provoks, dan GDGoC UB.'
+    description: 'IPK: 4.00 / 4.00 (Semester 1, Ongoing Semester 2). Aktif di BEM Vokasi (Kominfo), PSIK Vokasi, Provoks, dan GDGoC UB.'
   },
   {
     title: 'SMKN 1 Bukittinggi',
@@ -202,39 +215,46 @@ export const education = [
 export const experience = [
   {
     title: 'Lead Game Developer & Founder – Senin Terus Studio',
+    duration: 'Januari 2024 – Sekarang',
     items: [
-      '3.070+ total views game web visual novel di itch.io secara organik',
+      'Menginisiasi dan membangun studio game independen; produksi game berbasis web interaktif (Twine + JavaScript) & mobile (Android)',
+      '3.070+ total views game visual novel di itch.io secara organik',
       '2 game edukasi native Android (Flag Quiz Master & Sortiverse) di Google Play — 60+ unduhan awal',
-      'Mengelola publikasi dari GitHub, Google Play Console, hingga Vercel'
+      'Mengelola seluruh siklus publikasi: source code GitHub, kepatuhan Google Play Console, hingga situs resmi studio di Vercel'
     ]
   },
   {
-    title: 'Backend Developer (Staff Ahli) – BEM Vokasi UB',
+    title: 'Backend Developer (Staff Ahli) – Website BEM Vokasi UB',
+    duration: 'Maret 2026 – Sekarang',
     items: [
+      'Arsitektur core system website resmi BEM di bawah Kementerian Kominfo',
       'RESTful API 25+ endpoints untuk User, Role, Permission, Menu (Laravel, Full CRUD + Pagination)',
       'Sistem autentikasi Bearer Token dan otorisasi menu dinamis',
-      'Kolaborasi Front-End untuk integrasi data real-time'
+      'Kolaborasi Front-End untuk integrasi data real-time minim latensi'
     ]
   },
   {
-    title: 'Web Dev & Administrator – PSIK Vokasi UB',
+    title: 'Web Development & Administrator – PSIK Vokasi UB',
+    duration: 'April 2026 – Sekarang',
     items: [
-      'Maintenance, optimalisasi performa, dan backup server internal',
+      'Maintenance rutin, optimalisasi performa, dan backup berkala server internal PSIK Vokasi UB',
       'Audit kode dan security review sistem administrasi web kampus'
     ]
   },
   {
-    title: 'Helpdesk Assurance – PT Telkom Akses',
+    title: 'Helpdesk Assurance Intern – PT Telkom Akses',
+    duration: 'November 2024 – Maret 2025',
     items: [
-      '30–50 tiket gangguan per hari untuk seluruh wilayah Sumatera Barat',
-      'Validasi dan approval tiket dengan akurasi 98%'
+      'Memproses pemulihan gangguan jaringan 30–50 tiket per hari untuk regional Sumatera Barat',
+      'Validasi, analisis teknis awal, dan approval tiket dengan akurasi 98%'
     ]
   },
   {
-    title: 'Teknisi Fiber Optik – PT Golden Fiber',
+    title: 'Teknisi Fiber Optik Intern – PT Golden Fiber',
+    duration: 'Januari 2024 – Juni 2024',
     items: [
-      'Instalasi FTTH untuk 5 area perumahan dan perkantoran baru',
-      'Splicing dan pengujian OTDR dengan tingkat keberhasilan 100%'
+      'Instalasi jaringan FTTH untuk 5 area perumahan dan perkantoran pelanggan baru',
+      'Splicing kabel dan pengujian redaman OTDR dengan tingkat keberhasilan 100%'
     ]
   }
 ]
@@ -252,8 +272,9 @@ export const organizations = [
 ]
 
 export const achievements = [
-  { title: 'Kompetitor', event: 'Zero Day National CTF 2026 (Digital Social Group)', year: '2026' },
-  { title: 'Kompetitor', event: 'picoCTF 2026 — Carnegie Mellon University', year: '2026' },
+  { title: 'Finalis', event: 'Zero Day National CTF 2026 (Digital Social Group)', year: '2026' },
+  { title: 'Kompetitor', event: 'picoCTF 2026 — Carnegie Mellon University (Web Exploitation, Cryptography, Forensics)', year: '2026' },
+  { title: 'Kompetitor', event: 'OLIVIA XI 2026 — Konsorsium Vokasi Indonesia (Cybersecurity)', year: '2026' },
   { title: 'Finalis', event: 'MTQ UB XIX — Cabang Desain Aplikasi Al-Qur\'an', year: '2026' },
   { title: 'Finalis Nasional', event: '5th Ediverse Math Competition', year: '2024' },
   { title: 'Finalis Nasional', event: '4th Ediverse Math Competition', year: '2023' },
@@ -262,12 +283,22 @@ export const achievements = [
 ]
 
 export const certificates = [
-  { title: 'Web Programmer (React JS)', provider: 'Telkom Indonesia', image: '/images/cert.svg' },
-  { title: 'Junior Web Programmer', provider: 'BNSP', image: '/images/cert.svg' },
-  { title: 'Cloud Computing Fundamentals', provider: 'AWS / Dicoding', image: '/images/cert.svg' },
-  { title: 'IT & Computer Networking Support', provider: 'LSP', image: '/images/cert.svg' },
-  { title: 'Python Developer', provider: 'Google / Dicoding', image: '/images/cert.svg' },
-  { title: 'Pemrograman Python', provider: 'Dicoding', image: '/images/cert.svg' }
+  { title: 'Introduction to IoT', provider: 'Cisco Networking Academy', year: '2026', image: '/images/cert.svg' },
+  { title: 'Membangun Aplikasi Gen AI dengan Microsoft Azure', provider: 'Dicoding x Microsoft', year: '2026', image: '/images/cert.svg' },
+  { title: 'Belajar Penerapan Data Science dengan Microsoft Fabric', provider: 'Dicoding x Microsoft', year: '2026', image: '/images/cert.svg' },
+  { title: 'Networking Basics', provider: 'Cisco Networking Academy', year: '2025', image: '/images/cert.svg' },
+  { title: 'Introduction to Cybersecurity', provider: 'Cisco Networking Academy', year: '2025', image: '/images/cert.svg' },
+  { title: 'Python for Data Science', provider: 'Cognitive Class with IBM', year: '2025', image: '/images/cert.svg' },
+  { title: 'Junior Web Programmer', provider: 'BNSP', year: '2025', image: '/images/cert.svg' },
+  { title: 'Web Programmer (React JS)', provider: 'Telkom Indonesia', year: '2025', image: '/images/cert.svg' },
+  { title: 'Belajar Dasar Cloud dan Gen AI di AWS', provider: 'AWS / Dicoding', year: '2025', image: '/images/cert.svg' },
+  { title: 'Belajar Membuat Front-End Web untuk Pemula', provider: 'Dicoding', year: '2025', image: '/images/cert.svg' },
+  { title: 'Belajar Dasar Pemrograman Web', provider: 'Dicoding', year: '2025', image: '/images/cert.svg' },
+  { title: 'Belajar Dasar Pemrograman JavaScript', provider: 'Dicoding', year: '2025', image: '/images/cert.svg' },
+  { title: 'Memulai Pemrograman dengan Python', provider: 'Dicoding', year: '2024', image: '/images/cert.svg' },
+  { title: 'Belajar Dasar AI', provider: 'Dicoding', year: '2024', image: '/images/cert.svg' },
+  { title: 'Pengenalan ke Logika Pemrograman (Programming Logic 101)', provider: 'Dicoding', year: '2024', image: '/images/cert.svg' },
+  { title: 'Legacy Responsive Web Design V8', provider: 'freeCodeCamp', year: '2022', image: '/images/cert.svg' }
 ]
 
 export const studio = {

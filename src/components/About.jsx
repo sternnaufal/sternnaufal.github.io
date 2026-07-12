@@ -79,7 +79,7 @@ function About() {
           <div className="lg:w-1/2">
             <SectionHeading colorClass="yellow-400">About Me</SectionHeading>
             <p className="font-mono text-xl leading-relaxed mb-8 bg-white dark:bg-gray-800 p-8 border-4 border-black shadow-neo-large relative z-10">
-              Mahasiswa D3 Teknologi Informasi di <span className="bg-pink-500 px-1 border-2 border-black">Universitas Brawijaya</span>. Full-Stack Developer, Game Developer (Senin Terus Studio), dan Cyber Security enthusiast. Berpengalaman di AI integration, server internal kampus, dan jaringan fiber optik.
+              Mahasiswa Teknologi Informasi <span className="bg-pink-500 px-1 border-2 border-black">Universitas Brawijaya</span> dengan rekam jejak kuat dalam Full-Stack Web Development, Game Development, serta Network & Cyber Security. Menguasai ekosistem JavaScript modern (React.js, Next.js, Node.js) dan PHP (Laravel), serta integrasi model AI komersial (Azure OpenAI, Gemini, DeepSeek). Berpengalaman mengelola core system organisasi kampus, mengaudit infrastruktur server internal, menginisiasi studio game independen, serta menangani puluhan tiket gangguan jaringan harian di PT Telkom Akses. Tipe generalist yang berorientasi pada eksekusi produk nyata (end-to-end product delivery) dengan kemampuan problem-solving yang adaptif.
             </p>
 
             <div className="mt-12 h-1 w-full bg-black shadow-neo-mini mb-12" />
@@ -106,7 +106,7 @@ function About() {
                     <p className="text-sm">Proyek Selesai</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-black">11</p>
+                    <p className="text-4xl font-black">16</p>
                     <p className="text-sm">Sertifikat IT</p>
                   </div>
                   <div>
@@ -168,7 +168,7 @@ function About() {
               <Card
                 key={i}
                 title={exp.title}
-                duration="WORK"
+                duration={exp.duration || "WORK"}
                 variant="pink"
               >
                 <ul className="list-disc ml-5 space-y-2">
@@ -227,7 +227,7 @@ function About() {
                   <div className="absolute inset-0 bg-yellow-400/20 group-hover:bg-transparent transition-colors" />
                 </div>
                 <h5 className="font-space font-bold text-sm uppercase leading-tight line-clamp-2">{cert.title}</h5>
-                <p className="font-mono text-[10px] mt-1 opacity-60">{cert.provider}</p>
+                <p className="font-mono text-[10px] mt-1 opacity-60">{cert.provider} {cert.year ? `· ${cert.year}` : ''}</p>
               </div>
             ))}
           </div>

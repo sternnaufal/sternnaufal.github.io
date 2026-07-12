@@ -88,7 +88,7 @@ function App() {
                 "email": "naufalrakha2712@gmail.com",
                 "address": { "@type": "PostalAddress", "addressLocality": "Malang", "addressRegion": "Jawa Timur", "addressCountry": "Indonesia" },
                 "alumniOf": ["Universitas Brawijaya", "SMKN 1 Bukittinggi"],
-                "knowsAbout": ["React.js", "Node.js", "Laravel", "Game Development", "Cyber Security", "Kotlin", "Python", "Tailwind CSS", "Docker", "Git", "REST API", "MySQL", "Firebase", "Express.js", "PHP", "Linux Server", "Cisco", "MikroTik", "SEO", "Web Scraping", "Bot Automation"],
+                "knowsAbout": ["React.js", "Node.js", "Laravel", "PHP", "Game Development", "Cyber Security", "Kotlin", "Python", "Tailwind CSS", "Bootstrap", "Docker", "Git", "REST API", "MySQL", "Firebase", "Express.js", "SQL", "Azure AI Foundry", "Apache", "Postman", "Linux Server (Debian)", "Cisco", "MikroTik", "Twine", "Godot", "Unity", "C#", "SEO", "Web Scraping", "Bot Automation"],
                 "sameAs": ["https://linkedin.com/in/naufal-rakha-putra-a0130332a", "https://github.com/sternnaufal", "https://instagram.com/stern_naufal2712", "https://youtube.com/@naufaltechtainment1", "https://x.com/okebeyos", "https://blog.naufalrakha.my.id", "https://digital.naufalrakha.my.id"]
               })}
             </script>

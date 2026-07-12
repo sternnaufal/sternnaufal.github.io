@@ -53,7 +53,7 @@ function Contact() {
                 </div>
                 <div>
                   <p className="text-xs uppercase font-bold opacity-70">Locaton</p>
-                  <p className="text-xl font-black">Malang, Indonesia</p>
+                  <p className="text-xl font-black">Malang, Jawa Timur / Bukittinggi, Sumatera Barat</p>
                 </div>
               </div>
             </div>
