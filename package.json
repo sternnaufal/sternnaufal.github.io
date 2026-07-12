@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/copy-404.cjs",
+    "prebuild": "node scripts/fetch-blog-posts.cjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

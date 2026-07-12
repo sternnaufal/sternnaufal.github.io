@@ -38,7 +38,8 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
             <div className="absolute hidden group-hover:block group-focus-within:block bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black z-50" role="menu">
               <a href="https://webapps.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Webapps</a>
               <a href="https://demo.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Demo Artstyle</a>
-              <a href="https://pentingliterasi.blogspot.com" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Blog</a>
+              <a href="/blog" className="block px-4 py-2 hover:bg-white hover:text-black">Blog</a>
+              <a href="https://blog.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Blog (External)</a>
               <a href="/keepsimple/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Keepsimple Docs</a>
               <a href="/keepsimple-demo" className="block px-4 py-2 hover:bg-white hover:text-black">Keepsimple Demo</a>
               <a href="https://seninterusstudio.vercel.app" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Senin Terus Studio <FaGamepad size={14} className="inline" /></a>

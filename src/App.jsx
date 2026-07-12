@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 import LoadingScreen from './components/LoadingScreen'
 import KeepsimpleDemo from './components/KeepsimpleDemo'
 import Blog from './components/Blog'
+import BlogPage from './components/BlogPage'
 
 function Home() {
   return (
@@ -131,15 +132,37 @@ function App() {
                 ]
               })}
             </script>
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Naufal Rakha Putra",
+                "url": "https://naufalrakha.my.id",
+                "description": "Full-Stack Developer, Game Developer & IT Generalist — Portfolio & Projects.",
+                "about": {
+                  "@type": "Person",
+                  "name": "Naufal Rakha Putra"
+                },
+                "relatedLink": [
+                  "https://digital.naufalrakha.my.id",
+                  "https://blog.naufalrakha.my.id",
+                  "https://webapps.naufalrakha.my.id",
+                  "https://demo.naufalrakha.my.id",
+                  "https://koleksilama.naufalrakha.my.id",
+                  "https://api.naufalrakha.my.id"
+                ]
+              })}
+            </script>
           </Helmet>
 
           <ScrollProgressBar />
           <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} activeSection={activeSection} />
           
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/keepsimple-demo" element={<KeepsimpleDemo />} />
-          </Routes>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/keepsimple-demo" element={<KeepsimpleDemo />} />
+            </Routes>
           
           <Footer />
         </div>

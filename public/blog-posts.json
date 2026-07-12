@@ -1,0 +1,352 @@
+[
+  {
+    "title": "Apa Itu SEO dan GEO? Panduan Optimasi Konten untuk Mesin Cari & AI",
+    "url": "https://blog.naufalrakha.my.id/2026/07/apa-itu-seo-dan-geo-panduan-optimasi.html",
+    "date": "2026-07-11T15:01:31.303+07:00",
+    "category": "GEO",
+    "snippet": "\n\n  \n\n\nPengen tau perbedaan SEO dan GEO? Yuk, kita bedah tuntas cara optimasi konten biar dilirik Google sekaligus jadi jawaban ChatGPT dan AI lainnya!Halo, balik lagi di Penting Literasi! 👋Kalo ngomongin optimasi konten, pasti yang kebayang pertama"
+  },
+  {
+    "title": "Apa Itu Blockchain? | Yuk Kenalan dengan Teknologi di Balik Bitcoin",
+    "url": "https://blog.naufalrakha.my.id/2026/07/apa-itu-blockchain-yuk-kenalan-dengan.html",
+    "date": "2026-07-11T13:10:44.491+07:00",
+    "category": "Teknologi",
+    "snippet": "Halo, balik lagi di Penting Literasi! 👋 Pasti udah nggak asing lagi kan denger kata blockchain? Apalagi kalau ngomongin Bitcoin, Ethereum, atau cryptocurrency lainnya. Tapi sebenernya, apa sih blockchain itu? Apakah cuma sekedar buku catatan digital"
+  },
+  {
+    "title": "Chrome OS | OS yang cuma butuh browser doang",
+    "url": "https://blog.naufalrakha.my.id/2026/06/chrome-os-os-yang-cuma-butuh-browser.html",
+    "date": "2026-06-23T19:58:19.826+07:00",
+    "category": "Sistem Operasi",
+    "snippet": "\n\nChrome OS — OS yang cuma butuh browser doang.\n\n\nHalo, balik lagi di Penting Literasi! &#x1F44B;\n\nKita udah bahas Windows, Amiga, Debian, Android, Symbian. Sekarang giliran satu OS yang mungkin paling unik: Chrome OS.\n\nUniknya di mana? Chrome OS itu"
+  },
+  {
+    "title": "Sejarah Windows 95: OS yang Mengubah Dunia",
+    "url": "https://blog.naufalrakha.my.id/2026/06/sejarah-windows-95-os-yang-mengubah.html",
+    "date": "2026-06-22T21:52:43.380+07:00",
+    "category": "Sistem Operasi",
+    "snippet": "\n\n\n\nInstalasi Windows 95 butuh 23 floppy disk. Bayangin.\n\n\nHalo, balik lagi di Penting Literasi! &#x1F44B;\n\nSetelah kita bahas Windows 1.x dan Windows Longhorn, sekarang kita mundur ke tahun 1995. Tahun di mana OS yang bener-bener ngubah dunia dirili"
+  },
+  {
+    "title": "Teknik Hacking #09 | File Inclusion, Membuka Pintu Belakang lewat Include File",
+    "url": "https://blog.naufalrakha.my.id/2026/03/teknik-hacking-09-file-inclusion.html",
+    "date": "2026-03-22T19:26:00.000+07:00",
+    "category": "Teknik Hacking",
+    "snippet": "\n\n  \n    \n  \nHalo, balik lagi di Penting Literasi! Masih di seri Teknik Hacking, setelah kita kemarin pusing-pusing ngurusin XSS dan CSRF, sekarang kita bahas satu lagi celah yang udah lama tapi masih sering ditemuin di website-website jadul (dan kad"
+  },
+  {
+    "title": "Teknik Hacking #08 | CSRF, Memanfaatkan Korban untuk Mengeksekusi Aksi Tanpa Sepengetahuannya",
+    "url": "https://blog.naufalrakha.my.id/2026/03/teknik-hacking-08-csrf-memanfaatkan.html",
+    "date": "2026-03-19T22:18:00.006+07:00",
+    "category": "Hacking",
+    "snippet": "\n\n\nHalo, balik lagi di Penting Literasi! Masih di seri Teknik Hacking, setelah kita kemarin pusing-pusing ngurusin XSS yang nyuri cookie dan session, sekarang kita bahas satu lagi serangan yang masih satu rumpun, tapi punya cara kerja yang berbeda. N"
+  },
+  {
+    "title": "Teknik Hacking #07 | XSS (Cross Site Scripting), Celah Sederhana yang Bikin Website Tumbang",
+    "url": "https://blog.naufalrakha.my.id/2026/03/teknik-hacking-07-xss-cross-site.html",
+    "date": "2026-03-17T22:05:00.003+07:00",
+    "category": "Hacking",
+    "snippet": "\n\n\nAh, kembali lagi di Penting Literasi semuanya! Masih di seri Teknik Hacking, setelah kita kemarin pusing-pusing sama SQL Injection yang urusan sama database, sekarang kita bahas satu lagi yang gak kalah serem dan bahkan lebih sering muncul di daft"
+  },
+  {
+    "title": "C++ | #28 Pointer ke Pointer",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-28-pointer-ke-pointer.html",
+    "date": "2026-03-14T21:58:00.001+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Setelah kita memahami pointer dasar, sekarang kita akan membahas sesuatu yang sedikit lebih dalam, yaitu pointer ke pointer.\nPointer ke pointer artinya sebuah pointer yang menyimpan alamat dari pointer lain. Dengan kata lain, kita punya tingkat"
+  },
+  {
+    "title": "C++ | #27 Pointer dan Fungsi",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-27-pointer-dan-fungsi.html",
+    "date": "2026-03-11T21:57:00.001+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman, kali ini kita akan membahas bagaimana pointer digunakan dalam fungsi. Pointer sering dipakai ketika kita ingin mengirim data ke fungsi dan bisa mengubah nilai asli dari variabel di luar fungsi tersebut.\n\nMengingat Kembali: Pas"
+  },
+  {
+    "title": "C++ | #26 Pointer dan Array",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-26-pointer-dan-array.html",
+    "date": "2026-03-10T21:56:00.001+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman, sebelumnya kita sudah belajar tentang pointer dan bagaimana pointer bisa menunjuk ke variabel. Kali ini kita akan lihat bagaimana pointer bekerja dengan array, karena sebenarnya array dan pointer punya hubungan yang sangat dek"
+  },
+  {
+    "title": "C++ | #25 Pointer dan Variabel",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-25-pointer-dan-variabel.html",
+    "date": "2026-03-09T21:50:00.000+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman, pada artikel sebelumnya kita sudah mengenal apa itu pointer, bahwa pointer adalah variabel yang menyimpan alamat memori dari variabel lain.\nNah, sekarang kita akan fokus pada hubungan pointer dengan variabel, bagaimana cara me"
+  },
+  {
+    "title": "C++ | #24 Apa itu Pointer",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-24-apa-itu-pointer.html",
+    "date": "2026-03-08T21:11:00.001+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman, kali ini kita akan mulai belajar tentang pointer. Pointer sering dianggap sebagai salah satu materi yang agak sulit di C++, tapi tenang saja, kita akan pelajari pelan-pelan.\nPointer adalah variabel yang menyimpan alamat memori"
+  },
+  {
+    "title": "C++ | #23 String di C++",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-23-string-di-c.html",
+    "date": "2026-03-07T21:06:00.001+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman!\nSetelah sebelumnya kita membahas array, kali ini kita akan masuk ke string. Kalau array menyimpan kumpulan data dengan tipe yang sama, maka string adalah kumpulan karakter yang membentuk sebuah teks.\nContohnya:\n\"Hello\"\n\"Belaja"
+  },
+  {
+    "title": "C++ | #22 Array 2 Dimensi (Matriks)",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-22-array-2-dimensi-matriks.html",
+    "date": "2026-03-06T20:59:00.001+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman!\nKalau sebelumnya kita sudah membahas array 1 dimensi yang hanya berbentuk seperti deretan angka dalam satu baris, sekarang kita akan belajar array 2 dimensi.\nArray 2 dimensi sering disebut juga matriks, karena bentuknya sepert"
+  },
+  {
+    "title": "C++ | #21 Array 1 Dimensi",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-21-array-1-dimensi.html",
+    "date": "2026-03-05T20:53:00.001+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman!\nSetelah sebelumnya kita membahas fungsi dan rekursi, sekarang kita masuk ke salah satu struktur data yang paling sering dipakai dalam pemrograman, yaitu array.\n\nApa itu Array\nArray adalah sebuah variabel yang bisa menyimpan ba"
+  },
+  {
+    "title": "C++ | #20 Rekursi",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-20-rekursi.html",
+    "date": "2026-03-04T20:49:00.001+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman!\nKali ini kita akan membahas konsep menarik dalam fungsi, yaitu rekursi. Rekursi sering membuat bingung pemula, tapi kalau dipahami dengan baik, rekursi bisa jadi alat yang sangat berguna.\n\nApa itu Rekursi\nRekursi adalah teknik"
+  },
+  {
+    "title": "C++ | #19 Variabel Lokal dan Global",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-19-variabel-lokal-dan-global.html",
+    "date": "2026-03-03T20:47:00.001+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman! 👋\nDi part sebelumnya kita sudah belajar tentang fungsi dengan nilai balik (return). Nah, sebelum kita makin dalam ke fungsi, ada satu konsep penting yang harus kamu pahami, yaitu variabel lokal dan global.\nVariabel ini punya "
+  },
+  {
+    "title": "C++ | #18 Fungsi dengan Nilai Balik (Return)",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-18-fungsi-dengan-nilai-balik-return.html",
+    "date": "2026-03-02T20:45:00.000+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman! 👋\nSetelah kita belajar tentang parameter dan argumen, sekarang saatnya kita mengenal bagian penting lainnya dari fungsi, yaitu nilai balik (return value).\n\n🔹 Apa itu Nilai Balik?\nNilai balik adalah hasil yang dikembalikan ol"
+  },
+  {
+    "title": "C++ | #17 Parameter dan Argumen",
+    "url": "https://blog.naufalrakha.my.id/2026/03/c-17-parameter-dan-argumen.html",
+    "date": "2026-03-01T20:43:00.000+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman! 👋\nDi part sebelumnya kita sudah belajar tentang apa itu fungsi. Kita tahu bahwa fungsi bisa membantu kita membuat program yang lebih rapi, lebih terstruktur, dan bisa dipanggil berkali-kali tanpa harus menulis ulang kode.\nSek"
+  },
+  {
+    "title": "C++ | #16 Apa itu Fungsi",
+    "url": "https://blog.naufalrakha.my.id/2025/09/c-16-apa-itu-fungsi.html",
+    "date": "2025-10-01T20:40:00.001+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman!\nDi materi sebelumnya kita sudah membahas tentang perulangan dan juga penggunaan break serta continue. Nah, kali ini kita akan masuk ke bab baru yang tidak kalah penting, yaitu fungsi (function) di dalam C++.\nKenapa fungsi itu "
+  },
+  {
+    "title": "C++ | #15 Break dan Continue",
+    "url": "https://blog.naufalrakha.my.id/2025/09/c-15-break-dan-continue.html",
+    "date": "2025-09-30T19:55:00.003+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;Halo teman-teman, di part sebelumnya kita sudah belajar tentang perulangan for, while, dan do-while. Nah, di pertemuan kali ini kita akan mengenal dua keyword penting dalam perulangan, yaitu break dan continue.\nKeduanya sering dipakai untuk men"
+  },
+  {
+    "title": "C++ | #14 Perulangan Do-While",
+    "url": "https://blog.naufalrakha.my.id/2025/09/c-14-perulangan-do-while.html",
+    "date": "2025-09-24T12:41:00.001+07:00",
+    "category": "Technology",
+    "snippet": "Halo teman-teman 🙌\nKita sudah belajar tentang for dan while. Sekarang ada satu lagi jenis perulangan, yaitu do-while.\nPerulangan do-while ini mirip banget dengan while, tapi ada satu perbedaan penting: kode di dalam do-while pasti dijalankan minimal"
+  },
+  {
+    "title": "C++ #13 Pengulangan While",
+    "url": "https://blog.naufalrakha.my.id/2025/09/c-13-pengulangan-while.html",
+    "date": "2025-09-21T12:38:00.001+07:00",
+    "category": "C++",
+    "snippet": "Halo teman-teman 👋\nDi part sebelumnya kita sudah belajar perulangan for, sekarang kita bahas saudaranya: perulangan while.\nKalau for biasanya dipakai ketika jumlah perulangan sudah jelas, while lebih cocok kalau kita belum tahu pasti berapa kali per"
+  },
+  {
+    "title": "C++ | #12 Perulangan For",
+    "url": "https://blog.naufalrakha.my.id/2025/09/c-12-perulangan-for.html",
+    "date": "2025-09-19T10:54:00.000+07:00",
+    "category": "C++",
+    "snippet": "Halo teman-teman ✌️\nSudah siap masuk ke dunia perulangan? Setelah kita belajar percabangan if-else dan switch-case, kali ini kita mulai bahas looping.\nPerulangan (loop) dipakai kalau kita mau mengulang eksekusi kode berkali-kali tanpa harus nulis ber"
+  },
+  {
+    "title": "C++ | #11 Percabangan Switch-Case",
+    "url": "https://blog.naufalrakha.my.id/2025/09/c-11-percabangan-switch-case.html",
+    "date": "2025-09-13T12:30:00.000+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;\nHalo teman-teman 👋\nSetelah sebelumnya kita belajar percabangan if-else, kali ini kita akan membahas percabangan lain yaitu switch-case.\nSwitch-case biasanya digunakan kalau kita punya banyak pilihan kondisi yang jelas (misalnya angka atau hur"
+  },
+  {
+    "title": "C++ | #10 Percabangan If-Else",
+    "url": "https://blog.naufalrakha.my.id/2025/09/c-10-percabangan-if-else.html",
+    "date": "2025-09-12T12:27:00.000+07:00",
+    "category": "C++",
+    "snippet": "Halo teman-teman 👋\nKali ini kita akan membahas tentang percabangan If-Else di C++.\nPercabangan ini ibaratnya jalan dua arah. Kalau kondisi benar, program akan jalan ke arah pertama. Kalau salah, jalan ke arah lain.\n\nApa itu If-Else?\nif-else adalah s"
+  },
+  {
+    "title": "C++ | #09 Operator Perbandingan",
+    "url": "https://blog.naufalrakha.my.id/2025/09/c-09-operator-perbandingan.html",
+    "date": "2025-09-11T12:03:00.000+07:00",
+    "category": "C++",
+    "snippet": "Halo teman-teman, kita lanjut lagi ya! ✨\nKalau kemarin kita belajar operator logika, kali ini kita akan membahas operator perbandingan.\nEits, tenang dulu… ini bukan operator yang suka dibanding-bandingin mantan sama pacar baru (🤣), tapi operator dal"
+  },
+  {
+    "title": "Java | #0 Apa itu Java",
+    "url": "https://blog.naufalrakha.my.id/2025/09/java-0-apa-itu-java.html",
+    "date": "2025-09-11T07:43:00.001+07:00",
+    "category": "Technology",
+    "snippet": "Halo teman-teman, kita ketemu lagi di seri baru. Setelah sebelumnya kita membahas C++ dari dasar, kali ini kita akan masuk ke dunia baru: Java. Nah, mungkin sebagian dari kalian sudah pernah dengar Java. Ada yang mengira Java itu kopi (☕ iya, lambang"
+  },
+  {
+    "title": "C++ | #08 Operator Bagian 3 (Operator Logika) ",
+    "url": "https://blog.naufalrakha.my.id/2025/09/c-08-operator-bagian-3-operator-logika.html",
+    "date": "2025-09-10T16:58:00.000+07:00",
+    "category": "C++",
+    "snippet": "&nbsp;C++ | #08 Operator Bagian 3 (Operator Logika)\nHalo teman-teman, lanjut lagi ya belajarnya! Udah mulai mumet belum? Kalau mumet, istirahat sebentar, minum kopi dulu ☕. Tapi inget, kalau kopinya kebanyakan nanti bukan operator logika lagi yang di"
+  },
+  {
+    "title": "C++ | #07 Tipe Data Boolean (True or False) ",
+    "url": "https://blog.naufalrakha.my.id/2025/09/c-07-tipe-data-boolean-true-or-false.html",
+    "date": "2025-09-07T20:41:00.002+07:00",
+    "category": "C++",
+    "snippet": "C++ | #07 Tipe Data Boolean (True or False)\nGimana belajarnya, udah ada yang capek kah? Tenang teman, usaha tidak akan mengkhianati hasil (🤣 canda).Baik, lanjut. Kali ini kita akan mempelajari tipe data Boolean.\n\nApa itu Boolean?\nTipe data boolean a"
+  },
+  {
+    "title": "DHCP | Pengalamatan IP Otomatis!",
+    "url": "https://blog.naufalrakha.my.id/2025/09/dhcp-pengalamatan-ip-otomatis.html",
+    "date": "2025-09-03T18:59:00.006+07:00",
+    "category": "Informasi",
+    "snippet": "&nbsp;&nbsp; &nbsp;DHCP? Mungkin istlah ini terdengar asing bagi sebagian orang. Pada saat pengalamatan IP setiap perangkat yang terhubung Internet, kita memiliki 2 Metode untuk pengalamatan. Yakninya Static dan Dynamic. Dan pada saat ini kita akan m"
+  },
+  {
+    "title": "Teknik Hacking #06 | SQL Injection, Memahami Celah Database yang Sering Diserang",
+    "url": "https://blog.naufalrakha.my.id/2025/09/teknik-hacking-06-sql-injection.html",
+    "date": "2025-09-03T18:57:00.005+07:00",
+    "category": "Hacking",
+    "snippet": "&nbsp;Pendahuluan\nSQL Injection (SQLi) adalah teknik hacking yang menargetkan database dari sebuah aplikasi web. Dengan memanfaatkan input yang tidak tervalidasi, hacker bisa menyisipkan perintah SQL untuk mengambil atau memodifikasi data secara ileg"
+  },
+  {
+    "title": "CSS | Sistem yang membuat HTML-mu bergaya ",
+    "url": "https://blog.naufalrakha.my.id/2023/04/css-sistem-yang-membuat-html-mu-bergaya.html",
+    "date": "2023-04-15T23:13:00.004+07:00",
+    "category": "HTML",
+    "snippet": "&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Hmm, pernah mendengar kata CSS? CSS tidak bisa dilepaskan dari HTML. Jika kamu adalah web developer / web designer. Pasti tidak asing dengan ini.&nbsp;&nbsp; &nbsp;&nbsp;Apa itu CSS? Mari kita bahas!A. Apa "
+  },
+  {
+    "title": "Teknik Hacking #05 | Worming, Teknik Sebuah malware Membelah diri",
+    "url": "https://blog.naufalrakha.my.id/2023/04/teknik-hacking-05-worming-teknik-sebuah.html",
+    "date": "2023-04-08T03:00:00.004+07:00",
+    "category": "Hacking",
+    "snippet": "\n  &nbsp;Ah, kembali lagi di Penting Literasi semuanya. Sudah lama ga upload.\n    Sekali upload bahas Teknik Hacking Lagi. Tenang ajah, jadwal saya balik lagi\n    setiap Sabtu Guys! Stay Tune yah!\n\n\n  \n\n\n  A. Apa itu Worm?&nbsp;\n\n\n  \n\n\n  &nbsp; &nbsp"
+  },
+  {
+    "title": "Perangkat Jaringan | Macam-macam Perangkat Jaringan",
+    "url": "https://blog.naufalrakha.my.id/2023/02/perangkat-jaringan-macam-macam.html",
+    "date": "2023-02-22T00:30:00.002+07:00",
+    "category": "Jaringan",
+    "snippet": "Halo guys, sudah lama tidak berjumpa lagih. Maaf jika blog ini sudah 1 tahun tidak jalan (biasa lah).Oke kali ini kita akan bahas tentang perangkat jaringan. Apa itu perangkat jaringan?&nbsp;&nbsp;&nbsp; &nbsp;Perangkat jaringan adalah alat yang digu"
+  },
+  {
+    "title": "Topologi Jaringan | Macam - macam Topologi Jaringan! ",
+    "url": "https://blog.naufalrakha.my.id/2023/02/topologi-jaringan-macam-macam-topologi.html",
+    "date": "2023-02-15T00:00:00.001+07:00",
+    "category": "Jaringan",
+    "snippet": "A. Apa itu Topologi Jaringan?&nbsp;Topologi Jaringan adalah hal-hal yang menjelaskan hubungan geometris antara unsur-unsur dasar penyusun jaringan, yaitu node, link,dan station.B. Macam-macam Topologi Jaringan&nbsp;1.&nbsp;Topologi Star / Topologi Bi"
+  },
+  {
+    "title": "PlayStation | Dulu diremehkan, sekarang berkuasa",
+    "url": "https://blog.naufalrakha.my.id/2022/07/playstation-dulu-diremehkan-sekarang.html",
+    "date": "2022-07-31T07:54:00.001+07:00",
+    "category": "Video Game",
+    "snippet": "&nbsp;Siapa yang tidak mengenal konsol yang satu ini, apalagi anda anda yang suka rental di warnet apalagi beli kaset psnya 10 rebuan. Bahkan game harom perusak stik seperti guitar hero dan naruto series. Ternyata mempunyai sejarah yang lumayan pedih"
+  },
+  {
+    "title": "Teknik Hacking | #04 Credential Reuse, Sasaran Empuk bagi Mageran",
+    "url": "https://blog.naufalrakha.my.id/2022/07/teknik-hacking-04-credential-reuse.html",
+    "date": "2022-07-27T19:40:00.000+07:00",
+    "category": "Teknik Hacking",
+    "snippet": "\n  \n    \n  \nAlur Teknik Credential Reuse/Credential Stuffing&nbsp; &nbsp;Apakah kamu orang yang suka menggunakan username dengan password yang sama setiap platform yang kamu gunakan? Jika iya, maka segera hentikan. Karena itu sasaran empuk bagi hacke"
+  },
+  {
+    "title": "Amiga Os | Os saingan Windows!",
+    "url": "https://blog.naufalrakha.my.id/2022/01/amiga-os-os-saingan-windows.html",
+    "date": "2022-01-01T19:26:00.001+07:00",
+    "category": "Komputer",
+    "snippet": "&nbsp;A. Pengenalan Amiga OSAmiga OS adalah Sistem Operasi dari perusahaan Amiga Corporations. Yang dimana dikembangkan oleh Commodore International yang dimana komputer pertamanya yaitu AMIGA1000 yang dimana Sistem ini berjalan pada seri Motorola 68"
+  },
+  {
+    "title": "Teknik Hacking | #03 MitM, Saat Server Ternyata Disusupi",
+    "url": "https://blog.naufalrakha.my.id/2021/10/teknik-hacking-03-mitm-saat-server.html",
+    "date": "2021-10-02T10:08:00.003+07:00",
+    "category": "Hacking",
+    "snippet": "A. Apa itu serangan MITM?\n  \n    \n  \nSerangan man in the middle (MITM) adalah istilah umum ketika pelaku memposisikan dirinya dalam percakapan antara pengguna dan aplikasi, baik untuk menguping atau menyamar sebagai salah satu pihak, membuatnya tampa"
+  },
+  {
+    "title": "Nokia Symbian | Raja yang kehilangan Tahta, Entah Kenapa",
+    "url": "https://blog.naufalrakha.my.id/2021/09/nokia-symbian-raja-yang-kehilangan.html",
+    "date": "2021-09-29T06:46:00.000+07:00",
+    "category": "Sejarah",
+    "snippet": "Sepertinya saya tidak perlu menjelaskan apa itu Nokia, karena bagi yang gatau hape Nokia parah sih☺&nbsp;Tetapi jika yang gatau adalah Symbian itu wajar, karena Symbian adalah sistem operasi yang dipakai dalam Nokia N-series, hape lama, dan hape bapa"
+  },
+  {
+    "title": "Nintendo | Perusahaan Game Konsol tertua! ",
+    "url": "https://blog.naufalrakha.my.id/2021/09/nintendo-perusahaan-game-konsol-tertua.html",
+    "date": "2021-09-28T09:26:00.000+07:00",
+    "category": "Nintendo",
+    "snippet": "\n  \n    \n  \nApa yang pertama kali kamu pikirkan tentang Nintendo? Pasti marionya dan kekanak-kanakan. Bahkan anak gamers mana yang tidak mengenal Nintendo. Akan tetapi, tahu kah kamu jika perusahaan ini sudah berdiri 131 tahun yang lalu? Kok bisa?&nb"
+  },
+  {
+    "title": "HTML | Bukanlah Bahasa Pemrograman! Tapi Kenapa? ",
+    "url": "https://blog.naufalrakha.my.id/2021/09/html-bukanlah-bahasa-pemrograman-tapi.html",
+    "date": "2021-09-04T07:10:00.002+07:00",
+    "category": "HTML",
+    "snippet": "Html, xml, ml, xl, xxl, mobile legend, Mililiter (canda teman 🙏)&nbsp;Kenapa HTML tidak termasuk bahasa pemrograman? Kan yang kita tau bahasa pemrograman itu c-family, java-family, bahasa D, R, F bla bla dan sejenisnya. Nah sebelum itu, mari kita ke"
+  },
+  {
+    "title": "Teknik Hacking #2 | Brute Force, Cara Lama tetapi Bekerja",
+    "url": "https://blog.naufalrakha.my.id/2021/08/teknik-hacking-2-brute-force-cara-lama.html",
+    "date": "2021-08-30T12:34:00.002+07:00",
+    "category": "Teknik Hacking",
+    "snippet": "&nbsp;Setelah kemarin kita membahas phising, maka sekarang kita akan membahas teknik hacking yang baru, yaitu brute force. Apa sih brute force apa dampaknya bagi kita?&nbsp;A. Apa itu Serangan Brute Force?Serangan brute force adalah serangan trial-an"
+  },
+  {
+    "title": "Entity 404 | CreepyPasta Minecraft yang menjadi ikonik",
+    "url": "https://blog.naufalrakha.my.id/2021/08/entity-404-creepypasta-minecraft-yang.html",
+    "date": "2021-08-29T13:50:00.001+07:00",
+    "category": "Video Game",
+    "snippet": "\n  \n    \n  \nSebelum kita masuk pada pembahasan entity 404, alangkah baiknya saya menjelaskan apa itu creepypasta..&nbsp;\nCreepyPasta menurut Wikipedia adalah legenda atau gambar terkait horor yang telah disalin tempel di seluruh Internet. Entri-entri"
+  },
+  {
+    "title": "Teknik Hacking #1 | Phising, Teknik Para Hacker Sejuta Umat",
+    "url": "https://blog.naufalrakha.my.id/2021/08/teknik-hacking-1-phising-teknik-para.html",
+    "date": "2021-08-26T12:00:00.014+07:00",
+    "category": "Teknik Hacking",
+    "snippet": "\n  \n    \n  \nKalian pasti pernah mendengar kata-kata phising, tapi apa sih itu phising? Katanya bisa membuat datamu bocor dan disalahgunakan.&nbsp;A. Apa itu Phising?Phising adalah upaya untuk mendapatkan informasi data seseorang dengan teknik pengela"
+  },
+  {
+    "title": "Teknik Hacking #0 | Seri Baru Dari Pentingliterasi",
+    "url": "https://blog.naufalrakha.my.id/2021/08/teknik-hacking-0-seri-baru-dari.html",
+    "date": "2021-08-26T12:00:00.001+07:00",
+    "category": "Informasi",
+    "snippet": "\n  \n    \n  \nKalian pasti pernah mendengar istilah hacking. Kita akan membahas bagaimana teknik itu, apa tujuan pasti dari teknik itu, bagaimana cara menghindari nya dan siapa saja teknik nya... Mari kita bahas...Oh iya, seri ini akan hadir setiap kam"
+  },
+  {
+    "title": "Illusioner | Miniboss Java yang tidak akan Spawn Survival",
+    "url": "https://blog.naufalrakha.my.id/2021/08/illusioner-miniboss-java-yang-tidak.html",
+    "date": "2021-08-22T10:27:00.000+07:00",
+    "category": "Video Game",
+    "snippet": "\n\n\n\n\n\n\n\n\n\n\n\nKalian para Minecrafter khusus Java pasti tau dengan Ilusioner, mini boss yang satu ini terlalu overpower dengan kekuatannya. Kok bisa? Ini Sejarah nya!!&nbsp;A. Siapa Ilusioner?&nbsp;\n  \n    \n  \nIllusioner adalah illager tidak terpakai y"
+  },
+  {
+    "title": "Black, White, dan Grey Hat | Identitas Seorang Hacker",
+    "url": "https://blog.naufalrakha.my.id/2021/08/black-white-dan-grey-hat-identitas.html",
+    "date": "2021-08-21T17:23:00.001+07:00",
+    "category": "Hacking",
+    "snippet": "&nbsp;Kalian pasti pernah mendengar berita bahwa hacker telah membobol bank atau mungkin kalian juga menonton di dalam film bahwa seorang hacker itu paham teknologi dan terbilang keren.&nbsp;Meskipun begitu ada berberapa jenis hacker yang mungkin kam"
+  },
+  {
+    "title": "Debian | Kakek Dari Semua Linux",
+    "url": "https://blog.naufalrakha.my.id/2021/08/debian-kakek-dari-semua-linux.html",
+    "date": "2021-08-14T20:07:00.000+07:00",
+    "category": "Linux",
+    "snippet": "A. Apa itu Debian?&nbsp;\n  \n    \n  \nDebian adalah sistem operasi komputer yang tersusun dari paket-paket perangkat lunak yang dirilis sebagai perangkat lunak bebas dan terbuka dengan lisensi mayoritas GNU General Public License dan lisensi perangkat "
+  }
+]
