@@ -1,4 +1,4 @@
-import { FaInstagram, FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaArrowUp } from 'react-icons/fa'
+import { FaInstagram, FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaMedium, FaArrowUp } from 'react-icons/fa'
 
 function Footer() {
   const scrollToTop = () => {
@@ -33,7 +33,8 @@ function Footer() {
               { icon: <FaGithub />, url: "https://github.com/sternnaufal", name: "Github" },
               { icon: <FaLinkedin />, url: "https://linkedin.com/in/naufal-rakha-putra-a0130332a", name: "Linkedin" },
               { icon: <FaTwitter />, url: "https://x.com/okebeyos", name: "X (Twitter)" },
-              { icon: <FaYoutube />, url: "https://youtube.com/@naufaltechtainment1", name: "Youtube" }
+              { icon: <FaYoutube />, url: "https://youtube.com/@naufaltechtainment1", name: "Youtube" },
+              { icon: <FaMedium />, url: "https://medium.com/@naufalrakha2712", name: "Medium" }
             ].map((social, i) => (
               <a 
                 key={i} 

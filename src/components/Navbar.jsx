@@ -28,6 +28,8 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
               <a href="https://instagram.com/stern_naufal2712" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Instagram</a>
               <a href="https://x.com/okebeyos" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">X (Twitter)</a>
               <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Linkedin</a>
+              <a href="https://youtube.com/@naufaltechtainment1" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Youtube</a>
+              <a href="https://medium.com/@naufalrakha2712" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Medium</a>
             </div>
           </div>
           
@@ -45,8 +47,6 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
               <a href="https://seninterusstudio.vercel.app" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Senin Terus Studio <FaGamepad size={14} className="inline" /></a>
             </div>
           </div>
-          
-          <a href="https://youtube.com/@naufaltechtainment1" target="_blank" rel="noopener noreferrer" className="font-space font-bold hover:bg-black hover:text-white px-2 py-1 transition-colors">Youtube</a>
           
           {navLinks.map((link) => {
             const sectionId = link.href.replace('#', '')
@@ -116,8 +116,11 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
           </div>
           <div className="flex flex-col gap-2 font-bold">
              <p className="text-xs uppercase opacity-60 mt-2">Socials</p>
-             <a href="https://instagram.com/stern_naufal2712" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Instagram</a>
-             <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Linkedin</a>
+              <a href="https://instagram.com/stern_naufal2712" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Instagram</a>
+              <a href="https://x.com/okebeyos" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">X (Twitter)</a>
+              <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Linkedin</a>
+              <a href="https://youtube.com/@naufaltechtainment1" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Youtube</a>
+              <a href="https://medium.com/@naufalrakha2712" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Medium</a>
           </div>
         </nav>
       )}
