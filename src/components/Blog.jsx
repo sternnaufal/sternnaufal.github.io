@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FaArrowRight, FaBlog } from 'react-icons/fa'
 import { Helmet } from 'react-helmet-async'
+import { formatDate } from '../utils'
 
 const FALLBACK_POSTS = [
   {
@@ -22,12 +23,6 @@ const FALLBACK_POSTS = [
     category: "C++",
   },
 ]
-
-function formatDate(iso) {
-  if (!iso) return ''
-  const d = new Date(iso)
-  return d.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })
-}
 
 function Blog() {
   const [posts, setPosts] = useState([])

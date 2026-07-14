@@ -5,10 +5,16 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import AnimatedCounter from './AnimatedCounter'
 import { Trophy } from 'lucide-react'
 
+const bgMap = {
+  'yellow-400': 'bg-yellow-400',
+  'pink-500': 'bg-pink-500 text-white',
+  'blue-500 text-white': 'bg-blue-500 text-white',
+}
+
 const SectionHeading = ({ children, colorClass }) => (
   <div className="inline-block mb-10 transform -rotate-2 relative z-10">
     <div className="absolute inset-0 translate-x-3 translate-y-2 bg-black border-4 border-black" />
-    <h2 className={`relative z-10 px-8 py-3 bg-${colorClass} border-4 border-black text-2xl md:text-3xl font-black uppercase tracking-widest`}>
+    <h2 className={`relative z-10 px-8 py-3 ${bgMap[colorClass] || 'bg-yellow-400'} border-4 border-black text-2xl md:text-3xl font-black uppercase tracking-widest`}>
       {children}
     </h2>
   </div>

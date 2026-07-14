@@ -14,6 +14,7 @@ import LoadingScreen from './components/LoadingScreen'
 import KeepsimpleDemo from './components/KeepsimpleDemo'
 import Blog from './components/Blog'
 import BlogPage from './components/BlogPage'
+import CvPage from './components/CvPage'
 
 function Home() {
   return (
@@ -68,7 +69,7 @@ function App() {
     <HelmetProvider>
       {loading && <LoadingScreen darkMode={darkMode} onFinished={() => setLoading(false)} />}
       <Router>
-        <div className={`${loading ? 'hidden' : ''} ${darkMode ? 'bg-black' : 'bg-yellow-300'} ${darkMode ? 'text-white' : 'text-black'}`}>
+          <div className={`${loading ? 'hidden' : ''} min-h-screen flex flex-col ${darkMode ? 'bg-black' : 'bg-yellow-300'} ${darkMode ? 'text-white' : 'text-black'}`}>
           <Helmet>
             <title>Naufal Rakha Putra | Full-Stack Developer & Game Dev</title>
             <meta name="description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio), Cyber Security enthusiast." />
@@ -161,6 +162,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/blog" element={<BlogPage />} />
+              <Route path="/cv" element={<CvPage />} />
               <Route path="/keepsimple-demo" element={<KeepsimpleDemo />} />
             </Routes>
           

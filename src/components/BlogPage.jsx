@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa'
 import { Helmet } from 'react-helmet-async'
+import { formatDate } from '../utils'
 
 const CATEGORY_COLORS = {
   'C++': 'text-blue-400 bg-blue-400/10 border-blue-400/20',
@@ -14,12 +15,6 @@ const CATEGORY_COLORS = {
 
 function getCategoryColor(cat) {
   return CATEGORY_COLORS[cat] || 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20'
-}
-
-function formatDate(iso) {
-  if (!iso) return ''
-  const d = new Date(iso)
-  return d.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })
 }
 
 function BlogPage() {
@@ -138,7 +133,7 @@ function BlogPage() {
                         {post.category}
                       </span>
                       <span className="font-mono text-xs text-white/30">
-                        {formatDate(post.date) || post.date}
+                        {formatDate(post.date, { month: 'long' }) || post.date}
                       </span>
                     </div>
                     <h2 className="font-space font-bold text-xl group-hover:text-yellow-400 transition-colors mb-2">

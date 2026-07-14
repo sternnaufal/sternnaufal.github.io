@@ -8,7 +8,7 @@ function Hero() {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="hero bg-pink-500 dark:bg-gray-950 py-16 md:py-24 px-6 md:px-12 border-b-5 border-black relative overflow-hidden scroll-mt-24"
+      className="hero bg-pink-500 dark:bg-gray-950 min-h-screen flex flex-col justify-center py-16 md:py-24 px-6 md:px-12 border-b-5 border-black relative overflow-hidden scroll-mt-24"
     >
       {/* Decorative dots for Neo-Brutalism */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-400 border-4 border-black animate-bounce hidden md:block" />
@@ -51,6 +51,12 @@ function Hero() {
               className="bg-white dark:bg-gray-800 font-bold px-8 py-3 border-4 border-black shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black"
             >
               Download CV
+            </a>
+            <a
+              href="/cv"
+              className="bg-yellow-400 dark:bg-pink-500 text-black dark:text-white font-bold px-8 py-3 border-4 border-black shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black"
+            >
+              View CV
             </a>
           </div>
         </div>

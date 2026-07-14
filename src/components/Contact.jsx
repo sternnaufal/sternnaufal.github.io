@@ -1,21 +1,7 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaPaperPlane, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 
 function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    form.action = 'https://formsubmit.co/naufalrakha2712@gmail.com'
-    form.method = 'POST'
-    form.submit()
-  }
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
 
   return (
     <section id="contact" className="contact py-24 bg-blue-500 dark:bg-gray-950 border-b-5 border-black px-6 md:px-12 relative overflow-hidden scroll-mt-24">
@@ -70,47 +56,41 @@ function Contact() {
                  ✨
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-8">
+              <form action="https://formsubmit.co/naufalrakha2712@gmail.com" method="POST" className="space-y-8">
                 <div className="relative group">
                    <label htmlFor="contact-name" className="block font-space font-black uppercase text-sm mb-2">Nama Anda / Perusahaan</label>
                    <input 
                      id="contact-name"
                      type="text" 
                      name="name"
-                     required
-                     placeholder="John Doe"
-                     value={formData.name}
-                     onChange={handleChange}
-                     className="w-full bg-gray-50 dark:bg-black border-4 border-black p-4 font-mono focus:bg-yellow-100 dark:focus:bg-gray-800 focus:outline-none transition-all placeholder:opacity-30"
-                   />
-                </div>
+                      required
+                      placeholder="John Doe"
+                      className="w-full bg-gray-50 dark:bg-black border-4 border-black p-4 font-mono focus:bg-yellow-100 dark:focus:bg-gray-800 focus:outline-none transition-all placeholder:opacity-30"
+                    />
+                 </div>
 
-                <div className="relative group">
-                   <label htmlFor="contact-email" className="block font-space font-black uppercase text-sm mb-2">Email Aktif</label>
-                   <input 
-                     id="contact-email"
-                     type="email" 
-                     name="email"
-                     required
-                     placeholder="john@example.com"
-                     value={formData.email}
-                     onChange={handleChange}
-                     className="w-full bg-gray-50 dark:bg-black border-4 border-black p-4 font-mono focus:bg-pink-100 dark:focus:bg-gray-800 focus:outline-none transition-all placeholder:opacity-30"
-                   />
-                </div>
+                 <div className="relative group">
+                    <label htmlFor="contact-email" className="block font-space font-black uppercase text-sm mb-2">Email Aktif</label>
+                    <input 
+                      id="contact-email"
+                      type="email" 
+                      name="email"
+                      required
+                      placeholder="john@example.com"
+                      className="w-full bg-gray-50 dark:bg-black border-4 border-black p-4 font-mono focus:bg-pink-100 dark:focus:bg-gray-800 focus:outline-none transition-all placeholder:opacity-30"
+                    />
+                 </div>
 
-                <div className="relative group">
-                   <label htmlFor="contact-message" className="block font-space font-black uppercase text-sm mb-2">Pesan Anda</label>
-                   <textarea 
-                     id="contact-message"
-                     name="message"
-                     rows="5"
-                     required
-                     placeholder="Apa yang ingin Anda katakan?"
-                     value={formData.message}
-                     onChange={handleChange}
-                     className="w-full bg-gray-50 dark:bg-black border-4 border-black p-4 font-mono focus:bg-blue-100 dark:focus:bg-gray-800 focus:outline-none transition-all placeholder:opacity-30 resize-none"
-                   />
+                 <div className="relative group">
+                    <label htmlFor="contact-message" className="block font-space font-black uppercase text-sm mb-2">Pesan Anda</label>
+                    <textarea 
+                      id="contact-message"
+                      name="message"
+                      rows="5"
+                      required
+                      placeholder="Apa yang ingin Anda katakan?"
+                      className="w-full bg-gray-50 dark:bg-black border-4 border-black p-4 font-mono focus:bg-blue-100 dark:focus:bg-gray-800 focus:outline-none transition-all placeholder:opacity-30 resize-none"
+                    />
                 </div>
 
                 <button 
