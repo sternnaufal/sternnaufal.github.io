@@ -149,7 +149,6 @@ function App() {
                   "https://blog.naufalrakha.my.id",
                   "https://webapps.naufalrakha.my.id",
                   "https://demo.naufalrakha.my.id",
-                  "https://koleksilama.naufalrakha.my.id",
                   "https://api.naufalrakha.my.id"
                 ]
               })}

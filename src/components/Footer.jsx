@@ -61,9 +61,7 @@ function Footer() {
             <div className="flex flex-wrap justify-center gap-3 text-xs">
               <a href="https://naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Root</a>
               <a href="https://digital.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Digital</a>
-              <a href="https://demo.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Demo Art</a>
-              <a href="https://koleksilama.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Koleksi LAMA</a>
-              <a href="https://webapps.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">WebApps</a>
+              <a href="https://demo.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Demo Art</a><a href="https://webapps.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">WebApps</a>
               <a href="https://blog.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Blog</a>
             </div>
             <div className="flex flex-wrap justify-center gap-3 text-xs mt-2">
