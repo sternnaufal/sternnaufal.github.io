@@ -7,6 +7,7 @@ export const projects = [
     description: 'Platform crowdfunding medis full-stack (React.js + Node.js/Express). Kolaborasi tim dengan dosen sebagai stakeholder utama. Fitur campaign management, donasi, dan auth.',
     github: 'https://github.com/orgs/group4pbl-carefund/repositories',
     live: 'https://frontend-wine-kappa-76.vercel.app/',
+    caseStudy: '/projects/carefund.html',
     image: '/images/projects/carefund.png',
     tech: ['React.js', 'Node.js', 'Express', 'MySQL']
   },
@@ -16,6 +17,7 @@ export const projects = [
     description: 'Sistem generator soal ujian otomatis berbasis AI bernilai komersial Rp2.500.000. Multi-AI fallback: Gemini API, DeepSeek, Groq. Laravel + AI Integration.',
     github: 'https://github.com/sternnaufal/LG-exambot',
     live: 'https://exambot.l-glearning.com/',
+    caseStudy: '/projects/lg-exambot.html',
     image: '/images/projects/lg-exambot.png',
     tech: ['Laravel', 'Gemini API', 'DeepSeek', 'Groq']
   },
@@ -25,6 +27,7 @@ export const projects = [
     description: 'Platform manajemen acara lingkungan hidup. Produk andalan kompetisi Creanomic Vokasi UB 2025. Laravel + Blade + MySQL.',
     github: 'https://github.com/sternnaufal/greenEvent',
     live: 'https://greenevent.infinityfree.me',
+    caseStudy: '/projects/greenevent.html',
     image: '/images/projects/greenevent.png',
     tech: ['Laravel', 'Blade', 'MySQL']
   },
@@ -33,6 +36,7 @@ export const projects = [
     category: 'AI',
     description: 'Bot pengingat jadwal otomatis terintegrasi Google Calendar API. Skrip Python untuk manajemen waktu personal via Telegram.',
     github: 'https://github.com/sternnaufal/bot-calendar-python-telegram',
+    caseStudy: '/projects/bot-telegram.html',
     image: '/images/projects/bot-telegram.png',
     tech: ['Python', 'Google Calendar API']
   },
@@ -69,6 +73,7 @@ export const projects = [
     description: 'Game edukasi tebak bendera negara native Android. 60+ unduhan awal.',
     github: null,
     live: 'https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps',
+    caseStudy: '/projects/flagquiz.html',
     image: '/images/projects/flagquiz.png',
     tech: ['Kotlin', 'Android']
   },
@@ -78,6 +83,7 @@ export const projects = [
     description: 'Game puzzle edukasi sorting untuk Android. 60+ unduhan awal.',
     github: null,
     live: 'https://play.google.com/store/apps/details?id=com.seninterus.sortiverse',
+    caseStudy: '/projects/sortiverse.html',
     image: '/images/projects/sortiverse.png',
     tech: ['Kotlin', 'Android']
   },
@@ -87,6 +93,7 @@ export const projects = [
     description: 'RESTful API manajemen todos dengan Express.js + TypeScript. Fitur pagination, filter multi-parameter, kategorisasi, prioritas, dan statistik. Deployed di Vercel.',
     github: 'https://github.com/sternnaufal/api',
     live: 'https://api-three-self-56.vercel.app/',
+    caseStudy: '/projects/todos-api.html',
     image: '/images/projects/todos-api.png',
     tech: ['Express.js', 'TypeScript', 'Vercel']
   },
@@ -95,6 +102,7 @@ export const projects = [
     category: 'AI',
     description: 'Discord bot serbaguna v4 berbasis JavaScript dengan fitur moderasi, musik, tiket, translasi, dan lainnya.',
     github: 'https://github.com/sternnaufal/hanekawa-bot-v4',
+    caseStudy: '/projects/hanekawa-bot.html',
     image: '/images/projects/hanekawa-bot.png',
     tech: ['JavaScript', 'Discord.js']
   },
@@ -112,6 +120,7 @@ export const projects = [
     category: 'Tools',
     description: 'Toolkit CTF untuk analisis forensika digital. Koleksi skrip otomatisasi bedah file, ekstraksi artefak, dan investigasi sistem.',
     github: 'https://github.com/sternnaufal/sterntools',
+    caseStudy: '/projects/sterntools.html',
     image: '/images/projects/sterntools.png',
     tech: ['Shell', 'Linux']
   },
@@ -120,6 +129,7 @@ export const projects = [
     category: 'Web App',
     description: 'Landing page resmi profil Duta Anak Kota Bukittinggi. Dibangun dengan Bootstrap untuk tampilan responsif dan modern.',
     github: 'https://github.com/sternnaufal/website-duta-anak',
+    caseStudy: '/projects/duta-anak.html',
     image: '/images/project-placeholder.svg',
     tech: ['Bootstrap', 'HTML5', 'CSS3']
   }

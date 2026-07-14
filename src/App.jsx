@@ -86,12 +86,12 @@ function App() {
                 "name": "Naufal Rakha Putra",
                 "url": "https://naufalrakha.my.id",
                 "image": "https://naufalrakha.my.id/ku.png",
-                "jobTitle": ["Full-Stack Developer", "Game Developer", "IT Generalist", "Lead Game Developer & Founder at Senin Terus Studio"],
+                "jobTitle": ["Full-Stack Developer", "Game Developer", "IT Generalist", "Lead Game Developer and Founder at Senin Terus Studio"],
                 "email": "naufalrakha2712@gmail.com",
                 "address": { "@type": "PostalAddress", "addressLocality": "Malang", "addressRegion": "Jawa Timur", "addressCountry": "Indonesia" },
                 "alumniOf": ["Universitas Brawijaya", "SMKN 1 Bukittinggi"],
                 "knowsAbout": ["React.js", "Node.js", "Laravel", "PHP", "Game Development", "Cyber Security", "Kotlin", "Python", "Tailwind CSS", "Bootstrap", "Docker", "Git", "REST API", "MySQL", "Firebase", "Express.js", "SQL", "Azure AI Foundry", "Apache", "Postman", "Linux Server (Debian)", "Cisco", "MikroTik", "Twine", "Godot", "Unity", "C#", "SEO", "Web Scraping", "Bot Automation"],
-                "sameAs": ["https://linkedin.com/in/naufal-rakha-putra-a0130332a", "https://github.com/sternnaufal", "https://instagram.com/stern_naufal2712", "https://youtube.com/@naufaltechtainment1", "https://x.com/okebeyos", "https://blog.naufalrakha.my.id", "https://digital.naufalrakha.my.id"]
+                "sameAs": ["https://linkedin.com/in/naufal-rakha-putra", "https://github.com/sternnaufal", "https://instagram.com/stern_naufal2712", "https://youtube.com/@naufaltechtainment1", "https://x.com/okebeyos", "https://medium.com/@naufalrakha2712", "https://vokasi.ub.ac.id/author/naufal/", "https://play.google.com/store/apps/dev?id=9004420762141640273", "https://seninterus.itch.io/", "https://blog.naufalrakha.my.id", "https://digital.naufalrakha.my.id", "https://webapps.naufalrakha.my.id", "https://demo.naufalrakha.my.id", "https://api.naufalrakha.my.id"]
               })}
             </script>
             <script type="application/ld+json">
@@ -101,13 +101,13 @@ function App() {
                 "name": "Projects Portfolio Naufal Rakha Putra",
                 "description": "Kumpulan proyek pilihan Naufal Rakha Putra dalam pengembangan web, game, AI, dan mobile.",
                 "itemListElement": [
-                  { "@type": "SoftwareApplication", "name": "CareFund", "applicationCategory": "WebApplication", "description": "Platform crowdfunding medis full-stack React.js + Node.js/Express.", "url": "https://github.com/orgs/group4pbl-carefund/repositories" },
-                  { "@type": "SoftwareApplication", "name": "LG-Exambot", "applicationCategory": "AIApplication", "description": "Sistem generator soal ujian otomatis berbasis AI. Multi-AI fallback: Gemini, DeepSeek, Groq.", "url": "https://exambot.l-glearning.com/" },
-                  { "@type": "SoftwareApplication", "name": "GreenEvent", "applicationCategory": "WebApplication", "description": "Platform manajemen acara lingkungan hidup.", "url": "https://greenevent.infinityfree.me" },
-                  { "@type": "MobileApplication", "name": "Flag Quiz Master", "applicationCategory": "GameApplication", "description": "Game edukasi tebak bendera negara native Android.", "url": "https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps" },
-                  { "@type": "MobileApplication", "name": "Sortiverse", "applicationCategory": "GameApplication", "description": "Game puzzle edukasi sorting untuk Android.", "url": "https://play.google.com/store/apps/details?id=com.seninterus.sortiverse" },
-                  { "@type": "SoftwareApplication", "name": "Catatanku", "applicationCategory": "WebApplication", "description": "Aplikasi catatan digital untuk pelajar & mahasiswa.", "url": "https://naufalrakha.my.id/projects/catatanku.html" },
-                  { "@type": "WebAPI", "name": "Todos API", "applicationCategory": "WebApplication", "description": "RESTful API manajemen todos dengan Express.js + TypeScript.", "url": "https://api-three-self-56.vercel.app/" }
+                  { "@type": "SoftwareApplication", "name": "CareFund", "applicationCategory": "WebApplication", "operatingSystem": "All", "description": "Platform crowdfunding medis full-stack React.js + Node.js/Express.", "url": "https://github.com/orgs/group4pbl-carefund/repositories" },
+                  { "@type": "SoftwareApplication", "name": "LG-Exambot", "applicationCategory": "AIApplication", "operatingSystem": "All", "description": "Sistem generator soal ujian otomatis berbasis AI. Multi-AI fallback: Gemini, DeepSeek, Groq.", "url": "https://exambot.l-glearning.com/" },
+                  { "@type": "SoftwareApplication", "name": "GreenEvent", "applicationCategory": "WebApplication", "operatingSystem": "All", "description": "Platform manajemen acara lingkungan hidup.", "url": "https://greenevent.infinityfree.me" },
+                  { "@type": "MobileApplication", "name": "Flag Quiz Master", "applicationCategory": "GameApplication", "operatingSystem": "Android", "description": "Game edukasi tebak bendera negara native Android.", "url": "https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps" },
+                  { "@type": "MobileApplication", "name": "Sortiverse", "applicationCategory": "GameApplication", "operatingSystem": "Android", "description": "Game puzzle edukasi sorting untuk Android.", "url": "https://play.google.com/store/apps/details?id=com.seninterus.sortiverse" },
+                  { "@type": "SoftwareApplication", "name": "Catatanku", "applicationCategory": "WebApplication", "operatingSystem": "All", "description": "Aplikasi catatan digital untuk pelajar & mahasiswa.", "url": "https://naufalrakha.my.id/projects/catatanku.html" },
+                  { "@type": "WebAPI", "name": "Todos API", "applicationCategory": "WebApplication", "operatingSystem": "All", "description": "RESTful API manajemen todos dengan Express.js + TypeScript.", "url": "https://api-three-self-56.vercel.app/" }
                 ]
               })}
             </script>

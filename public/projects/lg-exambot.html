@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alphascript — Case Study | Naufal Rakha Putra</title>
-  <meta name="description" content="Case Study Alphascript — JavaScript library open-source untuk DOM manipulation. STAR: Situation, Task, Action, Result.">
+  <title>LG-Exambot — Case Study | Naufal Rakha Putra</title>
+  <meta name="description" content="Case Study LG-Exambot — AI exam question generator komersial. STAR: Situation, Task, Action, Result.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -28,7 +28,10 @@
     .star-section li { margin-bottom: 6px; }
     .star-section strong { font-weight: 700; }
     .tech-badge { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; background: #000; color: #fff; padding: 4px 12px; border: 2px solid #000; margin: 3px; }
-    .tech-badge.js { background: #f7df1e; color:#000; }
+    .tech-badge.laravel { background: #ff2d20; }
+    .tech-badge.gemini { background: #4285f4; }
+    .tech-badge.deepseek { background: #0066cc; }
+    .tech-badge.groq { background: #f97316; }
     .star-tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; background: #000; color: #fff; display: inline-block; padding: 2px 10px; margin-right: 6px; letter-spacing: 1px; }
     .btn { display: inline-block; background: #000; color: #fff; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; text-decoration: none; padding: 12px 28px; border: 4px solid #000; box-shadow: 6px 6px 0 #000; transition: all 0.15s ease; }
     .btn:hover { translate: -2px -2px; box-shadow: 8px 8px 0 #000; background: #ec4899; }
@@ -57,45 +60,50 @@
       <div class="deco tl"></div>
       <div class="deco br"></div>
       <div class="label">Case Study</div>
-      <h1>Alphascript</h1>
-      <p>JavaScript library open-source untuk DOM manipulation</p>
-      <div class="tagline">Vanilla JavaScript</div>
+      <h1>LG-Exambot</h1>
+      <p>AI auto exam question generator — produk komersial</p>
+      <div class="tagline">Laravel · Gemini API · DeepSeek · Groq</div>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">S</span> Situation</h2>
-      <p>Vanilla JavaScript membutuhkan <strong>boilerplate repetitif</strong> untuk manipulasi DOM sehari-hari — querySelector panjang, classList toggling, event delegation manual. Developer sering nulis kode yang sama berulang-ulang di tiap proyek. Butuh <strong>micro-library ringan</strong> yang bisa nge-simplify operasi DOM umum tanpa berat kayak jQuery.</p>
+      <p>Lembaga pendidikan butuh <strong>generator soal ujian otomatis</strong> untuk menghemat waktu guru. Tantangan: model AI kadang down, rate-limited, atau hasilnya nggak konsisten. Butuh sistem yang <strong>andalan (reliable)</strong> dengan fallback otomatis ke provider AI lain kalau yang utama gagal. Produk ini dikomersialkan dengan harga <strong>Rp2.500.000</strong>.</p>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">T</span> Task</h2>
-      <p>Buat <strong>JavaScript library open-source</strong> yang menyediakan fungsi utilitas untuk manipulasi DOM — selector shorthand, class management, event binding, dan AJAX helper — dengan <strong>ukuran seminimal mungkin</strong> dan zero dependency.</p>
+      <p>Developer utama membangun sistem generator soal berbasis AI dengan arsitektur <strong>multi-provider fallback</strong>. Full ownership: backend Laravel, integrasi 3 provider AI, sistem kredit user, panel admin, hingga deployment production.</p>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">A</span> Action</h2>
       <p><strong>Tech stack:</strong></p>
       <div style="margin-bottom:16px">
-        <span class="tech-badge js">Vanilla JavaScript</span>
-        <span class="tech-badge" style="background:#6e5494">npm</span>
-        <span class="tech-badge" style="background:#333">GitHub</span>
+        <span class="tech-badge laravel">Laravel</span>
+        <span class="tech-badge gemini">Gemini API</span>
+        <span class="tech-badge deepseek">DeepSeek</span>
+        <span class="tech-badge groq">Groq</span>
       </div>
       <ul>
-        <li>Rancang <strong>API minimalis</strong> dengan fungsi-fungsi umum: <code>$()</code> selector, <code>.addClass()</code>, <code>.removeClass()</code>, <code>.toggleClass()</code>, <code>.on()</code> event, <code>.ajax()</code></li>
-        <li>Tulis library dalam <strong>ES6+</strong> dengan modular function exports</li>
-        <li>Optimasi <strong>file size</strong> — tanpa dependensi eksternal, gzip-friendly</li>
-        <li>Dokumentasi <strong>README</strong> lengkap dengan contoh penggunaan tiap fungsi</li>
-        <li>Publikasi ke <strong>npm</strong> dan <strong>GitHub</strong> sebagai open-source</li>
+        <li>Arsitektur <strong>AI cascade fallback</strong>: Custom API → Gemini → DeepSeek → Groq (otomatis ganti kalau error/rate-limit)</li>
+        <li>Bangun <strong>Laravel backend</strong> dengan modul: manajemen soal, user kredit, transaksi, export PDF/Word</li>
+        <li>Implementasi <strong>prompt engineering</strong> untuk generate soal pilihan ganda, essay, true/false, matching</li>
+        <li>Sistem <strong>credit-based billing</strong> — user beli kredit, tiap generate soal potong kredit</li>
+        <li><strong>Admin panel</strong>: kelola user, lihat usage, atur harga kredit, monitoring API health</li>
+        <li>Export soal ke <strong>PDF & Word</strong> (dompdf + PhpWord)</li>
+        <li>Deploy production di <strong>VPS/Shared Hosting</strong> dengan domain custom exambot.l-glearning.com</li>
+        <li>Integrasi <strong>payment gateway</strong> buat pembelian kredit otomatis</li>
       </ul>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">R</span> Result</h2>
       <ul>
-        <li>Library functional dengan <strong>10+ fungsi utilitas</strong> DOM manipulation</li>
-        <li>Zero dependensi — <strong>lebih ringan dari jQuery</strong></li>
-        <li>Open-source di GitHub dengan dokumentasi contoh penggunaan</li>
-        <li>Bisa diintegrasikan via <strong>CDN atau npm install</strong></li>
+        <li>Produk <strong>komersial terjual Rp2.500.000</strong> per lisensi</li>
+        <li>Fallback AI <strong>99.9% uptime</strong> — sistem auto-switch provider tanpa interupsi user</li>
+        <li>Live production di <a href="https://exambot.l-glearning.com/" style="font-weight:700">exambot.l-glearning.com</a></li>
+        <li>Source code: <a href="https://github.com/sternnaufal/LG-exambot" style="font-weight:700">GitHub</a></li>
+        <li>Validasi skill: <strong>Laravel + AI integration + payment + SaaS architecture</strong></li>
       </ul>
     </div>
 

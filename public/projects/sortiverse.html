@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alphascript — Case Study | Naufal Rakha Putra</title>
-  <meta name="description" content="Case Study Alphascript — JavaScript library open-source untuk DOM manipulation. STAR: Situation, Task, Action, Result.">
+  <title>Sortiverse — Case Study | Naufal Rakha Putra</title>
+  <meta name="description" content="Case Study Sortiverse — Game puzzle edukasi sorting untuk Android. STAR: Situation, Task, Action, Result.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -28,7 +28,8 @@
     .star-section li { margin-bottom: 6px; }
     .star-section strong { font-weight: 700; }
     .tech-badge { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; background: #000; color: #fff; padding: 4px 12px; border: 2px solid #000; margin: 3px; }
-    .tech-badge.js { background: #f7df1e; color:#000; }
+    .tech-badge.kotlin { background: #7f52ff; }
+    .tech-badge.android { background: #3ddc84; color:#000; }
     .star-tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; background: #000; color: #fff; display: inline-block; padding: 2px 10px; margin-right: 6px; letter-spacing: 1px; }
     .btn { display: inline-block; background: #000; color: #fff; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; text-decoration: none; padding: 12px 28px; border: 4px solid #000; box-shadow: 6px 6px 0 #000; transition: all 0.15s ease; }
     .btn:hover { translate: -2px -2px; box-shadow: 8px 8px 0 #000; background: #ec4899; }
@@ -57,45 +58,48 @@
       <div class="deco tl"></div>
       <div class="deco br"></div>
       <div class="label">Case Study</div>
-      <h1>Alphascript</h1>
-      <p>JavaScript library open-source untuk DOM manipulation</p>
-      <div class="tagline">Vanilla JavaScript</div>
+      <h1>Sortiverse</h1>
+      <p>Game puzzle edukasi sorting untuk Android</p>
+      <div class="tagline">Kotlin · Android · Google Play</div>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">S</span> Situation</h2>
-      <p>Vanilla JavaScript membutuhkan <strong>boilerplate repetitif</strong> untuk manipulasi DOM sehari-hari — querySelector panjang, classList toggling, event delegation manual. Developer sering nulis kode yang sama berulang-ulang di tiap proyek. Butuh <strong>micro-library ringan</strong> yang bisa nge-simplify operasi DOM umum tanpa berat kayak jQuery.</p>
+      <p>Pelajar belajar algoritma sorting tapi cuma di <strong>koding abstrak</strong> di layar monitor. Nggak ada media interaktif yang nge-game-in konsep sorting (Bubble Sort, Selection Sort, Insertion Sort) jadi puzzle visual. Butuh game yang bikin <strong>belajar sorting jadi menyenangkan & tangible</strong>.</p>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">T</span> Task</h2>
-      <p>Buat <strong>JavaScript library open-source</strong> yang menyediakan fungsi utilitas untuk manipulasi DOM — selector shorthand, class management, event binding, dan AJAX helper — dengan <strong>ukuran seminimal mungkin</strong> dan zero dependency.</p>
+      <p>Sebagai <strong>Lead Game Developer (Senin Terus Studio)</strong>, bangun game puzzle Android native di mana pemain harus nge-sort elemen visual (angka, benda, warna) dengan mekanisme mirip algoritma sorting. Multiple worlds, increasing difficulty, target Mei 2026.</p>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">A</span> Action</h2>
       <p><strong>Tech stack:</strong></p>
       <div style="margin-bottom:16px">
-        <span class="tech-badge js">Vanilla JavaScript</span>
-        <span class="tech-badge" style="background:#6e5494">npm</span>
-        <span class="tech-badge" style="background:#333">GitHub</span>
+        <span class="tech-badge kotlin">Kotlin</span>
+        <span class="tech-badge android">Android SDK</span>
+        <span class="tech-badge" style="background:#414141">Google Play Console</span>
       </div>
       <ul>
-        <li>Rancang <strong>API minimalis</strong> dengan fungsi-fungsi umum: <code>$()</code> selector, <code>.addClass()</code>, <code>.removeClass()</code>, <code>.toggleClass()</code>, <code>.on()</code> event, <code>.ajax()</code></li>
-        <li>Tulis library dalam <strong>ES6+</strong> dengan modular function exports</li>
-        <li>Optimasi <strong>file size</strong> — tanpa dependensi eksternal, gzip-friendly</li>
-        <li>Dokumentasi <strong>README</strong> lengkap dengan contoh penggunaan tiap fungsi</li>
-        <li>Publikasi ke <strong>npm</strong> dan <strong>GitHub</strong> sebagai open-source</li>
+        <li>Desain <strong>mekanisme puzzle</strong>: pemain nge-sort elemen dengan swap/drag, mirip visualisasi sorting algorithm</li>
+        <li>Bikin <strong>multiple worlds</strong> (Universe 1-5), masing-masing dengan tema sorting beda (angka, warna, huruf, bentuk, combo)</li>
+        <li>Sistem <strong>level progression</strong>: 10+ level per world, bintang evaluasi berdasarkan jumlah langkah</li>
+        <li>Animasi <strong>smooth & satisfying</strong> — setiap swap/compare kasih feedback visual</li>
+        <li><strong>Progress tracking</strong>: total bintang, level terbuka, statistik pemain</li>
+        <li>UI/UX: tema colorful dengan <strong>Material Design 3</strong> components</li>
+        <li>Deploy ke <strong>Google Play Store</strong> — proses signing, testing track, store listing</li>
+        <li>Rilis <strong>Mei 2026</strong> di Play Store</li>
       </ul>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">R</span> Result</h2>
       <ul>
-        <li>Library functional dengan <strong>10+ fungsi utilitas</strong> DOM manipulation</li>
-        <li>Zero dependensi — <strong>lebih ringan dari jQuery</strong></li>
-        <li>Open-source di GitHub dengan dokumentasi contoh penggunaan</li>
-        <li>Bisa diintegrasikan via <strong>CDN atau npm install</strong></li>
+        <li><strong>60+ unduhan awal</strong> (organic) di Google Play Store</li>
+        <li>Published live: <a href="https://play.google.com/store/apps/details?id=com.seninterus.sortiverse" style="font-weight:700">Google Play Store</a></li>
+        <li>Buktikan ability bikin game dengan <strong>kompleksitas lebih tinggi</strong> dari Flag Quiz (multiple worlds, progression, combo mechanics)</li>
+        <li>Validasi skill: <strong>Kotlin native Android + Game design + Puzzle mechanics + Google Play pipeline</strong></li>
       </ul>
     </div>
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alphascript — Case Study | Naufal Rakha Putra</title>
-  <meta name="description" content="Case Study Alphascript — JavaScript library open-source untuk DOM manipulation. STAR: Situation, Task, Action, Result.">
+  <title>Sterntools — Case Study | Naufal Rakha Putra</title>
+  <meta name="description" content="Case Study Sterntools — Toolkit CTF forensika digital. STAR: Situation, Task, Action, Result.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -28,7 +28,8 @@
     .star-section li { margin-bottom: 6px; }
     .star-section strong { font-weight: 700; }
     .tech-badge { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; background: #000; color: #fff; padding: 4px 12px; border: 2px solid #000; margin: 3px; }
-    .tech-badge.js { background: #f7df1e; color:#000; }
+    .tech-badge.shell { background: #1a73e8; }
+    .tech-badge.linux { background: #fcc624; color:#000; }
     .star-tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; background: #000; color: #fff; display: inline-block; padding: 2px 10px; margin-right: 6px; letter-spacing: 1px; }
     .btn { display: inline-block; background: #000; color: #fff; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; text-decoration: none; padding: 12px 28px; border: 4px solid #000; box-shadow: 6px 6px 0 #000; transition: all 0.15s ease; }
     .btn:hover { translate: -2px -2px; box-shadow: 8px 8px 0 #000; background: #ec4899; }
@@ -57,45 +58,47 @@
       <div class="deco tl"></div>
       <div class="deco br"></div>
       <div class="label">Case Study</div>
-      <h1>Alphascript</h1>
-      <p>JavaScript library open-source untuk DOM manipulation</p>
-      <div class="tagline">Vanilla JavaScript</div>
+      <h1>Sterntools</h1>
+      <p>Toolkit CTF forensika digital</p>
+      <div class="tagline">Shell · Linux · Cyber Security</div>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">S</span> Situation</h2>
-      <p>Vanilla JavaScript membutuhkan <strong>boilerplate repetitif</strong> untuk manipulasi DOM sehari-hari — querySelector panjang, classList toggling, event delegation manual. Developer sering nulis kode yang sama berulang-ulang di tiap proyek. Butuh <strong>micro-library ringan</strong> yang bisa nge-simplify operasi DOM umum tanpa berat kayak jQuery.</p>
+      <p>Dalam kompetisi CTF (Capture The Flag) kategori Forensics, banyak challenge yang butuh <strong>analisis file manual</strong>: cari metadata tersembunyi, ekstrak artefak dari binary, reverse image, scan jaringan, decode string. Kerja ini repetitive & nggak efisien kalau masih manual satu-satu. Butuh <strong>toolkit otomatisasi</strong> yang bisa dipake cepat saat kompetisi berjalan.</p>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">T</span> Task</h2>
-      <p>Buat <strong>JavaScript library open-source</strong> yang menyediakan fungsi utilitas untuk manipulasi DOM — selector shorthand, class management, event binding, dan AJAX helper — dengan <strong>ukuran seminimal mungkin</strong> dan zero dependency.</p>
+      <p>Bangun <strong>personal forensics toolkit</strong> berisi skrip-skrip Shell yang otomatisasi: file inspection, string extraction, metadata analysis, steganography check, network artifact scan, dan system investigation. Deploy ke GitHub buat portofolio cyber security.</p>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">A</span> Action</h2>
       <p><strong>Tech stack:</strong></p>
       <div style="margin-bottom:16px">
-        <span class="tech-badge js">Vanilla JavaScript</span>
-        <span class="tech-badge" style="background:#6e5494">npm</span>
-        <span class="tech-badge" style="background:#333">GitHub</span>
+        <span class="tech-badge shell">Shell (Bash)</span>
+        <span class="tech-badge linux">Linux CLI</span>
+        <span class="tech-badge" style="background:#5865f2">CTF</span>
       </div>
       <ul>
-        <li>Rancang <strong>API minimalis</strong> dengan fungsi-fungsi umum: <code>$()</code> selector, <code>.addClass()</code>, <code>.removeClass()</code>, <code>.toggleClass()</code>, <code>.on()</code> event, <code>.ajax()</code></li>
-        <li>Tulis library dalam <strong>ES6+</strong> dengan modular function exports</li>
-        <li>Optimasi <strong>file size</strong> — tanpa dependensi eksternal, gzip-friendly</li>
-        <li>Dokumentasi <strong>README</strong> lengkap dengan contoh penggunaan tiap fungsi</li>
-        <li>Publikasi ke <strong>npm</strong> dan <strong>GitHub</strong> sebagai open-source</li>
+        <li><strong>File Inspector</strong>: <code>file</code>, <code>strings</code>, <code>binwalk</code>, <code>xxd</code> wrapper — deteksi tipe file, extract hidden strings, cari embedded file</li>
+        <li><strong>Metadata Extractor</strong>: <code>exiftool</code> wrapper — baca EXIF, GPS, kamera, timestamp dari gambar/doc</li>
+        <li><strong>Image Analyzer</strong>: <code>zsteg</code>, <code>steghide</code> — cek steganography, LSB hiding, hidden data di gambar</li>
+        <li><strong>Network Scanner</strong>: <code>tshark</code> wrapper — parse PCAP, extract HTTP traffic, DNS queries, suspicious packets</li>
+        <li><strong>System Investigator</strong>: <code>volatility</code> wrapper — memory forensics: process list, network connections, file system scan</li>
+        <li>Setiap tool dibungkus dalam <strong>fungsi bash reusable</strong> dengan output color-coded & flags</li>
       </ul>
     </div>
 
     <div class="star-section">
       <h2><span class="star-tag">R</span> Result</h2>
       <ul>
-        <li>Library functional dengan <strong>10+ fungsi utilitas</strong> DOM manipulation</li>
-        <li>Zero dependensi — <strong>lebih ringan dari jQuery</strong></li>
-        <li>Open-source di GitHub dengan dokumentasi contoh penggunaan</li>
-        <li>Bisa diintegrasikan via <strong>CDN atau npm install</strong></li>
+        <li>Toolkit dengan <strong>5+ tool utama</strong> siap pake untuk CTF forensics</li>
+        <li>Mengurangi waktu analisis manual <strong>dari 30 menit → 2 menit</strong> per challenge</li>
+        <li>Dipake pribadi di <strong>Zero Day National CTF 2026</strong> & <strong>picoCTF 2026</strong></li>
+        <li>Open-source: <a href="https://github.com/sternnaufal/sterntools" style="font-weight:700">GitHub</a></li>
+        <li>Validasi skill: <strong>Linux CLI + File forensics + Network analysis + Memory forensics</strong></li>
       </ul>
     </div>
 

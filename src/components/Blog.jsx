@@ -54,11 +54,12 @@ function Blog() {
               "name": "Naufal Rakha Putra",
               "url": "https://naufalrakha.my.id"
             },
-            "blogPost": display.slice(0, 6).map(p => ({
+              "blogPost": display.slice(0, 6).map(p => ({
               "@type": "BlogPosting",
               "headline": p.title,
               "url": p.url,
               "datePublished": p.date || p.published || "",
+              "image": p.image || "https://naufalrakha.my.id/ku.png",
               "author": { "@type": "Person", "name": "Naufal Rakha Putra", "url": "https://naufalrakha.my.id" },
               "publisher": { "@type": "Person", "name": "Naufal Rakha Putra" }
             }))
