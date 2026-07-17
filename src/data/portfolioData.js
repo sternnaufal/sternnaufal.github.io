@@ -136,6 +136,11 @@ export const projects = [
 ]
 
 export const analytics = [
+  // Plain stats (no icon, no animation)
+  { label: 'Proyek Selesai', value: 25, suffix: '+', plain: true, color: 'text-blue-500' },
+  { label: 'Sertifikat IT', value: 16, suffix: '', plain: true },
+  { label: 'Audience Views', value: 3000, suffix: '+', plain: true, color: 'text-green-500' },
+  // Animated counters with icons
   { label: 'YouTube Subscribers', value: 700, suffix: '+', icon: 'Play', color: 'bg-red-500' },
   { label: 'Blog Readers', value: 4000, suffix: '+', icon: 'PenLine', color: 'bg-blue-500' },
   { label: 'Google Play Downloads', value: 60, suffix: '+', icon: 'Smartphone', color: 'bg-green-500' },

@@ -89,13 +89,6 @@ function About() {
             </p>
 
             <div className="mt-12 h-1 w-full bg-black shadow-neo-mini mb-12" />
-
-            {/* Analytics Counters */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-              {analytics.map((item, i) => (
-                <AnimatedCounter key={i} {...item} />
-              ))}
-            </div>
           </div>
 
           <div className="lg:w-1/2 w-full">
@@ -106,19 +99,24 @@ function About() {
                 <h3 className="font-space font-black text-3xl uppercase mb-8 flex items-center gap-4">
                   <span className="w-12 h-1 bg-black dark:bg-yellow-400" /> Stats
                 </h3>
-                <div className="grid grid-cols-3 gap-8 font-mono">
-                  <div>
-                    <p className="text-4xl font-black text-blue-500">25+</p>
-                    <p className="text-sm">Proyek Selesai</p>
-                  </div>
-                  <div>
-                    <p className="text-4xl font-black">16</p>
-                    <p className="text-sm">Sertifikat IT</p>
-                  </div>
-                  <div>
-                    <p className="text-4xl font-black text-green-500">3K+</p>
-                    <p className="text-sm">Audience Views</p>
-                  </div>
+
+                {/* Plain stats */}
+                <div className="grid grid-cols-3 gap-8 font-mono mb-10">
+                  {analytics.filter(a => a.plain).map((item, i) => (
+                    <div key={i}>
+                      <p className={`text-4xl font-black ${item.color || ''}`}>
+                        {item.value >= 1000 ? `${(item.value / 1000).toFixed(0)}K` : item.value}{item.suffix}
+                      </p>
+                      <p className="text-sm">{item.label}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Animated counters */}
+                <div className="grid grid-cols-2 gap-4">
+                  {analytics.filter(a => !a.plain).map((item, i) => (
+                    <AnimatedCounter key={i} {...item} />
+                  ))}
                 </div>
               </div>
             </div>

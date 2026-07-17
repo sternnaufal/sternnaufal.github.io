@@ -17,6 +17,7 @@ import KeepsimpleDemo from './components/KeepsimpleDemo'
 import Blog from './components/Blog'
 import BlogPage from './components/BlogPage'
 import CvPage from './components/CvPage'
+import ProjectCase from './components/ProjectCase'
 
 function Home() {
   return (
@@ -73,14 +74,26 @@ function App() {
       <Router>
           <div className={`${loading ? 'hidden' : ''} min-h-screen flex flex-col ${darkMode ? 'bg-black' : 'bg-yellow-300'} ${darkMode ? 'text-white' : 'text-black'}`}>
           <Helmet>
-            <title>Naufal Rakha Putra | Full-Stack Developer & Game Dev</title>
-            <meta name="description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio), Cyber Security enthusiast." />
-            <meta property="og:title" content="Naufal Rakha Putra | Full-Stack Developer" />
-            <meta property="og:description" content="Portfolio Naufal Rakha Putra — Full-Stack Developer, Game Developer (Senin Terus Studio)." />
+            <title>Naufal Rakha Putra | Full-Stack Developer, Game Dev & AI Builder</title>
+            <meta name="description" content="Portofolio Naufal Rakha Putra — Full-Stack Developer, Game Developer & AI Builder. React.js, Node.js, Laravel, Kotlin, Cyber Security. 25+ proyek, game Android di Google Play." />
+            <meta property="og:title" content="Naufal Rakha Putra | Full-Stack Developer & Game Dev" />
+            <meta property="og:description" content="Portofolio Naufal Rakha Putra — Full-Stack Developer, Game Developer & AI Builder. 25+ proyek termasuk CareFund, LG-Exambot, Flag Quiz Master." />
             <meta property="og:image" content="https://naufalrakha.my.id/ku.png" />
             <meta property="og:url" content="https://naufalrakha.my.id/" />
             <meta name="twitter:card" content="summary_large_image" />
             <link rel="canonical" href="https://naufalrakha.my.id/" />
+            <meta name="keywords" content="Naufal Rakha Putra, portfolio, full-stack developer, game developer, React.js, Node.js, Laravel, Kotlin, AI, cyber security, Malang, Universitas Brawijaya" />
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://naufalrakha.my.id" },
+                  { "@type": "ListItem", "position": 2, "name": "Proyek", "item": "https://naufalrakha.my.id/#projects" },
+                  { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://naufalrakha.my.id/blog" }
+                ]
+              })}
+            </script>
             <script type="application/ld+json">
               {JSON.stringify({
                 "@context": "https://schema.org",
@@ -155,6 +168,62 @@ function App() {
                 ]
               })}
             </script>
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Siapa Naufal Rakha Putra?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Naufal Rakha Putra adalah Full-Stack Developer, Game Developer, dan AI Builder asal Indonesia. Mahasiswa D3 Teknologi Informasi Universitas Brawijaya yang menguasai React.js, Node.js, Laravel, Kotlin, dan integrasi AI (Gemini, DeepSeek, Groq)."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Apa tech stack utama yang dikuasai Naufal Rakha Putra?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Tech stack utamanya: Front-End (React.js, Next.js, Tailwind CSS, Bootstrap), Back-End (Node.js/Express, Laravel, RESTful API, MySQL, Firebase), dan Game Development (Kotlin/Android, Twine, Unity, Godot). Ia juga mahir Python, Docker, dan Linux Server."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Proyek apa saja yang sudah dibuat Naufal Rakha Putra?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Beberapa proyek utama: CareFund (platform crowdfunding medis full-stack), LG-Exambot (generator soal ujian berbasis AI), GreenEvent (manajemen acara), Flag Quiz Master & Sortiverse (game Android di Google Play), Catatanku (aplikasi catatan PHP), Alphascript (library JavaScript), dan Todos API (RESTful API Express.js)."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Apakah Naufal Rakha Putra menerima proyek freelance?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Ya. Naufal terbuka untuk kolaborasi dan proyek freelance di bidang web development, game development, dan AI integration. Hubungi melalui LinkedIn atau email yang tersedia di halaman kontak portofolio."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Studio game apa yang didirikan Naufal Rakha Putra?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Naufal adalah Lead Game Developer & Founder di Senin Terus Studio, studio game indie yang fokus pada game naratif dan edukasi berbasis web (Twine + JavaScript) serta Android. Game-game-nya tersedia di itch.io dan Google Play."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Sertifikat apa yang dimiliki Naufal Rakha Putra?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Ia memiliki 16+ sertifikat IT termasuk Junior Web Programmer (BNSP), Web Programmer React JS (Telkom), kursus AWS Gen AI & Cloud (Dicoding), Introduction to Cybersecurity dan Networking Basics (Cisco), serta Python for Data Science (IBM Cognitive Class)."
+                    }
+                  }
+                ]
+              })}
+            </script>
           </Helmet>
 
           <ScrollProgressBar />
@@ -165,6 +234,7 @@ function App() {
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/cv" element={<CvPage />} />
               <Route path="/keepsimple-demo" element={<KeepsimpleDemo />} />
+              <Route path="/case-study/:slug" element={<ProjectCase />} />
             </Routes>
           
           <Footer />
