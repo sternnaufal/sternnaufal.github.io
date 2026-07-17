@@ -78,9 +78,12 @@ function App() {
             <meta name="description" content="Portofolio Naufal Rakha Putra — Full-Stack Developer, Game Developer & AI Builder. React.js, Node.js, Laravel, Kotlin, Cyber Security. 25+ proyek, game Android di Google Play." />
             <meta property="og:title" content="Naufal Rakha Putra | Full-Stack Developer & Game Dev" />
             <meta property="og:description" content="Portofolio Naufal Rakha Putra — Full-Stack Developer, Game Developer & AI Builder. 25+ proyek termasuk CareFund, LG-Exambot, Flag Quiz Master." />
-            <meta property="og:image" content="https://naufalrakha.my.id/ku.png" />
+            <meta property="og:image" content="https://naufalrakha.my.id/api/og" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
             <meta property="og:url" content="https://naufalrakha.my.id/" />
             <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:image" content="https://naufalrakha.my.id/api/og" />
             <link rel="canonical" href="https://naufalrakha.my.id/" />
             <meta name="keywords" content="Naufal Rakha Putra, portfolio, full-stack developer, game developer, React.js, Node.js, Laravel, Kotlin, AI, cyber security, Malang, Universitas Brawijaya" />
             <script type="application/ld+json">
