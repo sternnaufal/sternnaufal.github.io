@@ -52,8 +52,7 @@ function Blog() {
             "author": {
               "@type": "Person",
               "name": "Naufal Rakha Putra",
-              "url": "https://www.naufalrakha.my.id"
-
+              "url": "https://www.naufalrakha.my.id",
               "image": p.image || "https://www.naufalrakha.my.id/ku.png",
               "author": { "@type": "Person", "name": "Naufal Rakha Putra", "url": "https://www.naufalrakha.my.id" },
               "publisher": { "@type": "Person", "name": "Naufal Rakha Putra" }
