@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Copy, Check } from 'lucide-react'
+import { FaArrowLeft, FaGithub, FaCopy, FaCheck, FaPalette, FaRocket, FaCss3, FaStar, FaBolt } from 'react-icons/fa'
 
-const WA = '6283845158177'
-
-const code = (c) => `class="${c}"`
+const TABS = [
+  { id: 'demo', label: 'Live Demo', icon: FaPalette },
+  { id: 'docs', label: 'Docs', icon: FaCss3 },
+  { id: 'start', label: 'Get Started', icon: FaRocket },
+]
 
 function CopyBtn({ text }) {
   const [copied, setCopied] = useState(false)
@@ -15,385 +17,486 @@ function CopyBtn({ text }) {
     })
   }
   return (
-    <button onClick={copy} className="flex items-center gap-1 text-xs px-2 py-1 rounded border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-      {copied ? <Check size={12} /> : <Copy size={12} />}
+    <button onClick={copy} className="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 border-2 border-black bg-white hover:bg-yellow-400 transition-colors">
+      {copied ? <FaCheck size={11} /> : <FaCopy size={11} />}
       {copied ? 'Copied!' : 'Copy'}
     </button>
   )
 }
 
-function Section({ title, desc, children, id }) {
+function CodeBlock({ code, title }) {
   return (
-    <section id={id} className="mb-12">
-      <h2 className="text-2xl font-bold mb-1">{title}</h2>
-      {desc && <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm">{desc}</p>}
-      {children}
-    </section>
-  )
-}
-
-function DemoBox({ label, codeStr, children, bg }) {
-  return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
-      <div className={`p-6 ${bg || 'bg-white dark:bg-gray-800'}`}>
-        {children}
-      </div>
-      <div className="flex items-center justify-between px-4 py-2 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
-        <code className="text-xs font-mono text-gray-600 dark:text-gray-400">{codeStr}</code>
-        <CopyBtn text={codeStr} />
-      </div>
-      {label && <div className="px-4 py-1.5 bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 text-xs text-gray-500">{label}</div>}
+    <div className="border-3 border-black bg-white dark:bg-gray-900 shadow-neo-mini mb-4">
+      {title && (
+        <div className="flex items-center justify-between px-4 py-2 bg-black text-white font-mono text-xs font-bold">
+          <span>{title}</span>
+          <CopyBtn text={code} />
+        </div>
+      )}
+      <pre className="bg-gray-900 text-green-400 p-4 text-sm overflow-x-auto font-mono leading-relaxed m-0">
+        <code>{code}</code>
+      </pre>
     </div>
   )
 }
 
-function Grid({ cols, children }) {
-  const colMap = { 2: 'md:grid-cols-2', 3: 'md:grid-cols-3', 4: 'md:grid-cols-4' }
-  return <div className={`grid grid-cols-1 ${colMap[cols] || 'md:grid-cols-2'} gap-4`}>{children}</div>
+function DemoBox({ label, children, codeStr }) {
+  return (
+    <div className="border-3 border-black bg-white dark:bg-gray-900 shadow-neo-mini overflow-hidden">
+      <div className="p-5">
+        {children}
+      </div>
+      {(label || codeStr) && (
+        <div className="flex items-center justify-between px-4 py-2 bg-gray-100 dark:bg-gray-800 border-t-3 border-black text-xs">
+          <code className="font-mono font-bold">{codeStr}</code>
+          {label && <span className="text-gray-500">{label}</span>}
+        </div>
+      )}
+    </div>
+  )
 }
 
-export default function KeepsimpleDemo() {
+function Section({ title, desc, children }) {
+  return (
+    <div className="mb-10">
+      <h3 className="font-space font-black text-xl uppercase mb-1 dark:text-white">{title}</h3>
+      {desc && <p className="font-mono text-xs dark:text-gray-400 mb-4">{desc}</p>}
+      {children}
+    </div>
+  )
+}
+
+function KeepsimpleDemo() {
+  const [tab, setTab] = useState('demo')
   const [darkDemo, setDarkDemo] = useState(false)
 
+  const code = (c) => c
+
   return (
-    <>
+    <main className="min-h-screen bg-gray-50 dark:bg-black">
       <Helmet>
-        <title>KeepSimple CSS Demo — Naufal Rakha Putra</title>
+        <title>KeepSimple CSS — Demo & Dokumentasi | Naufal Rakha Putra</title>
+        <meta name="description" content="KeepSimple CSS — Framework CSS minimalis, cepat, ringan. Demo live, dokumentasi lengkap, langsung copas!" />
         <link rel="stylesheet" href="/keepsimple/style.css" />
       </Helmet>
 
-      <div className="keepsimple-demo" style={{ fontFamily: "'Inter', system-ui, sans-serif", background: darkDemo ? '#0f172a' : '#f8f9fa', color: darkDemo ? '#f1f5f9' : '#212529', minHeight: '100vh' }}>
-        <div className="max-w-5xl mx-auto px-4 py-12">
-          <div className="flex items-center justify-between mb-2">
-            <div>
-              <a href="/keepsimple/" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">&larr; Docs</a>
-              <h1 className="text-4xl font-bold mt-2">KeepSimple CSS</h1>
-              <p className="text-gray-500 dark:text-gray-400 mt-1">Live demo semua class yang tersedia.</p>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+        {/* Back */}
+        <a href="/keepsimple/" className="inline-flex items-center gap-2 text-sm font-mono font-bold hover:underline mb-8 dark:text-white">
+          <FaArrowLeft /> Kembali ke Docs
+        </a>
+
+        {/* Hero */}
+        <div className="bg-white dark:bg-gray-900 border-5 border-black p-8 md:p-12 shadow-neo-large rotate-1 mb-8">
+          <div className="-rotate-1">
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="font-mono text-xs font-bold bg-black text-white px-3 py-1">v2.0</span>
+              <span className="font-mono text-xs font-bold bg-pink-500 text-white px-3 py-1">Minimal</span>
+              <span className="font-mono text-xs font-bold bg-green-500 text-white px-3 py-1">Ringan</span>
+              <span className="font-mono text-xs font-bold bg-blue-500 text-white px-3 py-1">CSS Only</span>
             </div>
-            <button onClick={() => setDarkDemo(!darkDemo)} className="px-3 py-1.5 text-sm rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-              {darkDemo ? '☀️ Light' : '🌙 Dark'}
-            </button>
+            <h1 className="font-space text-4xl md:text-6xl font-black uppercase mb-3 dark:text-white tracking-tight">
+              KeepSimple CSS
+            </h1>
+            <p className="font-mono text-base md:text-lg dark:text-gray-300 max-w-2xl">
+              CSS framework minimalis. Fokus kecepatan loading, utilitas praktis, dan desain yang bersih. Gas pol!
+            </p>
+            <div className="flex flex-wrap gap-3 mt-4">
+              <button onClick={() => setTab('demo')}
+                className="inline-flex items-center gap-2 bg-yellow-400 text-black font-bold px-5 py-2.5 border-3 border-black shadow-neo-mini hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all text-sm">
+                <FaPalette /> Live Demo
+              </button>
+              <button onClick={() => setTab('docs')}
+                className="inline-flex items-center gap-2 bg-black text-white font-bold px-5 py-2.5 border-3 border-black shadow-neo-mini hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all text-sm">
+                <FaCss3 /> Dokumentasi
+              </button>
+              <button onClick={() => setTab('start')}
+                className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 dark:text-white font-bold px-5 py-2.5 border-3 border-black shadow-neo-mini hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all text-sm">
+                <FaRocket /> Mulai
+              </button>
+              <a href="https://github.com/sternnaufal/keepsimple" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 dark:text-white font-bold px-5 py-2.5 border-3 border-black shadow-neo-mini hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all text-sm">
+                <FaGithub /> GitHub
+              </a>
+            </div>
           </div>
+        </div>
 
-          <hr className="my-8 border-gray-300 dark:border-gray-700" />
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+          {[
+            { icon: FaBolt, label: 'Ukuran', val: '~8KB', color: 'bg-yellow-400' },
+            { icon: FaStar, label: 'Komponen', val: '30+', color: 'bg-pink-500' },
+            { icon: FaCss3, label: 'Class', val: '100+', color: 'bg-blue-500' },
+            { icon: FaRocket, label: 'Dependensi', val: '0', color: 'bg-green-500' },
+          ].map((s, i) => (
+            <div key={i} className="bg-white dark:bg-gray-900 border-3 border-black p-4 shadow-neo-mini text-center">
+              <s.icon className="text-xl mb-1 mx-auto" />
+              <p className="font-space font-black text-2xl dark:text-white">{s.val}</p>
+              <p className="font-mono text-xs dark:text-gray-400">{s.label}</p>
+            </div>
+          ))}
+        </div>
 
-          {/* Navigation */}
-          <div className="flex flex-wrap gap-2 mb-10 text-sm">
-            {[
-              ['Typography', '#typo'], ['Buttons', '#buttons'], ['Cards', '#cards'], ['Alerts', '#alerts'],
-              ['Forms', '#forms'], ['Tables', '#tables'], ['Badges', '#badges'], ['Grid', '#grid'],
-              ['Spacing', '#spacing'], ['Utilities', '#utils'], ['Images', '#images'], ['Spinner', '#spinner'],
-            ].map(([l, h]) => (
-              <a key={l} href={h} className="px-3 py-1.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors font-medium">{l}</a>
-            ))}
-          </div>
+        {/* Tabs */}
+        <div className="flex border-b-3 border-black mb-8 overflow-x-auto">
+          {TABS.map(t => {
+            const Icon = t.icon
+            return (
+              <button key={t.id}
+                onClick={() => setTab(t.id)}
+                className={`flex items-center gap-2 font-space font-bold text-sm uppercase px-5 py-3 border-t-3 border-l-3 border-r-3 border-black -mb-[2px] transition-all shrink-0 ${
+                  tab === t.id
+                    ? 'bg-yellow-400 text-black'
+                    : 'bg-white dark:bg-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                }`}
+              >
+                <Icon /> {t.label}
+              </button>
+            )
+          })}
+        </div>
 
-          <div className={darkDemo ? 'dark' : ''}>
-            <div style={{ background: 'var(--bg)', color: 'var(--text)', fontFamily: 'var(--font)', padding: '2rem 0' }}>
-              <div className="container" style={{ marginTop: 0 }}>
+        {/* Tab: Demo */}
+        {tab === 'demo' && (
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="font-space font-black text-2xl uppercase dark:text-white">🎨 Live Demo</h2>
+              <button onClick={() => setDarkDemo(!darkDemo)}
+                className="px-4 py-2 text-sm font-bold border-3 border-black bg-white dark:bg-gray-800 dark:text-white hover:bg-yellow-400 transition-colors shadow-neo-mini">
+                {darkDemo ? '☀️ Light Mode' : '🌙 Dark Mode'}
+              </button>
+            </div>
 
-                {/* Typography */}
-                <Section id="typo" title="Typography" desc="Heading, body text, font families.">
-                  <DemoBox codeStr={code('h1')} label="Heading 1">
-                    <h1 className="p-0 m-0">Heading 1</h1>
-                  </DemoBox>
-                  <div className="grid gap-4 mt-4">
-                    {[2, 3, 4].map((n) => (
-                      <DemoBox key={n} codeStr={code(`h${n}`)} label={`Heading ${n}`}>
-                        <div className={`h${n}`} style={{ margin: 0 }}>Heading {n}</div>
+            <div className={`p-6 border-4 border-black shadow-neo-large ${darkDemo ? 'bg-slate-900 dark' : 'bg-gray-100'}`}>
+              <div className={darkDemo ? 'dark' : ''}>
+                <div className="space-y-8" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+
+                  {/* Buttons */}
+                  <Section title="Buttons" desc="Tombol dengan berbagai varian dan ukuran.">
+                    <DemoBox codeStr="btn btn-primary / btn-secondary / btn-outline / btn-ghost / btn-danger">
+                      <div className="flex flex-wrap gap-3">
+                        <a className="btn btn-primary">Primary</a>
+                        <a className="btn btn-secondary">Secondary</a>
+                        <a className="btn btn-outline">Outline</a>
+                        <a className="btn btn-ghost">Ghost</a>
+                        <a className="btn btn-danger">Danger</a>
+                      </div>
+                    </DemoBox>
+                    <DemoBox codeStr="btn btn-sm / btn-lg" label="Size variants">
+                      <div className="flex flex-wrap gap-3 items-center">
+                        <a className="btn btn-primary btn-sm">Small</a>
+                        <a className="btn btn-primary">Default</a>
+                        <a className="btn btn-primary btn-lg">Large</a>
+                      </div>
+                    </DemoBox>
+                  </Section>
+
+                  {/* Cards */}
+                  <Section title="Cards" desc="Card dengan shadow dan hover effect.">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <DemoBox codeStr="card" label="Default card">
+                        <div className="card m-0">
+                          <h3 className="m-0 mb-2">Card Title</h3>
+                          <p className="m-0 text-sm">Ini card default. Coba hover buat liat efek angkat.</p>
+                        </div>
                       </DemoBox>
-                    ))}
-                  </div>
-                  <Grid cols={3}>
-                    <DemoBox codeStr={code('font-mono')} label="Monospace font">
-                      <p className="font-mono m-0">Hello Mono</p>
-                    </DemoBox>
-                    <DemoBox codeStr={code('font-serif')} label="Serif font">
-                      <p className="font-serif m-0">Hello Serif</p>
-                    </DemoBox>
-                    <DemoBox codeStr={code('font-gothic')} label="Gothic font">
-                      <p className="font-gothic m-0">Hello Gothic</p>
-                    </DemoBox>
-                  </Grid>
-                </Section>
-
-                <hr />
-
-                {/* Buttons */}
-                <Section id="buttons" title="Buttons" desc="Tombol dengan berbagai varian dan ukuran.">
-                  <DemoBox codeStr={code('btn btn-primary')}>
-                    <div className="flex flex-wrap gap-3">
-                      <a className="btn btn-primary">Primary</a>
-                      <a className="btn btn-secondary">Secondary</a>
-                      <a className="btn btn-outline">Outline</a>
-                      <a className="btn btn-ghost">Ghost</a>
-                      <a className="btn btn-danger">Danger</a>
+                      <DemoBox codeStr="card card-flat" label="Flat card">
+                        <div className="card card-flat m-0">
+                          <h3 className="m-0 mb-2">Flat Card</h3>
+                          <p className="m-0 text-sm">Card tanpa shadow, simpel & clean.</p>
+                        </div>
+                      </DemoBox>
                     </div>
-                  </DemoBox>
-                  <DemoBox codeStr={code('btn btn-sm / btn-lg')} label="Size variants">
-                    <div className="flex flex-wrap gap-3 items-center">
-                      <a className="btn btn-primary btn-sm">Small</a>
-                      <a className="btn btn-primary">Default</a>
-                      <a className="btn btn-primary btn-lg">Large</a>
-                    </div>
-                  </DemoBox>
-                </Section>
+                  </Section>
 
-                <hr />
-
-                {/* Cards */}
-                <Section id="cards" title="Cards" desc="Card container dengan shadow dan hover effect.">
-                  <Grid cols={2}>
-                    <DemoBox codeStr={code('card')} label="Default card with hover lift">
-                      <div className="card m-0">
-                        <h3 className="m-0 mb-2">Card Title</h3>
-                        <p className="m-0 text-sm">Ini adalah card default. Coba hover untuk lihat efek angkat.</p>
-                      </div>
-                    </DemoBox>
-                    <DemoBox codeStr={code('card card-flat')} label="Flat card without shadow">
-                      <div className="card card-flat m-0">
-                        <h3 className="m-0 mb-2">Flat Card</h3>
-                        <p className="m-0 text-sm">Card tanpa shadow dan efek hover.</p>
-                      </div>
-                    </DemoBox>
-                  </Grid>
-                </Section>
-
-                <hr />
-
-                {/* Alerts */}
-                <Section id="alerts" title="Alerts" desc="Pesan notifikasi dengan warna berbeda.">
-                  <DemoBox codeStr={code('alert alert-success')}>
-                    <div className="alert alert-success m-0">✓ Data berhasil disimpan!</div>
-                  </DemoBox>
-                  <div className="grid gap-3 mt-3">
+                  {/* Alerts */}
+                  <Section title="Alerts" desc="Pesan notifikasi buat feedback user.">
                     {[
-                      ['alert-error', '✗ Gagal memuat data.'],
-                      ['alert-info', 'ℹ Info: Update tersedia.'],
-                      ['alert-warning', '⚠ Perhatian: Kuota hampir habis.'],
+                      ['alert-success', '✓ Data berhasil disimpan!'],
+                      ['alert-error', '✗ Gagal memuat data. Coba lagi.'],
+                      ['alert-info', 'ℹ Update tersedia. Klik untuk detail.'],
+                      ['alert-warning', '⚠ Kuota hampir habis!'],
                     ].map(([cls, txt]) => (
-                      <DemoBox key={cls} codeStr={code(`alert ${cls}`)}>
-                        <div className={`alert ${cls} m-0`}>{txt}</div>
-                      </DemoBox>
+                      <div key={cls} className={`alert ${cls} m-0 mb-2`}>{txt}</div>
                     ))}
-                  </div>
-                </Section>
+                  </Section>
 
-                <hr />
-
-                {/* Forms */}
-                <Section id="forms" title="Forms" desc="Input, select, dan textarea.">
-                  <DemoBox codeStr={code('form-group / input')}>
-                    <div style={{ maxWidth: 400 }}>
-                      <div className="form-group">
-                        <label className="form-label">Email</label>
-                        <input type="email" className="input" placeholder="nama@email.com" />
+                  {/* Badges */}
+                  <Section title="Badges" desc="Label kecil buat status atau tag.">
+                    <DemoBox codeStr="badge badge-*">
+                      <div className="flex flex-wrap gap-2">
+                        <span className="badge badge-primary">Primary</span>
+                        <span className="badge badge-secondary">Secondary</span>
+                        <span className="badge badge-success">Success</span>
+                        <span className="badge badge-danger">Danger</span>
+                        <span className="badge badge-warning">Warning</span>
                       </div>
-                      <div className="form-group">
-                        <label className="form-label">Kategori</label>
-                        <select className="select">
-                          <option>Pilih kategori</option>
-                          <option>Web</option>
-                          <option>Mobile</option>
-                        </select>
-                      </div>
-                      <div className="form-group">
-                        <label className="form-label">Pesan</label>
-                        <textarea className="textarea" placeholder="Tulis pesan..." rows={3}></textarea>
-                      </div>
-                    </div>
-                  </DemoBox>
-                </Section>
-
-                <hr />
-
-                {/* Tables */}
-                <Section id="tables" title="Tables" desc="Tabel dengan berbagai variasi.">
-                  <DemoBox codeStr={code('table')} label="Default table">
-                    <table className="table m-0">
-                      <thead><tr><th>Nama</th><th>Role</th><th>Status</th></tr></thead>
-                      <tbody>
-                        <tr><td>Naufal</td><td>Developer</td><td><span className="badge badge-success">Active</span></td></tr>
-                        <tr><td>Rakha</td><td>Designer</td><td><span className="badge badge-primary">New</span></td></tr>
-                        <tr><td>Putra</td><td>Manager</td><td><span className="badge badge-warning">Pending</span></td></tr>
-                      </tbody>
-                    </table>
-                  </DemoBox>
-                  <div className="grid gap-4 mt-4 md:grid-cols-2">
-                    <DemoBox codeStr={code('table table-striped')} label="Striped rows">
-                      <table className="table table-striped m-0">
-                        <thead><tr><th>Item</th><th>Qty</th></tr></thead>
-                        <tbody>
-                          <tr><td>Beras</td><td>2 kg</td></tr>
-                          <tr><td>Gula</td><td>1 kg</td></tr>
-                          <tr><td>Minyak</td><td>2 L</td></tr>
-                        </tbody>
-                      </table>
                     </DemoBox>
-                    <DemoBox codeStr={code('table table-bordered')} label="Bordered">
-                      <table className="table table-bordered m-0">
-                        <thead><tr><th>#</th><th>Nilai</th></tr></thead>
-                        <tbody>
-                          <tr><td>1</td><td>A</td></tr>
-                          <tr><td>2</td><td>B</td></tr>
-                          <tr><td>3</td><td>C</td></tr>
-                        </tbody>
-                      </table>
-                    </DemoBox>
-                  </div>
-                </Section>
+                  </Section>
 
-                <hr />
-
-                {/* Badges */}
-                <Section id="badges" title="Badges" desc="Label kecil untuk status, tag, dll.">
-                  <DemoBox codeStr={code('badge badge-primary')}>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="badge badge-primary">Primary</span>
-                      <span className="badge badge-secondary">Secondary</span>
-                      <span className="badge badge-success">Success</span>
-                      <span className="badge badge-danger">Danger</span>
-                      <span className="badge badge-warning">Warning</span>
-                    </div>
-                  </DemoBox>
-                </Section>
-
-                <hr />
-
-                {/* Grid */}
-                <Section id="grid" title="Grid Systems" desc="Grid dan row/col layout.">
-                  <DemoBox codeStr={code('grid grid-3')} label="Auto-fit grid, 3 columns">
-                    <div className="grid grid-3 m-0">
-                      {[1, 2, 3].map((n) => (
-                        <div key={n} className="card card-flat text-center p-4 m-0">
-                          <p className="text-lg font-bold m-0">Grid Item {n}</p>
+                  {/* Forms */}
+                  <Section title="Forms" desc="Input, select, textarea.">
+                    <DemoBox codeStr="form-group / input / select / textarea">
+                      <div className="max-w-md">
+                        <div className="form-group">
+                          <label className="form-label">Email</label>
+                          <input type="email" className="input" placeholder="nama@email.com" />
                         </div>
-                      ))}
-                    </div>
-                  </DemoBox>
-                  <DemoBox codeStr={code('row > .col-4 / .col-8')} label="Flex row with column fractions">
-                    <div className="row m-0">
-                      <div className="col-4"><div className="card card-flat text-center p-3 m-0 text-sm">col-4</div></div>
-                      <div className="col-8"><div className="card card-flat text-center p-3 m-0 text-sm">col-8</div></div>
-                    </div>
-                  </DemoBox>
-                </Section>
-
-                <hr />
-
-                {/* Spacing */}
-                <Section id="spacing" title="Spacing Utilities" desc="Margin & padding helper classes.">
-                  <DemoBox codeStr={code('m-2 p-3')} label="Margin & padding">
-                    <div className="flex flex-wrap gap-3 items-center">
-                      {['m-0', 'm-1', 'm-2', 'm-3', 'm-4'].map((cls) => (
-                        <div key={cls} className="card card-flat p-2 m-0 text-center">
-                          <code className="text-xs">{cls}</code>
-                          <div className={`${cls} bg-blue-100 dark:bg-blue-900 rounded text-xs p-2`}>Box</div>
+                        <div className="form-group">
+                          <label className="form-label">Kategori</label>
+                          <select className="select">
+                            <option>Pilih</option>
+                            <option>Web</option>
+                            <option>Mobile</option>
+                          </select>
                         </div>
-                      ))}
-                    </div>
-                  </DemoBox>
-                  <DemoBox codeStr={code('mt-2 mb-3')} label="Directional margins">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                      {['mt-1', 'mt-2', 'mb-1', 'mb-2'].map((cls) => (
-                        <div key={cls} className="card card-flat p-2 m-0 text-center text-xs">
-                          <code>{cls}</code>
+                        <div className="form-group">
+                          <label className="form-label">Pesan</label>
+                          <textarea className="textarea" placeholder="Tulis pesan..." rows={3}></textarea>
                         </div>
-                      ))}
-                    </div>
-                  </DemoBox>
-                </Section>
-
-                <hr />
-
-                {/* Utilities */}
-                <Section id="utils" title="Utilities" desc="Text, flex, display, dan utility classes lainnya.">
-                  <Grid cols={2}>
-                    <DemoBox codeStr={code('text-center')}>
-                      <p className="text-center p-3 bg-white dark:bg-gray-800 rounded m-0">Center</p>
-                    </DemoBox>
-                    <DemoBox codeStr={code('text-muted')}>
-                      <p className="text-muted m-0">Teks dengan opacity lebih rendah.</p>
-                    </DemoBox>
-                    <DemoBox codeStr={code('text-primary / text-success / text-danger')}>
-                      <div className="flex flex-col gap-1">
-                        <p className="text-primary m-0">Primary text</p>
-                        <p className="text-success m-0">Success text</p>
-                        <p className="text-danger m-0">Danger text</p>
                       </div>
                     </DemoBox>
-                    <DemoBox codeStr={code('list-unstyled / list-inline')}>
-                      <ul className="list-unstyled m-0 text-sm">
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                      </ul>
-                      <ul className="list-inline m-0 mt-2 text-sm">
-                        <li>Inline 1</li>
-                        <li>Inline 2</li>
-                      </ul>
-                    </DemoBox>
-                  </Grid>
-                  <DemoBox codeStr={code('skeleton')} label="Skeleton loading">
-                    <div className="flex flex-col gap-3">
-                      <div className="skeleton w-3/4" style={{ height: '1.2rem' }}></div>
-                      <div className="skeleton w-1/2" style={{ height: '1rem' }}></div>
-                      <div className="skeleton w-full" style={{ height: '3rem' }}></div>
+                  </Section>
+
+                  {/* Tables */}
+                  <Section title="Tables" desc="Tabel responsive.">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <DemoBox codeStr="table" label="Default">
+                        <table className="table m-0">
+                          <thead><tr><th>Nama</th><th>Role</th><th>Status</th></tr></thead>
+                          <tbody>
+                            <tr><td>Naufal</td><td>Dev</td><td><span className="badge badge-success">Active</span></td></tr>
+                            <tr><td>Rakha</td><td>Design</td><td><span className="badge badge-primary">New</span></td></tr>
+                          </tbody>
+                        </table>
+                      </DemoBox>
+                      <DemoBox codeStr="table table-striped" label="Striped">
+                        <table className="table table-striped m-0">
+                          <thead><tr><th>Item</th><th>Qty</th></tr></thead>
+                          <tbody>
+                            <tr><td>Beras</td><td>2 kg</td></tr>
+                            <tr><td>Gula</td><td>1 kg</td></tr>
+                          </tbody>
+                        </table>
+                      </DemoBox>
                     </div>
-                  </DemoBox>
-                </Section>
+                  </Section>
 
-                <hr />
-
-                {/* Images */}
-                <Section id="images" title="Images" desc="Image utility classes.">
-                  <Grid cols={3}>
-                    <DemoBox codeStr={code('img-fluid img-round')} label="Responsive + rounded">
-                      <img src="https://via.placeholder.com/100" alt="" className="img-fluid img-round" style={{ maxWidth: 100 }} />
+                  {/* Grid & Spacing */}
+                  <Section title="Grid & Spacing" desc="Layout grid dan utility spacing.">
+                    <DemoBox codeStr="grid grid-3">
+                      <div className="grid grid-3 m-0">
+                        {[1, 2, 3].map((n) => (
+                          <div key={n} className="card card-flat text-center p-4 m-0">
+                            <p className="font-bold m-0">Item {n}</p>
+                          </div>
+                        ))}
+                      </div>
                     </DemoBox>
-                    <DemoBox codeStr={code('img-fluid img-shadow')} label="With shadow">
-                      <img src="https://via.placeholder.com/100" alt="" className="img-fluid img-shadow" style={{ maxWidth: 100 }} />
+                    <DemoBox codeStr="row > col-*">
+                      <div className="row m-0">
+                        <div className="col-4"><div className="card card-flat p-3 text-center text-sm m-0">col-4</div></div>
+                        <div className="col-8"><div className="card card-flat p-3 text-center text-sm m-0">col-8</div></div>
+                      </div>
                     </DemoBox>
-                    <DemoBox codeStr={code('img-fluid img-bordered')} label="With border">
-                      <img src="https://via.placeholder.com/100" alt="" className="img-fluid img-bordered" style={{ maxWidth: 100 }} />
+                  </Section>
+
+                  {/* Spinner */}
+                  <Section title="Spinner" desc="Loading spinner.">
+                    <DemoBox codeStr="spinner / spinner-lg">
+                      <div className="flex items-center gap-6">
+                        <div className="spinner"></div>
+                        <div className="spinner-lg"></div>
+                        <span className="text-sm">Loading...</span>
+                      </div>
                     </DemoBox>
-                  </Grid>
-                </Section>
+                  </Section>
 
-                <hr />
-
-                {/* Spinner */}
-                <Section id="spinner" title="Spinner" desc="Loading spinner.">
-                  <DemoBox codeStr={code('spinner / spinner-lg')}>
-                    <div className="flex items-center gap-6">
-                      <div className="spinner"></div>
-                      <div className="spinner-lg"></div>
-                    </div>
-                  </DemoBox>
-                </Section>
-
-                <hr />
-
-                {/* Code */}
-                <Section title="Code & Pre" desc="Inline code dan code blocks.">
-                  <Grid cols={2}>
-                    <DemoBox codeStr={code('code')} label="Inline code">
-                      <p className="m-0">Gunakan <code className="code">npm install</code> untuk menginstall.</p>
-                    </DemoBox>
-                    <DemoBox codeStr={code('pre')} label="Code block">
-                      <pre className="pre m-0" style={{ fontSize: '.8rem' }}>{`function hello() {\n  console.log("KeepSimple!");\n}`}</pre>
-                    </DemoBox>
-                  </Grid>
-                </Section>
-
+                </div>
               </div>
             </div>
           </div>
+        )}
 
-          <div className="mt-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-xl text-center text-sm text-gray-500 dark:text-gray-400">
-            KeepSimple CSS v2.0 — by <a href="https://www.naufalrakha.my.id" className="text-blue-600 dark:text-blue-400 hover:underline">Naufal Rakha Putra</a>
+        {/* Tab: Docs */}
+        {tab === 'docs' && (
+          <div className="space-y-6">
+            <div className="bg-white dark:bg-gray-900 border-4 border-black p-6 md:p-8 shadow-neo-large">
+              <h2 className="font-space font-black text-2xl uppercase mb-4 dark:text-white">📖 Dokumentasi Lengkap</h2>
+              <p className="font-mono text-sm dark:text-gray-400 mb-6">Referensi lengkap semua komponen dan utility class KeepSimple CSS.</p>
+
+              <div className="space-y-6">
+                <Section title="🔘 Buttons" desc="Kelas tombol: btn + varian (primary, secondary, outline, ghost, danger).">
+                  <CodeBlock title="Button classes" code={`<a class="btn btn-primary">Primary</a>
+<a class="btn btn-secondary">Secondary</a>
+<a class="btn btn-outline">Outline</a>
+<a class="btn btn-ghost">Ghost</a>
+<a class="btn btn-danger">Danger</a>
+<!-- ukuran: btn-sm / btn-lg -->`} />
+                </Section>
+
+                <Section title="🃏 Cards" desc="Kelas card: card (default) dan card-flat.">
+                  <CodeBlock title="Card classes" code={`<div class="card">
+  <h3>Title</h3>
+  <p>Content</p>
+</div>
+<div class="card card-flat">
+  <!-- tanpa shadow -->
+</div>`} />
+                </Section>
+
+                <Section title="⚠️ Alerts" desc="Kelas alert: alert-success, alert-error, alert-info, alert-warning.">
+                  <CodeBlock title="Alert classes" code={`<div class="alert alert-success">✓ Success</div>
+<div class="alert alert-error">✗ Error</div>
+<div class="alert alert-info">ℹ Info</div>
+<div class="alert alert-warning">⚠ Warning</div>`} />
+                </Section>
+
+                <Section title="🏷️ Badges" desc="Kelas badge: badge-primary, badge-secondary, badge-success, badge-danger, badge-warning.">
+                  <CodeBlock title="Badge classes" code={`<span class="badge badge-primary">Primary</span>
+<span class="badge badge-success">Success</span>`} />
+                </Section>
+
+                <Section title="📝 Forms" desc="Kelas form: form-group, form-label, input, select, textarea.">
+                  <CodeBlock title="Form classes" code={`<div class="form-group">
+  <label class="form-label">Email</label>
+  <input class="input" type="email" />
+</div>
+<div class="form-group">
+  <label class="form-label">Kategori</label>
+  <select class="select">
+    <option>Pilih</option>
+  </select>
+</div>
+<div class="form-group">
+  <label class="form-label">Pesan</label>
+  <textarea class="textarea" rows="3"></textarea>
+</div>`} />
+                </Section>
+
+                <Section title="📊 Tables" desc="Kelas table: table, table-striped, table-bordered.">
+                  <CodeBlock title="Table classes" code={`<table class="table">
+  <thead><tr><th>Nama</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>Naufal</td><td>Active</td></tr>
+  </tbody>
+</table>
+
+<!-- varian: table-striped, table-bordered -->`} />
+                </Section>
+
+                <Section title="📐 Grid" desc="Grid system: grid grid-{n}, row > col-{n}.">
+                  <CodeBlock title="Grid classes" code={`<!-- Auto-fit grid -->
+<div class="grid grid-3">...</div>
+
+<!-- Flex row with columns -->
+<div class="row">
+  <div class="col-4">Sidebar</div>
+  <div class="col-8">Content</div>
+</div>`} />
+                </Section>
+
+                <Section title="📏 Spacing" desc="Margin & padding: m-{0-4}, p-{0-4}, mt-, mb-, pt-, pb-, dll.">
+                  <CodeBlock title="Spacing utilities" code={`<div class="m-2 p-3">margin 2, padding 3</div>
+<div class="mt-4 mb-2">margin top 4, bottom 2</div>`} />
+                </Section>
+
+                <Section title="🎨 Utilities" desc="Text, display, flex, dan utility lainnya.">
+                  <CodeBlock title="Utility classes" code={`<!-- Text -->
+text-center, text-muted, text-primary, text-success, text-danger
+
+<!-- Font -->
+font-mono, font-serif, font-gothic
+
+<!-- List -->
+list-unstyled, list-inline
+
+<!-- Display -->
+skeleton (loading placeholder)
+
+<!-- Images -->
+img-fluid, img-round, img-shadow, img-bordered</code>} />
+                </Section>
+
+                <Section title="⏳ Spinner" desc="Loading spinner.">
+                  <CodeBlock title="Spinner classes" code={`<div class="spinner"></div>
+<div class="spinner-lg"></div>`} />
+                </Section>
+              </div>
+            </div>
           </div>
+        )}
+
+        {/* Tab: Get Started */}
+        {tab === 'start' && (
+          <div className="space-y-6">
+            <div className="bg-white dark:bg-gray-900 border-4 border-black p-6 md:p-8 shadow-neo-large">
+              <h2 className="font-space font-black text-2xl uppercase mb-4 dark:text-white">🚀 Mulai Cepat</h2>
+              <p className="font-mono text-sm dark:text-gray-400 mb-6">Tambahin KeepSimple ke project lo dalam 2 cara:</p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="border-3 border-black p-5 bg-yellow-50 dark:bg-gray-800">
+                  <h3 className="font-space font-bold text-lg uppercase mb-2 dark:text-white">📦 Download CSS</h3>
+                  <p className="font-mono text-sm dark:text-gray-400 mb-3">Download file CSS dan include manual.</p>
+                  <CodeBlock code={`<link rel="stylesheet" href="keepsimple.css">`} />
+                  <a href="/keepsimple/style.css" download
+                    className="inline-block mt-2 bg-black text-white font-bold px-4 py-2 border-2 border-black text-sm hover:bg-yellow-400 hover:text-black transition-colors">
+                    ↓ Download keepsimple.css
+                  </a>
+                </div>
+                <div className="border-3 border-black p-5 bg-green-50 dark:bg-gray-800">
+                  <h3 className="font-space font-bold text-lg uppercase mb-2 dark:text-white">🌐 CDN</h3>
+                  <p className="font-mono text-sm dark:text-gray-400 mb-3">Langsung dari CDN, gak perlu download.</p>
+                  <CodeBlock code={`<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/keepsimple/dist/keepsimple.min.css">`} />
+                </div>
+              </div>
+
+              <div className="border-3 border-black p-5 bg-blue-50 dark:bg-gray-800">
+                <h3 className="font-space font-bold text-lg uppercase mb-2 dark:text-white">📄 Template HTML</h3>
+                <p className="font-mono text-sm dark:text-gray-400 mb-3">Copy-paste template ini buat mulai:</p>
+                <CodeBlock code={`<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Site</title>
+  <link rel="stylesheet" href="keepsimple.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Halo, Dunia!</h1>
+    <a class="btn btn-primary">Mulai</a>
+  </div>
+</body>
+</html>`} />
+              </div>
+            </div>
+
+            <div className="bg-yellow-400 border-4 border-black p-6 md:p-8 shadow-neo-large text-center">
+              <p className="font-space font-black text-2xl uppercase mb-2">Mudah kan? 😎</p>
+              <p className="font-mono text-sm mb-4">Tinggal tambahin class, beres. Gak perlu setup ribet.</p>
+              <a href="/keepsimple/" className="inline-block bg-black text-white font-bold px-6 py-3 border-3 border-black shadow-neo-mini hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all text-sm">
+                📖 Baca Dokumentasi Lengkap →
+              </a>
+            </div>
+          </div>
+        )}
+
+        {/* Footer */}
+        <div className="mt-8 p-6 bg-black border-4 border-black shadow-neo-large text-center">
+          <p className="font-space font-bold text-lg text-yellow-400">KeepSimple CSS v2.0</p>
+          <p className="font-mono text-xs text-gray-400 mt-2">
+            by <a href="https://www.naufalrakha.my.id" className="text-yellow-400 hover:underline">Naufal Rakha Putra</a>
+            {' · '}
+            <a href="https://github.com/sternnaufal/keepsimple" className="text-yellow-400 hover:underline" target="_blank">GitHub</a>
+            {' · '} MIT License
+          </p>
         </div>
       </div>
-    </>
+    </main>
   )
 }
+
+export default KeepsimpleDemo

@@ -187,7 +187,7 @@ export default async function handler(req) {
               marginTop: '12px',
             }}
           >
-            naufalrakha.my.id
+            www.naufalrakha.my.id
           </div>
         </div>
       </div>
