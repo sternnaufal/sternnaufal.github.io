@@ -66,11 +66,25 @@ function Section({ title, desc, children }) {
   )
 }
 
+const DOCS_CODE = {
+  buttons: '<a class="btn btn-primary">Primary</a>\n<a class="btn btn-secondary">Secondary</a>\n<a class="btn btn-outline">Outline</a>\n<a class="btn btn-ghost">Ghost</a>\n<a class="btn btn-danger">Danger</a>\n<!-- ukuran: btn-sm / btn-lg -->',
+  card: '<div class="card">\n  <h3>Title</h3>\n  <p>Content</p>\n</div>\n<div class="card card-flat">\n  <!-- tanpa shadow -->\n</div>',
+  alerts: '<div class="alert alert-success">✓ Success</div>\n<div class="alert alert-error">✗ Error</div>\n<div class="alert alert-info">ℹ Info</div>\n<div class="alert alert-warning">⚠ Warning</div>',
+  badges: '<span class="badge badge-primary">Primary</span>\n<span class="badge badge-success">Success</span>',
+  forms: '<div class="form-group">\n  <label class="form-label">Email</label>\n  <input class="input" type="email" />\n</div>\n<div class="form-group">\n  <label class="form-label">Kategori</label>\n  <select class="select">\n    <option>Pilih</option>\n  </select>\n</div>\n<div class="form-group">\n  <label class="form-label">Pesan</label>\n  <textarea class="textarea" rows="3"></textarea>\n</div>',
+  tables: '<table class="table">\n  <thead><tr><th>Nama</th><th>Status</th></tr></thead>\n  <tbody>\n    <tr><td>Naufal</td><td>Active</td></tr>\n  </tbody>\n</table>\n\n<!-- varian: table-striped, table-bordered -->',
+  grid: '<!-- Auto-fit grid -->\n<div class="grid grid-3">...</div>\n\n<!-- Flex row with columns -->\n<div class="row">\n  <div class="col-4">Sidebar</div>\n  <div class="col-8">Content</div>\n</div>',
+  spacing: '<div class="m-2 p-3">margin 2, padding 3</div>\n<div class="mt-4 mb-2">margin top 4, bottom 2</div>',
+  utils: '<!-- Text -->\ntext-center, text-muted, text-primary, text-success, text-danger\n\n<!-- Font -->\nfont-mono, font-serif, font-gothic\n\n<!-- List -->\nlist-unstyled, list-inline\n\n<!-- Display -->\nskeleton (loading placeholder)\n\n<!-- Images -->\nimg-fluid, img-round, img-shadow, img-bordered',
+  spinner: '<div class="spinner"></div>\n<div class="spinner-lg"></div>',
+  linkCss: '<link rel="stylesheet" href="keepsimple.css">',
+  cdnCss: '<link rel="stylesheet"\n  href="https://cdn.jsdelivr.net/npm/keepsimple/dist/keepsimple.min.css">',
+  template: '<!DOCTYPE html>\n<html lang="id">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>My Site</title>\n  <link rel="stylesheet" href="keepsimple.css">\n</head>\n<body>\n  <div class="container">\n    <h1>Halo, Dunia!</h1>\n    <a class="btn btn-primary">Mulai</a>\n  </div>\n</body>\n</html>',
+}
+
 function KeepsimpleDemo() {
   const [tab, setTab] = useState('demo')
   const [darkDemo, setDarkDemo] = useState(false)
-
-  const code = (c) => c
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-black">
@@ -328,100 +342,43 @@ function KeepsimpleDemo() {
 
               <div className="space-y-6">
                 <Section title="🔘 Buttons" desc="Kelas tombol: btn + varian (primary, secondary, outline, ghost, danger).">
-                  <CodeBlock title="Button classes" code={`<a class="btn btn-primary">Primary</a>
-<a class="btn btn-secondary">Secondary</a>
-<a class="btn btn-outline">Outline</a>
-<a class="btn btn-ghost">Ghost</a>
-<a class="btn btn-danger">Danger</a>
-<!-- ukuran: btn-sm / btn-lg -->`} />
+                  <CodeBlock title="Button classes" code={DOCS_CODE.buttons} />
                 </Section>
 
                 <Section title="🃏 Cards" desc="Kelas card: card (default) dan card-flat.">
-                  <CodeBlock title="Card classes" code={`<div class="card">
-  <h3>Title</h3>
-  <p>Content</p>
-</div>
-<div class="card card-flat">
-  <!-- tanpa shadow -->
-</div>`} />
+                  <CodeBlock title="Card classes" code={DOCS_CODE.card} />
                 </Section>
 
                 <Section title="⚠️ Alerts" desc="Kelas alert: alert-success, alert-error, alert-info, alert-warning.">
-                  <CodeBlock title="Alert classes" code={`<div class="alert alert-success">✓ Success</div>
-<div class="alert alert-error">✗ Error</div>
-<div class="alert alert-info">ℹ Info</div>
-<div class="alert alert-warning">⚠ Warning</div>`} />
+                  <CodeBlock title="Alert classes" code={DOCS_CODE.alerts} />
                 </Section>
 
                 <Section title="🏷️ Badges" desc="Kelas badge: badge-primary, badge-secondary, badge-success, badge-danger, badge-warning.">
-                  <CodeBlock title="Badge classes" code={`<span class="badge badge-primary">Primary</span>
-<span class="badge badge-success">Success</span>`} />
+                  <CodeBlock title="Badge classes" code={DOCS_CODE.badges} />
                 </Section>
 
                 <Section title="📝 Forms" desc="Kelas form: form-group, form-label, input, select, textarea.">
-                  <CodeBlock title="Form classes" code={`<div class="form-group">
-  <label class="form-label">Email</label>
-  <input class="input" type="email" />
-</div>
-<div class="form-group">
-  <label class="form-label">Kategori</label>
-  <select class="select">
-    <option>Pilih</option>
-  </select>
-</div>
-<div class="form-group">
-  <label class="form-label">Pesan</label>
-  <textarea class="textarea" rows="3"></textarea>
-</div>`} />
+                  <CodeBlock title="Form classes" code={DOCS_CODE.forms} />
                 </Section>
 
                 <Section title="📊 Tables" desc="Kelas table: table, table-striped, table-bordered.">
-                  <CodeBlock title="Table classes" code={`<table class="table">
-  <thead><tr><th>Nama</th><th>Status</th></tr></thead>
-  <tbody>
-    <tr><td>Naufal</td><td>Active</td></tr>
-  </tbody>
-</table>
-
-<!-- varian: table-striped, table-bordered -->`} />
+                  <CodeBlock title="Table classes" code={DOCS_CODE.tables} />
                 </Section>
 
                 <Section title="📐 Grid" desc="Grid system: grid grid-{n}, row > col-{n}.">
-                  <CodeBlock title="Grid classes" code={`<!-- Auto-fit grid -->
-<div class="grid grid-3">...</div>
-
-<!-- Flex row with columns -->
-<div class="row">
-  <div class="col-4">Sidebar</div>
-  <div class="col-8">Content</div>
-</div>`} />
+                  <CodeBlock title="Grid classes" code={DOCS_CODE.grid} />
                 </Section>
 
                 <Section title="📏 Spacing" desc="Margin & padding: m-{0-4}, p-{0-4}, mt-, mb-, pt-, pb-, dll.">
-                  <CodeBlock title="Spacing utilities" code={`<div class="m-2 p-3">margin 2, padding 3</div>
-<div class="mt-4 mb-2">margin top 4, bottom 2</div>`} />
+                  <CodeBlock title="Spacing utilities" code={DOCS_CODE.spacing} />
                 </Section>
 
                 <Section title="🎨 Utilities" desc="Text, display, flex, dan utility lainnya.">
-                  <CodeBlock title="Utility classes" code={`<!-- Text -->
-text-center, text-muted, text-primary, text-success, text-danger
-
-<!-- Font -->
-font-mono, font-serif, font-gothic
-
-<!-- List -->
-list-unstyled, list-inline
-
-<!-- Display -->
-skeleton (loading placeholder)
-
-<!-- Images -->
-img-fluid, img-round, img-shadow, img-bordered</code>} />
+                  <CodeBlock title="Utility classes" code={DOCS_CODE.utils} />
                 </Section>
 
                 <Section title="⏳ Spinner" desc="Loading spinner.">
-                  <CodeBlock title="Spinner classes" code={`<div class="spinner"></div>
-<div class="spinner-lg"></div>`} />
+                  <CodeBlock title="Spinner classes" code={'<div class="spinner"></div>\n<div class="spinner-lg"></div>'} />
                 </Section>
               </div>
             </div>
@@ -439,7 +396,7 @@ img-fluid, img-round, img-shadow, img-bordered</code>} />
                 <div className="border-3 border-black p-5 bg-yellow-50 dark:bg-gray-800">
                   <h3 className="font-space font-bold text-lg uppercase mb-2 dark:text-white">📦 Download CSS</h3>
                   <p className="font-mono text-sm dark:text-gray-400 mb-3">Download file CSS dan include manual.</p>
-                  <CodeBlock code={`<link rel="stylesheet" href="keepsimple.css">`} />
+                  <CodeBlock code={DOCS_CODE.linkCss} />
                   <a href="/keepsimple/style.css" download
                     className="inline-block mt-2 bg-black text-white font-bold px-4 py-2 border-2 border-black text-sm hover:bg-yellow-400 hover:text-black transition-colors">
                     ↓ Download keepsimple.css
@@ -448,29 +405,14 @@ img-fluid, img-round, img-shadow, img-bordered</code>} />
                 <div className="border-3 border-black p-5 bg-green-50 dark:bg-gray-800">
                   <h3 className="font-space font-bold text-lg uppercase mb-2 dark:text-white">🌐 CDN</h3>
                   <p className="font-mono text-sm dark:text-gray-400 mb-3">Langsung dari CDN, gak perlu download.</p>
-                  <CodeBlock code={`<link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/keepsimple/dist/keepsimple.min.css">`} />
+                  <CodeBlock code={DOCS_CODE.cdnCss} />
                 </div>
               </div>
 
               <div className="border-3 border-black p-5 bg-blue-50 dark:bg-gray-800">
                 <h3 className="font-space font-bold text-lg uppercase mb-2 dark:text-white">📄 Template HTML</h3>
                 <p className="font-mono text-sm dark:text-gray-400 mb-3">Copy-paste template ini buat mulai:</p>
-                <CodeBlock code={`<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Site</title>
-  <link rel="stylesheet" href="keepsimple.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Halo, Dunia!</h1>
-    <a class="btn btn-primary">Mulai</a>
-  </div>
-</body>
-</html>`} />
+                <CodeBlock code={DOCS_CODE.template} />
               </div>
             </div>
 
