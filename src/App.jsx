@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider, Helmet } from 'react-helmet-async'
 import { Analytics } from '@vercel/analytics/react'
@@ -13,11 +13,13 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import LoadingScreen from './components/LoadingScreen'
-import KeepsimpleDemo from './components/KeepsimpleDemo'
 import Blog from './components/Blog'
-import BlogPage from './components/BlogPage'
-import CvPage from './components/CvPage'
-import ProjectCase from './components/ProjectCase'
+
+const BlogPage = lazy(() => import('./components/BlogPage'))
+const CvPage = lazy(() => import('./components/CvPage'))
+const KeepsimpleDemo = lazy(() => import('./components/KeepsimpleDemo'))
+const ProjectCase = lazy(() => import('./components/ProjectCase'))
+const AlphascriptDemo = lazy(() => import('./components/AlphascriptDemo'))
 
 function Home() {
   return (
@@ -231,14 +233,17 @@ function App() {
 
           <ScrollProgressBar />
           <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} activeSection={activeSection} />
-          
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/cv" element={<CvPage />} />
-              <Route path="/keepsimple-demo" element={<KeepsimpleDemo />} />
-              <Route path="/case-study/:slug" element={<ProjectCase />} />
-            </Routes>
+
+            <Suspense fallback={<div className="min-h-screen bg-gray-50 dark:bg-black flex items-center justify-center font-space text-2xl font-black">Loading...</div>}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/cv" element={<CvPage />} />
+                <Route path="/keepsimple-demo" element={<KeepsimpleDemo />} />
+                <Route path="/alphascript-demo" element={<AlphascriptDemo />} />
+                <Route path="/case-study/:slug" element={<ProjectCase />} />
+              </Routes>
+            </Suspense>
           
           <Footer />
         </div>
