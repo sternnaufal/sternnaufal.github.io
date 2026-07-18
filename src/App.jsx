@@ -25,11 +25,11 @@ function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <Suspense fallback={<div className="h-64" />}><Projects /></Suspense>
-      <Suspense fallback={<div className="h-64" />}><Games /></Suspense>
-      <Suspense fallback={<div className="h-64" />}><Blog /></Suspense>
-      <Suspense fallback={<div className="h-64" />}><About /></Suspense>
-      <Suspense fallback={<div className="h-64" />}><Contact /></Suspense>
+      <Suspense fallback={<div className="h-[700px]" />}><Projects /></Suspense>
+      <Suspense fallback={<div className="h-[500px]" />}><Games /></Suspense>
+      <Suspense fallback={<div className="h-[400px]" />}><Blog /></Suspense>
+      <Suspense fallback={<div className="min-h-[1200px]" />}><About /></Suspense>
+      <Suspense fallback={<div className="min-h-[600px]" />}><Contact /></Suspense>
     </main>
   )
 }
@@ -74,7 +74,7 @@ function App() {
     <HelmetProvider>
       {loading && <LoadingScreen darkMode={darkMode} onFinished={() => setLoading(false)} />}
       <Router>
-          <div className={`${loading ? 'hidden' : ''} min-h-screen flex flex-col ${darkMode ? 'bg-black' : 'bg-yellow-300'} ${darkMode ? 'text-white' : 'text-black'}`}>
+          <div className={`min-h-screen flex flex-col transition-opacity duration-500 ${loading ? 'opacity-0 pointer-events-none' : 'opacity-100'} ${darkMode ? 'bg-black' : 'bg-yellow-300'} ${darkMode ? 'text-white' : 'text-black'}`}>
           <Helmet>
             <title>Naufal Rakha Putra | Full-Stack Developer, Game Dev & AI Builder</title>
             <meta name="description" content="Portofolio Naufal Rakha Putra — Full-Stack Developer, Game Developer & AI Builder. React.js, Node.js, Laravel, Kotlin, Cyber Security. 25+ proyek, game Android di Google Play." />

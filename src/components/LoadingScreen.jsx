@@ -29,7 +29,8 @@ const LoadingScreen = ({ darkMode, onFinished }) => {
         clearInterval(interval)
         setTimeout(() => {
           setShow(false)
-          setTimeout(onFinished, 100)
+          // memberi waktu opacity transition loading screen fade out
+          setTimeout(onFinished, 300)
         }, 400)
       }
       setProgress(current)
@@ -37,10 +38,8 @@ const LoadingScreen = ({ darkMode, onFinished }) => {
     return () => clearInterval(interval)
   }, [onFinished])
 
-  if (!show) return null
-
   return (
-    <div className={`fixed inset-0 z-[9999] ${darkMode ? 'bg-black' : 'bg-yellow-400'} flex flex-col items-center justify-center p-6 overflow-hidden`}>
+    <div className={`fixed inset-0 z-[9999] ${darkMode ? 'bg-black' : 'bg-yellow-400'} flex flex-col items-center justify-center p-6 overflow-hidden transition-opacity duration-300 ${show ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
       <div className={`absolute top-10 left-10 w-32 h-32 border-4 ${darkMode ? 'border-white bg-pink-500' : 'border-black bg-white'} -rotate-12 shadow-neo`} />
       <div className={`absolute bottom-10 right-10 w-48 h-48 border-4 ${darkMode ? 'border-white' : 'border-black'} bg-pink-500 rotate-12 shadow-neo`} />
       <div className={`absolute top-1/4 right-20 w-16 h-16 border-4 ${darkMode ? 'border-white' : 'border-black'} bg-lime-400 shadow-neo animate-spin-slow`} />
