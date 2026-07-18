@@ -86,7 +86,6 @@ function App() {
             <meta property="og:url" content="https://www.naufalrakha.my.id/" />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:image" content="https://www.naufalrakha.my.id/api/og" />
-            <link rel="canonical" href="https://www.naufalrakha.my.id/" />
             <meta name="keywords" content="Naufal Rakha Putra, portfolio, full-stack developer, game developer, React.js, Node.js, Laravel, Kotlin, AI, cyber security, Malang, Universitas Brawijaya" />
             <script type="application/ld+json">
               {JSON.stringify({
