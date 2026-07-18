@@ -115,9 +115,9 @@ function AlphascriptDemo() {
         <meta name="description" content="Alphascript — JavaScript library open-source untuk DOM manipulation cepat & ringan. Demo interaktif, dokumentasi lengkap, API reference." />
         <meta property="og:title" content="Alphascript — JavaScript Library Demo & Docs" />
         <meta property="og:description" content="DOM manipulation library ringan ~2KB, zero dependencies, open source. Coba demo interaktif!" />
-        <meta property="og:image" content="https://www.naufalrakha.my.id/api/og?title=Alphascript%20%E2%80%94%20JS%20Library" />
-        <meta property="og:url" content="https://www.naufalrakha.my.id/alphascript-demo" />
-        <link rel="canonical" href="https://www.naufalrakha.my.id/alphascript-demo" />
+        <meta property="og:image" content="https://naufalrakha.my.id/api/og?title=Alphascript%20%E2%80%94%20JS%20Library" />
+        <meta property="og:url" content="https://naufalrakha.my.id/alphascript-demo" />
+        <link rel="canonical" href="https://naufalrakha.my.id/alphascript-demo" />
       </Helmet>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">

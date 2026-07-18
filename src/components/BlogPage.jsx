@@ -41,15 +41,15 @@ function BlogPage() {
         <meta property="og:title" content="Blog — Naufal Rakha Putra" />
         <meta property="og:description" content="Tulisan teknologi, programming, hacking, dan sains komputer oleh Naufal Rakha Putra." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.naufalrakha.my.id/blog" />
-        <link rel="canonical" href="https://www.naufalrakha.my.id/blog" />
+        <meta property="og:url" content="https://naufalrakha.my.id/blog" />
+        <link rel="canonical" href="https://naufalrakha.my.id/blog" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": "Blog — Naufal Rakha Putra",
             "description": "Tulisan teknologi, programming, hacking, dan sains komputer oleh Naufal Rakha Putra.",
-            "url": "https://www.naufalrakha.my.id/blog",
+            "url": "https://naufalrakha.my.id/blog",
             "mainEntity": {
               "@type": "ItemList",
               "itemListElement": posts.map((p, i) => ({

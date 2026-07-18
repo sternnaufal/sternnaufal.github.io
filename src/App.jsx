@@ -80,21 +80,21 @@ function App() {
             <meta name="description" content="Portofolio Naufal Rakha Putra — Full-Stack Developer, Game Developer & AI Builder. React.js, Node.js, Laravel, Kotlin, Cyber Security. 25+ proyek, game Android di Google Play." />
             <meta property="og:title" content="Naufal Rakha Putra | Full-Stack Developer & Game Dev" />
             <meta property="og:description" content="Portofolio Naufal Rakha Putra — Full-Stack Developer, Game Developer & AI Builder. 25+ proyek termasuk CareFund, LG-Exambot, Flag Quiz Master." />
-            <meta property="og:image" content="https://www.naufalrakha.my.id/api/og" />
+            <meta property="og:image" content="https://naufalrakha.my.id/api/og" />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
-            <meta property="og:url" content="https://www.naufalrakha.my.id/" />
+            <meta property="og:url" content="https://naufalrakha.my.id/" />
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:image" content="https://www.naufalrakha.my.id/api/og" />
+            <meta name="twitter:image" content="https://naufalrakha.my.id/api/og" />
             <meta name="keywords" content="Naufal Rakha Putra, portfolio, full-stack developer, game developer, React.js, Node.js, Laravel, Kotlin, AI, cyber security, Malang, Universitas Brawijaya" />
             <script type="application/ld+json">
               {JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://www.naufalrakha.my.id" },
-                  { "@type": "ListItem", "position": 2, "name": "Proyek", "item": "https://www.naufalrakha.my.id/#projects" },
-                  { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://www.naufalrakha.my.id/blog" }
+                  { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://naufalrakha.my.id" },
+                  { "@type": "ListItem", "position": 2, "name": "Proyek", "item": "https://naufalrakha.my.id/#projects" },
+                  { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://naufalrakha.my.id/blog" }
                 ]
               })}
             </script>
@@ -103,8 +103,8 @@ function App() {
                 "@context": "https://schema.org",
                 "@type": "Person",
                 "name": "Naufal Rakha Putra",
-                "url": "https://www.naufalrakha.my.id",
-                "image": "https://www.naufalrakha.my.id/ku.png",
+                "url": "https://naufalrakha.my.id",
+                "image": "https://naufalrakha.my.id/ku.png",
                 "jobTitle": ["Full-Stack Developer", "Game Developer", "IT Generalist", "Lead Game Developer and Founder at Senin Terus Studio"],
                 "email": "naufalrakha2712@gmail.com",
                 "address": { "@type": "PostalAddress", "addressLocality": "Malang", "addressRegion": "Jawa Timur", "addressCountry": "Indonesia" },
@@ -125,7 +125,7 @@ function App() {
                   { "@type": "SoftwareApplication", "name": "GreenEvent", "applicationCategory": "WebApplication", "operatingSystem": "All", "description": "Platform manajemen acara lingkungan hidup.", "url": "https://greenevent.infinityfree.me" },
                   { "@type": "MobileApplication", "name": "Flag Quiz Master", "applicationCategory": "GameApplication", "operatingSystem": "Android", "description": "Game edukasi tebak bendera negara native Android.", "url": "https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps" },
                   { "@type": "MobileApplication", "name": "Sortiverse", "applicationCategory": "GameApplication", "operatingSystem": "Android", "description": "Game puzzle edukasi sorting untuk Android.", "url": "https://play.google.com/store/apps/details?id=com.seninterus.sortiverse" },
-                  { "@type": "SoftwareApplication", "name": "Catatanku", "applicationCategory": "WebApplication", "operatingSystem": "All", "description": "Aplikasi catatan digital untuk pelajar & mahasiswa.", "url": "https://www.naufalrakha.my.id/case-study/catatanku" },
+                  { "@type": "SoftwareApplication", "name": "Catatanku", "applicationCategory": "WebApplication", "operatingSystem": "All", "description": "Aplikasi catatan digital untuk pelajar & mahasiswa.", "url": "https://naufalrakha.my.id/case-study/catatanku" },
                   { "@type": "WebAPI", "name": "Todos API", "applicationCategory": "WebApplication", "operatingSystem": "All", "description": "RESTful API manajemen todos dengan Express.js + TypeScript.", "url": "https://api-three-self-56.vercel.app/" }
                 ]
               })}
@@ -157,7 +157,7 @@ function App() {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
                 "name": "Naufal Rakha Putra",
-                "url": "https://www.naufalrakha.my.id",
+                "url": "https://naufalrakha.my.id",
                 "description": "Full-Stack Developer, Game Developer & IT Generalist — Portfolio & Projects.",
                 "about": {
                   "@type": "Person",

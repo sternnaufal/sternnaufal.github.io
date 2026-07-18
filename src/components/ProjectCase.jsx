@@ -34,7 +34,7 @@ function ProjectCase() {
     )
   }
 
-  const siteUrl = 'https://www.naufalrakha.my.id'
+  const siteUrl = 'https://naufalrakha.my.id'
   const pageUrl = `${siteUrl}/case-study/${slug}`
 
   return (
