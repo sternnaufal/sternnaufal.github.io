@@ -56,7 +56,13 @@ function Contact() {
                  ✨
               </div>
 
-              <form action="https://formsubmit.co/naufalrakha2712@gmail.com" method="POST" className="space-y-8">
+              <form 
+                action="https://formsubmit.co/naufalrakha2712@gmail.com" 
+                method="POST" 
+                className="space-y-8"
+                toolname="kirim-pesan"
+                tooldescription="Mengirim pesan kontak ke Naufal Rakha Putra via form submit. Field: nama, email, pesan."
+              >
                 <div className="relative group">
                    <label htmlFor="contact-name" className="block font-space font-black uppercase text-sm mb-2">Nama Anda / Perusahaan</label>
                    <input 
@@ -65,20 +71,22 @@ function Contact() {
                      name="name"
                       required
                       placeholder="John Doe"
+                      toolparamdescription="Nama pengirim atau nama perusahaan"
                       className="w-full bg-gray-50 dark:bg-black border-4 border-black p-4 font-mono focus:bg-yellow-100 dark:focus:bg-gray-800 focus:outline-none transition-all placeholder:opacity-30"
                     />
                  </div>
 
                  <div className="relative group">
                     <label htmlFor="contact-email" className="block font-space font-black uppercase text-sm mb-2">Email Aktif</label>
-                    <input 
-                      id="contact-email"
-                      type="email" 
-                      name="email"
-                      required
-                      placeholder="john@example.com"
-                      className="w-full bg-gray-50 dark:bg-black border-4 border-black p-4 font-mono focus:bg-pink-100 dark:focus:bg-gray-800 focus:outline-none transition-all placeholder:opacity-30"
-                    />
+<input 
+                       id="contact-email"
+                       type="email" 
+                       name="email"
+                       required
+                       placeholder="john@example.com"
+                       toolparamdescription="Email aktif untuk balasan"
+                       className="w-full bg-gray-50 dark:bg-black border-4 border-black p-4 font-mono focus:bg-pink-100 dark:focus:bg-gray-800 focus:outline-none transition-all placeholder:opacity-30"
+                     />
                  </div>
 
                  <div className="relative group">
@@ -89,6 +97,7 @@ function Contact() {
                       rows="5"
                       required
                       placeholder="Apa yang ingin Anda katakan?"
+                      toolparamdescription="Isi pesan yang ingin disampaikan"
                       className="w-full bg-gray-50 dark:bg-black border-4 border-black p-4 font-mono focus:bg-blue-100 dark:focus:bg-gray-800 focus:outline-none transition-all placeholder:opacity-30 resize-none"
                     />
                 </div>

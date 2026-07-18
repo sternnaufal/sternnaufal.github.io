@@ -1,9 +1,22 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { FaBars, FaTimes, FaGamepad } from 'react-icons/fa'
 import { Sun, Moon } from 'lucide-react'
 
 function Navbar({ darkMode, toggleDarkMode, activeSection }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [socialOpen, setSocialOpen] = useState(false)
+  const [sitesOpen, setSitesOpen] = useState(false)
+  const socialRef = useRef(null)
+  const sitesRef = useRef(null)
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (socialRef.current && !socialRef.current.contains(e.target)) setSocialOpen(false)
+      if (sitesRef.current && !sitesRef.current.contains(e.target)) setSitesOpen(false)
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
 
   const navLinks = [
     { href: '#about', label: 'About' },
@@ -20,29 +33,43 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
         
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
-          <div className="relative group">
-            <button className="font-space font-bold hover:bg-black hover:text-white px-2 py-1 transition-colors" aria-expanded="false">
+          <div className="relative" ref={socialRef}>
+            <button 
+              onClick={() => { setSocialOpen(!socialOpen); setSitesOpen(false) }}
+              className="font-space font-bold hover:bg-black hover:text-white px-2 py-1 transition-colors" 
+              aria-expanded={socialOpen}
+              aria-haspopup="menu"
+            >
               Social Media ▾
             </button>
-            <div className="absolute hidden group-hover:block group-focus-within:block bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black z-50" role="menu">
-              <a href="https://instagram.com/stern_naufal2712" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Instagram</a>
-              <a href="https://x.com/okebeyos" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">X (Twitter)</a>
-              <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Linkedin</a>
-              <a href="https://youtube.com/@naufaltechtainment1" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Youtube</a>
-              <a href="https://medium.com/@naufalrakha2712" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Medium</a>
-            </div>
+            {socialOpen && (
+              <div className="absolute bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black z-50" role="menu">
+                <a href="https://instagram.com/stern_naufal2712" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Instagram</a>
+                <a href="https://x.com/okebeyos" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">X (Twitter)</a>
+                <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Linkedin</a>
+                <a href="https://youtube.com/@naufaltechtainment1" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Youtube</a>
+                <a href="https://medium.com/@naufalrakha2712" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Medium</a>
+              </div>
+            )}
           </div>
           
-          <div className="relative group">
-            <button className="font-space font-bold hover:bg-black hover:text-white px-2 py-1 transition-colors" aria-expanded="false">
+          <div className="relative" ref={sitesRef}>
+            <button 
+              onClick={() => { setSitesOpen(!sitesOpen); setSocialOpen(false) }}
+              className="font-space font-bold hover:bg-black hover:text-white px-2 py-1 transition-colors" 
+              aria-expanded={sitesOpen}
+              aria-haspopup="menu"
+            >
               My Sites ▾
             </button>
-            <div className="absolute hidden group-hover:block group-focus-within:block bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black z-50" role="menu">
-              <a href="https://webapps.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Webapps</a>
-              <a href="https://demo.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Demo Artstyle</a>
-              <a href="/blog" className="block px-4 py-2 hover:bg-white hover:text-black">Blog</a>
-              <a href="https://seninterusstudio.vercel.app" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Senin Terus Studio <FaGamepad size={14} className="inline" /></a>
-            </div>
+            {sitesOpen && (
+              <div className="absolute bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black z-50" role="menu">
+                <a href="https://webapps.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Webapps</a>
+                <a href="https://demo.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Demo Artstyle</a>
+                <a href="/blog" className="block px-4 py-2 hover:bg-white hover:text-black">Blog</a>
+                <a href="https://seninterusstudio.vercel.app" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Senin Terus Studio <FaGamepad size={14} className="inline" /></a>
+              </div>
+            )}
           </div>
           
           {navLinks.map((link) => {

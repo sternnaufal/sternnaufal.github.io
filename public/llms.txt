@@ -1,0 +1,39 @@
+# Naufal Rakha Putra
+
+> Full-Stack Developer, Game Developer & AI Builder dari Indonesia. Mahasiswa D3 Teknologi Informasi Universitas Brawijaya. Membangun web, game Android, dan solusi AI.
+
+Tech stack utama: React.js, Node.js/Express, Laravel, Kotlin, Tailwind CSS, Python, Docker, MySQL, Firebase, Unity, Godot.
+
+## Portfolio
+
+- [Website utama](https://naufalrakha.my.id): Portfolio utama dengan proyek, blog, game studio, dan kontak
+- [Digital](https://digital.naufalrakha.my.id): Produk digital dan tools online
+- [Demo Artstyle](https://demo.naufalrakha.my.id): Demo variasi artstyle web
+- [WebApps](https://webapps.naufalrakha.my.id): Koleksi web aplikasi
+- [Blog](https://blog.naufalrakha.my.id): Blog teknis tentang programming, hacking, dan tutorial
+
+## Proyek
+
+- [CareFund](https://github.com/orgs/group4pbl-carefund/repositories): Platform crowdfunding medis full-stack (React.js + Node.js/Express)
+- [LG-Exambot](https://exambot.l-glearning.com): Generator soal ujian otomatis berbasis AI (multi-AI fallback)
+- [GreenEvent](https://greenevent.infinityfree.me): Platform manajemen acara lingkungan hidup
+- [Flag Quiz Master](https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps): Game edukasi tebak bendera native Android
+- [Sortiverse](https://play.google.com/store/apps/details?id=com.seninterus.sortiverse): Game puzzle edukasi sorting untuk Android
+- [Catatanku](https://www.naufalrakha.my.id/case-study/catatanku): Aplikasi catatan digital PHP native
+- [Todos API](https://api-three-self-56.vercel.app): RESTful API Express.js + TypeScript
+
+## Sosial
+
+- [GitHub](https://github.com/sternnaufal)
+- [LinkedIn](https://linkedin.com/in/naufal-rakha-putra-a0130332a)
+- [YouTube](https://youtube.com/@naufaltechtainment1)
+- [Instagram](https://instagram.com/stern_naufal2712)
+- [Medium](https://medium.com/@naufalrakha2712)
+- [Google Play Developer](https://play.google.com/store/apps/dev?id=9004420762141640273)
+- [itch.io Studio](https://seninterus.itch.io)
+
+## Optional
+
+- [CV PDF](https://naufalrakha.my.id/CV_Naufal%20Rakha%20Putra.pdf): Curriculum Vitae terbaru
+- [Project PDF](https://naufalrakha.my.id/Project_Naufal%20Rakha%20Putra.pdf): Portofolio proyek detail
+- [Sitemap](https://naufalrakha.my.id/sitemap.xml): Sitemap lengkap website

@@ -195,6 +195,9 @@ function Projects() {
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
           onClick={() => setLightbox(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Perbesar gambar: ${lightbox.title}`}
         >
           <div
             className="relative max-w-5xl w-full border-5 border-black shadow-neo-large"
@@ -203,6 +206,7 @@ function Projects() {
             <button
               onClick={() => setLightbox(null)}
               className="absolute -top-4 -right-4 z-10 bg-pink-500 border-4 border-black w-10 h-10 flex items-center justify-center font-space font-bold text-xl text-black hover:bg-yellow-400 transition-colors shadow-neo-mini hover:-translate-y-0.5"
+              aria-label="Tutup perbesar gambar"
             >
               X
             </button>

@@ -7,14 +7,14 @@ import { SpeedInsights } from '@vercel/speed-insights/react'
 import ScrollProgressBar from './components/ScrollProgressBar'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Projects from './components/Projects'
-import Games from './components/Games'
-import About from './components/About'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
 import LoadingScreen from './components/LoadingScreen'
-import Blog from './components/Blog'
 
+const Projects = lazy(() => import('./components/Projects'))
+const Games = lazy(() => import('./components/Games'))
+const Blog = lazy(() => import('./components/Blog'))
+const About = lazy(() => import('./components/About'))
+const Contact = lazy(() => import('./components/Contact'))
 const BlogPage = lazy(() => import('./components/BlogPage'))
 const CvPage = lazy(() => import('./components/CvPage'))
 const KeepsimpleDemo = lazy(() => import('./components/KeepsimpleDemo'))
@@ -25,11 +25,11 @@ function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <Projects />
-      <Games />
-      <Blog />
-      <About />
-      <Contact />
+      <Suspense fallback={<div className="h-64" />}><Projects /></Suspense>
+      <Suspense fallback={<div className="h-64" />}><Games /></Suspense>
+      <Suspense fallback={<div className="h-64" />}><Blog /></Suspense>
+      <Suspense fallback={<div className="h-64" />}><About /></Suspense>
+      <Suspense fallback={<div className="h-64" />}><Contact /></Suspense>
     </main>
   )
 }
