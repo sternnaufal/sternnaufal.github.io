@@ -26,7 +26,7 @@ export default function CvPage() {
           </div>
 
           <iframe
-            src="/cv.html"
+            src="/CV_Naufal Rakha Putra.pdf"
             className="w-full min-h-[90vh] border-4 border-black shadow-neo bg-white"
             title="Curriculum Vitae Naufal Rakha Putra"
           />

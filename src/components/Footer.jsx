@@ -66,9 +66,8 @@ function Footer() {
               <a href="https://blog.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Blog</a>
             </div>
             <div className="flex flex-wrap justify-center gap-3 text-xs mt-2">
-              <a href="/about.html" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Tentang</a>
-              <a href="/privacy.html" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Privasi</a>
-              <a href="/contact.html" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Kontak</a>
+              <a href="/#about" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Tentang</a>
+              <a href="/#contact" className="bg-white/10 hover:bg-yellow-400 hover:text-black px-3 py-1 border border-white/20 rounded transition-all">Kontak</a>
             </div>
           </div>
         </div>
