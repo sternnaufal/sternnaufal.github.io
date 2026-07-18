@@ -390,7 +390,7 @@ export default function KeepsimpleDemo() {
           </div>
 
           <div className="mt-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-xl text-center text-sm text-gray-500 dark:text-gray-400">
-            KeepSimple CSS v2.0 — by <a href="https://naufalrakha.my.id" className="text-blue-600 dark:text-blue-400 hover:underline">Naufal Rakha Putra</a>
+            KeepSimple CSS v2.0 — by <a href="https://www.naufalrakha.my.id" className="text-blue-600 dark:text-blue-400 hover:underline">Naufal Rakha Putra</a>
           </div>
         </div>
       </div>

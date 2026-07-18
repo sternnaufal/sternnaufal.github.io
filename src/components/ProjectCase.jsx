@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router-dom'
 import { projects, projectCategories } from '../data/portfolioData'
-import { FaArrowLeft, FaExternalLinkAlt, FaGithub, FaArrowRight } from 'react-icons/fa'
+import { FaArrowLeft, FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 const slugs = projects.map(p =>
   p.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
@@ -34,7 +34,7 @@ function ProjectCase() {
     )
   }
 
-  const siteUrl = 'https://naufalrakha.my.id'
+  const siteUrl = 'https://www.naufalrakha.my.id'
   const pageUrl = `${siteUrl}/case-study/${slug}`
 
   return (
@@ -116,18 +116,7 @@ function ProjectCase() {
           )}
         </div>
 
-        {/* Link to full case study */}
-        {project.caseStudy && (
-          <a href={project.caseStudy}
-            className="group block bg-yellow-400 border-4 border-black p-6 shadow-neo hover:-translate-x-1 hover:-translate-y-1 transition-all">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="font-mono text-xs font-bold mb-1">BACA SELENGKAPNYA</p>
-                <p className="font-space text-xl font-black uppercase">Case Study Lengkap (STAR Method) <FaArrowRight className="inline ml-2 group-hover:translate-x-2 transition-transform" /></p>
-              </div>
-            </div>
-          </a>
-        )}
+
       </div>
     </main>
   )
