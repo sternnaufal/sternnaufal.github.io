@@ -191,9 +191,9 @@ function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {organizations.map((org, i) => (
               <div key={i} className="border-4 border-black bg-white dark:bg-gray-900 p-6 shadow-neo-small hover:shadow-neo hover:-translate-y-2 transition-all">
-                <h4 className="font-space font-bold text-xl mb-2 uppercase">{org.title}</h4>
+                <h3 className="font-space font-bold text-xl mb-2 uppercase">{org.title}</h3>
                 <p className="font-mono text-sm font-bold mb-1">{org.role}</p>
-                <p className="font-mono text-xs opacity-70">{org.year}</p>
+                <p className="font-mono text-xs opacity-80">{org.year}</p>
               </div>
             ))}
           </div>
@@ -207,8 +207,8 @@ function About() {
               <div key={i} className="flex items-center gap-6 bg-black text-white p-6 border-4 border-yellow-400 shadow-neo group hover:bg-yellow-400 hover:text-black transition-colors rotate-1 hover:rotate-0">
                 <div className="scale-125 group-hover:scale-150 transition-transform"><Trophy size={36} strokeWidth={2.5} /></div>
                 <div>
-                  <h4 className="font-space font-black text-xl uppercase tracking-tighter">{ach.title}</h4>
-                  <p className="font-mono text-sm uppercase opacity-80">{ach.event} · {ach.year}</p>
+                  <h3 className="font-space font-black text-xl uppercase tracking-tighter">{ach.title}</h3>
+                  <p className="font-mono text-sm uppercase opacity-90">{ach.event} · {ach.year}</p>
                 </div>
               </div>
             ))}
@@ -230,7 +230,7 @@ function About() {
                   />
                   <div className="absolute inset-0 bg-yellow-400/20 group-hover:bg-transparent transition-colors" />
                 </div>
-                <h5 className="font-space font-bold text-sm uppercase leading-tight line-clamp-2">{cert.title}</h5>
+                <h3 className="font-space font-bold text-sm uppercase leading-tight line-clamp-2">{cert.title}</h3>
                 <p className="font-mono text-[10px] mt-1 opacity-60">{cert.provider} {cert.year ? `· ${cert.year}` : ''}</p>
               </div>
             ))}

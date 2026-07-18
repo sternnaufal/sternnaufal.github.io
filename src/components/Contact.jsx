@@ -28,7 +28,7 @@ function Contact() {
                   <FaEnvelope />
                 </div>
                 <div>
-                  <p className="text-xs uppercase font-bold opacity-70">Email Me</p>
+                  <p className="text-xs uppercase font-bold opacity-90">Email Me</p>
                   <a href="mailto:naufalrakha2712@gmail.com" className="text-xl font-black hover:underline underline-offset-4 decoration-yellow-400 decoration-4">naufalrakha2712@gmail.com</a>
                 </div>
               </div>
@@ -38,7 +38,7 @@ function Contact() {
                   <FaMapMarkerAlt />
                 </div>
                 <div>
-                  <p className="text-xs uppercase font-bold opacity-70">Locaton</p>
+                  <p className="text-xs uppercase font-bold opacity-90">Location</p>
                   <p className="text-xl font-black">Malang, Jawa Timur / Bukittinggi, Sumatera Barat</p>
                 </div>
               </div>

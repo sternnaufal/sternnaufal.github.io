@@ -99,7 +99,7 @@ function Blog() {
                   <h3 className="font-space font-bold text-lg mb-2 group-hover:text-yellow-400 transition-colors">
                     {post.title}
                   </h3>
-                  <p className="font-mono text-xs opacity-40">{formatDate(post.date) || post.date}</p>
+                  <p className="font-mono text-xs text-white/60">{formatDate(post.date) || post.date}</p>
                 </a>
               ))
           }

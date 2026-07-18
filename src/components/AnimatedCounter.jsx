@@ -49,7 +49,7 @@ export default function AnimatedCounter({ value, suffix = '', label, icon, color
         <p className="font-space text-3xl md:text-4xl font-black text-black dark:text-white mt-2">
           {displayValue}{suffix}
         </p>
-        <p className="font-mono text-xs font-bold text-black/70 dark:text-white/70 mt-1 uppercase tracking-wider">{label}</p>
+        <p className="font-mono text-xs font-bold text-black/90 dark:text-white/90 mt-1 uppercase tracking-wider">{label}</p>
       </div>
     </motion.div>
   )

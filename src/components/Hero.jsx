@@ -34,7 +34,7 @@ function Hero() {
             className="font-mono italic text-xl md:text-2xl mb-8 max-w-2xl bg-white/10 dark:bg-black/20 p-4 border-l-8 border-black shadow-neo-mini backdrop-blur-sm"
           >
             "Kode bukan hanya soal fungsi, tapi juga cerita." 
-            <span className="block mt-2 text-sm not-italic font-bold opacity-70"> - Naufal Rakha Putra</span>
+            <span className="block mt-2 text-sm not-italic font-bold"> - Naufal Rakha Putra</span>
           </motion.p>
           
           <div className="flex flex-wrap justify-center md:justify-start gap-5">
