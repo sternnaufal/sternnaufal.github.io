@@ -5,7 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE = 'https://naufalrakha.my.id';
+const SITE = 'https://www.naufalrakha.my.id';
 const PUBLIC = path.join(__dirname, '..', 'public');
 const SRC = path.join(__dirname, '..', 'src');
 const PROJECTS_DIR = path.join(PUBLIC, 'projects');
@@ -53,7 +53,7 @@ function getProjectSlugs() {
       }
     }
     
-    return slugs;
+    return [...new Set(slugs)];
   } catch (e) {
     console.warn('⚠️  Failed to parse portfolioData.js:', e.message);
     return [];

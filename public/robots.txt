@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /private/
 Allow: /
 
-Sitemap: https://naufalrakha.my.id/sitemap.xml
+Sitemap: https://www.naufalrakha.my.id/sitemap.xml
