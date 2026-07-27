@@ -76,10 +76,11 @@ function App() {
       <Router>
           <div className={`min-h-screen flex flex-col transition-opacity duration-500 ${loading ? 'opacity-0 pointer-events-none' : 'opacity-100'} ${darkMode ? 'bg-black' : 'bg-yellow-300'} ${darkMode ? 'text-white' : 'text-black'}`}>
           <Helmet>
-            <title>Naufal Rakha Putra | Full-Stack Developer, Game Dev & AI Builder</title>
-            <meta name="description" content="Portofolio Naufal Rakha Putra — Full-Stack Developer, Game Developer & AI Builder. React.js, Node.js, Laravel, Kotlin, Cyber Security. 25+ proyek, game Android di Google Play." />
-            <meta property="og:title" content="Naufal Rakha Putra | Full-Stack Developer & Game Dev" />
-            <meta property="og:description" content="Portofolio Naufal Rakha Putra — Full-Stack Developer, Game Developer & AI Builder. 25+ proyek termasuk CareFund, LG-Exambot, Flag Quiz Master." />
+            <title>Naufal Rakha Putra | Software Developer di Bukittinggi & Malang | Full Stack, Game & IT Generalist</title>
+            <meta name="description" content="Naufal Rakha Putra — Software Developer di Bukittinggi & Malang, Full Stack, Game, IT Generalist. React.js, Node.js, Laravel, Kotlin, Cyber Security. 25+ proyek, game Android di Google Play. Lulusan SMKN 1 Bukittinggi, mahasiswa Universitas Brawijaya." />
+            <meta name="keywords" content="software developer Bukittinggi, software developer di Bukittinggi, software developer Malang, software developer di Malang, full-stack developer Bukittinggi, full-stack developer Malang, web developer Bukittinggi, web developer Malang, Naufal Rakha Putra, programmer Bukittinggi, programmer Malang, React.js, Node.js, Laravel, Kotlin" />
+            <meta property="og:title" content="Naufal Rakha Putra | Software Developer di Bukittinggi & Malang | Full Stack, Game & IT Generalist" />
+            <meta property="og:description" content="Software Developer di Bukittinggi & Malang — Full Stack, Game, IT Generalist. 25+ proyek termasuk CareFund, LG-Exambot, Flag Quiz Master. Lulusan SMKN 1 Bukittinggi, Universitas Brawijaya." />
             <meta property="og:image" content="https://naufalrakha.my.id/api/og" />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
@@ -105,7 +106,7 @@ function App() {
                 "name": "Naufal Rakha Putra",
                 "url": "https://naufalrakha.my.id",
                 "image": "https://naufalrakha.my.id/ku.png",
-                "jobTitle": ["Full-Stack Developer", "Game Developer", "IT Generalist", "Lead Game Developer and Founder at Senin Terus Studio"],
+                "jobTitle": ["Full Stack, Game & IT Generalist", "Game Developer", "IT Generalist", "Lead Game Developer and Founder at Senin Terus Studio", "Software Developer di Bukittinggi & Malang"],
                 "email": "naufalrakha2712@gmail.com",
                 "address": { "@type": "PostalAddress", "addressLocality": "Malang", "addressRegion": "Jawa Timur", "addressCountry": "Indonesia" },
                 "alumniOf": ["Universitas Brawijaya", "SMKN 1 Bukittinggi"],
@@ -158,7 +159,7 @@ function App() {
                 "@type": "WebSite",
                 "name": "Naufal Rakha Putra",
                 "url": "https://naufalrakha.my.id",
-                "description": "Full-Stack Developer, Game Developer & IT Generalist — Portfolio & Projects.",
+                "description": "Full Stack, Game & IT Generalist, Game Developer, IT Generalist — Portfolio & Projects.",
                 "about": {
                   "@type": "Person",
                   "name": "Naufal Rakha Putra"
@@ -182,7 +183,7 @@ function App() {
                     "name": "Siapa Naufal Rakha Putra?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Naufal Rakha Putra adalah Full-Stack Developer, Game Developer, dan AI Builder asal Indonesia. Mahasiswa D3 Teknologi Informasi Universitas Brawijaya yang menguasai React.js, Node.js, Laravel, Kotlin, dan integrasi AI (Gemini, DeepSeek, Groq)."
+                      "text": "Naufal Rakha Putra adalah Software Developer di Bukittinggi & Malang, Full Stack, Game & IT Generalist. Lulusan SMKN 1 Bukittinggi yang kini kuliah D3 Teknologi Informasi Universitas Brawijaya di Malang. Menguasai React.js, Node.js, Laravel, Kotlin, dan integrasi AI (Gemini, DeepSeek, Groq)."
                     }
                   },
                   {
@@ -223,6 +224,14 @@ function App() {
                     "acceptedAnswer": {
                       "@type": "Answer",
                       "text": "Ia memiliki 16+ sertifikat IT termasuk Junior Web Programmer (BNSP), Web Programmer React JS (Telkom), kursus AWS Gen AI & Cloud (Dicoding), Introduction to Cybersecurity dan Networking Basics (Cisco), serta Python for Data Science (IBM Cognitive Class)."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Apakah Naufal Rakha Putra berasal dari Bukittinggi?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Ya. Naufal Rakha Putra lahir dan besar di Bukittinggi, Sumatera Barat. Ia lulusan SMKN 1 Bukittinggi dan aktif di organisasi Forum Anak Kota Bukittinggi. Sekarang berkuliah di Universitas Brawijaya Malang dan berstatus sebagai Software Developer di Bukittinggi & Malang. Melayani klien dari kedua kota tersebut."
                     }
                   }
                 ]

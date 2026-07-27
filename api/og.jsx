@@ -13,9 +13,9 @@ async function loadFont(name, weight, style = 'normal') {
 
 export default async function handler(req) {
   const { searchParams } = new URL(req.url);
-  const title = searchParams.get('title') || 'Full-Stack Developer, Game Dev & AI Builder';
+  const title = searchParams.get('title') || 'Full Stack, Game & IT Generalist';
   const name = 'NAUFAL RAKHA PUTRA';
-  const subtitle = '25+ Proyek · React · Node · Laravel · Kotlin · AI';
+  const subtitle = 'Full Stack · Game · IT Generalist · 25+ Proyek · React · Node · Laravel · Kotlin';
 
   const [spaceGrotesk, ibmPlexMono] = await Promise.all([
     loadFont('Space+Grotesk', 900),

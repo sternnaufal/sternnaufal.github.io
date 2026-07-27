@@ -5,7 +5,7 @@ export default function CvPage() {
     <>
       <Helmet>
         <title>CV — Naufal Rakha Putra</title>
-        <meta name="description" content="Curriculum Vitae Naufal Rakha Putra — Full-Stack Developer, Game Developer, IT Generalist" />
+        <meta name="description" content="Curriculum Vitae Naufal Rakha Putra — Software Developer di Bukittinggi & Malang, Full Stack, Game & IT Generalist" />
         <meta property="og:title" content="CV — Naufal Rakha Putra" />
         <meta property="og:description" content="Curriculum Vitae Naufal Rakha Putra" />
         <meta property="og:type" content="website" />

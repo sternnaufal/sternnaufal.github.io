@@ -22,8 +22,8 @@ function Hero() {
             transition={{ delay: 0.2 }}
           >
             <h2 className="font-space text-5xl md:text-7xl font-bold mb-6 leading-none uppercase -rotate-1">
-              FULL-STACK DEV.<br/>
-              <span className="bg-yellow-400 dark:bg-pink-500 px-3 border-4 border-black shadow-neo-small rotate-2 inline-block">GAME & AI BUILDER.</span>
+              FULL STACK<br/>
+              <span className="bg-yellow-400 dark:bg-pink-500 px-3 border-4 border-black shadow-neo-small rotate-2 inline-block">GAME, IT GENERALIST</span>
             </h2>
           </motion.div>
           
@@ -33,7 +33,7 @@ function Hero() {
             transition={{ delay: 0.4 }}
             className="font-mono italic text-xl md:text-2xl mb-8 max-w-2xl bg-white/10 dark:bg-black/20 p-4 border-l-8 border-black shadow-neo-mini backdrop-blur-sm"
           >
-            "Kode bukan hanya soal fungsi, tapi juga cerita." 
+            "Full Stack, Game, IT Generalist. Berbasis di Bukittinggi & Malang." 
             <span className="block mt-2 text-sm not-italic font-bold"> - Naufal Rakha Putra</span>
           </motion.p>
           
