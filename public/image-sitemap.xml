@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.naufalrakha.my.id/</loc>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/og-image.png</image:loc>
+      <image:caption>Naufal Rakha Putra - Software Developer di Bukittinggi &amp; Malang | Full Stack, Game &amp; IT Generalist</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/ku.png</image:loc>
+      <image:caption>Foto profil Naufal Rakha Putra - Software Developer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/carefund.png</image:loc>
+      <image:caption>CareFund - Platform crowdfunding medis full-stack React.js + Node.js</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/lg-exambot.png</image:loc>
+      <image:caption>LG-Exambot - AI automated exam generator Laravel + Gemini API</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/greenevent.png</image:loc>
+      <image:caption>GreenEvent - Platform manajemen acara lingkungan Laravel</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/flagquiz.png</image:loc>
+      <image:caption>Flag Quiz Master - Game edukasi tebak bendera Android Kotlin</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/sortiverse.png</image:loc>
+      <image:caption>Sortiverse - Game puzzle edukasi sorting Android</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/catatanku.png</image:loc>
+      <image:caption>Catatanku - Aplikasi catatan digital PHP MySQL</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/todos-api.png</image:loc>
+      <image:caption>Todos API - RESTful API Express.js TypeScript</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/bot-telegram.png</image:loc>
+      <image:caption>Telegram Bot Reminder - Python Google Calendar API</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/hanekawa-bot.png</image:loc>
+      <image:caption>Hanekawa Bot v4 - Discord multi-purpose bot JavaScript</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/sterntools.png</image:loc>
+      <image:caption>Sterntools - CTF Forensic Toolkit Shell Linux</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/alphascript.png</image:loc>
+      <image:caption>Alphascript - JavaScript DOM manipulation library</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/keepsimple.png</image:loc>
+      <image:caption>Keepsimple - Minimalist CSS framework for fast loading</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.naufalrakha.my.id/images/projects/sakurapai.png</image:loc>
+      <image:caption>Sakurapai - CMS Video Streaming PHP MySQL</image:caption>
+    </image:image>
+  </url>
+</urlset>

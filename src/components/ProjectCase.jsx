@@ -77,6 +77,18 @@ function ProjectCase() {
           <FaArrowLeft /> Kembali ke Portfolio
         </Link>
 
+        {/* Project Image - visible to Google crawler */}
+        {project.image && (
+          <div className="mb-8 border-4 border-black overflow-hidden bg-gray-200 dark:bg-gray-800 shadow-neo-large">
+            <img
+              src={project.image}
+              alt={`${project.title} - ${project.category} project by Naufal Rakha Putra`}
+              className="w-full object-cover"
+              loading="eager"
+            />
+          </div>
+        )}
+
         <div className="bg-white dark:bg-gray-900 border-4 border-black p-8 md:p-12 shadow-neo-large -rotate-1 mb-8">
           <div className="rotate-1">
             <span className="inline-block font-mono text-xs font-bold bg-black text-white px-3 py-1 mb-4">

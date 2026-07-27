@@ -4,3 +4,4 @@ Disallow: /private/
 Allow: /
 
 Sitemap: https://www.naufalrakha.my.id/sitemap.xml
+Sitemap: https://www.naufalrakha.my.id/image-sitemap.xml
