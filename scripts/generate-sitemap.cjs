@@ -14,15 +14,12 @@ const OUTPUT = path.join(PUBLIC, 'sitemap.xml');
 const today = new Date().toISOString().split('T')[0];
 
 const pages = [
-  { loc: '/', priority: '1.0', changefreq: 'monthly' },
-  { loc: '/about.html', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/', priority: '1.0', changefreq: 'weekly' },
   { loc: '/blog', priority: '0.9', changefreq: 'daily' },
-  { loc: '/contact.html', priority: '0.7', changefreq: 'monthly' },
   { loc: '/cv', priority: '0.8', changefreq: 'monthly' },
   { loc: '/keepsimple/', priority: '0.8', changefreq: 'monthly' },
   { loc: '/keepsimple-demo', priority: '0.6', changefreq: 'monthly' },
-  { loc: '/privacy.html', priority: '0.5', changefreq: 'yearly' },
-  { loc: '/donation.html', priority: '0.5', changefreq: 'yearly' },
+  { loc: '/alphascript-demo', priority: '0.6', changefreq: 'monthly' },
 ];
 
 // Parse portfolioData.js to extract ONLY project titles (from projects array + games array)

@@ -6,7 +6,7 @@ Tech stack utama: React.js, Node.js/Express, Laravel, Kotlin, Tailwind CSS, Pyth
 
 ## Portfolio
 
-- [Website utama](https://naufalrakha.my.id): Portfolio utama dengan proyek, blog, game studio, dan kontak
+- [Website utama](https://www.naufalrakha.my.id): Portfolio utama dengan proyek, blog, game studio, dan kontak
 - [Digital](https://digital.naufalrakha.my.id): Produk digital dan tools online
 - [Demo Artstyle](https://demo.naufalrakha.my.id): Demo variasi artstyle web
 - [WebApps](https://webapps.naufalrakha.my.id): Koleksi web aplikasi
@@ -34,6 +34,6 @@ Tech stack utama: React.js, Node.js/Express, Laravel, Kotlin, Tailwind CSS, Pyth
 
 ## Optional
 
-- [CV PDF](https://naufalrakha.my.id/CV_Naufal%20Rakha%20Putra.pdf): Curriculum Vitae terbaru
-- [Project PDF](https://naufalrakha.my.id/Project_Naufal%20Rakha%20Putra.pdf): Portofolio proyek detail
-- [Sitemap](https://naufalrakha.my.id/sitemap.xml): Sitemap lengkap website
+- [CV PDF](https://www.naufalrakha.my.id/CV_Naufal%20Rakha%20Putra.pdf): Curriculum Vitae terbaru
+- [Project PDF](https://www.naufalrakha.my.id/Project_Naufal%20Rakha%20Putra.pdf): Portofolio proyek detail
+- [Sitemap](https://www.naufalrakha.my.id/sitemap.xml): Sitemap lengkap website

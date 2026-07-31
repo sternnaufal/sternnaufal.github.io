@@ -9,7 +9,7 @@ export default function CvPage() {
         <meta property="og:title" content="CV — Naufal Rakha Putra" />
         <meta property="og:description" content="Curriculum Vitae Naufal Rakha Putra" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://naufalrakha.my.id/cv" />
+        <link rel="canonical" href="https://www.naufalrakha.my.id/cv" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
