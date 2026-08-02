@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/copy-404.cjs",
+    "build": "vite build && node scripts/copy-404.cjs && node scripts/prerender-case-studies.mjs",
     "prebuild": "node scripts/fetch-blog-posts.cjs && node scripts/generate-sitemap.cjs",
     "lint": "eslint .",
     "preview": "vite preview"

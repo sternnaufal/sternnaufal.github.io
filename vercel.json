@@ -1,5 +1,10 @@
 {
   "rewrites": [
+    { "source": "/case-study/:slug", "destination": "/case-study/:slug/index.html" },
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/cv", "destination": "/cv/index.html" },
+    { "source": "/keepsimple-demo", "destination": "/keepsimple-demo/index.html" },
+    { "source": "/alphascript-demo", "destination": "/alphascript-demo/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

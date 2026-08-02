@@ -22,28 +22,19 @@ const pages = [
   { loc: '/alphascript-demo', priority: '0.6', changefreq: 'monthly' },
 ];
 
-// Parse portfolioData.js to extract ONLY project titles (from projects array + games array)
+// Parse portfolioData.js to extract ONLY project titles (projects array).
+// Games have no /case-study route — including them adds 404 URLs to the sitemap.
 function getProjectSlugs() {
   const dataPath = path.join(SRC, 'data', 'portfolioData.js');
   try {
     const dataSrc = fs.readFileSync(dataPath, 'utf-8');
     
-    // Find the projects array section and games array section
     const projectsSection = extractArraySection(dataSrc, 'export const projects = [');
-    const gamesSection = extractArraySection(dataSrc, 'export const games = [');
     
     const slugs = [];
     
     if (projectsSection) {
       const titleMatches = projectsSection.matchAll(/title:\s*'([^']+)'/g);
-      for (const m of titleMatches) {
-        const slug = m[1].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-        slugs.push(slug);
-      }
-    }
-    
-    if (gamesSection) {
-      const titleMatches = gamesSection.matchAll(/title:\s*'([^']+)'/g);
       for (const m of titleMatches) {
         const slug = m[1].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
         slugs.push(slug);
