@@ -16,17 +16,27 @@ export default function CvPage() {
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
             <h2 className="font-space font-black text-4xl uppercase">Curriculum Vitae</h2>
-            <a
-              href="/CV_Naufal Rakha Putra.pdf"
-              download
-              className="bg-black text-white font-bold px-6 py-3 border-4 border-black shadow-neo hover:bg-yellow-400 hover:text-black transition-all"
-            >
-              Download PDF
-            </a>
+            <div className="flex gap-3">
+              <a
+                href="/cv-live.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-yellow-400 text-black font-bold px-6 py-3 border-4 border-black shadow-neo hover:bg-pink-500 hover:text-white transition-all"
+              >
+                Lihat Online
+              </a>
+              <a
+                href="/CV_Naufal Rakha Putra.pdf"
+                download
+                className="bg-black text-white font-bold px-6 py-3 border-4 border-black shadow-neo hover:bg-yellow-400 hover:text-black transition-all"
+              >
+                Download PDF
+              </a>
+            </div>
           </div>
 
           <iframe
-            src="/CV_Naufal Rakha Putra.pdf"
+            src="/cv-live.html"
             className="w-full min-h-[90vh] border-4 border-black shadow-neo bg-white"
             title="Curriculum Vitae Naufal Rakha Putra"
           />

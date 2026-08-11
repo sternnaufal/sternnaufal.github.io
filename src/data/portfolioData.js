@@ -132,6 +132,25 @@ export const projects = [
     caseStudy: '/case-study/website-duta-anak-kota-bukittinggi-2025',
     image: '/images/project-placeholder.svg',
     tech: ['Bootstrap', 'HTML5', 'CSS3']
+  },
+  {
+    title: 'WebApps',
+    category: 'Tools',
+    description: 'Koleksi 40+ online developer tools: JSON formatter, QR code generator, regex tester, subnet calculator, dsb. Dibangun dengan Astro 5 + Tailwind CSS + daisyUI, deployment otomatis di Vercel.',
+    github: 'https://github.com/sternnaufal/webapps',
+    live: 'https://webapps.naufalrakha.my.id',
+    caseStudy: '/case-study/webapps',
+    image: '/images/project-placeholder.svg',
+    tech: ['Astro', 'Tailwind CSS', 'daisyUI']
+  },
+  {
+    title: 'Cronblog',
+    category: 'AI',
+    description: 'Bot penulis artikel otomatis terjadwal via GitHub Actions (2x seminggu): tren dari RSS feed → konten via cascade AI (Custom API > Gemini > OpenAI) → Draft di Blogger API v3 untuk kurasi manual.',
+    github: 'https://github.com/sternnaufal/cronblog',
+    caseStudy: '/case-study/cronblog',
+    image: '/images/project-placeholder.svg',
+    tech: ['Python', 'Gemini API', 'OpenAI', 'Blogger API']
   }
 ]
 
