@@ -8,14 +8,6 @@ const PER_PAGE = 6
 function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
   const [page, setPage] = useState(1)
-  const [lightbox, setLightbox] = useState(null)
-
-  useEffect(() => {
-    if (!lightbox) return
-    const handler = (e) => { if (e.key === 'Escape') setLightbox(null) }
-    window.addEventListener('keydown', handler)
-    return () => window.removeEventListener('keydown', handler)
-  }, [lightbox])
 
   const filtered = activeCategory === 'All'
     ? projects
@@ -32,41 +24,43 @@ function Projects() {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { staggerChildren: 0.12 }
+      transition: { staggerChildren: 0.08 }
     }
   }
 
   const item = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     show: { y: 0, opacity: 1 }
   }
 
+  const detailHref = (p) => p.caseStudy || p.live || '#'
+
   return (
-    <section id="projects" className="projects py-20 px-6 border-b-5 border-black bg-white dark:bg-gray-950 overflow-hidden relative scroll-mt-24">
+    <section id="projects" className="projects py-16 px-6 border-b-5 border-black bg-white dark:bg-gray-950 overflow-hidden relative scroll-mt-24">
       <div className="absolute inset-0 opacity-10 dark:opacity-20 pointer-events-none" style={{
         backgroundImage: 'radial-gradient(circle, black 1px, transparent 1px)',
         backgroundSize: '30px 30px'
       }} />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-8">
-          <h2 className="font-space text-4xl md:text-6xl font-bold uppercase tracking-tighter bg-yellow-400 dark:bg-pink-500 px-6 py-2 border-5 border-black shadow-neo-large -rotate-2">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-6">
+          <h2 className="font-space text-3xl md:text-4xl font-bold uppercase tracking-tighter bg-yellow-400 dark:bg-pink-500 px-4 py-1.5 border-4 border-black shadow-neo -rotate-2">
             PROYEK PILIHAN
           </h2>
-          <p className="font-mono text-lg md:text-xl max-w-xl border-l-8 border-black pl-5 italic">
+          <p className="font-mono text-base md:text-lg max-w-xl border-l-4 border-black pl-4 italic">
             Beberapa hasil karya saya dalam pengembangan web, game, AI, dan mobile.
           </p>
         </div>
 
         {/* Filter */}
-        <div className="flex flex-wrap gap-3 mb-12 justify-center">
+        <div className="flex flex-wrap gap-2 mb-8 justify-center">
           {projectCategories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`font-space font-bold px-5 py-2 border-3 border-black uppercase text-sm tracking-wider transition-all ${
+              className={`font-mono text-xs font-bold px-3 py-1 border-2 border-black uppercase tracking-wider transition-all ${
                 activeCategory === cat
-                  ? 'bg-black text-white dark:bg-yellow-400 dark:text-black shadow-neo-mini -translate-y-1'
+                  ? 'bg-black text-white dark:bg-yellow-400 dark:text-black shadow-neo-mini -translate-y-0.5'
                   : 'bg-white dark:bg-gray-800 hover:-translate-y-0.5 hover:shadow-neo-mini'
               }`}
             >
@@ -80,7 +74,7 @@ function Projects() {
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {paginated.map((project, index) => (
             <motion.div
@@ -89,83 +83,77 @@ function Projects() {
               layout
               className="group relative"
             >
-              <div className="absolute inset-0 bg-black translate-x-3 translate-y-3 group-hover:translate-x-5 group-hover:translate-y-5 transition-transform" />
+              <div className="absolute inset-0 bg-black translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
 
-              <div className="relative bg-white dark:bg-gray-900 border-5 border-black p-6 h-full flex flex-col group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
-                <div className="mb-4 flex justify-between items-start">
-                  <div className="flex gap-2 items-center">
-                    <div className="bg-pink-500 dark:bg-yellow-400 w-10 h-10 border-4 border-black flex items-center justify-center font-bold text-sm -rotate-12 group-hover:rotate-0 transition-transform">
-                      {index + 1}
-                    </div>
-                    {project.category && (
-                      <span className="font-mono text-[10px] font-bold bg-black text-white dark:bg-yellow-400 dark:text-black px-2 py-1 border-2 border-black uppercase tracking-wider">
-                        {project.category}
+              <div className="relative bg-white dark:bg-gray-900 border-3 border-black p-4 h-full flex flex-col group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
+                <a
+                  href={detailHref(project)}
+                  className="mb-3 block border-2 border-black overflow-hidden bg-gray-200 dark:bg-gray-800"
+                  aria-label={`Buka detail ${project.title}`}
+                >
+                  <div className="aspect-video relative">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                      <span className="bg-white dark:bg-gray-900 text-black dark:text-white font-bold px-2.5 py-1 border-2 border-black text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">
+                        View Details ↗
                       </span>
-                    )}
+                    </div>
                   </div>
-                  <div className="flex gap-4">
-                    {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`Lihat kode ${project.title} di GitHub`} className="text-2xl hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
-                        <FaGithub />
-                      </a>
-                    )}
-                    {project.live && (
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" aria-label={`Buka demo ${project.title}`} className="text-2xl hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
-                        <FaExternalLinkAlt />
-                      </a>
-                    )}
-                  </div>
+                </a>
+
+                <div className="mb-1.5 flex justify-between items-center gap-2">
+                  {project.category && (
+                    <span className="font-mono text-[9px] font-bold bg-black text-white dark:bg-yellow-400 dark:text-black px-1.5 py-0.5 border border-black uppercase tracking-wider">
+                      {project.category}
+                    </span>
+                  )}
+                  <span className="font-mono text-[10px] font-bold opacity-40">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                 </div>
 
-                {project.image && (
-                  <button onClick={() => setLightbox(project)} className="mb-4 border-4 border-black overflow-hidden bg-gray-200 dark:bg-gray-800 w-full text-left cursor-pointer group/image">
-                    <div className="aspect-video relative">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors flex items-center justify-center">
-                        <span className="bg-white dark:bg-gray-900 text-black dark:text-white font-bold px-3 py-1 border-2 border-black text-xs uppercase opacity-0 group-hover/image:opacity-100 transition-opacity -translate-y-2 group-hover/image:translate-y-0">
-                          Perbesar
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                )}
-
-                <h3 className="font-space text-2xl font-bold mb-3 uppercase tracking-tight group-hover:underline decoration-yellow-400 decoration-8 underline-offset-4">
+                <h3 className="font-space text-base md:text-lg font-bold mb-1 uppercase tracking-tight group-hover:underline decoration-yellow-400 decoration-4 underline-offset-4">
                   {project.title}
                 </h3>
 
-                <p className="font-mono text-sm leading-relaxed mb-4 flex-grow">
+                <p className="font-mono text-xs leading-relaxed mb-3 flex-grow line-clamp-3">
                   {project.description}
                 </p>
 
                 {project.tech && project.tech.length > 0 && (
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {project.tech.map((t) => (
-                      <span key={t} className="font-mono text-[10px] font-bold bg-gray-100 dark:bg-gray-800 text-black dark:text-white px-2 py-0.5 border-2 border-black">
+                  <div className="flex flex-wrap gap-1 mb-3">
+                    {project.tech.slice(0, 4).map((t) => (
+                      <span key={t} className="font-mono text-[9px] font-bold bg-gray-100 dark:bg-gray-800 text-black dark:text-white px-1.5 py-0.5 border border-black">
                         {t}
                       </span>
                     ))}
+                    {project.tech.length > 4 && (
+                      <span className="font-mono text-[9px] font-bold opacity-50 px-1 py-0.5">
+                        +{project.tech.length - 4}
+                      </span>
+                    )}
                   </div>
                 )}
 
-                <div className="mt-auto flex flex-wrap gap-3 pt-4 border-t-2 border-black/10 dark:border-white/10">
+                <div className="mt-auto flex flex-wrap gap-3 pt-2 border-t-2 border-black/10 dark:border-white/10 font-mono text-[11px] font-bold uppercase">
                   {project.caseStudy ? (
-                    <a href={project.caseStudy} className="bg-yellow-400 dark:bg-pink-500 text-black dark:text-white font-bold px-4 py-2 border-3 border-black text-sm uppercase shadow-neo-mini hover:-translate-y-1 hover:shadow-neo transition-all">
-                      Case Study
+                    <a href={project.caseStudy} className="hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
+                      Detail ↗
                     </a>
                   ) : null}
                   {project.github ? (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="bg-white dark:bg-gray-800 text-black dark:text-white font-bold px-4 py-2 border-3 border-black text-sm uppercase shadow-neo-mini hover:-translate-y-1 hover:shadow-neo transition-all">
-                      View Code
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
+                      <FaGithub className="text-xs" /> Code
                     </a>
-                  ) : project.live ? (
-                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="bg-white dark:bg-gray-800 text-black dark:text-white font-bold px-4 py-2 border-3 border-black text-sm uppercase shadow-neo-mini hover:-translate-y-1 hover:shadow-neo transition-all">
-                      View App
+                  ) : null}
+                  {project.live ? (
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
+                      <FaExternalLinkAlt className="text-xs" /> Live
                     </a>
                   ) : null}
                 </div>
@@ -182,7 +170,7 @@ function Projects() {
           <div className="flex justify-center mt-12">
             <button
               onClick={() => setPage((p) => p + 1)}
-              className="bg-black text-white dark:bg-yellow-400 dark:text-black font-bold px-8 py-3 border-4 border-black text-sm uppercase shadow-neo hover:-translate-y-1 hover:shadow-neo-large transition-all flex items-center gap-3"
+              className="bg-black text-white dark:bg-yellow-400 dark:text-black font-bold px-6 py-2.5 border-4 border-black text-sm uppercase shadow-neo hover:-translate-y-1 hover:shadow-neo-large transition-all flex items-center gap-3"
             >
               <span>Muat Lainnya</span>
               <FaChevronRight />
@@ -190,34 +178,6 @@ function Projects() {
           </div>
         )}
       </div>
-
-      {lightbox && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-          onClick={() => setLightbox(null)}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Perbesar gambar: ${lightbox.title}`}
-        >
-          <div
-            className="relative max-w-5xl w-full border-5 border-black shadow-neo-large"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setLightbox(null)}
-              className="absolute -top-4 -right-4 z-10 bg-pink-500 border-4 border-black w-10 h-10 flex items-center justify-center font-space font-bold text-xl text-black hover:bg-yellow-400 transition-colors shadow-neo-mini hover:-translate-y-0.5"
-              aria-label="Tutup perbesar gambar"
-            >
-              X
-            </button>
-            <img
-              src={lightbox.image}
-              alt={lightbox.title}
-              className="w-full h-auto max-h-[85vh] object-contain bg-white dark:bg-gray-900"
-            />
-          </div>
-        </div>
-      )}
     </section>
   )
 }
