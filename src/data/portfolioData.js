@@ -2,6 +2,15 @@ export const projectCategories = ['All', 'Web App', 'Game', 'AI', 'Mobile', 'Lib
 
 export const projects = [
   {
+    title: 'YuwarajaFest 2026',
+    category: 'Web App',
+    description: 'Platform resmi PKKMB & event tahunan BEM Vokasi Universitas Brawijaya (Yuwarajafest 2026). Sistem manajemen 1.400+ mahasiswa dengan fitur join kelompok/cluster, tugas, absensi, pengumuman, jadwal acara, dan dashboard role-based (admin, panitia, supervisor, mahasiswa). Dibangun dengan Laravel + Inertia.js + React, CI/CD GitHub Actions, zero-downtime deployment.',
+    github: null,
+    live: 'https://yuwarajafest.web.id',
+    image: '/images/projects/yuwarajafest.svg',
+    tech: ['Laravel', 'Inertia.js', 'React', 'MySQL']
+  },
+  {
     title: 'CareFund',
     category: 'Web App',
     description: 'Platform crowdfunding medis full-stack (React.js + Node.js/Express). Kolaborasi tim dengan dosen sebagai stakeholder utama. Fitur campaign management, donasi, dan auth.',
