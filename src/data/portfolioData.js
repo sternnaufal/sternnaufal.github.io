@@ -1,4 +1,4 @@
-export const projectCategories = ['All', 'Web App', 'Game', 'AI', 'Mobile', 'Library', 'Backend', 'Tools']
+export const projectCategories = ['All', 'Web App', 'Game', 'AI', 'Library', 'Backend', 'Tools']
 
 export const projects = [
   {
@@ -78,7 +78,7 @@ export const projects = [
   },
   {
     title: 'Flag Quiz Master',
-    category: 'Mobile',
+    category: 'Game',
     description: 'Game edukasi tebak bendera negara native Android. 60+ unduhan awal.',
     github: null,
     live: 'https://play.google.com/store/apps/details?id=com.seninterus.flagquizapps',
@@ -88,7 +88,7 @@ export const projects = [
   },
   {
     title: 'Sortiverse',
-    category: 'Mobile',
+    category: 'Game',
     description: 'Game puzzle edukasi sorting untuk Android. 60+ unduhan awal.',
     github: null,
     live: 'https://play.google.com/store/apps/details?id=com.seninterus.sortiverse',
