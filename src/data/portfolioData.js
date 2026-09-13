@@ -7,7 +7,7 @@ export const projects = [
     description: 'Platform resmi PKKMB & event tahunan BEM Vokasi Universitas Brawijaya (Yuwarajafest 2026). Sistem manajemen 1.400+ mahasiswa dengan fitur join kelompok/cluster, tugas, absensi, pengumuman, jadwal acara, dan dashboard role-based (admin, panitia, supervisor, mahasiswa). Dibangun dengan Laravel + Inertia.js + React, CI/CD GitHub Actions, zero-downtime deployment.',
     github: null,
     live: 'https://yuwarajafest.web.id',
-    image: '/images/projects/yuwarajafest.svg',
+    image: '/images/projects/yuwarajafest.png',
     tech: ['Laravel', 'Inertia.js', 'React', 'MySQL']
   },
   {
@@ -315,6 +315,7 @@ export const organizations = [
 ]
 
 export const achievements = [
+  { title: 'Juara 1', event: 'Business Plan Competition SYNC 2026 (Komunitas Kemenkeu Malang) – Tingkat Regional Malang. Merancang perancangan model bisnis inovatif dan validasi produk.', year: '2026' },
   { title: 'Finalis', event: 'Zero Day National CTF 2026 (Digital Social Group)', year: '2026' },
   { title: 'Kompetitor', event: 'picoCTF 2026 — Carnegie Mellon University (Web Exploitation, Cryptography, Forensics)', year: '2026' },
   { title: 'Kompetitor', event: 'OLIVIA XI 2026 — Konsorsium Vokasi Indonesia (Cybersecurity)', year: '2026' },
