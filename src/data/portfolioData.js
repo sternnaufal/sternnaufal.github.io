@@ -285,6 +285,14 @@ export const experience = [
     ]
   },
   {
+    title: 'Web Developer / Author – Website Vokasi UB',
+    duration: '2026 – Sekarang',
+    items: [
+      'Memublikasikan artikel informatif dan mengelola konten sebagai author/kontributor resmi web Vokasi UB',
+      'Mendukung operasional dan pembaruan struktur halaman web kampus'
+    ]
+  },
+  {
     title: 'Helpdesk Assurance Intern – PT Telkom Akses',
     duration: 'November 2024 – Maret 2025',
     items: [
