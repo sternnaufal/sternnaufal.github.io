@@ -353,8 +353,10 @@ export const achievements = [
 ]
 
 export const certificates = [
+  { title: 'Spec-Driven Development dengan Kiro', provider: 'Dicoding', year: '2026', image: '/images/cert.svg' },
+  { title: 'Web Development Fundamentals', provider: 'IBM SkillsBuild', year: '2026', image: '/images/cert.svg' },
   { title: 'Introduction to IoT', provider: 'Cisco Networking Academy', year: '2026', image: '/images/cert.svg' },
-  { title: 'Membangun Aplikasi Gen AI dengan Microsoft Azure', provider: 'Dicoding x Microsoft', year: '2026', image: '/images/cert.svg' },
+  { title: 'Membangun Aplikasi Gen AI dengan Microsoft Azure', provider: 'Dicoding x Microsoft', year: '2026', image: '/images/cert/Membangun Aplikasi Gen AI dengan Microsoft Azure.jpg' },
   { title: 'Belajar Penerapan Data Science dengan Microsoft Fabric', provider: 'Dicoding x Microsoft', year: '2026', image: '/images/cert.svg' },
   { title: 'Networking Basics', provider: 'Cisco Networking Academy', year: '2025', image: '/images/cert.svg' },
   { title: 'Introduction to Cybersecurity', provider: 'Cisco Networking Academy', year: '2025', image: '/images/cert.svg' },
@@ -362,11 +364,11 @@ export const certificates = [
   { title: 'Junior Web Programmer', provider: 'BNSP', year: '2025', image: '/images/cert.svg' },
   { title: 'Web Programmer (React JS)', provider: 'Telkom Indonesia', year: '2025', image: '/images/cert.svg' },
   { title: 'Belajar Dasar Cloud dan Gen AI di AWS', provider: 'AWS / Dicoding', year: '2025', image: '/images/cert.svg' },
-  { title: 'Belajar Membuat Front-End Web untuk Pemula', provider: 'Dicoding', year: '2025', image: '/images/cert.svg' },
-  { title: 'Belajar Dasar Pemrograman Web', provider: 'Dicoding', year: '2025', image: '/images/cert.svg' },
+  { title: 'Belajar Membuat Front-End Web untuk Pemula', provider: 'Dicoding', year: '2025', image: '/images/cert/Belajar Membuat Front-End Web untuk Pemula - Dicoding.jpg' },
+  { title: 'Belajar Dasar Pemrograman Web', provider: 'Dicoding', year: '2025', image: '/images/cert/Belajar Dasar Pemrograman Web - Dicoding.jpg' },
   { title: 'Belajar Dasar Pemrograman JavaScript', provider: 'Dicoding', year: '2025', image: '/images/cert.svg' },
-  { title: 'Memulai Pemrograman dengan Python', provider: 'Dicoding', year: '2024', image: '/images/cert.svg' },
-  { title: 'Belajar Dasar AI', provider: 'Dicoding', year: '2024', image: '/images/cert.svg' },
+  { title: 'Memulai Pemrograman dengan Python', provider: 'Dicoding', year: '2024', image: '/images/cert/Memulai Pemrograman dengan Python.jpg' },
+  { title: 'Belajar Dasar AI', provider: 'Dicoding', year: '2024', image: '/images/cert/Belajar Dasar AI - Dicoding.jpg' },
   { title: 'Pengenalan ke Logika Pemrograman (Programming Logic 101)', provider: 'Dicoding', year: '2024', image: '/images/cert.svg' },
   { title: 'Legacy Responsive Web Design V8', provider: 'freeCodeCamp', year: '2022', image: '/images/cert.svg' }
 ]
