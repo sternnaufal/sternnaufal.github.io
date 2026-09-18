@@ -139,7 +139,7 @@ export const projects = [
     description: 'Landing page resmi profil Duta Anak Kota Bukittinggi. Dibangun dengan Bootstrap untuk tampilan responsif dan modern.',
     github: 'https://github.com/sternnaufal/website-duta-anak',
     caseStudy: '/case-study/website-duta-anak-kota-bukittinggi-2025',
-    image: '/images/project-placeholder.svg',
+    image: '/images/projects/webdutanak.png',
     tech: ['Bootstrap', 'HTML5', 'CSS3']
   },
   {
@@ -149,7 +149,7 @@ export const projects = [
     github: 'https://github.com/sternnaufal/webapps',
     live: 'https://webapps.naufalrakha.my.id',
     caseStudy: '/case-study/webapps',
-    image: '/images/project-placeholder.svg',
+    image: '/images/projects/webapps.png',
     tech: ['Astro', 'Tailwind CSS', 'daisyUI']
   },
   {
@@ -158,7 +158,7 @@ export const projects = [
     description: 'Bot penulis artikel otomatis terjadwal via GitHub Actions (2x seminggu): tren dari RSS feed → konten via cascade AI (Custom API > Gemini > OpenAI) → Draft di Blogger API v3 untuk kurasi manual.',
     github: 'https://github.com/sternnaufal/cronblog',
     caseStudy: '/case-study/cronblog',
-    image: '/images/project-placeholder.svg',
+    image: '/images/projects/cronblog.png',
     tech: ['Python', 'Gemini API', 'OpenAI', 'Blogger API']
   },
   {
