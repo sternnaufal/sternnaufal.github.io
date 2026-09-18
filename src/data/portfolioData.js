@@ -167,7 +167,7 @@ export const projects = [
     description: 'Website resmi BEM Vokasi Universitas Brawijaya. Backend developer (Staff Ahli) — arsitektur core system, RESTful API 25+ endpoints, autentikasi Bearer Token, otorisasi menu dinamis. Laravel + React.',
     github: null,
     live: 'https://bemvokasi.ub.ac.id',
-    image: '/images/project-placeholder.svg',
+    image: '/images/projects/bemvokasi.png',
     tech: ['Laravel', 'React', 'MySQL', 'RESTful API']
   },
   {
@@ -176,7 +176,7 @@ export const projects = [
     description: 'Game edukasi peternakan ayam broiler. Kolaborasi DIKST UB, Jatim Park Group, dan Lets Play Indonesia. Available on Google Play.',
     github: null,
     live: 'https://play.google.com/store/apps/details?id=com.dikstgame.broilerquest&hl=id',
-    image: '/images/project-placeholder.svg',
+    image: '/images/projects/chickenquest.png',
     tech: ['Android', 'Game Development']
   }
 ]
