@@ -75,6 +75,7 @@ const SkillBar = ({ name, level }) => (
 
 function About() {
   const [openSkillCat, setOpenSkillCat] = useState(skillCategories[0]?.name || null)
+  const [selectedCert, setSelectedCert] = useState(null)
 
   return (
     <section id="about" className="about py-24 bg-gray-50 dark:bg-black border-b-5 border-black px-6 md:px-12 overflow-hidden scroll-mt-24">
@@ -220,7 +221,11 @@ function About() {
           <SectionHeading colorClass="pink-500">Sertifikat</SectionHeading>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {certificates.map((cert, i) => (
-              <div key={i} className="bg-white dark:bg-gray-900 border-3 border-black p-3 shadow-neo-mini hover:shadow-neo transition-all group overflow-hidden">
+              <button
+                key={i}
+                onClick={() => setSelectedCert(cert)}
+                className="bg-white dark:bg-gray-900 border-3 border-black p-3 shadow-neo-mini hover:shadow-neo transition-all group overflow-hidden text-left cursor-pointer"
+              >
                 <div className="aspect-[4/3] mb-4 border-2 border-black overflow-hidden bg-gray-100 relative">
                   <LazyLoadImage
                     src={cert.image}
@@ -232,10 +237,41 @@ function About() {
                 </div>
                 <h3 className="font-space font-bold text-sm uppercase leading-tight line-clamp-2">{cert.title}</h3>
                 <p className="font-mono text-[10px] mt-1 opacity-60">{cert.provider} {cert.year ? `· ${cert.year}` : ''}</p>
-              </div>
+              </button>
             ))}
           </div>
         </div>
+
+        {/* Certificate Lightbox */}
+        {selectedCert && (
+          <div
+            className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4"
+            onClick={() => setSelectedCert(null)}
+          >
+            <button
+              onClick={() => setSelectedCert(null)}
+              className="absolute top-6 right-6 bg-white text-black border-3 border-black w-10 h-10 font-bold text-xl shadow-neo hover:bg-pink-500 hover:text-white transition-colors z-10"
+            >
+              ✕
+            </button>
+            <div
+              className="relative max-w-4xl w-full bg-white border-4 border-black shadow-neo-large overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-4 border-b-3 border-black bg-yellow-400">
+                <h3 className="font-space font-bold text-lg uppercase">{selectedCert.title}</h3>
+                <p className="font-mono text-sm">{selectedCert.provider} · {selectedCert.year}</p>
+              </div>
+              <div className="bg-gray-100 flex items-center justify-center p-2 max-h-[70vh] overflow-auto">
+                <LazyLoadImage
+                  src={selectedCert.image}
+                  alt={selectedCert.title}
+                  className="max-w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        )}
 
       </div>
     </section>
