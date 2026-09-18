@@ -160,6 +160,24 @@ export const projects = [
     caseStudy: '/case-study/cronblog',
     image: '/images/project-placeholder.svg',
     tech: ['Python', 'Gemini API', 'OpenAI', 'Blogger API']
+  },
+  {
+    title: 'Website BEM Vokasi UB',
+    category: 'Web App',
+    description: 'Website resmi BEM Vokasi Universitas Brawijaya. Backend developer (Staff Ahli) — arsitektur core system, RESTful API 25+ endpoints, autentikasi Bearer Token, otorisasi menu dinamis. Laravel + React.',
+    github: null,
+    live: 'https://bemvokasi.ub.ac.id',
+    image: '/images/project-placeholder.svg',
+    tech: ['Laravel', 'React', 'MySQL', 'RESTful API']
+  },
+  {
+    title: 'ChickenQuest (Broiler Quest)',
+    category: 'Game',
+    description: 'Game edukasi peternakan ayam broiler. Kolaborasi DIKST UB, Jatim Park Group, dan Lets Play Indonesia. Available on Google Play.',
+    github: null,
+    live: 'https://play.google.com/store/apps/details?id=com.dikstgame.broilerquest&hl=id',
+    image: '/images/project-placeholder.svg',
+    tech: ['Android', 'Game Development']
   }
 ]
 
