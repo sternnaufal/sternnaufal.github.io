@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
@@ -38,9 +39,9 @@ function Hero() {
           </motion.p>
           
           <div className="flex flex-wrap justify-center md:justify-start gap-5">
-            <a href="#projects" className="bg-black text-white font-bold px-8 py-3 border-4 border-black shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all hover:bg-yellow-400 hover:text-black">
+            <Link to="/#projects" className="bg-black text-white font-bold px-8 py-3 border-4 border-black shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all hover:bg-yellow-400 hover:text-black">
               View My Work
-            </a>
+            </Link>
             <a
               href="/CV_Naufal Rakha Putra.pdf"
               target="_blank" rel="noopener noreferrer"
@@ -52,12 +53,12 @@ function Hero() {
             >
               Download CV
             </a>
-            <a
-              href="/cv"
+            <Link
+              to="/cv"
               className="bg-yellow-400 dark:bg-pink-500 text-black dark:text-white font-bold px-8 py-3 border-4 border-black shadow-neo hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-large transition-all hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black"
             >
               View CV
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { FaBars, FaTimes, FaGamepad, FaChevronDown } from 'react-icons/fa'
 import { Sun, Moon } from 'lucide-react'
 
@@ -50,9 +51,9 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
   return (
     <header className="bg-yellow-400 dark:bg-black border-b-5 border-black sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 md:py-4 flex justify-between items-center gap-4">
-        <a href="/" className="font-space text-lg sm:text-xl md:text-2xl font-bold tracking-tighter hover:opacity-70 transition-opacity whitespace-nowrap">
+        <Link to="/" className="font-space text-lg sm:text-xl md:text-2xl font-bold tracking-tighter hover:opacity-70 transition-opacity whitespace-nowrap">
           NAUFAL RAKHA PUTRA
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-3 xl:gap-5">
@@ -87,16 +88,26 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
             </button>
             {sitesOpen && (
               <div className="absolute right-0 top-full mt-1 bg-black text-white min-w-52 py-2 shadow-neo border-3 border-black z-50" role="menu">
-                {siteLinks.map((s) => (
-                  <a
-                    key={s.label}
-                    href={s.url}
-                    {...(s.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    className="flex items-center gap-2 px-4 py-2 hover:bg-yellow-400 hover:text-black transition-colors font-mono text-sm"
-                  >
-                    {s.label} {s.icon && <FaGamepad size={13} />}
-                  </a>
-                ))}
+                {siteLinks.map((s) =>
+                  s.url.startsWith('http') ? (
+                    <a
+                      key={s.label}
+                      href={s.url}
+                      target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 hover:bg-yellow-400 hover:text-black transition-colors font-mono text-sm"
+                    >
+                      {s.label} {s.icon && <FaGamepad size={13} />}
+                    </a>
+                  ) : (
+                    <Link
+                      key={s.label}
+                      to={s.url}
+                      className="flex items-center gap-2 px-4 py-2 hover:bg-yellow-400 hover:text-black transition-colors font-mono text-sm"
+                    >
+                      {s.label} {s.icon && <FaGamepad size={13} />}
+                    </Link>
+                  )
+                )}
               </div>
             )}
           </div>
@@ -107,9 +118,9 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
             const sectionId = link.href.replace('#', '')
             const isActive = activeSection === sectionId
             return (
-              <a
+              <Link
                 key={sectionId}
-                href={link.href}
+                to={`/${link.href}`}
                 className={`font-space font-bold text-sm xl:text-base px-2 py-1.5 transition-all ${
                   isActive
                     ? 'bg-black text-white dark:bg-yellow-400 dark:text-black'
@@ -117,7 +128,7 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             )
           })}
 
@@ -164,9 +175,9 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
                 const sectionId = link.href.replace('#', '')
                 const isActive = activeSection === sectionId
                 return (
-                  <a
+                  <Link
                     key={sectionId}
-                    href={link.href}
+                    to={`/${link.href}`}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`p-2.5 border-2 border-black transition-colors ${
                       isActive
@@ -175,7 +186,7 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
                     }`}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 )
               })}
             </div>
@@ -196,17 +207,27 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
 
             <div className="flex flex-col gap-1.5 font-bold">
               <p className="text-xs uppercase opacity-60 mb-1 font-mono tracking-widest">My Sites</p>
-              {siteLinks.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.url}
-                  onClick={() => setMobileMenuOpen(false)}
-                  {...(s.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  className="flex items-center gap-2 p-2.5 border-2 border-black bg-white dark:bg-gray-900 hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black transition-colors"
-                >
-                  {s.label} {s.icon && <FaGamepad size={13} />}
-                </a>
-              ))}
+              {siteLinks.map((s) =>
+                s.url.startsWith('http') ? (
+                  <a
+                    key={s.label}
+                    href={s.url}
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-2 p-2.5 border-2 border-black bg-white dark:bg-gray-900 hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black transition-colors"
+                  >
+                    {s.label} {s.icon && <FaGamepad size={13} />}
+                  </a>
+                ) : (
+                  <Link
+                    key={s.label}
+                    to={s.url}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2 p-2.5 border-2 border-black bg-white dark:bg-gray-900 hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black transition-colors"
+                  >
+                    {s.label} {s.icon && <FaGamepad size={13} />}
+                  </Link>
+                )
+              )}
             </div>
           </nav>
         </>

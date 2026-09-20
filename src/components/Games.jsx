@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import { studio } from '../data/portfolioData'
 import { FaGamepad } from 'react-icons/fa'
 import { Gamepad2 } from 'lucide-react'

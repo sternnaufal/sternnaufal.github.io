@@ -1,5 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { HelmetProvider, Helmet } from 'react-helmet-async'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
@@ -9,6 +9,28 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
 import LoadingScreen from './components/LoadingScreen'
+
+function ScrollToHash() {
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (hash) {
+      let tries = 0
+      const tryScroll = () => {
+        const el = document.querySelector(hash)
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        } else if (tries < 10) {
+          tries++
+          setTimeout(tryScroll, 100)
+        }
+      }
+      tryScroll()
+      return
+    }
+    window.scrollTo(0, 0)
+  }, [pathname, hash])
+  return null
+}
 
 const Projects = lazy(() => import('./components/Projects'))
 const Games = lazy(() => import('./components/Games'))
@@ -42,7 +64,7 @@ function App() {
     if (stored === 'light') return false
     return window.matchMedia('(prefers-color-scheme: dark)').matches
   })
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(() => !sessionStorage.getItem('nr_loaded'))
   const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
@@ -71,9 +93,14 @@ function App() {
 
   const toggleDarkMode = () => setDarkMode((prev) => !prev)
 
+  const handleLoadingFinished = () => {
+    sessionStorage.setItem('nr_loaded', '1')
+    setLoading(false)
+  }
+
   return (
     <HelmetProvider>
-      {loading && <LoadingScreen darkMode={darkMode} onFinished={() => setLoading(false)} />}
+      {loading && <LoadingScreen darkMode={darkMode} onFinished={handleLoadingFinished} />}
       <Router>
           <div className={`min-h-screen flex flex-col transition-opacity duration-500 ${loading ? 'opacity-0 pointer-events-none' : 'opacity-100'} ${darkMode ? 'bg-black' : 'bg-yellow-300'} ${darkMode ? 'text-white' : 'text-black'}`}>
           <Helmet>
@@ -241,6 +268,7 @@ function App() {
           </Helmet>
 
           <ScrollProgressBar />
+          <ScrollToHash />
           <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} activeSection={activeSection} />
 
             <Suspense fallback={<div className="min-h-screen bg-gray-50 dark:bg-black flex items-center justify-center font-space text-2xl font-black">Loading...</div>}>

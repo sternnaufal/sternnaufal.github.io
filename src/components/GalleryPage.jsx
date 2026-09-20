@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FaArrowLeft, FaImage } from 'react-icons/fa'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { Helmet } from 'react-helmet-async'
@@ -40,12 +41,12 @@ function GalleryPage() {
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Header */}
         <div className="flex items-center gap-6 mb-12">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="bg-white text-black border-4 border-black p-3 shadow-neo hover:-translate-y-1 hover:shadow-neo-large transition-all"
           >
             <FaArrowLeft size={20} />
-          </a>
+          </Link>
           <div>
             <h1 className="font-space text-4xl md:text-5xl font-black uppercase tracking-tighter">
               <span className="bg-yellow-400 px-4 py-1 border-4 border-black inline-block -rotate-1">Gallery</span>

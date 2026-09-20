@@ -197,63 +197,64 @@ export const skillCategories = [
   {
     name: 'Front-End',
     items: [
-      { name: 'React.js', level: 90 },
-      { name: 'Next.js', level: 75 },
-      { name: 'Vite', level: 85 },
-      { name: 'Tailwind CSS', level: 95 },
-      { name: 'Bootstrap', level: 80 },
+      { name: 'React.js', icon: 'SiReact' },
+      { name: 'Next.js', icon: 'SiNextdotjs' },
+      { name: 'Vite', icon: 'SiVite' },
+      { name: 'Tailwind CSS', icon: 'SiTailwindcss' },
+      { name: 'Bootstrap', icon: 'SiBootstrap' },
     ]
   },
   {
     name: 'Back-End & Database',
     items: [
-      { name: 'Node.js (Express)', level: 85 },
-      { name: 'Laravel', level: 80 },
-      { name: 'RESTful API Architecture', level: 85 },
-      { name: 'MySQL', level: 80 },
-      { name: 'Firebase', level: 70 },
+      { name: 'Node.js (Express)', icon: 'SiNodedotjs' },
+      { name: 'Laravel', icon: 'SiLaravel' },
+      { name: 'RESTful API', icon: 'SiPostman' },
+      { name: 'MySQL', icon: 'SiMysql' },
+      { name: 'Firebase', icon: 'SiFirebase' },
     ]
   },
   {
     name: 'Programming Languages',
     items: [
-      { name: 'JavaScript (ES6+)', level: 90 },
-      { name: 'PHP', level: 85 },
-      { name: 'Kotlin', level: 75 },
-      { name: 'Python', level: 80 },
-      { name: 'HTML5 / CSS3', level: 95 },
-      { name: 'SQL', level: 80 },
+      { name: 'JavaScript (ES6+)', icon: 'SiJavascript' },
+      { name: 'TypeScript', icon: 'SiTypescript' },
+      { name: 'PHP', icon: 'SiPhp' },
+      { name: 'Kotlin', icon: 'SiKotlin' },
+      { name: 'Python', icon: 'SiPython' },
+      { name: 'HTML5 / CSS3', icon: 'SiHtml5' },
+      { name: 'SQL', icon: 'SiMysql' },
     ]
   },
   {
     name: 'Game Development',
     items: [
-      { name: 'Kotlin (Android)', level: 75 },
-      { name: 'Twine', level: 85 },
-      { name: 'Unity / C#', level: 60 },
-      { name: 'Godot', level: 50 },
+      { name: 'Android (Kotlin)', icon: 'SiAndroid' },
+      { name: 'Twine', icon: 'SiJavascript' },
+      { name: 'Unity / C#', icon: 'SiUnity' },
+      { name: 'Godot', icon: 'SiGodotengine' },
     ]
   },
   {
     name: 'Networking & Security',
     items: [
-      { name: 'Cisco', level: 70 },
-      { name: 'MikroTik', level: 75 },
-      { name: 'Linux Server (Debian)', level: 80 },
-      { name: 'Fiber Optic (OTDR & Splicing)', level: 85 },
-      { name: 'CTF Methodologies', level: 65 },
+      { name: 'Cisco', icon: 'SiCisco' },
+      { name: 'MikroTik', icon: 'SiMikrotik' },
+      { name: 'Linux Server (Debian)', icon: 'SiDebian' },
+      { name: 'Fiber Optic (OTDR & Splicing)', icon: 'SiGnubash' },
+      { name: 'CTF Methodologies', icon: 'SiGnubash' },
     ]
   },
-{
+  {
     name: 'DevOps & Tools',
     items: [
-      { name: 'Azure AI Foundry', level: 75 },
-      { name: 'Git/GitHub', level: 90 },
-      { name: 'Docker', level: 65 },
-      { name: 'Vercel / Railway', level: 85 },
-      { name: 'cPanel / Nginx', level: 75 },
-      { name: 'Apache', level: 70 },
-      { name: 'Postman', level: 85 },
+      { name: 'Azure AI Foundry', icon: 'FaMicrosoft' },
+      { name: 'Git/GitHub', icon: 'SiGithub' },
+      { name: 'Docker', icon: 'SiDocker' },
+      { name: 'Vercel / Railway', icon: 'SiVercel' },
+      { name: 'cPanel / Nginx', icon: 'SiNginx' },
+      { name: 'Apache', icon: 'SiApache' },
+      { name: 'Postman', icon: 'SiPostman' },
     ]
   }
 ]

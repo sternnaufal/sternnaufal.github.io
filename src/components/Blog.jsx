@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { FaArrowRight, FaBlog } from 'react-icons/fa'
 import { Helmet } from 'react-helmet-async'
 import { formatDate } from '../utils'
@@ -106,13 +107,13 @@ function Blog() {
         </div>
 
         <div className="mt-10 text-center">
-          <a
-            href="/blog"
+          <Link
+            to="/blog"
             className="inline-flex items-center gap-2 font-space font-bold text-sm px-6 py-3 border-2 border-yellow-400 text-yellow-400 rounded-lg hover:bg-yellow-400 hover:text-black transition-all group mr-4"
           >
             Lihat Semua Tulisan
             <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
           <a
             href="https://blog.naufalrakha.my.id"
             target="_blank"

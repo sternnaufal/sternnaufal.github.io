@@ -4,6 +4,25 @@ import { education, experience, organizations, achievements, certificates, analy
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import AnimatedCounter from './AnimatedCounter'
 import { Trophy } from 'lucide-react'
+import {
+  SiReact, SiNextdotjs, SiVite, SiTailwindcss, SiBootstrap,
+  SiNodedotjs, SiLaravel, SiPostman, SiMysql, SiFirebase,
+  SiJavascript, SiTypescript, SiPhp, SiKotlin, SiPython, SiHtml5,
+  SiAndroid, SiUnity, SiGodotengine,
+  SiCisco, SiMikrotik, SiDebian, SiGnubash,
+  SiGithub, SiDocker, SiVercel, SiNginx, SiApache,
+} from 'react-icons/si'
+import { FaMicrosoft } from 'react-icons/fa'
+
+const skillIcons = {
+  SiReact, SiNextdotjs, SiVite, SiTailwindcss, SiBootstrap,
+  SiNodedotjs, SiLaravel, SiPostman, SiMysql, SiFirebase,
+  SiJavascript, SiTypescript, SiPhp, SiKotlin, SiPython, SiHtml5,
+  SiAndroid, SiUnity, SiGodotengine,
+  SiCisco, SiMikrotik, SiDebian, SiGnubash,
+  SiGithub, SiDocker, SiVercel, SiNginx, SiApache,
+  FaMicrosoft,
+}
 
 const bgMap = {
   'yellow-400': 'bg-yellow-400',
@@ -55,26 +74,30 @@ const Card = ({ title, subtitle, duration, children, variant = 'yellow' }) => {
   )
 }
 
-const SkillBar = ({ name, level }) => (
-  <div className="mb-3">
-    <div className="flex justify-between font-mono text-xs font-bold mb-1">
-      <span>{name}</span>
-      <span className="opacity-60">{level}%</span>
+const SkillIcon = ({ name, icon }) => {
+  const Icon = skillIcons[icon]
+  return (
+    <div className="flex items-center gap-3 bg-white dark:bg-gray-900 border-3 border-black px-5 py-3 shadow-neo-mini shrink-0 mx-3">
+      {Icon && <Icon size={28} className="text-black dark:text-white shrink-0" />}
+      <span className="font-space font-bold text-base whitespace-nowrap uppercase">{name}</span>
     </div>
-    <div className="w-full h-3 bg-white dark:bg-gray-700 border-2 border-black overflow-hidden">
-      <motion.div
-        initial={{ width: 0 }}
-        whileInView={{ width: `${level}%` }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
-        className="h-full bg-yellow-400 dark:bg-pink-500 border-r-2 border-black"
-      />
+  )
+}
+
+const SkillMarquee = ({ items, reverse = false }) => {
+  const doubled = [...items, ...items]
+  return (
+    <div className="marquee-group overflow-hidden border-y-3 border-black py-4 bg-lime-100 dark:bg-gray-950">
+      <div className={`flex w-max ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'}`} style={{ '--marquee-duration': `${items.length * 4}s` }}>
+        {doubled.map((skill, i) => (
+          <SkillIcon key={`${skill.name}-${i}`} {...skill} />
+        ))}
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 function About() {
-  const [openSkillCat, setOpenSkillCat] = useState(skillCategories[0]?.name || null)
   const [selectedCert, setSelectedCert] = useState(null)
 
   return (
@@ -124,25 +147,16 @@ function About() {
           </div>
         </div>
 
-        {/* Skills with Progress Bars */}
+        {/* Skills Marquee */}
         <div className="mb-24">
           <SectionHeading colorClass="yellow-400">Skills</SectionHeading>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skillCategories.map((cat) => (
-              <div key={cat.name} className="border-4 border-black bg-white dark:bg-gray-900 p-6 shadow-neo-small">
-                <button
-                  onClick={() => setOpenSkillCat(openSkillCat === cat.name ? null : cat.name)}
-                  className="w-full flex justify-between items-center font-space font-black text-lg uppercase mb-4"
-                >
-                  {cat.name}
-                  <span className="text-xl transform transition-transform duration-300" style={{ rotate: openSkillCat === cat.name ? '180deg' : '0deg' }}>▼</span>
-                </button>
-                <div className={`overflow-hidden transition-all duration-300 ${openSkillCat === cat.name ? 'max-h-96' : 'max-h-0'}`}>
-                  {cat.items.map((skill) => (
-                    <SkillBar key={skill.name} {...skill} />
-                  ))}
-                </div>
-              </div>
+          <div className="space-y-0 border-4 border-black shadow-neo overflow-hidden">
+            {skillCategories.map((cat, i) => (
+              <SkillMarquee
+                key={cat.name}
+                items={cat.items}
+                reverse={i % 2 === 1}
+              />
             ))}
           </div>
         </div>

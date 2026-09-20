@@ -87,3 +87,26 @@ a, button, input, textarea, [role="button"], [tabindex]:not([tabindex="-1"]) {
 .animate-spin-slow {
   animation: spin-slow 8s linear infinite;
 }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 30s) linear infinite;
+}
+
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse var(--marquee-duration, 30s) linear infinite;
+}
+
+.marquee-group:hover .animate-marquee,
+.marquee-group:hover .animate-marquee-reverse {
+  animation-play-state: paused;
+}

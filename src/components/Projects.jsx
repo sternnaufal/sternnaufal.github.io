@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { projects, projectCategories } from '../data/portfolioData'
 import { FaGithub, FaExternalLinkAlt, FaChevronRight } from 'react-icons/fa'
@@ -34,6 +35,7 @@ function Projects() {
   }
 
   const detailHref = (p) => p.caseStudy || p.live || '#'
+  const isExternal = (href) => /^https?:\/\//.test(href)
 
   return (
     <section id="projects" className="projects py-16 px-6 border-b-5 border-black bg-white dark:bg-gray-950 overflow-hidden relative scroll-mt-24">
@@ -86,25 +88,48 @@ function Projects() {
               <div className="absolute inset-0 bg-black translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
 
               <div className="relative bg-white dark:bg-gray-900 border-3 border-black p-4 h-full flex flex-col group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
-                <a
-                  href={detailHref(project)}
-                  className="mb-3 block border-2 border-black overflow-hidden bg-gray-200 dark:bg-gray-800"
-                  aria-label={`Buka detail ${project.title}`}
-                >
-                  <div className="aspect-video relative">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                      <span className="bg-white dark:bg-gray-900 text-black dark:text-white font-bold px-2.5 py-1 border-2 border-black text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">
-                        View Details ↗
-                      </span>
+                {isExternal(detailHref(project)) ? (
+                  <a
+                    href={detailHref(project)}
+                    target="_blank" rel="noopener noreferrer"
+                    className="mb-3 block border-2 border-black overflow-hidden bg-gray-200 dark:bg-gray-800"
+                    aria-label={`Buka detail ${project.title}`}
+                  >
+                    <div className="aspect-video relative">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <span className="bg-white dark:bg-gray-900 text-black dark:text-white font-bold px-2.5 py-1 border-2 border-black text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">
+                          View Details ↗
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                ) : (
+                  <Link
+                    to={detailHref(project)}
+                    className="mb-3 block border-2 border-black overflow-hidden bg-gray-200 dark:bg-gray-800"
+                    aria-label={`Buka detail ${project.title}`}
+                  >
+                    <div className="aspect-video relative">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <span className="bg-white dark:bg-gray-900 text-black dark:text-white font-bold px-2.5 py-1 border-2 border-black text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">
+                          View Details ↗
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                )}
 
                 <div className="mb-1.5 flex justify-between items-center gap-2">
                   {project.category && (
@@ -142,9 +167,9 @@ function Projects() {
 
                 <div className="mt-auto flex flex-wrap gap-3 pt-2 border-t-2 border-black/10 dark:border-white/10 font-mono text-[11px] font-bold uppercase">
                   {project.caseStudy ? (
-                    <a href={project.caseStudy} className="hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
+                    <Link to={project.caseStudy} className="hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
                       Detail ↗
-                    </a>
+                    </Link>
                   ) : null}
                   {project.github ? (
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-pink-500 dark:hover:text-yellow-400 transition-colors">
