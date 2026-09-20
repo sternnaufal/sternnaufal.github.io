@@ -1,28 +1,56 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { education, experience, organizations, achievements, certificates, analytics, skillCategories } from '../data/portfolioData'
+import { education, experience, organizations, achievements, certificates, analytics } from '../data/portfolioData'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import AnimatedCounter from './AnimatedCounter'
 import { Trophy } from 'lucide-react'
 import {
-  SiReact, SiNextdotjs, SiVite, SiTailwindcss, SiBootstrap,
-  SiNodedotjs, SiLaravel, SiPostman, SiMysql, SiFirebase,
-  SiJavascript, SiTypescript, SiPhp, SiKotlin, SiPython, SiHtml5,
+  SiReact, SiNextdotjs, SiVite, SiTailwindcss,
+  SiNodedotjs, SiLaravel, SiMysql,
+  SiJavascript, SiTypescript, SiPhp, SiKotlin, SiPython,
   SiAndroid, SiUnity, SiGodotengine,
-  SiCisco, SiMikrotik, SiDebian, SiGnubash,
-  SiGithub, SiDocker, SiVercel, SiNginx, SiApache,
+  SiCisco, SiMikrotik, SiDebian,
+  SiGithub, SiDocker, SiVercel,
 } from 'react-icons/si'
 import { FaMicrosoft } from 'react-icons/fa'
 
 const skillIcons = {
-  SiReact, SiNextdotjs, SiVite, SiTailwindcss, SiBootstrap,
-  SiNodedotjs, SiLaravel, SiPostman, SiMysql, SiFirebase,
-  SiJavascript, SiTypescript, SiPhp, SiKotlin, SiPython, SiHtml5,
+  SiReact, SiNextdotjs, SiVite, SiTailwindcss,
+  SiNodedotjs, SiLaravel, SiMysql,
+  SiJavascript, SiTypescript, SiPhp, SiKotlin, SiPython,
   SiAndroid, SiUnity, SiGodotengine,
-  SiCisco, SiMikrotik, SiDebian, SiGnubash,
-  SiGithub, SiDocker, SiVercel, SiNginx, SiApache,
+  SiCisco, SiMikrotik, SiDebian,
+  SiGithub, SiDocker, SiVercel,
   FaMicrosoft,
 }
+
+const skillRowOne = [
+  { name: 'React.js', icon: 'SiReact' },
+  { name: 'Next.js', icon: 'SiNextdotjs' },
+  { name: 'JavaScript', icon: 'SiJavascript' },
+  { name: 'TypeScript', icon: 'SiTypescript' },
+  { name: 'Node.js', icon: 'SiNodedotjs' },
+  { name: 'Laravel', icon: 'SiLaravel' },
+  { name: 'PHP', icon: 'SiPhp' },
+  { name: 'Tailwind CSS', icon: 'SiTailwindcss' },
+  { name: 'MySQL', icon: 'SiMysql' },
+  { name: 'Vite', icon: 'SiVite' },
+]
+
+const skillRowTwo = [
+  { name: 'Python', icon: 'SiPython' },
+  { name: 'Kotlin', icon: 'SiKotlin' },
+  { name: 'Android', icon: 'SiAndroid' },
+  { name: 'Unity / C#', icon: 'SiUnity' },
+  { name: 'Godot', icon: 'SiGodotengine' },
+  { name: 'Docker', icon: 'SiDocker' },
+  { name: 'Git/GitHub', icon: 'SiGithub' },
+  { name: 'Linux (Debian)', icon: 'SiDebian' },
+  { name: 'Cisco', icon: 'SiCisco' },
+  { name: 'MikroTik', icon: 'SiMikrotik' },
+  { name: 'Vercel', icon: 'SiVercel' },
+  { name: 'Azure AI', icon: 'FaMicrosoft' },
+]
 
 const bgMap = {
   'yellow-400': 'bg-yellow-400',
@@ -150,14 +178,9 @@ function About() {
         {/* Skills Marquee */}
         <div className="mb-24">
           <SectionHeading colorClass="yellow-400">Skills</SectionHeading>
-          <div className="space-y-0 border-4 border-black shadow-neo overflow-hidden">
-            {skillCategories.map((cat, i) => (
-              <SkillMarquee
-                key={cat.name}
-                items={cat.items}
-                reverse={i % 2 === 1}
-              />
-            ))}
+          <div className="border-4 border-black shadow-neo overflow-hidden divide-y-3 divide-black">
+            <SkillMarquee items={skillRowOne} />
+            <SkillMarquee items={skillRowTwo} reverse />
           </div>
         </div>
 
