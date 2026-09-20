@@ -73,28 +73,24 @@ const Card = ({ title, subtitle, duration, children, variant = 'yellow' }) => {
 
   return (
     <motion.div
-      whileInView={{ x: 0, opacity: 1 }}
-      initial={{ x: -20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      initial={{ y: 12, opacity: 0 }}
       viewport={{ once: true }}
-      className="relative group mb-10 ml-4"
+      className="group relative h-full"
     >
-      <div className="absolute top-0 -left-[24px] w-12 h-12 rounded-full border-4 border-black bg-black z-20 flex items-center justify-center">
-        <div className={`w-4 h-4 rounded-full ${accentClass}`} />
-      </div>
+      <div className="absolute inset-0 bg-black translate-x-1.5 translate-y-1.5 group-hover:translate-x-2.5 group-hover:translate-y-2.5 transition-transform" />
 
-      <div className="absolute inset-0 bg-black translate-x-3 translate-y-3 group-hover:translate-x-5 group-hover:translate-y-5 transition-transform" />
-
-      <div className={`relative z-10 p-6 border-4 border-black ${bgClass} dark:bg-gray-900 shadow-neo group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all`}>
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 border-b-3 border-black pb-4">
-          <div>
-            <h3 className="font-space text-2xl font-bold uppercase">{title}</h3>
-            <p className="font-mono font-bold mt-1">{subtitle}</p>
+      <div className={`relative z-10 h-full p-4 border-3 border-black ${bgClass} dark:bg-gray-900 shadow-neo-mini group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex flex-col`}>
+        <div className="flex items-start justify-between gap-3 mb-2 border-b-2 border-black pb-2">
+          <div className="min-w-0">
+            <h3 className="font-space text-base font-bold uppercase leading-tight">{title}</h3>
+            {subtitle && <p className="font-mono text-xs font-bold mt-0.5 opacity-70">{subtitle}</p>}
           </div>
-          <span className="font-mono bg-black text-white px-3 py-1 text-sm border-2 border-black inline-block md:rotate-3 shadow-neo-mini">
+          <span className={`font-mono text-[10px] font-bold px-2 py-0.5 border-2 border-black shrink-0 ${accentClass}`}>
             {duration}
           </span>
         </div>
-        <div className="font-mono text-sm leading-relaxed dark:text-gray-300">
+        <div className="font-mono text-xs leading-relaxed dark:text-gray-300">
           {children}
         </div>
       </div>
@@ -187,7 +183,7 @@ function About() {
         {/* Pendidikan */}
         <div className="mt-32">
           <SectionHeading colorClass="blue-500 text-white">Pendidikan</SectionHeading>
-          <div className="border-l-4 border-black border-dashed py-4 relative max-w-3xl">
+          <div className="grid md:grid-cols-2 gap-4">
             {education.map((edu, i) => (
               <Card
                 key={i}
@@ -205,7 +201,7 @@ function About() {
         {/* Pengalaman */}
         <div className="mt-32">
           <SectionHeading colorClass="pink-500">Pengalaman</SectionHeading>
-          <div className="border-l-4 border-black border-dashed py-4 relative max-w-3xl">
+          <div className="grid md:grid-cols-2 gap-4">
             {experience.map((exp, i) => (
               <Card
                 key={i}
@@ -213,7 +209,7 @@ function About() {
                 duration={exp.duration || "WORK"}
                 variant="pink"
               >
-                <ul className="list-disc ml-5 space-y-2">
+                <ul className="list-disc ml-4 space-y-1">
                   {exp.items.map((item, j) => (
                     <li key={j}>{item}</li>
                   ))}
