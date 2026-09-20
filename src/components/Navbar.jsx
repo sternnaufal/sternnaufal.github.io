@@ -12,6 +12,7 @@ const socialLinks = [
 ]
 
 const siteLinks = [
+  { label: 'IT Solutions', url: 'https://digital.naufalrakha.my.id' },
   { label: 'Webapps', url: 'https://webapps.naufalrakha.my.id' },
   { label: 'Demo Artstyle', url: 'https://demo.naufalrakha.my.id' },
   { label: 'Blog', url: '/blog' },
