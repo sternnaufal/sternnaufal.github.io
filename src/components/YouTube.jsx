@@ -22,6 +22,14 @@ const FALLBACK = [
     published: '2025-11-16T17:01:26+00:00',
     views: 36,
   },
+  {
+    videoId: 'fycntWkhsqg',
+    title: 'Menghubungkan 2 Switch dengan Beberapa PC | Tutorial Cisco Packet Tracer Eps.4',
+    url: 'https://www.youtube.com/watch?v=fycntWkhsqg',
+    thumbnail: 'https://i.ytimg.com/vi/fycntWkhsqg/hqdefault.jpg',
+    published: '2025-01-01T00:00:00+00:00',
+    views: null,
+  },
 ]
 
 const fmtDate = (iso) => {

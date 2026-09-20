@@ -16,22 +16,6 @@
     "views": 36
   },
   {
-    "videoId": "Lon34igobGs",
-    "title": "Orang ngoding diem | Stream Silent Part.1",
-    "url": "https://www.youtube.com/watch?v=Lon34igobGs",
-    "thumbnail": "https://i1.ytimg.com/vi/Lon34igobGs/hqdefault.jpg",
-    "published": "2025-10-24T03:17:40+00:00",
-    "views": 0
-  },
-  {
-    "videoId": "zOXzkL0xGo4",
-    "title": "Orang ngoding diem | Stream Silent Part.1",
-    "url": "https://www.youtube.com/watch?v=zOXzkL0xGo4",
-    "thumbnail": "https://i3.ytimg.com/vi/zOXzkL0xGo4/hqdefault.jpg",
-    "published": "2025-10-24T02:45:54+00:00",
-    "views": 18
-  },
-  {
     "videoId": "fycntWkhsqg",
     "title": "Menghubungkan 2 Switch dengan Beberapa PC | Tutorial Cisco Packet Tracer Eps.4",
     "url": "https://www.youtube.com/watch?v=fycntWkhsqg",
@@ -46,5 +30,21 @@
     "thumbnail": "https://i1.ytimg.com/vi/hdEYw7cnQyQ/hqdefault.jpg",
     "published": "2025-10-01T17:01:10+00:00",
     "views": 23
+  },
+  {
+    "videoId": "EwsA5sHSOEY",
+    "title": "Koneksi 4 PC dengan Switch | Tutorial Cisco Packet Tracer Eps.3",
+    "url": "https://www.youtube.com/watch?v=EwsA5sHSOEY",
+    "thumbnail": "https://i2.ytimg.com/vi/EwsA5sHSOEY/hqdefault.jpg",
+    "published": "2025-09-24T00:57:27+00:00",
+    "views": 103
+  },
+  {
+    "videoId": "YuCXgnOAadw",
+    "title": "Belajar Cisco Packet Tracer Jaringan Peer-to-Peer | Tutorial Cisco Packet Tracer Eps.2",
+    "url": "https://www.youtube.com/watch?v=YuCXgnOAadw",
+    "thumbnail": "https://i2.ytimg.com/vi/YuCXgnOAadw/hqdefault.jpg",
+    "published": "2025-09-17T05:34:18+00:00",
+    "views": 48
   }
 ]

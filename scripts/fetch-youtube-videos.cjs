@@ -21,6 +21,26 @@ function decode(s) {
     .replace(/&apos;/g, "'");
 }
 
+/**
+ * RSS feed tidak membedakan live stream vs video biasa.
+ * Cek halaman watch untuk field isLiveContent (true = pernah live/premiere).
+ */
+async function isLive(videoId) {
+  try {
+    const res = await fetch(`https://www.youtube.com/watch?v=${videoId}`, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; naufalrakha-portfolio/1.0)' },
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!res.ok) return false;
+    const html = await res.text();
+    const m = html.match(/"isLiveContent":(true|false)/);
+    return m ? m[1] === 'true' : false;
+  } catch {
+    // Ragu → anggap live agar tidak lolos ke daftar.
+    return true;
+  }
+}
+
 async function main() {
   const res = await fetch(RSS, {
     headers: { 'User-Agent': 'Mozilla/5.0 (compatible; naufalrakha-portfolio/1.0)' },
@@ -28,8 +48,8 @@ async function main() {
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
   const xml = await res.text();
 
-  const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].slice(0, MAX);
-  const videos = entries.map(([, e]) => {
+  const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)];
+  const parsed = entries.map(([, e]) => {
     const videoId = e.match(/<yt:videoId>([^<]+)<\/yt:videoId>/)?.[1] || '';
     const title = decode(e.match(/<media:title>([^<]+)<\/media:title>/)?.[1] || '(no title)');
     const published = e.match(/<published>([^<]+)<\/published>/)?.[1] || '';
@@ -46,9 +66,26 @@ async function main() {
     };
   });
 
+  // Cek live per batch, berhenti begitu dapat cukup video non-live.
+  const videos = [];
+  let liveCount = 0;
+  const BATCH = 3;
+
+  for (let i = 0; i < parsed.length && videos.length < MAX; i += BATCH) {
+    const batch = parsed.slice(i, i + BATCH);
+    const flags = await Promise.all(batch.map((v) => isLive(v.videoId)));
+    batch.forEach((v, j) => {
+      if (flags[j]) {
+        liveCount++;
+      } else if (videos.length < MAX) {
+        videos.push(v);
+      }
+    });
+  }
+
   fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
   fs.writeFileSync(OUTPUT, JSON.stringify(videos, null, 2));
-  console.log(`✅ Fetched ${videos.length} YouTube videos → public/youtube-videos.json`);
+  console.log(`✅ Fetched ${videos.length} YouTube videos (${liveCount} live skipped) → public/youtube-videos.json`);
 }
 
 main().catch((e) => {
