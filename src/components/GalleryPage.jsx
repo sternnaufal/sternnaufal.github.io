@@ -75,20 +75,21 @@ function GalleryPage() {
           ))}
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {/* Masonry */}
+        <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
           {filtered.map((img, i) => (
             <button
               key={i}
               onClick={() => setSelectedImage(img)}
-              className="group relative bg-white border-3 border-black overflow-hidden shadow-neo-mini hover:shadow-neo hover:-translate-y-1 transition-all cursor-pointer"
+              className="group relative block w-full mb-4 bg-white border-3 border-black overflow-hidden shadow-neo-mini hover:shadow-neo hover:-translate-y-1 transition-all cursor-pointer break-inside-avoid"
             >
-              <div className="aspect-square relative">
+              <div className="relative">
                 <LazyLoadImage
                   src={img.src}
                   alt={img.alt}
                   effect="blur"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  wrapperClassName="block w-full"
+                  className="w-full h-auto grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                   <span className="bg-white text-black font-bold px-2 py-1 border-2 border-black text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
