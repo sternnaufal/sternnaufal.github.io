@@ -45,6 +45,7 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
     { href: '#about', label: 'About' },
     { href: '#projects', label: 'Projects' },
     { href: '#games', label: 'Studio' },
+    { href: '#youtube', label: 'YouTube' },
     { href: '#blog', label: 'Blog' },
     { href: '#contact', label: 'Contact' },
   ]

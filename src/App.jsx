@@ -37,6 +37,7 @@ const Games = lazy(() => import('./components/Games'))
 const Blog = lazy(() => import('./components/Blog'))
 const About = lazy(() => import('./components/About'))
 const DigitalCta = lazy(() => import('./components/DigitalCta'))
+const YouTube = lazy(() => import('./components/YouTube'))
 const Contact = lazy(() => import('./components/Contact'))
 const BlogPage = lazy(() => import('./components/BlogPage'))
 const GalleryPage = lazy(() => import('./components/GalleryPage'))
@@ -52,6 +53,7 @@ function Home() {
       <Suspense fallback={<div className="h-[700px]" />}><Projects /></Suspense>
       <Suspense fallback={<div className="h-[500px]" />}><Games /></Suspense>
       <Suspense fallback={<div className="h-[400px]" />}><Blog /></Suspense>
+      <Suspense fallback={<div className="h-[600px]" />}><YouTube /></Suspense>
       <Suspense fallback={<div className="min-h-[1200px]" />}><About /></Suspense>
       <Suspense fallback={<div className="h-[400px]" />}><DigitalCta /></Suspense>
       <Suspense fallback={<div className="min-h-[600px]" />}><Contact /></Suspense>

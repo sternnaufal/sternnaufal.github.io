@@ -52,6 +52,7 @@ function Footer() {
              <Link to="/#about" className="hover:text-pink-500 transition-colors">About</Link>
              <Link to="/#projects" className="hover:text-pink-500 transition-colors">Projects</Link>
              <Link to="/#games" className="hover:text-pink-500 transition-colors">Studio</Link>
+             <Link to="/#youtube" className="hover:text-pink-500 transition-colors">YouTube</Link>
              <Link to="/gallery" className="hover:text-pink-500 transition-colors">Gallery</Link>
              <Link to="/#contact" className="hover:text-pink-500 transition-colors">Contact</Link>
              <button onClick={scrollToTop} className="flex items-center gap-2 border-l-2 border-black pl-4 hover:text-blue-500 transition-colors">
