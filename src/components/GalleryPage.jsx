@@ -2,21 +2,17 @@ import { useState } from 'react'
 import { FaArrowLeft, FaImage } from 'react-icons/fa'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { Helmet } from 'react-helmet-async'
+import { projects } from '../data/portfolioData'
+
+const personalPhotos = [
+  { src: '/images/gallery/placeholder.svg', alt: 'Foto Pribadi 1' },
+  { src: '/images/gallery/placeholder.svg', alt: 'Foto Pribadi 2' },
+  { src: '/images/gallery/placeholder.svg', alt: 'Foto Pribadi 3' },
+]
 
 const galleryData = [
-  // Foto Pribadi
-  { src: '/images/gallery/placeholder.svg', alt: 'Foto Pribadi 1', category: 'Pribadi' },
-  { src: '/images/gallery/placeholder.svg', alt: 'Foto Pribadi 2', category: 'Pribadi' },
-  { src: '/images/gallery/placeholder.svg', alt: 'Foto Pribadi 3', category: 'Pribadi' },
-  // Project Screenshots
-  { src: '/images/projects/yuwarajafest.png', alt: 'YuwarajaFest 2026', category: 'Project' },
-  { src: '/images/projects/carefund.png', alt: 'CareFund', category: 'Project' },
-  { src: '/images/projects/lg-exambot.png', alt: 'LG-Exambot', category: 'Project' },
-  { src: '/images/projects/greenevent.png', alt: 'GreenEvent', category: 'Project' },
-  { src: '/images/projects/bemvokasi.png', alt: 'BEM Vokasi UB', category: 'Project' },
-  { src: '/images/projects/chickenquest.png', alt: 'ChickenQuest', category: 'Project' },
-  { src: '/images/projects/flagquiz.png', alt: 'Flag Quiz Master', category: 'Project' },
-  { src: '/images/projects/sortiverse.png', alt: 'Sortiverse', category: 'Project' },
+  ...personalPhotos.map(p => ({ ...p, category: 'Pribadi' })),
+  ...projects.map(p => ({ src: p.image, alt: p.title, category: 'Project' })),
 ]
 
 const categories = ['Semua', 'Pribadi', 'Project']
