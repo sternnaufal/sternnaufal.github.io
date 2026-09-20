@@ -120,6 +120,20 @@ render({
 })
 
 render({
+  path: 'gallery',
+  title: 'Gallery — Naufal Rakha Putra',
+  desc: 'Galeri foto pribadi dan screenshot proyek oleh Naufal Rakha Putra.',
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Gallery — Naufal Rakha Putra',
+    description: 'Galeri foto pribadi dan screenshot proyek oleh Naufal Rakha Putra.',
+    url: `${SITE}/gallery`,
+    isPartOf: { '@type': 'WebSite', name: 'Naufal Rakha Putra', url: SITE },
+  },
+})
+
+render({
   path: 'keepsimple-demo',
   title: 'KeepSimple CSS — Demo & Dokumentasi | Naufal Rakha Putra',
   desc: 'KeepSimple CSS — Framework CSS minimalis, cepat, ringan. Demo live, dokumentasi lengkap, langsung copas!',
@@ -177,4 +191,4 @@ for (const project of projects) {
   })
 }
 
-console.log(`\nDone. ${projects.length + 4} pages prerendered → dist/`)
+console.log(`\nDone. ${projects.length + 5} pages prerendered → dist/`)

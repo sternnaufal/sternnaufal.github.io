@@ -1,6 +1,22 @@
 import { useState, useRef, useEffect } from 'react'
-import { FaBars, FaTimes, FaGamepad } from 'react-icons/fa'
+import { FaBars, FaTimes, FaGamepad, FaChevronDown } from 'react-icons/fa'
 import { Sun, Moon } from 'lucide-react'
+
+const socialLinks = [
+  { label: 'Instagram', url: 'https://instagram.com/stern_naufal2712' },
+  { label: 'X (Twitter)', url: 'https://x.com/okebeyos' },
+  { label: 'LinkedIn', url: 'https://linkedin.com/in/naufal-rakha-putra-a0130332a' },
+  { label: 'YouTube', url: 'https://youtube.com/@naufaltechtainment1' },
+  { label: 'Medium', url: 'https://medium.com/@naufalrakha2712' },
+]
+
+const siteLinks = [
+  { label: 'Webapps', url: 'https://webapps.naufalrakha.my.id' },
+  { label: 'Demo Artstyle', url: 'https://demo.naufalrakha.my.id' },
+  { label: 'Blog', url: '/blog' },
+  { label: 'Gallery', url: '/gallery' },
+  { label: 'Senin Terus Studio', url: 'https://seninterusstudio.vercel.app', icon: true },
+]
 
 function Navbar({ darkMode, toggleDarkMode, activeSection }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -18,60 +34,75 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
     return () => document.removeEventListener('mousedown', handler)
   }, [])
 
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [mobileMenuOpen])
+
   const navLinks = [
     { href: '#about', label: 'About' },
     { href: '#projects', label: 'Projects' },
-    { href: '#games', label: 'Games' },
+    { href: '#games', label: 'Studio' },
     { href: '#blog', label: 'Blog' },
     { href: '#contact', label: 'Contact' },
   ]
 
   return (
     <header className="bg-yellow-400 dark:bg-black border-b-5 border-black sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="font-space text-2xl font-bold tracking-tighter">NAUFAL RAKHA PUTRA</h1>
-        
+      <div className="max-w-7xl mx-auto px-4 py-3 md:py-4 flex justify-between items-center gap-4">
+        <a href="/" className="font-space text-lg sm:text-xl md:text-2xl font-bold tracking-tighter hover:opacity-70 transition-opacity whitespace-nowrap">
+          NAUFAL RAKHA PUTRA
+        </a>
+
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-5">
           <div className="relative" ref={socialRef}>
-            <button 
+            <button
               onClick={() => { setSocialOpen(!socialOpen); setSitesOpen(false) }}
-              className="font-space font-bold hover:bg-black hover:text-white px-2 py-1 transition-colors" 
+              className="font-space font-bold text-sm xl:text-base hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black px-2 py-1.5 transition-colors flex items-center gap-1.5"
               aria-expanded={socialOpen}
               aria-haspopup="menu"
             >
-              Social Media ▾
+              Social <FaChevronDown size={10} className={`transition-transform ${socialOpen ? 'rotate-180' : ''}`} />
             </button>
             {socialOpen && (
-              <div className="absolute bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black z-50" role="menu">
-                <a href="https://instagram.com/stern_naufal2712" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Instagram</a>
-                <a href="https://x.com/okebeyos" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">X (Twitter)</a>
-                <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Linkedin</a>
-                <a href="https://youtube.com/@naufaltechtainment1" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Youtube</a>
-                <a href="https://medium.com/@naufalrakha2712" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Medium</a>
+              <div className="absolute right-0 top-full mt-1 bg-black text-white min-w-44 py-2 shadow-neo border-3 border-black z-50" role="menu">
+                {socialLinks.map((s) => (
+                  <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-yellow-400 hover:text-black transition-colors font-mono text-sm">
+                    {s.label}
+                  </a>
+                ))}
               </div>
             )}
           </div>
-          
+
           <div className="relative" ref={sitesRef}>
-            <button 
+            <button
               onClick={() => { setSitesOpen(!sitesOpen); setSocialOpen(false) }}
-              className="font-space font-bold hover:bg-black hover:text-white px-2 py-1 transition-colors" 
+              className="font-space font-bold text-sm xl:text-base hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black px-2 py-1.5 transition-colors flex items-center gap-1.5"
               aria-expanded={sitesOpen}
               aria-haspopup="menu"
             >
-              My Sites ▾
+              My Sites <FaChevronDown size={10} className={`transition-transform ${sitesOpen ? 'rotate-180' : ''}`} />
             </button>
             {sitesOpen && (
-              <div className="absolute bg-black text-white min-w-40 py-2 shadow-neo border-3 border-black z-50" role="menu">
-                <a href="https://webapps.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Webapps</a>
-                <a href="https://demo.naufalrakha.my.id" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Demo Artstyle</a>
-                <a href="/blog" className="block px-4 py-2 hover:bg-white hover:text-black">Blog</a>
-                <a href="https://seninterusstudio.vercel.app" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-white hover:text-black">Senin Terus Studio <FaGamepad size={14} className="inline" /></a>
+              <div className="absolute right-0 top-full mt-1 bg-black text-white min-w-52 py-2 shadow-neo border-3 border-black z-50" role="menu">
+                {siteLinks.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.url}
+                    {...(s.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    className="flex items-center gap-2 px-4 py-2 hover:bg-yellow-400 hover:text-black transition-colors font-mono text-sm"
+                  >
+                    {s.label} {s.icon && <FaGamepad size={13} />}
+                  </a>
+                ))}
               </div>
             )}
           </div>
-          
+
+          <div className="w-px h-6 bg-black/20 dark:bg-white/20" />
+
           {navLinks.map((link) => {
             const sectionId = link.href.replace('#', '')
             const isActive = activeSection === sectionId
@@ -79,9 +110,9 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
               <a
                 key={sectionId}
                 href={link.href}
-                className={`font-space font-bold px-2 py-1 transition-all ${
+                className={`font-space font-bold text-sm xl:text-base px-2 py-1.5 transition-all ${
                   isActive
-                    ? 'bg-black text-white dark:bg-yellow-400 dark:text-black scale-110'
+                    ? 'bg-black text-white dark:bg-yellow-400 dark:text-black'
                     : 'hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black'
                 }`}
               >
@@ -89,64 +120,96 @@ function Navbar({ darkMode, toggleDarkMode, activeSection }) {
               </a>
             )
           })}
-          
-          <button 
+
+          <button
             onClick={toggleDarkMode}
             aria-label={darkMode ? 'Aktifkan mode terang' : 'Aktifkan mode gelap'}
-            className="bg-black text-white border-3 border-black p-2 text-xl shadow-neo hover:bg-yellow-400 hover:text-black transition-all rotate-3 hover:rotate-0"
+            className="bg-black text-white dark:bg-yellow-400 dark:text-black border-3 border-black p-2 shadow-neo hover:-translate-y-0.5 transition-all ml-1"
           >
-            {darkMode ? <Sun size={24} /> : <Moon size={24} />}
+            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
           </button>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-2xl border-3 border-black p-1 bg-black text-white shadow-neo"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'}
-          aria-expanded={mobileMenuOpen}
-        >
-          {mobileMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+        {/* Mobile/Tablet controls */}
+        <div className="flex lg:hidden items-center gap-2">
+          <button
+            onClick={toggleDarkMode}
+            aria-label={darkMode ? 'Aktifkan mode terang' : 'Aktifkan mode gelap'}
+            className="bg-black text-white dark:bg-yellow-400 dark:text-black border-3 border-black p-2 shadow-neo-mini"
+          >
+            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          <button
+            className="text-xl border-3 border-black p-2 bg-black text-white dark:bg-yellow-400 dark:text-black shadow-neo-mini"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'}
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav Overlay */}
       {mobileMenuOpen && (
-        <nav className="md:hidden bg-yellow-400 dark:bg-black border-l-4 border-b-4 border-black absolute right-0 w-64 py-6 px-4 flex flex-col gap-4 shadow-neo-large animate-slide-in">
-          <button onClick={toggleDarkMode} className="text-left font-bold flex items-center justify-between border-3 border-black p-2 bg-white dark:bg-gray-800">
-            <span>{darkMode ? 'Light Mode' : 'Dark Mode'}</span>
-            <span>{darkMode ? <Sun size={20} /> : <Moon size={20} />}</span>
-          </button>
-          <div className="flex flex-col gap-2 font-bold">
-             <p className="text-xs uppercase opacity-60 mt-2">Navigation</p>
-             {navLinks.map((link) => {
-               const sectionId = link.href.replace('#', '')
-               const isActive = activeSection === sectionId
-               return (
-                 <a
-                   key={sectionId}
-                   href={link.href}
-                   onClick={() => setMobileMenuOpen(false)}
-                   className={`p-2 transition-colors ${
-                     isActive
-                       ? 'bg-black text-white dark:bg-yellow-400 dark:text-black'
-                       : 'border-b-2 border-black hover:bg-white dark:hover:bg-gray-800'
-                   }`}
-                 >
-                   {link.label}
-                 </a>
-               )
-             })}
-          </div>
-          <div className="flex flex-col gap-2 font-bold">
-             <p className="text-xs uppercase opacity-60 mt-2">Socials</p>
-              <a href="https://instagram.com/stern_naufal2712" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Instagram</a>
-              <a href="https://x.com/okebeyos" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">X (Twitter)</a>
-              <a href="https://linkedin.com/in/naufal-rakha-putra-a0130332a" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Linkedin</a>
-              <a href="https://youtube.com/@naufaltechtainment1" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Youtube</a>
-              <a href="https://medium.com/@naufalrakha2712" target="_blank" rel="noopener noreferrer" className="p-2 border-b-2 border-black hover:bg-white dark:hover:bg-gray-800">Medium</a>
-          </div>
-        </nav>
+        <>
+          <div
+            className="lg:hidden absolute inset-x-0 top-full h-[calc(100vh-100%)] bg-black/50 z-40"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+          <nav className="lg:hidden absolute right-0 top-full h-[calc(100vh-100%)] w-72 max-w-[85vw] bg-yellow-400 dark:bg-gray-950 border-l-4 border-b-4 border-black overflow-y-auto py-6 px-5 flex flex-col gap-6 shadow-neo-large animate-slide-in z-50">
+            <div className="flex flex-col gap-1.5 font-bold">
+              <p className="text-xs uppercase opacity-60 mb-1 font-mono tracking-widest">Navigation</p>
+              {navLinks.map((link) => {
+                const sectionId = link.href.replace('#', '')
+                const isActive = activeSection === sectionId
+                return (
+                  <a
+                    key={sectionId}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`p-2.5 border-2 border-black transition-colors ${
+                      isActive
+                        ? 'bg-black text-white dark:bg-yellow-400 dark:text-black'
+                        : 'bg-white dark:bg-gray-900 hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black'
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                )
+              })}
+            </div>
+
+            <div className="flex flex-col gap-1.5 font-bold">
+              <p className="text-xs uppercase opacity-60 mb-1 font-mono tracking-widest">Socials</p>
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.url}
+                  target="_blank" rel="noopener noreferrer"
+                  className="p-2.5 border-2 border-black bg-white dark:bg-gray-900 hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black transition-colors"
+                >
+                  {s.label}
+                </a>
+              ))}
+            </div>
+
+            <div className="flex flex-col gap-1.5 font-bold">
+              <p className="text-xs uppercase opacity-60 mb-1 font-mono tracking-widest">My Sites</p>
+              {siteLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.url}
+                  onClick={() => setMobileMenuOpen(false)}
+                  {...(s.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  className="flex items-center gap-2 p-2.5 border-2 border-black bg-white dark:bg-gray-900 hover:bg-black hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black transition-colors"
+                >
+                  {s.label} {s.icon && <FaGamepad size={13} />}
+                </a>
+              ))}
+            </div>
+          </nav>
+        </>
       )}
     </header>
   )

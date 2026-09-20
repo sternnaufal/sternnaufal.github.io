@@ -16,6 +16,7 @@ const Blog = lazy(() => import('./components/Blog'))
 const About = lazy(() => import('./components/About'))
 const Contact = lazy(() => import('./components/Contact'))
 const BlogPage = lazy(() => import('./components/BlogPage'))
+const GalleryPage = lazy(() => import('./components/GalleryPage'))
 const CvPage = lazy(() => import('./components/CvPage'))
 const KeepsimpleDemo = lazy(() => import('./components/KeepsimpleDemo'))
 const ProjectCase = lazy(() => import('./components/ProjectCase'))
@@ -246,6 +247,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/blog" element={<BlogPage />} />
+                <Route path="/gallery" element={<GalleryPage />} />
                 <Route path="/cv" element={<CvPage />} />
                 <Route path="/keepsimple-demo" element={<KeepsimpleDemo />} />
                 <Route path="/alphascript-demo" element={<AlphascriptDemo />} />

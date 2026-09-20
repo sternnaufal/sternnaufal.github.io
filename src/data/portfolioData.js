@@ -11,14 +11,13 @@ export const projects = [
     tech: ['Laravel', 'Inertia.js', 'React', 'MySQL']
   },
   {
-    title: 'CareFund',
-    category: 'Web App',
-    description: 'Platform crowdfunding medis full-stack (React.js + Node.js/Express). Kolaborasi tim dengan dosen sebagai stakeholder utama. Fitur campaign management, donasi, dan auth.',
-    github: 'https://github.com/orgs/group4pbl-carefund/repositories',
-    live: 'https://frontend-wine-kappa-76.vercel.app/',
-    caseStudy: '/case-study/carefund',
-    image: '/images/projects/carefund.png',
-    tech: ['React.js', 'Node.js', 'Express', 'MySQL']
+    title: 'ChickenQuest (Broiler Quest)',
+    category: 'Game',
+    description: 'Game edukasi peternakan ayam broiler. Kolaborasi DIKST UB, Jatim Park Group, dan Lets Play Indonesia. Available on Google Play.',
+    github: null,
+    live: 'https://play.google.com/store/apps/details?id=com.dikstgame.broilerquest&hl=id',
+    image: '/images/projects/chickenquest.png',
+    tech: ['Android', 'Game Development']
   },
   {
     title: 'LG-Exambot',
@@ -31,6 +30,25 @@ export const projects = [
     tech: ['Laravel', 'Gemini API', 'DeepSeek', 'Groq']
   },
   {
+    title: 'Website BEM Vokasi UB',
+    category: 'Web App',
+    description: 'Website resmi BEM Vokasi Universitas Brawijaya. Backend developer (Staff Ahli) — arsitektur core system, RESTful API 25+ endpoints, autentikasi Bearer Token, otorisasi menu dinamis. Laravel + React.',
+    github: null,
+    live: 'https://bemvokasi.ub.ac.id',
+    image: '/images/projects/bemvokasi.png',
+    tech: ['Laravel', 'React', 'MySQL', 'RESTful API']
+  },
+  {
+    title: 'CareFund',
+    category: 'Web App',
+    description: 'Platform crowdfunding medis full-stack (React.js + Node.js/Express). Kolaborasi tim dengan dosen sebagai stakeholder utama. Fitur campaign management, donasi, dan auth.',
+    github: 'https://github.com/orgs/group4pbl-carefund/repositories',
+    live: 'https://frontend-wine-kappa-76.vercel.app/',
+    caseStudy: '/case-study/carefund',
+    image: '/images/projects/carefund.png',
+    tech: ['React.js', 'Node.js', 'Express', 'MySQL']
+  },
+  {
     title: 'GreenEvent',
     category: 'Web App',
     description: 'Platform manajemen acara lingkungan hidup. Produk andalan kompetisi Creanomic Vokasi UB 2025. Laravel + Blade + MySQL.',
@@ -41,40 +59,14 @@ export const projects = [
     tech: ['Laravel', 'Blade', 'MySQL']
   },
   {
-    title: 'Telegram Bot Reminder',
-    category: 'AI',
-    description: 'Bot pengingat jadwal otomatis terintegrasi Google Calendar API. Skrip Python untuk manajemen waktu personal via Telegram.',
-    github: 'https://github.com/sternnaufal/bot-calendar-python-telegram',
-    caseStudy: '/case-study/telegram-bot-reminder',
-    image: '/images/projects/bot-telegram.png',
-    tech: ['Python', 'Google Calendar API']
-  },
-  {
-    title: 'Catatanku',
-    category: 'Web App',
-    description: 'Aplikasi catatan digital untuk pelajar & mahasiswa. PHP Native + MySQL dengan fitur CRUD catatan, autentikasi, admin panel, dan ekspor PDF.',
-    github: 'https://github.com/sternnaufal/catatanku',
-    caseStudy: '/case-study/catatanku',
-    image: '/images/projects/catatanku.png',
-    tech: ['PHP', 'MySQL']
-  },
-  {
-    title: 'Alphascript',
-    category: 'Library',
-    description: 'JavaScript library open-source untuk mempercepat manipulasi DOM sederhana.',
-    github: 'https://github.com/sternnaufal/alphascript',
-    caseStudy: '/case-study/alphascript',
-    image: '/images/projects/alphascript.png',
-    tech: ['JavaScript']
-  },
-  {
-    title: 'Sakurapai (CMS Video)',
-    category: 'Web App',
-    description: 'Content Management System video streaming dengan fitur login, manajemen konten, dan MySQL. PHP Native.',
-    github: 'https://github.com/sternnaufal/cmsvideo',
-    caseStudy: '/case-study/sakurapai-cms-video',
-    image: '/images/projects/sakurapai.png',
-    tech: ['PHP', 'MySQL']
+    title: 'Todos API',
+    category: 'Backend',
+    description: 'RESTful API manajemen todos dengan Express.js + TypeScript. Fitur pagination, filter multi-parameter, kategorisasi, prioritas, dan statistik. Deployed di Vercel.',
+    github: 'https://github.com/sternnaufal/api',
+    live: 'https://api-three-self-56.vercel.app/',
+    caseStudy: '/case-study/todos-api',
+    image: '/images/projects/todos-api.png',
+    tech: ['Express.js', 'TypeScript', 'Vercel']
   },
   {
     title: 'Flag Quiz Master',
@@ -97,50 +89,13 @@ export const projects = [
     tech: ['Kotlin', 'Android']
   },
   {
-    title: 'Todos API',
-    category: 'Backend',
-    description: 'RESTful API manajemen todos dengan Express.js + TypeScript. Fitur pagination, filter multi-parameter, kategorisasi, prioritas, dan statistik. Deployed di Vercel.',
-    github: 'https://github.com/sternnaufal/api',
-    live: 'https://api-three-self-56.vercel.app/',
-    caseStudy: '/case-study/todos-api',
-    image: '/images/projects/todos-api.png',
-    tech: ['Express.js', 'TypeScript', 'Vercel']
-  },
-  {
-    title: 'Hanekawa Bot v4',
+    title: 'Cronblog',
     category: 'AI',
-    description: 'Discord bot serbaguna v4 berbasis JavaScript dengan fitur moderasi, musik, tiket, translasi, dan lainnya.',
-    github: 'https://github.com/sternnaufal/hanekawa-bot-v4',
-    caseStudy: '/case-study/hanekawa-bot-v4',
-    image: '/images/projects/hanekawa-bot.png',
-    tech: ['JavaScript', 'Discord.js']
-  },
-  {
-    title: 'Keepsimple',
-    category: 'Library',
-    description: 'CSS framework minimalis fokus pada kecepatan muat halaman dan kebersihan UI.',
-    github: 'https://github.com/sternnaufal/keepsimple',
-    caseStudy: '/case-study/keepsimple',
-    image: '/images/projects/keepsimple.png',
-    tech: ['CSS']
-  },
-  {
-    title: 'Sterntools',
-    category: 'Tools',
-    description: 'Toolkit CTF untuk analisis forensika digital. Koleksi skrip otomatisasi bedah file, ekstraksi artefak, dan investigasi sistem.',
-    github: 'https://github.com/sternnaufal/sterntools',
-    caseStudy: '/case-study/sterntools',
-    image: '/images/projects/sterntools.png',
-    tech: ['Shell', 'Linux']
-  },
-  {
-    title: 'Website Duta Anak Kota Bukittinggi 2025',
-    category: 'Web App',
-    description: 'Landing page resmi profil Duta Anak Kota Bukittinggi. Dibangun dengan Bootstrap untuk tampilan responsif dan modern.',
-    github: 'https://github.com/sternnaufal/website-duta-anak',
-    caseStudy: '/case-study/website-duta-anak-kota-bukittinggi-2025',
-    image: '/images/projects/webdutanak.png',
-    tech: ['Bootstrap', 'HTML5', 'CSS3']
+    description: 'Bot penulis artikel otomatis terjadwal via GitHub Actions (2x seminggu): tren dari RSS feed → konten via cascade AI (Custom API > Gemini > OpenAI) → Draft di Blogger API v3 untuk kurasi manual.',
+    github: 'https://github.com/sternnaufal/cronblog',
+    caseStudy: '/case-study/cronblog',
+    image: '/images/projects/cronblog.png',
+    tech: ['Python', 'Gemini API', 'OpenAI', 'Blogger API']
   },
   {
     title: 'WebApps',
@@ -153,31 +108,76 @@ export const projects = [
     tech: ['Astro', 'Tailwind CSS', 'daisyUI']
   },
   {
-    title: 'Cronblog',
+    title: 'Hanekawa Bot v4',
     category: 'AI',
-    description: 'Bot penulis artikel otomatis terjadwal via GitHub Actions (2x seminggu): tren dari RSS feed → konten via cascade AI (Custom API > Gemini > OpenAI) → Draft di Blogger API v3 untuk kurasi manual.',
-    github: 'https://github.com/sternnaufal/cronblog',
-    caseStudy: '/case-study/cronblog',
-    image: '/images/projects/cronblog.png',
-    tech: ['Python', 'Gemini API', 'OpenAI', 'Blogger API']
+    description: 'Discord bot serbaguna v4 berbasis JavaScript dengan fitur moderasi, musik, tiket, translasi, dan lainnya.',
+    github: 'https://github.com/sternnaufal/hanekawa-bot-v4',
+    caseStudy: '/case-study/hanekawa-bot-v4',
+    image: '/images/projects/hanekawa-bot.png',
+    tech: ['JavaScript', 'Discord.js']
   },
   {
-    title: 'Website BEM Vokasi UB',
+    title: 'Sterntools',
+    category: 'Tools',
+    description: 'Toolkit CTF untuk analisis forensika digital. Koleksi skrip otomatisasi bedah file, ekstraksi artefak, dan investigasi sistem.',
+    github: 'https://github.com/sternnaufal/sterntools',
+    caseStudy: '/case-study/sterntools',
+    image: '/images/projects/sterntools.png',
+    tech: ['Shell', 'Linux']
+  },
+  {
+    title: 'Keepsimple',
+    category: 'Library',
+    description: 'CSS framework minimalis fokus pada kecepatan muat halaman dan kebersihan UI.',
+    github: 'https://github.com/sternnaufal/keepsimple',
+    caseStudy: '/case-study/keepsimple',
+    image: '/images/projects/keepsimple.png',
+    tech: ['CSS']
+  },
+  {
+    title: 'Alphascript',
+    category: 'Library',
+    description: 'JavaScript library open-source untuk mempercepat manipulasi DOM sederhana.',
+    github: 'https://github.com/sternnaufal/alphascript',
+    caseStudy: '/case-study/alphascript',
+    image: '/images/projects/alphascript.png',
+    tech: ['JavaScript']
+  },
+  {
+    title: 'Catatanku',
     category: 'Web App',
-    description: 'Website resmi BEM Vokasi Universitas Brawijaya. Backend developer (Staff Ahli) — arsitektur core system, RESTful API 25+ endpoints, autentikasi Bearer Token, otorisasi menu dinamis. Laravel + React.',
-    github: null,
-    live: 'https://bemvokasi.ub.ac.id',
-    image: '/images/projects/bemvokasi.png',
-    tech: ['Laravel', 'React', 'MySQL', 'RESTful API']
+    description: 'Aplikasi catatan digital untuk pelajar & mahasiswa. PHP Native + MySQL dengan fitur CRUD catatan, autentikasi, admin panel, dan ekspor PDF.',
+    github: 'https://github.com/sternnaufal/catatanku',
+    caseStudy: '/case-study/catatanku',
+    image: '/images/projects/catatanku.png',
+    tech: ['PHP', 'MySQL']
   },
   {
-    title: 'ChickenQuest (Broiler Quest)',
-    category: 'Game',
-    description: 'Game edukasi peternakan ayam broiler. Kolaborasi DIKST UB, Jatim Park Group, dan Lets Play Indonesia. Available on Google Play.',
-    github: null,
-    live: 'https://play.google.com/store/apps/details?id=com.dikstgame.broilerquest&hl=id',
-    image: '/images/projects/chickenquest.png',
-    tech: ['Android', 'Game Development']
+    title: 'Sakurapai (CMS Video)',
+    category: 'Web App',
+    description: 'Content Management System video streaming dengan fitur login, manajemen konten, dan MySQL. PHP Native.',
+    github: 'https://github.com/sternnaufal/cmsvideo',
+    caseStudy: '/case-study/sakurapai-cms-video',
+    image: '/images/projects/sakurapai.png',
+    tech: ['PHP', 'MySQL']
+  },
+  {
+    title: 'Telegram Bot Reminder',
+    category: 'AI',
+    description: 'Bot pengingat jadwal otomatis terintegrasi Google Calendar API. Skrip Python untuk manajemen waktu personal via Telegram.',
+    github: 'https://github.com/sternnaufal/bot-calendar-python-telegram',
+    caseStudy: '/case-study/telegram-bot-reminder',
+    image: '/images/projects/bot-telegram.png',
+    tech: ['Python', 'Google Calendar API']
+  },
+  {
+    title: 'Website Duta Anak Kota Bukittinggi 2025',
+    category: 'Web App',
+    description: 'Landing page resmi profil Duta Anak Kota Bukittinggi. Dibangun dengan Bootstrap untuk tampilan responsif dan modern.',
+    github: 'https://github.com/sternnaufal/website-duta-anak',
+    caseStudy: '/case-study/website-duta-anak-kota-bukittinggi-2025',
+    image: '/images/projects/webdutanak.png',
+    tech: ['Bootstrap', 'HTML5', 'CSS3']
   }
 ]
 
